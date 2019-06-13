@@ -1,0 +1,26 @@
+.landing{
+	&__container{
+		margin: 0 auto;
+		margin-top: 6.75rem;
+		height: 36.90rem;
+		width: 36.90rem;
+		border: solid 2px $color-blue-3;
+		border-radius: 36.9rem;
+		padding-top: 15.50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
+	&__img{
+		&--1{
+			width: 1.20rem;
+			height: 1.20rem;
+			margin-top: 0.85rem;
+			
+			> *{
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.header {
+	&__logo{		
+	  flex: 0 0 5.20rem;
+	  height: 1.60rem;
+	  background-color: $color-white-2;
+	}			
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		&--1{
+			flex: 0 0 8.40rem;
+			height: 2.00rem;
+		}
+	}
+	&__rectangle {
+  flex: 0 0 2.00rem;
+  height: 2.00rem;
+  border-radius: 1rem;
+  border: solid 0.10rem $color-blue-1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+		&:not(:last-of-type){
+			  margin-right: 1.20rem;
+		}
+	}
+}
+
+
+

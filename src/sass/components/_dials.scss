@@ -1,0 +1,44 @@
+.dial{
+	&-group{
+		width: 40.48rem;
+		height: 20.27rem;
+		position: relative;
+		&--1{
+			margin-top: 9.35rem;
+		}
+		&--2{
+			margin-top: 1.90rem;
+		}
+	}
+
+	&-tracker{
+		&__wrapper{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+	}
+
+	&__crown{
+		background-color: $color-blue-1;
+		width: 2.50rem;
+		height: 2.50rem;
+		position: absolute;
+		bottom: -1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+	}
+	&__hand{
+    width: 0;
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.62rem 17.80rem 0.62rem;
+    border-color: transparent transparent $color-blue-1 transparent;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%)rotate(-90deg);
+    transform-origin: 50% 100%;		
+	}
+}

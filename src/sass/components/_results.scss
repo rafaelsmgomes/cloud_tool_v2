@@ -1,0 +1,20 @@
+.detailed-score__wrapper{
+	height: 23.35rem;
+	background-color: green;
+	width: 100%;
+}
+
+.cta{
+	&-group{
+		&__wrapper{
+			height: 25.65rem;
+			display: flex;
+			width: 45.00rem;
+			margin-top: 2.80rem;
+			background-color: blue;
+		}
+	}
+	&__wrapper{
+
+	}
+}

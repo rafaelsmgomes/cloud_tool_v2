@@ -1,0 +1,45 @@
+.page{
+	position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  &--1{
+  	background-color: $color-blue-2;
+  }
+  &--2{
+  	background-color: blue;
+  	top: 100vh;
+    left: 100vw;	
+  }
+  &--3{
+  	background-color: green;
+    top: 200vh;
+    left: 300vw;
+  }
+  &--4{
+  	background-color: orangered;
+    top: -300vh;
+    left: 300vw;
+  }
+  &--5{
+  	background-color: lime;
+    top: -300vh;
+    left: 0px;
+  }
+  &--6{
+  	background-color: blueviolet;
+    top: -300vh;
+    left: -300vw;
+  }
+  &--7{
+  	background-color: tan;
+  	top: 200vh;
+  	left: -200vw;
+  }
+  &--8{
+  	background-color: aqua;
+    top: 300vh;
+    overflow-y: overlay;
+  }
+}

@@ -1,0 +1,30 @@
+.scroller{
+	&__wrapper{
+		width: 40.90rem;		
+		background-color: orangered;
+		margin-top: 3.00rem;
+		
+		&--1{
+	    height: 23.15rem;
+		}
+		&--2{
+	    height: 30.15rem;
+		}		
+	}
+	&__content{
+		width: 39.75rem;
+		height: 2.70rem;
+		opacity: 0.25;
+		border-radius: 0.20rem;
+		background-color: $color-white-1;
+		margin: 0 auto;
+
+		&--active{
+			height: 12.65rem;
+			opacity: 1;
+		}
+		&:not(:last-of-type){
+			margin-bottom: 0.80rem;
+		}
+	}
+}

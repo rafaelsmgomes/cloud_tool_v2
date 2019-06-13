@@ -1,0 +1,15 @@
+.pagination{
+	display: flex;	
+	margin-top: 1rem;
+	justify-content: space-between;
+	&--1{
+		width: 2.55rem;
+	}
+	&--2{
+		width: 3.50rem;
+	}
+	&--3{
+		width: 5.10rem;
+	}
+
+}
