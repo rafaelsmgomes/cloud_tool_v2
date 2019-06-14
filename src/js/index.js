@@ -12,13 +12,12 @@ const movement = [
 	['r1','d1'],
 ];
 
-// console.log(Knob);
-
 $(document).ready(function(){
+
+
 	$('.btn__progress').sp(movement);
 	
-	// tests
-	$('.btn__progress--5').click();
+
 	$(".dial-tracker").knob({
     'min':0,
     'max':180,
@@ -29,5 +28,16 @@ $(document).ready(function(){
 		'displayInput': false,
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
+
+    'change' : function (v) {
+
+    	var dial_hand =$(this)[0].$div.closest('.dial-group').find( ".dial__hand" );
+ 			
+ 			var rotator = `translateX(-50%) rotate(${v-90}deg)`;
+
+ 			dial_hand.css('transform', rotator);
+    },
 	});
+
+	$('.dial-tracker');
 });  
