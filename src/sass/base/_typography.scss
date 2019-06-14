@@ -143,3 +143,30 @@
 	  margin-top: 3.80rem;
 	}
 }
+
+.dial{
+	&__text{
+
+		font-family: $font-reg;
+	  font-size: $font-size-2;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.32;
+	  letter-spacing: normal;
+		margin-top: 0.25rem;	  
+	  color: $color-white-1;	  	  
+		
+		&--1{
+		  text-align: center;
+			width: 6.60rem;
+
+  	}
+  	&--2{
+  		margin-left: 1.00rem;
+  	}
+  	&--3{
+  		margin-right: 1.00rem;
+  	}
+  }
+}

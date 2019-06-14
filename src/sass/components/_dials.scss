@@ -49,4 +49,47 @@
     transform: translateX(-50%)rotate(-90deg);
     transform-origin: 50% 100%;		
 	}
+	&__context{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		&-section{
+	    display: flex;
+	    &--1{
+		    flex-direction: column;
+		    align-items: center;
+		    padding-top: 2.00rem;
+			}
+			&--2{
+				margin-top: 8.05rem;
+		    justify-content: space-between;
+			}
+		}
+
+		&--wrapper{
+			display: flex;
+
+			&--1{
+				padding-left: 3.30rem;
+			}
+			&--2{
+				padding-right: 3.30rem;	
+			}			
+		}
+	}
+	&__line{
+		background-color: $color-white-1;
+	  height: 1.08rem;
+	  border: solid 0.20rem $color-white-1;
+		
+		&--1{
+
+		}
+		&--2{
+	    transform: rotate(-71deg);
+		}
+		&--3{
+	    transform: rotate(71deg);
+		}		
+	}
 }

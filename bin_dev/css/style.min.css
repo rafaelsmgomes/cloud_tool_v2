@@ -196,6 +196,24 @@ body {
   margin: 0 auto;
   margin-top: 3.80rem; }
 
+.dial__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: normal;
+  margin-top: 0.25rem;
+  color: #fff; }
+  .dial__text--1 {
+    text-align: center;
+    width: 6.60rem; }
+  .dial__text--2 {
+    margin-left: 1.00rem; }
+  .dial__text--3 {
+    margin-right: 1.00rem; }
+
 .cloud__wrapper {
   width: 33.85rem;
   height: 19.13rem;
@@ -250,6 +268,35 @@ body {
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
   transform-origin: 50% 100%; }
+
+.dial__context {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  .dial__context-section {
+    display: flex; }
+    .dial__context-section--1 {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 2.00rem; }
+    .dial__context-section--2 {
+      margin-top: 8.05rem;
+      justify-content: space-between; }
+  .dial__context--wrapper {
+    display: flex; }
+    .dial__context--wrapper--1 {
+      padding-left: 3.30rem; }
+    .dial__context--wrapper--2 {
+      padding-right: 3.30rem; }
+
+.dial__line {
+  background-color: #fff;
+  height: 1.08rem;
+  border: solid 0.2rem #fff; }
+  .dial__line--2 {
+    transform: rotate(-71deg); }
+  .dial__line--3 {
+    transform: rotate(71deg); }
 
 .header__logo {
   flex: 0 0 5.20rem;

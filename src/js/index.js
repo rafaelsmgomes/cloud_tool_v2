@@ -9,8 +9,9 @@ import {e} from './views/base';
 $(document).ready(function(){
 
 	e.btnProgress.sp(v.movement);
+	$('.btn__progress--1').click();
 	f.dialKnob(e.dialTracker);
-	
+
 });  
 
 
