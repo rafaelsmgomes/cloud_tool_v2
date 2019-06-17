@@ -63,7 +63,20 @@
 			&--2{
 				margin-top: 8.05rem;
 		    justify-content: space-between;
+				&-a{
+					margin-top: 13.88rem;
+				}
 			}
+
+			&--3{
+				display: none;
+				justify-content: center;
+		    position: absolute;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    top: 22.45rem;		
+			}
+
 		}
 
 		&--wrapper{

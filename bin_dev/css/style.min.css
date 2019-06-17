@@ -166,7 +166,8 @@ body {
   color: #fff;
   font-stretch: normal;
   line-height: 1.2;
-  letter-spacing: normal; }
+  letter-spacing: normal;
+  letter-spacing: -0.01em; }
   .selection__container--active .selection__text {
     color: #00758f; }
 
@@ -183,7 +184,7 @@ body {
   letter-spacing: normal; }
 
 .results__copy {
-  width: 600px;
+  width: 30.00rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
@@ -214,12 +215,62 @@ body {
   .dial__text--3 {
     margin-right: 1.00rem; }
 
+.cta__txt {
+  width: 15.55rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #fff; }
+  .cta__txt > b {
+    font-weight: 700; }
+  .cta__txt--1 {
+    height: 4.20rem; }
+  .cta__txt--2 {
+    height: 3.20rem; }
+  .cta__txt--3 {
+    height: 2.75rem; }
+    .cta__txt--3-a {
+      letter-spacing: -.01em; }
+
 .cloud__wrapper {
   width: 33.85rem;
   height: 19.13rem;
   background-color: orangered;
   margin: 0 auto;
   margin-top: -1.70rem; }
+
+.cta__wrapper {
+  width: 35.40rem;
+  border: 2px solid #00758f;
+  position: absolute;
+  left: 52.40rem;
+  padding: 0.50rem 0 0.80rem 0.80rem; }
+  .cta__wrapper--1 {
+    top: 33.80rem;
+    height: 8.40rem; }
+  .cta__wrapper--2 {
+    top: 30.20rem;
+    height: 7.20rem; }
+  .cta__wrapper--3 {
+    top: 14.3rem;
+    height: 6.55rem; }
+  .cta__wrapper--4 {
+    top: 35.70rem;
+    height: 6.55rem; }
+    .cta__wrapper--4-a {
+      top: 37.80rem; }
+
+.cta__btn {
+  width: 8.45rem;
+  height: 1.80rem;
+  border: 1px solid #fff;
+  margin-top: 1.10rem; }
+  .cta__btn--2 {
+    margin-top: 0.50rem; }
 
 .btn__progress {
   height: 2.50rem;
@@ -282,6 +333,15 @@ body {
     .dial__context-section--2 {
       margin-top: 8.05rem;
       justify-content: space-between; }
+      .dial__context-section--2-a {
+        margin-top: 13.88rem; }
+    .dial__context-section--3 {
+      display: none;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 22.45rem; }
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {
@@ -460,7 +520,8 @@ body {
 .page__content {
   width: 70.00rem;
   margin: 0 auto;
-  padding-top: 2.95rem; }
+  padding-top: 2.95rem;
+  position: relative; }
 
 .page {
   position: absolute;

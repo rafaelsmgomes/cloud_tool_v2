@@ -108,6 +108,7 @@
 	  font-stretch: normal;
 	  line-height: 1.2;
 	  letter-spacing: normal;
+	  letter-spacing: -0.01em;
 	
 		.selection__container--active &{
 			color: $color-blue-1;
@@ -129,7 +130,7 @@
 	  letter-spacing: normal;
 	}
 	&__copy{
-	 	width: 600px;
+	 	width: 30.00rem;
 	  font-family: $font-reg;
 	  font-size: $font-size-2;
 	  font-weight: normal;
@@ -169,4 +170,35 @@
   		margin-right: 1.00rem;
   	}
   }
+}
+
+.cta{
+	&__txt{
+	  width: 15.55rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-5;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.31;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+
+
+		& > b{
+			font-weight: 700;
+		}
+	  &--1{
+		  height: 4.20rem;
+	  }
+	  &--2{
+	  	height: 3.20rem;
+	  }	  
+	  &--3{
+	  	height: 2.75rem;
+	  	&-a{
+		    letter-spacing: -.01em;
+	  	}
+	  }	 
+	}
 }
