@@ -2,9 +2,10 @@ import 'jquery';
 import 'jquery-knob';
 import 'cpr_scrollpath';
 
+import {e} from './views/base';
+
 import Selector from './models/Selector';
 
-import {e} from './views/base';
 import * as dk from './views/dialView';
 import * as sv from './views/selectorView';
 
@@ -24,9 +25,9 @@ $(document).ready(function(){
 	];
 	e.btnProgress.sp(movement);
 
-	// TEST
-	$('.btn__progress--3').click();
-	// TEST 
+	// // TEST
+	// $('.btn__progress--3').click();
+	// // TEST 
 
 /****** DIAL CONTROLLER ******/
 	e.dialTracker.knob({
@@ -41,20 +42,15 @@ $(document).ready(function(){
 		'fgColor': '#00758f',
 
     'change' : function (v) {
-
-    	const dialHand = $(this)[0].$div.closest('.dial-group').find( ".dial__hand" ); 
-      const dialContext = $(this)[0].$div.closest('.dial-group').find( ".dial__context-section--1, .dial__context-section--2");
-      const dialContextMain = $(this)[0].$div.closest('.dial-group').find( ".dial__context-section--3");
-	 		const rotator = `translateX(-50%) rotate(${v-90}deg)`;
-
-	 		dialHand.css('transform', rotator);
-      dialContext.css('display', 'none');
-      dialContextMain.css('display', 'flex');
+      const self = $(this);
+	 		
+	 		dk.dialRotator(self,v);
+			dk.dialContextualize(self);	 		
     },
-
     'release': function (v){
-       const pageBtnProgress = $(this)[0].$div.closest('.page__content').find( ".btn__progress");
-       pageBtnProgress.click();
+       const self = $(this);
+
+       dk.progressBtn(self);
     },
 	});
 
@@ -63,10 +59,8 @@ $(document).ready(function(){
 
 	e.selection.on('click',function(){
 		const self =  $(this);
-
 		const select = self.data('val');
-		console.log(state.selected.choices);
-		console.log(self);
+		
 		if(!state.selected.choices.includes(select)){
 			sv.highlightSelected(self);
 			state.selected.selectOption(select);
