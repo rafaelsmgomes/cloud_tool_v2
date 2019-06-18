@@ -458,7 +458,8 @@ body {
 .selection__container {
   width: 14.65rem;
   background-color: transparent;
-  border: solid 2px #00758f; }
+  border: solid 2px #00758f;
+  cursor: pointer; }
   .selection__container--active {
     background-color: #fff; }
   .selection__container--1 {
