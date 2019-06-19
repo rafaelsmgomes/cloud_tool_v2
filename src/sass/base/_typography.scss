@@ -215,11 +215,11 @@
 	  color: $color-blue-2;
 	  display: flex;
 	  align-items: center;
+	  margin-right: auto;	  
 		.scroller__content--active &{
 		  height: 3.55rem;
 		  font-size: $font-size-6;
 		  line-height: 1.67;
-		  margin-right: auto;
 		}
 	}
 	&__step{

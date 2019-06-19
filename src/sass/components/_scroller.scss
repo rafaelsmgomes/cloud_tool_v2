@@ -19,6 +19,8 @@
 		background-color: $color-white-1;
 		margin: 0 auto;
 		padding-left: 0.8rem;
+		padding-right: 0.8rem;
+
 		
 		& > *{
 			display: none;
@@ -69,6 +71,14 @@
 			height: auto;
 			align-items: flex-start; 
 
+		}
+	}
+	&__down{
+	  width: 1.20rem;
+	  height: 1.20rem;
+	  background-color: green;
+		.scroller__content--active &{
+			display: none;
 		}
 	}
 }

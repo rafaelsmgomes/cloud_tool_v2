@@ -246,12 +246,12 @@ body {
   letter-spacing: normal;
   color: #324b5c;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-right: auto; }
   .scroller__content--active .scroller__title {
     height: 3.55rem;
     font-size: 1.8rem;
-    line-height: 1.67;
-    margin-right: auto; }
+    line-height: 1.67; }
 
 .scroller__step {
   font-family: Arial, Helvetica, sans-serif;
@@ -321,7 +321,9 @@ body {
 .btn__progress {
   height: 2.50rem;
   width: 7.50rem;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 0;
+  width: 0; }
 
 .dial-group {
   width: 40.48rem;
@@ -485,7 +487,8 @@ body {
   border-radius: 0.20rem;
   background-color: #fff;
   margin: 0 auto;
-  padding-left: 0.8rem; }
+  padding-left: 0.8rem;
+  padding-right: 0.8rem; }
   .scroller__content > * {
     display: none; }
   .scroller__content--active {
@@ -524,6 +527,13 @@ body {
   .scroller__content--active .scroller__header {
     height: auto;
     align-items: flex-start; }
+
+.scroller__down {
+  width: 1.20rem;
+  height: 1.20rem;
+  background-color: green; }
+  .scroller__content--active .scroller__down {
+    display: none; }
 
 .rangeslider,
 .rangeslider__fill {

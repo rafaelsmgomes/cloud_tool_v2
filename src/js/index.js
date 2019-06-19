@@ -26,7 +26,7 @@ $(document).ready(function(){
 	];
 	e.btnProgress.sp(movement);
 
-	$('.btn__progress--5').click();
+	// $('.btn__progress--5').click();
 
 /****** DIAL CONTROLLER ******/
 	e.dialTracker.knob({
