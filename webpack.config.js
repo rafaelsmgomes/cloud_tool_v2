@@ -15,6 +15,7 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',
+			range: 'rangeslider.js',
 			knob: 'jquery-knob',
 			sp: 'cpr_scrollpath',
 		}),

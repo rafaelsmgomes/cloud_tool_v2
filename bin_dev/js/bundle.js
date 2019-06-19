@@ -3594,7 +3594,55 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var jquery_knob__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery-knob */ \"./node_modules/jquery-knob/dist/jquery.knob.min.js\");\n/* harmony import */ var jquery_knob__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_knob__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var cpr_scrollpath__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cpr_scrollpath */ \"./node_modules/cpr_scrollpath/cpr_scrollpath.js\");\n/* harmony import */ var cpr_scrollpath__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cpr_scrollpath__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nvar movement = [['d', 'r'], ['d', 'r'], ['r2', 'u2', 'l2'], ['l'], ['l'], ['d', 'r'], ['r1', 'd1']];\nvar testssss = 'ajsdofjasdf'; // console.log(Knob);\n\n$(document).ready(function () {\n  $('.btn__progress').sp(movement); // tests\n\n  $('.btn__progress--1').click();\n  $(\".dial-tracker\").knob({\n    'min': 0,\n    'max': 180,\n    'angleArc': 180,\n    'angleOffset': -90,\n    'thickness': .12,\n    'height': '200%',\n    'displayInput': false,\n    'bgColor': '#fff',\n    'fgColor': '#00758f',\n    'change': function change(v) {\n      // console.log('1',$(this));\n      // console.log('2',$(this)[0].$div.prevObject.prev());\n      // console.log('2',$(this)[0].$div.closest('.dial-group'));\n      testssss = $(this)[0].$div.closest('.dial-group');\n    }\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var jquery_knob__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery-knob */ \"./node_modules/jquery-knob/dist/jquery.knob.min.js\");\n/* harmony import */ var jquery_knob__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_knob__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var cpr_scrollpath__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cpr_scrollpath */ \"./node_modules/cpr_scrollpath/cpr_scrollpath.js\");\n/* harmony import */ var cpr_scrollpath__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cpr_scrollpath__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _views_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/base */ \"./src/js/views/base.js\");\n/* harmony import */ var _models_Selector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./models/Selector */ \"./src/js/models/Selector.js\");\n/* harmony import */ var _views_dialView__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/dialView */ \"./src/js/views/dialView.js\");\n/* harmony import */ var _views_selectorView__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/selectorView */ \"./src/js/views/selectorView.js\");\n\n\n\n\n\n\n\n$(document).ready(function () {\n  var state = {};\n  /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/\n\n  var movement = [['d', 'r'], ['d', 'r'], ['r2', 'u2', 'l2'], ['l'], ['l'], ['d', 'r'], ['r1', 'd1']];\n  _views_base__WEBPACK_IMPORTED_MODULE_3__[\"e\"].btnProgress.sp(movement);\n  /****** DIAL CONTROLLER ******/\n\n  _views_base__WEBPACK_IMPORTED_MODULE_3__[\"e\"].dialTracker.knob({\n    'min': 0,\n    'max': 180,\n    'angleArc': 180,\n    'angleOffset': -90,\n    'thickness': .12,\n    'height': '200%',\n    'displayInput': false,\n    'bgColor': '#fff',\n    'fgColor': '#00758f',\n    'change': function change(v) {\n      var self = $(this);\n      _views_dialView__WEBPACK_IMPORTED_MODULE_5__[\"dialRotator\"](self, v);\n      _views_dialView__WEBPACK_IMPORTED_MODULE_5__[\"dialContextualize\"](self);\n    },\n    'release': function release(v) {\n      var self = $(this);\n      _views_dialView__WEBPACK_IMPORTED_MODULE_5__[\"progressBtn\"](self);\n    }\n  });\n  /****** SELECTOR CONTROLLER ******/\n\n  state.selected = new _models_Selector__WEBPACK_IMPORTED_MODULE_4__[\"default\"]();\n  _views_base__WEBPACK_IMPORTED_MODULE_3__[\"e\"].selection.on('click', function () {\n    var self = $(this);\n    var select = self.data('val');\n\n    if (!state.selected.choices.includes(select)) {\n      _views_selectorView__WEBPACK_IMPORTED_MODULE_6__[\"highlightSelected\"](self);\n      state.selected.selectOption(select);\n    } else {\n      _views_selectorView__WEBPACK_IMPORTED_MODULE_6__[\"deHighlightSelected\"](self);\n      state.selected.removeOption(select);\n    }\n\n    if (state.selected.choices.length === 3) {\n      var pageBtnProgress = self.closest('.page__content').find(\".btn__progress\");\n      pageBtnProgress.click();\n    }\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/models/Selector.js":
+/*!***********************************!*\
+  !*** ./src/js/models/Selector.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Selector; });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Selector =\n/*#__PURE__*/\nfunction () {\n  function Selector() {\n    _classCallCheck(this, Selector);\n\n    this.choices = [];\n  }\n\n  _createClass(Selector, [{\n    key: \"selectOption\",\n    value: function selectOption(x) {\n      if (this.choices.length !== 3) {\n        this.choices.push(x);\n      }\n\n      ;\n    }\n  }, {\n    key: \"removeOption\",\n    value: function removeOption(x) {\n      var index = this.choices.indexOf(x);\n      this.choices.splice(index, 1);\n    }\n  }]);\n\n  return Selector;\n}();\n\n\n\n//# sourceURL=webpack:///./src/js/models/Selector.js?");
+
+/***/ }),
+
+/***/ "./src/js/views/base.js":
+/*!******************************!*\
+  !*** ./src/js/views/base.js ***!
+  \******************************/
+/*! exports provided: e */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"e\", function() { return e; });\nvar e = {\n  btnProgress: $('.btn__progress'),\n  dialTracker: $(\".dial-tracker\"),\n  selection: $(\".selection__container\"),\n  thisDialElement: function thisDialElement(start, reference, end) {\n    $(start)[0].$div.closest(reference).find(end);\n  }\n};\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/views/base.js?");
+
+/***/ }),
+
+/***/ "./src/js/views/dialView.js":
+/*!**********************************!*\
+  !*** ./src/js/views/dialView.js ***!
+  \**********************************/
+/*! exports provided: dialRotator, dialContextualize, progressBtn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"dialRotator\", function() { return dialRotator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"dialContextualize\", function() { return dialContextualize; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"progressBtn\", function() { return progressBtn; });\nvar dialRotator = function dialRotator(dial, val) {\n  var dialHand = dial[0].$div.closest('.dial-group').find(\".dial__hand\");\n  var rotator = \"translateX(-50%) rotate(\".concat(val - 90, \"deg)\");\n  dialHand.css('transform', rotator);\n};\nvar dialContextualize = function dialContextualize(dial) {\n  var dialContext = dial[0].$div.closest('.dial-group').find(\".dial__context-section--1, .dial__context-section--2\");\n  var dialContextMain = dial[0].$div.closest('.dial-group').find(\".dial__context-section--3\");\n  dialContext.css('display', 'none');\n  dialContextMain.css('display', 'flex');\n};\nvar progressBtn = function progressBtn(dial) {\n  var pageBtnProgress = dial[0].$div.closest('.page__content').find(\".btn__progress\");\n  pageBtnProgress.click();\n};\n\n//# sourceURL=webpack:///./src/js/views/dialView.js?");
+
+/***/ }),
+
+/***/ "./src/js/views/selectorView.js":
+/*!**************************************!*\
+  !*** ./src/js/views/selectorView.js ***!
+  \**************************************/
+/*! exports provided: highlightSelected, deHighlightSelected */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"highlightSelected\", function() { return highlightSelected; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deHighlightSelected\", function() { return deHighlightSelected; });\nvar highlightSelected = function highlightSelected(selected) {\n  selected.addClass('selection__container--active');\n};\nvar deHighlightSelected = function deHighlightSelected(selected) {\n  selected.removeClass('selection__container--active');\n};\n\n//# sourceURL=webpack:///./src/js/views/selectorView.js?");
 
 /***/ }),
 

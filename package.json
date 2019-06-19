@@ -35,8 +35,10 @@
     "@babel/polyfill": "^7.4.3",
     "axios": "^0.19.0",
     "cpr_scrollpath": "^1.0.2",
+    "i": "^0.3.6",
     "jquery": "^3.4.1",
     "jquery-knob": "^1.2.11",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "rangeslider.js": "^2.3.2"
   }
 }

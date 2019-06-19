@@ -1,4 +1,5 @@
 import 'jquery';
+import 'rangeslider.js';
 import 'jquery-knob';
 import 'cpr_scrollpath';
 
@@ -25,9 +26,7 @@ $(document).ready(function(){
 	];
 	e.btnProgress.sp(movement);
 
-	// // TEST
-	// $('.btn__progress--3').click();
-	// // TEST 
+	$('.btn__progress--5').click();
 
 /****** DIAL CONTROLLER ******/
 	e.dialTracker.knob({
@@ -48,13 +47,13 @@ $(document).ready(function(){
 			dk.dialContextualize(self);	 		
     },
     'release': function (v){
-       const self = $(this);
+      const self = $(this);
 
-       dk.progressBtn(self);
+      dk.progressBtn(self);
     },
 	});
 
-/****** SELECTOR CONTROLLER ******/
+/****** SELECTOR CONTROLLER (NEEDS TO BE MODULARIZXED) ******/
 	state.selected = new Selector();
 
 	e.selection.on('click',function(){
@@ -73,6 +72,33 @@ $(document).ready(function(){
     	const pageBtnProgress = self.closest('.page__content').find( ".btn__progress");
     	pageBtnProgress.click();
 		}
+	});
+
+/****** SLIDER CONTROLLER ******/
+	$('input[type="range"]').rangeslider({
+	  polyfill: false,
+
+    // Callback function on slide
+    onSlide: function(position, value) {
+    	
+    },
+
+    // Callback function on end
+    onSlideEnd: function(position, value) {
+    	const slider = this.identifier;
+    	const pageBtnProgress = $(`#${slider}`).closest('.page__content').find( ".btn__progress");
+    	if($(`#${slider}`).closest('.scroller__content').next('.scroller__content').hasClass('scroller__content')){
+    		
+    		// this content closes //add inactive class
+    		$(`#${slider}`).closest('.scroller__content').addClass('scroller__content--deactive');
+    		$(`#${slider}`).closest('.scroller__content').removeClass('scroller__content--active');
+    		// next content becomes active
+    		$(`#${slider}`).closest('.scroller__content').next('.scroller__content').addClass('scroller__content--active');
+
+    	}else{
+	    	pageBtnProgress.click();
+    	};
+    }
 	});
 });  
 
