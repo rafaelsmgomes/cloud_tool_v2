@@ -3,6 +3,8 @@ export const e = {
 	dialTracker: $(".dial-tracker"),
 	selection: $(".selection__container"),
 	restartBtn: $('.header__rectangle--1'),
+	firstScrollers: $('scroller__wrapper--1'),
+	secondScrollers: $('scroller__wrapper--2'),
 
 	thisDialElement: function(start,reference,end){
 		$(start)[0].$div.closest(reference).find(end); 	

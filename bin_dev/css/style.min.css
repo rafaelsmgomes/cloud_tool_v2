@@ -153,13 +153,14 @@ b {
   height: 0.90rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
   letter-spacing: normal;
   text-align: right;
   color: #fff; }
+  .pagination__num--active {
+    font-weight: 700; }
 
 .selection__text {
   font-family: Arial, Helvetica, sans-serif;
@@ -579,6 +580,8 @@ b {
     width: 3.50rem; }
   .pagination--3 {
     width: 5.10rem; }
+  .pagination--active {
+    font-weight: 700; }
 
 .detailed-score__wrapper {
   height: 23.35rem;
@@ -719,8 +722,7 @@ b {
   .rangeslider--horizontal {
     width: 39.17rem;
     height: 0;
-    border: 0;
-    overflow: hidden; }
+    border: 0; }
     .scroller__content--active .rangeslider--horizontal {
       height: 2.20rem;
       border: solid 2px #cad9de;
@@ -837,15 +839,12 @@ b {
     top: 100vh;
     left: 100vw; }
   .page--3 {
-    background-color: green;
     top: 200vh;
     left: 300vw; }
   .page--4 {
-    background-color: orangered;
     top: -300vh;
     left: 300vw; }
   .page--5 {
-    background-color: lime;
     top: -300vh;
     left: 0px; }
   .page--6 {

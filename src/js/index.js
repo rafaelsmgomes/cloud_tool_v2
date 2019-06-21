@@ -7,11 +7,13 @@ import {e} from './views/base';
 
 import Selector from './models/Selector';
 import Page from './models/Page';
+import SliderGroup from './models/Slider';
 
 import * as dial from './views/dialView';
 import * as header from './views/headerView';
+import * as pagination from './views/paginationView';
 import * as selector from './views/selectorView';
-import * as slider from './views/sliderView';
+import * as sl from './views/sliderView';
 
 $(document).ready(function(){
 
@@ -31,7 +33,7 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 	
-	$('.btn__progress--1').click();
+	$('.btn__progress--5').click();
 
 	e.btnProgress.on('click',function(){
 		state.pageNum.incrementPageNum();
@@ -70,9 +72,8 @@ $(document).ready(function(){
 	e.selection.on('click',function(){
 		const self =  $(this);
 		const select = self.data('val');
+		const pageContentElement = self.closest('.page__content');
 		
-		console.log(state.selected);
-
 		if(!state.selected.choices.includes(select)){
 			selector.highlightSelected(self);
 			state.selected.selectOption(select);
@@ -81,12 +82,16 @@ $(document).ready(function(){
 			state.selected.removeOption(select);
 		}
 
+		pagination.highlightPagination(pageContentElement, state.selected.choices);
+
 		if(state.selected.choices.length === 3){
     	selector.progressBtn(self);
 		}
 	});
 
 /****** SLIDER CONTROLLER ******/
+	state.slider1 = new SliderGroup()
+
 	$('input[type="range"]').rangeslider({
 	  polyfill: false,
 
@@ -98,10 +103,10 @@ $(document).ready(function(){
     onSlideEnd: function(position, value) {
     	const slider = this.identifier;
 
-    	if(slider.nextScrollerExist(slider)){    	
-    		slider.progressScrollerContent(slider);
+    	if(sl.nextScrollerExist(slider)){    	
+    		sl.progressScrollerContent(slider);
     	}else{
-	    	slider.progressBtn(slider);
+	    	sl.progressBtn(slider);
     	};
     }
 	});
