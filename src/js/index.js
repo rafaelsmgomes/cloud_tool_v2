@@ -2,17 +2,16 @@ import 'jquery';
 import 'rangeslider.js';
 import 'jquery-knob';
 import 'cpr_scrollpath';
-import 'vue';
 
 import {e} from './views/base';
 
 import Selector from './models/Selector';
 import Page from './models/Page';
 
-import * as dk from './views/dialView';
-import * as hd from './views/headerView';
-import * as sv from './views/selectorView';
-import * as sd from './views/sliderView';
+import * as dial from './views/dialView';
+import * as header from './views/headerView';
+import * as selector from './views/selectorView';
+import * as slider from './views/sliderView';
 
 $(document).ready(function(){
 
@@ -32,9 +31,11 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 	
+	$('.btn__progress--1').click();
+
 	e.btnProgress.on('click',function(){
 		state.pageNum.incrementPageNum();
-		hd.toggleRestartBtn(state.pageNum.pageNumber);
+		header.toggleRestartBtn(state.pageNum.pageNumber);
 	});
 
 /****** DIAL CONTROLLER ******/
@@ -51,18 +52,19 @@ $(document).ready(function(){
 
     'change' : function (v) {
       const self = $(this);
-	 		
-	 		dk.dialRotator(self,v);
-			dk.dialContextualize(self);	 		
+	 	
+
+	 		dial.dialRotator(self,v);
+			dial.dialContextualize(self,v);	 		
     },
     'release': function (v){
       const self = $(this);
 
-      dk.progressBtn(self);
+      dial.progressBtn(self);
     },
 	});
 
-/****** SELECTOR CONTROLLER (NEEDS TO BE MODULARIZXED) ******/
+/****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
 
 	e.selection.on('click',function(){
@@ -72,15 +74,15 @@ $(document).ready(function(){
 		console.log(state.selected);
 
 		if(!state.selected.choices.includes(select)){
-			sv.highlightSelected(self);
+			selector.highlightSelected(self);
 			state.selected.selectOption(select);
 		}else{
-			sv.deHighlightSelected(self);
+			selector.deHighlightSelected(self);
 			state.selected.removeOption(select);
 		}
 
 		if(state.selected.choices.length === 3){
-    	sv.progressBtn(self);
+    	selector.progressBtn(self);
 		}
 	});
 
@@ -96,10 +98,10 @@ $(document).ready(function(){
     onSlideEnd: function(position, value) {
     	const slider = this.identifier;
 
-    	if(sd.nextScrollerExist(slider)){    	
-    		sd.progressScrollerContent(slider);
+    	if(slider.nextScrollerExist(slider)){    	
+    		slider.progressScrollerContent(slider);
     	}else{
-	    	sd.progressBtn(slider);
+	    	slider.progressBtn(slider);
     	};
     }
 	});

@@ -437,7 +437,7 @@ b {
   width: 40.48rem;
   height: 20.27rem;
   position: relative; }
-  .dial-group--1 {
+  .dial-group--1, .dial-group--3 {
     margin-top: 9.35rem; }
   .dial-group--2 {
     margin-top: 1.90rem; }

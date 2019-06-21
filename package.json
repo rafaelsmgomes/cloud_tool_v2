@@ -39,7 +39,6 @@
     "jquery": "^3.4.1",
     "jquery-knob": "^1.2.11",
     "path": "^0.12.7",
-    "rangeslider.js": "^2.3.2",
-    "vue": "^2.6.10"
+    "rangeslider.js": "^2.3.2"
   }
 }
