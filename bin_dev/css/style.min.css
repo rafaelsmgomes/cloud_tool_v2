@@ -848,15 +848,12 @@ b {
     top: -300vh;
     left: 0px; }
   .page--6 {
-    background-color: blueviolet;
     top: -300vh;
     left: -300vw; }
   .page--7 {
-    background-color: tan;
     top: 200vh;
     left: -200vw; }
   .page--8 {
-    background-color: aqua;
     top: 300vh;
     overflow-y: overlay; }
 

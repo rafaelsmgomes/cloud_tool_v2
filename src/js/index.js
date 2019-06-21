@@ -32,8 +32,8 @@ $(document).ready(function(){
 	e.btnProgress.sp(movement);
 
 	state.pageNum = new Page();
-	
-	$('.btn__progress--5').click();
+
+	// $('.btn__progress--5').click();
 
 	e.btnProgress.on('click',function(){
 		state.pageNum.incrementPageNum();
@@ -55,7 +55,6 @@ $(document).ready(function(){
     'change' : function (v) {
       const self = $(this);
 	 	
-
 	 		dial.dialRotator(self,v);
 			dial.dialContextualize(self,v);	 		
     },
@@ -73,7 +72,8 @@ $(document).ready(function(){
 		const self =  $(this);
 		const select = self.data('val');
 		const pageContentElement = self.closest('.page__content');
-		
+		let stateChoicesLength;
+
 		if(!state.selected.choices.includes(select)){
 			selector.highlightSelected(self);
 			state.selected.selectOption(select);
@@ -82,7 +82,9 @@ $(document).ready(function(){
 			state.selected.removeOption(select);
 		}
 
-		pagination.highlightPagination(pageContentElement, state.selected.choices);
+		stateChoicesLength = state.selected.choices.length;
+
+		pagination.highlightPagination(pageContentElement, stateChoicesLength);
 
 		if(state.selected.choices.length === 3){
     	selector.progressBtn(self);
@@ -90,7 +92,9 @@ $(document).ready(function(){
 	});
 
 /****** SLIDER CONTROLLER ******/
-	state.slider1 = new SliderGroup()
+	state.slider1 = new SliderGroup($('.scroller__wrapper--1'));
+	state.slider2 = new SliderGroup($('.scroller__wrapper--2'));
+
 
 	$('input[type="range"]').rangeslider({
 	  polyfill: false,
@@ -101,13 +105,25 @@ $(document).ready(function(){
 
     // Callback function on end
     onSlideEnd: function(position, value) {
-    	const slider = this.identifier;
+    	const slider = this.identifier;    	
+    	const pageContentElement = $(`#${slider}`).closest('.page__content');
+    	let sliderGroup;
+
+    	if(pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--1')){
+    		sliderGroup = state.slider1;    		    		
+    	}else{
+    		sliderGroup = state.slider2;
+    	}
+    	sliderGroup.progression++;
+    	
+    	pagination.highlightPagination(pageContentElement, sliderGroup.progression);
+
 
     	if(sl.nextScrollerExist(slider)){    	
     		sl.progressScrollerContent(slider);
     	}else{
 	    	sl.progressBtn(slider);
-    	};
+    	};      		   
     }
 	});
 });  
