@@ -3,12 +3,9 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-
-  &--1{
-  	background-color: $color-blue-2;
+  &--1{  	
   }
   &--2{
-  	background-color: blue;
   	top: 100vh;
     left: 100vw;	
   }

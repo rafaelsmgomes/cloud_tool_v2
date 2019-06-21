@@ -18,6 +18,7 @@ module.exports = {
 			range: 'rangeslider.js',
 			knob: 'jquery-knob',
 			sp: 'cpr_scrollpath',
+			vue: 'vue',
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',

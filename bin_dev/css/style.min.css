@@ -71,7 +71,10 @@ table {
 
 body {
   margin: 0;
-  background-color: antiquewhite; }
+  background-color: #324b5c; }
+
+b {
+  font-weight: 700; }
 
 .landing__title {
   font-size: 2.4rem;
@@ -236,6 +239,29 @@ body {
     .cta__txt--3-a {
       letter-spacing: -.01em; }
 
+.cta-group__title {
+  height: 1.70rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #324b5c; }
+
+.cta-group__copy {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: normal;
+  color: #324b5c;
+  margin-top: 0.20rem;
+  width: 95%; }
+
 .scroller__title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.95em;
@@ -282,12 +308,94 @@ body {
     text-align: right;
     width: 6.65rem; }
 
+.cloud__text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 9.10rem 4.05rem 3.83rem 4.05rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #324b5c; }
+  .cloud__text > * {
+    line-height: 1.25; }
+
+.cloud__span {
+  display: block; }
+  .cloud__span--2 {
+    font-size: 1.75rem; }
+  .cloud__span > b {
+    font-weight: 700; }
+
+.detailed-score__title {
+  height: 1.70rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #fff; }
+
+.detailed-score__copy {
+  width: 100%;
+  height: 3.20rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: normal;
+  color: #fff;
+  margin-top: 0.55rem; }
+
+.sidebar__title {
+  height: 1.60rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #324b5c;
+  margin-top: -0.30rem; }
+
+.sidebar__info--title {
+  height: 0.90rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.70rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #324b5c; }
+
+.sidebar__info--subtitle {
+  height: 1.15rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.70rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #324b5c; }
+
 .cloud__wrapper {
   width: 33.85rem;
   height: 19.13rem;
   background-color: orangered;
   margin: 0 auto;
-  margin-top: -1.70rem; }
+  margin-top: -1.70rem;
+  position: relative; }
 
 .cta__wrapper {
   width: 35.40rem;
@@ -415,7 +523,6 @@ body {
   display: flex;
   justify-content: space-between; }
   .header__wrapper--1 {
-    flex: 0 0 8.40rem;
     height: 2.00rem; }
 
 .header__rectangle {
@@ -428,6 +535,10 @@ body {
   align-items: center; }
   .header__rectangle:not(:last-of-type) {
     margin-right: 1.20rem; }
+  .header__rectangle--1 {
+    display: none; }
+    .header__rectangle--1.toggle {
+      display: flex; }
 
 .landing__container {
   margin: 0 auto;
@@ -439,12 +550,21 @@ body {
   padding-top: 15.50rem;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
+  .landing__container:hover {
+    background-color: #fff;
+    border: 0; }
+    .landing__container:hover > * {
+      color: #324b5c; }
+    .landing__container:hover > .landing__img--1 {
+      background-image: url("../assets/graphics/down-blue.svg"); }
 
 .landing__img--1 {
   width: 1.20rem;
   height: 1.20rem;
-  margin-top: 0.85rem; }
+  margin-top: 0.85rem;
+  background-image: url("../assets/graphics/down.svg"); }
   .landing__img--1 > * {
     height: 100%;
     width: 100%; }
@@ -463,14 +583,68 @@ body {
 .detailed-score__wrapper {
   height: 23.35rem;
   background-color: green;
-  width: 100%; }
+  width: 100%;
+  padding: 4.37rem 2.40rem 4.38rem 2.60rem;
+  display: flex; }
+
+.detailed-score__container--1 {
+  flex: 0 0 17.95rem;
+  background-color: dodgerblue;
+  margin-right: auto;
+  padding-top: 2.98rem; }
+
+.detailed-score__container--2 {
+  flex: 0 0 25.90rem;
+  background-color: pink; }
+
+.detailed-score__btn {
+  width: 7.00rem;
+  height: 1.90rem;
+  border: solid 0.1rem #fff;
+  margin-top: 1.25rem; }
 
 .cta-group__wrapper {
   height: 25.65rem;
   display: flex;
   width: 45.00rem;
   margin-top: 2.80rem;
-  background-color: blue; }
+  background-color: blue;
+  justify-content: space-between; }
+
+.cta-group__container {
+  flex: 0 0 21.65rem;
+  background-color: #fff; }
+
+.cta-group__btn {
+  border: solid 0.1rem #324b5c;
+  background-color: #324b5c;
+  height: 1.80rem;
+  margin-bottom: 2.80rem;
+  margin-top: 0.85rem; }
+  .cta-group__btn--1 {
+    width: 7.15rem; }
+  .cta-group__btn--2 {
+    width: 8.45rem; }
+
+.sidebar__line {
+  margin-top: 0.30rem; }
+
+.sidebar__group {
+  height: 15.40rem;
+  background-color: orange;
+  width: 100%;
+  margin-top: 1.20rem; }
+
+.sidebar__video--container {
+  width: 100%;
+  height: 9.30rem;
+  background-color: green; }
+
+.sidebar__btn {
+  width: 7.35rem;
+  height: 1.80rem;
+  background-color: #fff;
+  border: solid 0.1rem #324b5c; }
 
 .scroller__wrapper {
   width: 40.90rem;
@@ -545,7 +719,8 @@ body {
   .rangeslider--horizontal {
     width: 39.17rem;
     height: 0;
-    border: 0; }
+    border: 0;
+    overflow: hidden; }
     .scroller__content--active .rangeslider--horizontal {
       height: 2.20rem;
       border: solid 2px #cad9de;
@@ -645,8 +820,7 @@ body {
 
 .results__sidebar {
   flex: 0 0 17.20rem;
-  background-color: dodgerblue;
-  height: 300px; }
+  background-color: dodgerblue; }
 
 .page__content {
   width: 70.00rem;
@@ -659,10 +833,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex; }
-  .page--1 {
-    background-color: #324b5c; }
   .page--2 {
-    background-color: blue;
     top: 100vh;
     left: 100vw; }
   .page--3 {

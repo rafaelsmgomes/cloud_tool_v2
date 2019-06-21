@@ -14,6 +14,5 @@ export const dialContextualize = (dial) => {
 
 export const progressBtn = (dial) => {
    const pageBtnProgress = dial[0].$div.closest('.page__content').find( ".btn__progress");
-
    pageBtnProgress.click();
 }

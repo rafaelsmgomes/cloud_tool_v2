@@ -2,17 +2,21 @@ import 'jquery';
 import 'rangeslider.js';
 import 'jquery-knob';
 import 'cpr_scrollpath';
+import 'vue';
 
 import {e} from './views/base';
 
 import Selector from './models/Selector';
+import Page from './models/Page';
 
 import * as dk from './views/dialView';
+import * as hd from './views/headerView';
 import * as sv from './views/selectorView';
+import * as sd from './views/sliderView';
 
 $(document).ready(function(){
 
-	const state = {};
+ 	const state = {};
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
 	let movement = [
@@ -26,7 +30,12 @@ $(document).ready(function(){
 	];
 	e.btnProgress.sp(movement);
 
-	// $('.btn__progress--5').click();
+	state.pageNum = new Page();
+	
+	e.btnProgress.on('click',function(){
+		state.pageNum.incrementPageNum();
+		hd.toggleRestartBtn(state.pageNum.pageNumber);
+	});
 
 /****** DIAL CONTROLLER ******/
 	e.dialTracker.knob({
@@ -60,6 +69,8 @@ $(document).ready(function(){
 		const self =  $(this);
 		const select = self.data('val');
 		
+		console.log(state.selected);
+
 		if(!state.selected.choices.includes(select)){
 			sv.highlightSelected(self);
 			state.selected.selectOption(select);
@@ -69,8 +80,7 @@ $(document).ready(function(){
 		}
 
 		if(state.selected.choices.length === 3){
-    	const pageBtnProgress = self.closest('.page__content').find( ".btn__progress");
-    	pageBtnProgress.click();
+    	sv.progressBtn(self);
 		}
 	});
 
@@ -79,24 +89,17 @@ $(document).ready(function(){
 	  polyfill: false,
 
     // Callback function on slide
-    onSlide: function(position, value) {
-    	
+    onSlide: function(position, value) {    	
     },
 
     // Callback function on end
     onSlideEnd: function(position, value) {
     	const slider = this.identifier;
-    	const pageBtnProgress = $(`#${slider}`).closest('.page__content').find( ".btn__progress");
-    	if($(`#${slider}`).closest('.scroller__content').next('.scroller__content').hasClass('scroller__content')){
-    		
-    		// this content closes //add inactive class
-    		$(`#${slider}`).closest('.scroller__content').addClass('scroller__content--deactive');
-    		$(`#${slider}`).closest('.scroller__content').removeClass('scroller__content--active');
-    		// next content becomes active
-    		$(`#${slider}`).closest('.scroller__content').next('.scroller__content').addClass('scroller__content--active');
 
+    	if(sd.nextScrollerExist(slider)){    	
+    		sd.progressScrollerContent(slider);
     	}else{
-	    	pageBtnProgress.click();
+	    	sd.progressBtn(slider);
     	};
     }
 	});

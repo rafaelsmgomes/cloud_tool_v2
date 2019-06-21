@@ -8,7 +8,6 @@
 		display: flex;
 		justify-content: space-between;
 		&--1{
-			flex: 0 0 8.40rem;
 			height: 2.00rem;
 		}
 	}
@@ -21,9 +20,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+	
 		&:not(:last-of-type){
 			  margin-right: 1.20rem;
 		}
+
+		&--1{
+			display: none;
+		
+			&.toggle{
+				display: flex;
+			}		
+		}		
 	}
 }
 

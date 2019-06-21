@@ -98,6 +98,7 @@
 	  // border: solid 2px $color-blue-4;
 	  height: 0;
 	  border: 0;
+	  overflow: hidden;
 
 	  .scroller__content--active &{
 		  height: 2.20rem;

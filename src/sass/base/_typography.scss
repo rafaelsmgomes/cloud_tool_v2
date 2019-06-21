@@ -1,3 +1,7 @@
+b {
+	font-weight: 700;
+}
+
 .landing{
 	&__title{
 	  font-size: $font-size-1;
@@ -201,6 +205,32 @@
 	  	}
 	  }	 
 	}
+
+	&-group{
+		&__title{
+			height: 1.70rem;
+		  font-family: $font-reg;
+		  font-size: 1.25rem;
+		  font-weight: bold;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.2;
+		  letter-spacing: normal;
+		  color: $color-blue-2;			
+		}
+		&__copy{			  
+		  font-family: $font-reg;
+		  font-size: $font-size-2;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-blue-2;
+		  margin-top: 0.20rem;
+		  width: 95%;
+		}
+	}
 }
 
 .scroller{
@@ -253,5 +283,101 @@
 			text-align: right;
 	    width: 6.65rem;
 		}
+	}
+}
+
+.cloud{
+	&__text{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		padding: 9.10rem 4.05rem 3.83rem 4.05rem;	
+	  font-family: $font-reg;
+	  font-size: $font-size-1;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  letter-spacing: normal;
+	  text-align: center;
+	  color: $color-blue-2;	
+	
+		& > *{
+	    line-height: 1.25;
+		} 
+	}
+
+	&__span{
+		display: block;
+		&--2{
+			font-size: $font-size-7;
+		}
+
+		& > b{
+			font-weight: 700;
+		}
+	}
+}
+
+.detailed-score{
+	&__title{
+		height: 1.70rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-4;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+	}
+	&__copy{
+	  width: 100%;
+	  height: 3.20rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-2;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.32;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+    margin-top: 0.55rem;
+	}
+}
+
+.sidebar{
+	&__title{
+	  height: 1.60rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-4;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+    margin-top: -0.30rem;	  
+	}
+	&__info--title{
+	  height: 0.90rem;
+	  font-family: $font-reg;
+	  font-size: 0.70rem;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+	}
+	&__info--subtitle{
+		height: 1.15rem;
+	  font-family: $font-reg;
+	  font-size: 0.70rem;
+	  font-weight: 300;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
 	}
 }
