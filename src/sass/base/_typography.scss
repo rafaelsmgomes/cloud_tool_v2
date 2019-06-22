@@ -384,3 +384,19 @@ b {
 	  color: $color-blue-2;
 	}
 }
+
+.btn{
+	&__txt{
+	  height: 1.20rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-3;
+	  font-weight: bold;
+	  font-style: normal;
+    display: flex;
+    align-items: center;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+	}
+}
