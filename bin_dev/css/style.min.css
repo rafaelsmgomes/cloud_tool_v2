@@ -185,7 +185,8 @@ b {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
-  letter-spacing: normal; }
+  letter-spacing: normal;
+  color: #939699; }
 
 .results__copy {
   width: 30.00rem;
@@ -736,7 +737,7 @@ b {
 .scroller__down {
   width: 1.20rem;
   height: 1.20rem;
-  background-color: green; }
+  background-image: url(../assets/graphics/down-blue.svg); }
   .scroller__content--active .scroller__down {
     display: none; }
 

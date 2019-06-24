@@ -75,7 +75,8 @@
 	&__down{
 	  width: 1.20rem;
 	  height: 1.20rem;
-	  background-color: green;
+    background-image: url(../assets/graphics/down-blue.svg);
+		// background-color: green;
 		.scroller__content--active &{
 			display: none;
 		}
