@@ -535,6 +535,10 @@ b {
       padding-left: 3.30rem; }
     .dial__context--wrapper--2 {
       padding-right: 3.30rem; }
+    .dial__context--wrapper--1 {
+      padding-left: 3.70rem; }
+    .dial__context--wrapper--2 {
+      padding-right: 3.70rem; }
 
 .dial__line {
   background-color: #fff;
