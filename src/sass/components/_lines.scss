@@ -1,0 +1,22 @@
+.line{
+	&__wrapper{
+    height: 1px;
+    width: 1px;
+    position: absolute;
+		z-index: 1;
+    overflow: visible;			
+	}
+  
+	stroke:rgb(0,0,0);
+	stroke-width:2;
+
+	&--1{
+	  background-color: #120;
+	}
+	&--2{
+	  background-color: #230;
+	}
+	&--3{
+	  background-color: #340;
+	}		
+}

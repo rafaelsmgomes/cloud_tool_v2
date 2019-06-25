@@ -1,7 +1,7 @@
 .landing{
 	&__container{
 		margin: 0 auto;
-		margin-top: 6.75rem;
+		margin-top: 5.70rem;
 		height: 36.90rem;
 		width: 36.90rem;
 		border: solid 2px $color-blue-3;
@@ -14,7 +14,8 @@
 
     &:hover{
     	background-color: $color-white-1;
-    	border: 0;
+    	// border: 0;
+    	border: solid 2px transparent;
 
     	& > * {
 				color: $color-blue-2;

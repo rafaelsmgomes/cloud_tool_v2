@@ -29,13 +29,18 @@ time, mark, audio, video, button {
   font: inherit;
   vertical-align: baseline;
 }
+svg{
+  height: 0;
+  width: 0;
+  position: absolute;
+}
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow:hidden;
   font-size: 125%; //20px
   box-sizing: border-box;
-  // transform: scale(.1);
+  transform: scale(.4);
 }
 
 article, aside, details, figcaption, figure, 

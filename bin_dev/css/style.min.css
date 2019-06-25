@@ -40,12 +40,18 @@ time, mark, audio, video, button {
   font: inherit;
   vertical-align: baseline; }
 
+svg {
+  height: 0;
+  width: 0;
+  position: absolute; }
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow: hidden;
   font-size: 125%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transform: scale(0.4); }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -577,7 +583,7 @@ b {
 
 .landing__container {
   margin: 0 auto;
-  margin-top: 6.75rem;
+  margin-top: 5.70rem;
   height: 36.90rem;
   width: 36.90rem;
   border: solid 2px #8aadbf;
@@ -589,7 +595,7 @@ b {
   cursor: pointer; }
   .landing__container:hover {
     background-color: #fff;
-    border: 0; }
+    border: solid 2px transparent; }
     .landing__container:hover > * {
       color: #324b5c; }
     .landing__container:hover > .landing__img--1 {
@@ -603,6 +609,22 @@ b {
   .landing__img--1 > * {
     height: 100%;
     width: 100%; }
+
+.line {
+  stroke: black;
+  stroke-width: 2; }
+  .line__wrapper {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    z-index: 1;
+    overflow: visible; }
+  .line--1 {
+    background-color: #120; }
+  .line--2 {
+    background-color: #230; }
+  .line--3 {
+    background-color: #340; }
 
 .pagination {
   display: flex;
@@ -860,14 +882,15 @@ b {
 .page__content {
   width: 70.00rem;
   margin: 0 auto;
-  padding-top: 2.95rem;
+  padding-top: 4.00rem;
   position: relative; }
 
 .page {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  display: flex; }
+  display: flex;
+  background-color: orange; }
   .page--2 {
     top: 100vh;
     left: 100vw; }
