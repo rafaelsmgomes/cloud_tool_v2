@@ -3,7 +3,8 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-color: orange;
+  z-index: 10;
+  // background-color: orange;
   &--1{  	
   }
   &--2{

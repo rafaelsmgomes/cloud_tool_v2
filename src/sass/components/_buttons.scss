@@ -9,4 +9,31 @@
 		// position: absolute;
 		// z-index: -1;
 	}
+
+	&__regress{
+    width: 2.00rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: solid 0.1rem $color-blue-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-blue-2;
+    background-color: transparent;
+    cursor: pointer;
+    
+		&--2,
+		&--5,{
+			margin-top: 4.80rem;
+		}
+		&--3{
+			margin-top: 6.10rem;
+		}    
+		&--4{
+			margin-top: 7.90rem;
+		}
+		&--5{
+	    margin-top: -0.85rem;
+		}
+	}
 }
