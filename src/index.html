@@ -58,12 +58,13 @@
 					<line class="line line--9" x1="50vw" y1="-204.78vh" x2="-286.5vw" y2="-204.78vh"></line>
 					<!-- <line class="line line--10" x1="-250vw" y1="-204.78vh" x2="-250vw" y2="295.22vh"></line> -->
 					<line class="line line--10" x1="-286.5vw" y1="-204.78vh" x2="-286.5vw" y2="295.22vh"></line>
-					<line class="line line--11" x1="-250vw" y1="295.22vh" x2="-150vw" y2="295.22vh"></line>
-					<line class="line line--12" x1="-250vw" y1="295.22vh" x2="50vw" y2="295.22vh"></line>
+					<line class="line line--11" x1="-286.5vw" y1="295.22vh" x2="-150vw" y2="295.22vh"></line>
+					<line class="line line--12" x1="-150vw" y1="295.22vh" x2="50vw" y2="295.22vh"></line>
 				</svg>				
-				<section class='page page--1'>
+				<section class='page page--1 activate'>
 					<div class="page__content">
-						<div class="landing__container btn__progress btn__progress--1">							
+						<div class="landing__container btn__progress btn__progress--1" data-val='1'>
+							<!-- <div class="landing__bg"></div> -->							
 							<h1 class='landing__title'>Are you Cloud Confident?</h1>
 							<h2 class="landing__subtitle">Is your business ahead of the curve, or do you need to catch up?</h2>
 							<div class="landing__txt landing__txt--1">Let's find out</div>
@@ -88,7 +89,7 @@
 						<h3 class='main__direction'>Adjust the dial below to most closely align with you company.</h3>	
 						<div class="dial-group dial-group--1">
 							<div class="dial-tracker__wrapper">
-								<input type="text" value="0" class="dial-tracker dial-tracker--1">
+								<input type="text" value="0" class="dial-tracker dial-tracker--1" data-id='1'>
 							</div>					
 							<div class="dial-clock__wrapper">
 								<div class="dial__crown"></div>
@@ -116,7 +117,7 @@
 								</div>						
 							</div>		
 						</div>									
-					<button class='btn__progress btn__progress--2'></button>	
+					<button class='btn__progress btn__progress--2' data-val='2'></button>	
 					<button class="btn__regress btn__regress--2">
 						<img src="assets/graphics/back.svg" alt="back.svg">
 					</button>
@@ -137,7 +138,7 @@
 						<h3 class='main__direction'>Adjust the dial below to most closely align with your company.</h3>
 						<div class="dial-group dial-group--2">
 							<div class="dial-tracker__wrapper">
-								<input type="text" value="0" class="dial-tracker dial-tracker--2">
+								<input type="text" value="0" class="dial-tracker dial-tracker--2" data-id='2'>
 							</div>							
 							<div class="dial-clock__wrapper">
 								<div class="dial__crown"></div>
@@ -161,7 +162,7 @@
 								</div>									
 							</div>
 						</div>								
-						<button class='btn__progress btn__progress--3'></button>
+						<button class='btn__progress btn__progress--3' data-val='3'></button>
 						<button class="btn__regress btn__regress--3">
 							<img src="assets/graphics/back.svg" alt="back.svg">
 						</button>
@@ -228,7 +229,7 @@
 								</span>
 							</div>
 						</div>
-						<button class='btn__progress btn__progress--4'></button>
+						<button class='btn__progress btn__progress--4' data-val='4'></button>
 						<button class="btn__regress btn__regress--4">
 							<img src="assets/graphics/back.svg" alt="back.svg">
 						</button>
@@ -249,7 +250,7 @@
 						<h3 class='main__direction'>Adjust the dial below to most closely align with your company.</h3>
 						<div class="dial-group dial-group--3">
 							<div class="dial-tracker__wrapper">
-								<input type="text" value="0" class="dial-tracker dial-tracker--3">
+								<input type="text" value="0" class="dial-tracker dial-tracker--3" data-id='3'>
 							</div>							
 							<div class="dial-clock__wrapper">
 								<div class="dial__crown"></div>
@@ -277,7 +278,7 @@
 								</div>								
 							</div>
 						</div>											
-						<button class='btn__progress btn__progress--5'></button>					
+						<button class='btn__progress btn__progress--5' data-val='5'></button>					
 						<button class="btn__regress btn__regress--5">
 							<img src="assets/graphics/back.svg" alt="back.svg">
 						</button>
@@ -356,8 +357,8 @@
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
 						</div>
-						<button class='btn__progress btn__progress--6'></button>								
-						<button class="btn__regress btn__regress--3">
+						<button class='btn__progress btn__progress--6' data-val='6'></button>								
+						<button class="btn__regress btn__regress--6">
 							<img src="assets/graphics/back.svg" alt="back.svg">
 						</button>
 					</div>
@@ -463,8 +464,8 @@
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>																			
 						</div>											
-						<button class='btn__progress btn__progress--7'></button>			
-						<button class="btn__regress btn__regress--5">
+						<button class='btn__progress btn__progress--7' data-val='7'></button>			
+						<button class="btn__regress btn__regress--7">
 							<img src="assets/graphics/back.svg" alt="back.svg">
 						</button>									
 					</div>					
@@ -474,8 +475,8 @@
 						<div class="results__logo">Cloud Confidence Results</div>
 							<div class="cloud__wrapper">
 								<div class="cloud__text">
-									<span class="cloud__span cloud__span--1">You Score: <b>50</b></span>
-									<span class="cloud__span cloud__span--2">You Peers: <b>77</b></span>
+									<span class="cloud__span cloud__span--1">You Score: <b id='userValue'>0</b></span>
+									<span class="cloud__span cloud__span--2">You Peers: <b id='peersValue'>77</b></span>
 								</div>
 							</div>
 							
@@ -496,7 +497,10 @@
 										<div class="detailed-score__container detailed-score__container--1">
 											<div class="detailed-score__title">Detailed Score Report</div>
 											<div class="detailed-score__copy">Value proposition, look at all the cool features you can have access to.</div>
-											<div class="detailed-score__btn"></div>									
+											<div class="detailed-score__btn">
+													<div class="btn__txt">Get Access</div>
+													<div class="btn__arrow"></div>												
+											</div>									
 										</div>
 										<div class="detailed-score__container detailed-score__container--2"></div>
 									</div>
@@ -506,29 +510,44 @@
 											<div class="cta-group__group">
 												<div class="cta-group__title">Further Information</div>
 												<div class="cta-group__copy">Please go to oracle.com/cloud</div>
-												<div class="cta-group__btn cta-group__btn--1"></div>
+												<div class="cta-group__btn cta-group__btn--1">
+													<div class="btn__txt">Visit the site</div>
+													<div class="btn__arrow"></div>
+												</div>
 											</div>
 											<div class="cta-group__group">
 												<div class="cta-group__title">Cloud Events</div>
 												<div class="cta-group__copy">Check out cloud events near you.</div>
-												<div class="cta-group__btn cta-group__btn--1"></div>
+												<div class="cta-group__btn cta-group__btn--1">
+													<div class="btn__txt">See the List</div>
+													<div class="btn__arrow"></div>													
+												</div>
 											</div>
 											<div class="cta-group__group">
 												<div class="cta-group__title">TCO Calculator</div>
 												<div class="cta-group__copy">See how much you could save by moving your data management to Oracle DataBase Cloud Serices: Oracle Database Cloud TCO Calculator</div>
-												<div class="cta-group__btn cta-group__btn--1"></div>
+												<div class="cta-group__btn cta-group__btn--1">
+													<div class="btn__txt">See the List</div>
+													<div class="btn__arrow"></div>															
+												</div>
 											</div>
 										</div>
 										<div class="cta-group__container cta-group__container--2">
 											<div class="cta-group__group">
 												<div class="cta-group__title">Get Cloud Overview</div>
 												<div class="cta-group__copy">An overview of how Oracle can help with your cloud implementation.</div>
-												<div class="cta-group__btn cta-group__btn--2"></div>
+												<div class="cta-group__btn cta-group__btn--2">
+													<div class="btn__txt">See the Guide</div>
+													<div class="btn__arrow"></div>															
+												</div>
 											</div>
 											<div class="cta-group__group">
 												<div class="cta-group__title">New Frontiers of Automation</div>
 												<div class="cta-group__copy">Read the IT Leaders’ Guide to Oracle Autonomous Database.</div>
-												<div class="cta-group__btn cta-group__btn--2"></div>
+												<div class="cta-group__btn cta-group__btn--2">
+													<div class="btn__txt">Read the article</div>
+													<div class="btn__arrow"></div>															
+												</div>
 											</div>
 										</div>
 									</div>
@@ -543,7 +562,10 @@
 										<div class="sidebar__info--wrapper">
 											<div class="sidebar__info--title">Independent Research Report</div>
 											<div class="sidebar__info--subtitle">By Longitude</div>
-											<div class="sidebar__btn"></div>
+											<div class="sidebar__btn">
+												<div class="btn__txt">See the Guide</div>
+												<div class="btn__arrow"></div>
+											</div>
 										</div>
 									</div>
 									<div class="sidebar__group">
@@ -551,7 +573,10 @@
 										<div class="sidebar__info--wrapper">
 											<div class="sidebar__info--title">Oracle Autonomous Database</div>
 											<div class="sidebar__info--subtitle">Innovate for tomorrow, today with Oracle Cloud.</div>
-											<div class="sidebar__btn"></div>
+											<div class="sidebar__btn">
+												<div class="btn__txt">Start for free</div>
+												<div class="btn__arrow"></div>
+											</div>
 										</div>
 									</div>
 								</div>

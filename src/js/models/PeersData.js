@@ -1,0 +1,1 @@
+export const highlightPagination = Math.round(70.4);

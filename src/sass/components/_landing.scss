@@ -11,20 +11,27 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    
+    // &:hover{
+    // 	background-color: $color-white-1;
+    // 	// border: 0;
+    // 	border: solid 2px transparent;
+			
+    // 	& > * {
+				// color: $color-blue-2;
+    // 	}
 
-    &:hover{
-    	background-color: $color-white-1;
-    	// border: 0;
-    	border: solid 2px transparent;
+    // 	& > .landing__img--1{
+    // 		background-image: url('../assets/graphics/down-blue.svg');
+    // 	}
+    // }
 
-    	& > * {
-				color: $color-blue-2;
-    	}
+		&--fadeout{
+			transition-property: border-color;
+	    transition-duration: 0.5s;			
+	    border-color: transparent;			
+		}
 
-    	& > .landing__img--1{
-    		background-image: url('../assets/graphics/down-blue.svg');
-    	}
-    }
 	}
 	&__img{
 		&--1{

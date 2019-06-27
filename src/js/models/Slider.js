@@ -3,6 +3,25 @@ export default class SliderGroup {
         this.group = group;
         this.sliderArray = this.retrieveSliders();
         this.progression = 0;
+        this.arrayVal = [];
+        this.val = 0;
+    }
+
+    pushToVal(x){
+        this.arrayVal.push(x);        
+    }
+
+    calculateVal(){    
+        let avg;
+        let sum = 0;
+
+        this.arrayVal.forEach( function(element, index) {
+            sum+=element;
+        });
+
+        avg = Math.round(20*((sum/this.arrayVal.length)/100));
+
+        this.val = avg;
     }
 
     retrieveSliders(){

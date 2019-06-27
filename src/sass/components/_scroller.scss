@@ -99,6 +99,7 @@
 	  height: 0;
 	  border: 0;
 	  // overflow: hidden;
+	  cursor: pointer;
 
 	  .scroller__content--active &{
 		  height: 2.20rem;

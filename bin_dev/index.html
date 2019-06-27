@@ -10,11 +10,11 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" type="text/javascript" ><\/script>');</script>
-		<script type="text/javascript" src="js/vue.min.js"></script>
 	  <!-- Start SiteCatalyst codess -->
 	  <script language="JavaScript" type="text/javascript">
 	      var s_html5videocta = "true";
 	  </script>
+
 	  <script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
 	  <!-- End SiteCatalyst codes -->
 		<!-- Hotjar Tracking Code for https://demo.ineedcpr.com/cloud_confidence_assessment/main.html -->
@@ -46,14 +46,30 @@
 		</div>
 		<div class="main-container">
 			<div class="pathfinder">   <!-- IMPORTANT! -->
-				<section class='page page--1'>
+				<svg class="line__wrapper">									
+					<line class="line line--1" x1="50vw" y1="95.2vh" x2="50vw" y2="195.22vh"></line>
+					<line class="line line--2" x1="50vw" y1="195.22vh" x2="150vw" y2="195.22vh"></line>
+					<line class="line line--3" x1="150vw" y1="195.22vh" x2="150vw" y2="295.22vh"></line>
+					<line class="line line--4" x1="150vw" y1="295.22vh" x2="350vw" y2="295.22vh"></line>		
+					<line class="line line--5" x1="350vw" y1="295.22vh" x2="425vw" y2="295.22vh"></line>
+					<line class="line line--6" x1="425vw" y1="295.22vh" x2="425vw" y2="-204.78vh"></line>					
+					<line class="line line--7" x1="425vw" y1="-204.78vh" x2="350vw" y2="-204.78vh"></line>	
+					<line class="line line--8" x1="425vw" y1="-204.78vh" x2="50vw" y2="-204.78vh"></line>
+					<line class="line line--9" x1="50vw" y1="-204.78vh" x2="-286.5vw" y2="-204.78vh"></line>
+					<!-- <line class="line line--10" x1="-250vw" y1="-204.78vh" x2="-250vw" y2="295.22vh"></line> -->
+					<line class="line line--10" x1="-286.5vw" y1="-204.78vh" x2="-286.5vw" y2="295.22vh"></line>
+					<line class="line line--11" x1="-286.5vw" y1="295.22vh" x2="-150vw" y2="295.22vh"></line>
+					<line class="line line--12" x1="-150vw" y1="295.22vh" x2="50vw" y2="295.22vh"></line>
+				</svg>				
+				<section class='page page--1 activate'>
 					<div class="page__content">
-						<div class="landing__container">							
+						<div class="landing__container btn__progress btn__progress--1" data-val='1'>
+							<!-- <div class="landing__bg"></div> -->							
 							<h1 class='landing__title'>Are you Cloud Confident?</h1>
 							<h2 class="landing__subtitle">Is your business ahead of the curve, or do you need to catch up?</h2>
 							<div class="landing__txt landing__txt--1">Let's find out</div>
-							<div class="landing__img landing__img--1 btn__progress btn__progress--1">
-								<img src="assets/graphics/down.svg" alt="down.svg">
+							<div class="landing__img landing__img--1">
+								<!-- <img src="assets/graphics/down.svg" alt="assets/graphics/down.svg"> -->
 							</div>
 						</div>
 					</div>
@@ -64,13 +80,16 @@
 							<div class="cta__txt cta__txt--1">
 								Companies with the most of their applications in the cloud report the greatest increases in productivity and competitiveness.
 							</div>
-							<div class="cta__btn cta__btn--1"></div>
+							<div class="cta__btn cta__btn--1">
+								<div class="btn__txt">Watch the video</div>
+								<div class="btn__arrow"></div>
+							</div>
 						</div>								
 						<h1 class='main__title main__title--1'>How is your organization currently utilizing cloud services?</h1>
 						<h3 class='main__direction'>Adjust the dial below to most closely align with you company.</h3>	
 						<div class="dial-group dial-group--1">
 							<div class="dial-tracker__wrapper">
-								<input type="text" value="0" class="dial-tracker">
+								<input type="text" value="0" class="dial-tracker dial-tracker--1" data-id='1'>
 							</div>					
 							<div class="dial-clock__wrapper">
 								<div class="dial__crown"></div>
@@ -92,14 +111,16 @@
 										</div>										
 									</div>		
 									<div class="dial__context-section dial__context-section--3">
-										<div class="dial__text">
-											Planning
+										<div class="dial__text dial__text--4">
 										</div>
 									</div>
 								</div>						
 							</div>		
 						</div>									
-					<button class='btn__progress btn__progress--2'></button>					
+					<button class='btn__progress btn__progress--2' data-val='2'></button>	
+					<button class="btn__regress btn__regress--2">
+						<img src="assets/graphics/back.svg" alt="back.svg">
+					</button>
 					</div>
 				</section>
 				<section class='page page--3'>
@@ -108,13 +129,16 @@
 							<div class="cta__txt cta__txt--2">
 								<b>72%</b> say moving applications, DevOps, and workloads to the cloud in integral to competitiveness.
 							</div>
-							<div class="cta__btn cta__btn--1"></div>
+							<div class="cta__btn cta__btn--1">
+								<div class="btn__txt">Read the brief</div>
+								<div class="btn__arrow"></div>
+							</div>
 						</div>								
 						<h1 class='main__title main__title--2'>How would migrating apps and workloads to the cloud impact your business?</h1>
 						<h3 class='main__direction'>Adjust the dial below to most closely align with your company.</h3>
 						<div class="dial-group dial-group--2">
 							<div class="dial-tracker__wrapper">
-								<input type="text" value="0" class="dial-tracker">
+								<input type="text" value="0" class="dial-tracker dial-tracker--2" data-id='2'>
 							</div>							
 							<div class="dial-clock__wrapper">
 								<div class="dial__crown"></div>
@@ -131,15 +155,17 @@
 										</div>										
 									</div>		
 									<div class="dial__context-section dial__context-section--3">
-										<div class="dial__text">
+										<div class="dial__text dial__text--4">
 											Planning
 										</div>
 									</div>									
 								</div>									
 							</div>
 						</div>								
-						<button class='btn__progress btn__progress--3'></button>
-						<h1>3</h1>
+						<button class='btn__progress btn__progress--3' data-val='3'></button>
+						<button class="btn__regress btn__regress--3">
+							<img src="assets/graphics/back.svg" alt="back.svg">
+						</button>
 					</div>
 				</section>
 				<section class='page page--4'>
@@ -148,14 +174,17 @@
 							<div class="cta__txt cta__txt--3">
 								<b>50%</b> Claim integration improvements since moving to the cloud.
 							</div>
-							<div class="cta__btn cta__btn--2"></div>
+							<div class="cta__btn cta__btn--2">
+								<div class="btn__txt">Read the brief</div>
+								<div class="btn__arrow"></div>
+							</div>
 						</div>							
 						<h1 class='main__title main__title--3'>Top 3 PaaS Features</h1>
 						<h3 class='main__direction main__direction--1'>Select the top 3 PaaS Integration features most important to enabling digital transformation.</h3>		
 						<div class="pagination pagination--1">
-							<span class="pagination__num pagination__num--1">1</span>
-							<span class="pagination__num pagination__num--2">2</span>
-							<span class="pagination__num pagination__num--3">3</span>
+							<span class="pagination__num pagination__num--0 pagination--active">1</span>
+							<span class="pagination__num pagination__num--1">2</span>
+							<span class="pagination__num pagination__num--2">3</span>
 						</div>
 						
 						<div class="selection__wrapper">
@@ -200,8 +229,10 @@
 								</span>
 							</div>
 						</div>
-						<button class='btn__progress btn__progress--4'></button>
-						<h1>4</h1>
+						<button class='btn__progress btn__progress--4' data-val='4'></button>
+						<button class="btn__regress btn__regress--4">
+							<img src="assets/graphics/back.svg" alt="back.svg">
+						</button>
 					</div>
 				</section>
 				<section class='page page--5'>
@@ -210,13 +241,16 @@
 							<div class="cta__txt cta__txt--3">
 								<b>77%</b> of cloud-mature companies claim they are able to generate better data insights.
 							</div>
-							<div class="cta__btn cta__btn--2"></div>
+							<div class="cta__btn cta__btn--2">
+								<div class="btn__txt">Read the brief</div>
+								<div class="btn__arrow"></div>
+							</div>
 						</div>							
 						<h1 class='main__title main__title--1'>How would managing data in the cloud effect the way you use data?</h1>
 						<h3 class='main__direction'>Adjust the dial below to most closely align with your company.</h3>
-						<div class="dial-group dial-group--1">
+						<div class="dial-group dial-group--3">
 							<div class="dial-tracker__wrapper">
-								<input type="text" value="0" class="dial-tracker">
+								<input type="text" value="0" class="dial-tracker dial-tracker--3" data-id='3'>
 							</div>							
 							<div class="dial-clock__wrapper">
 								<div class="dial__crown"></div>
@@ -237,14 +271,17 @@
 										</div>										
 									</div>		
 									<div class="dial__context-section dial__context-section--3">
-										<div class="dial__text">
+										<div class="dial__text dial__text--4">
 											Planning
 										</div>
 									</div>
 								</div>								
 							</div>
 						</div>											
-						<button class='btn__progress btn__progress--5'></button>					
+						<button class='btn__progress btn__progress--5' data-val='5'></button>					
+						<button class="btn__regress btn__regress--5">
+							<img src="assets/graphics/back.svg" alt="back.svg">
+						</button>
 					</div>
 				</section>
 				<section class='page page--6'>
@@ -253,20 +290,23 @@
 							<div class="cta__txt cta__txt--2">
 								Cloud-mature companies believe that the safest place for their data is not in data centers, but in the cloud.
 							</div>
-							<div class="cta__btn cta__btn--1"></div>
+							<div class="cta__btn cta__btn--1">
+								<div class="btn__txt">Read the brief</div>
+								<div class="btn__arrow"></div>
+							</div>
 						</div>						
 						<h1 class="main__title main__title--3">Security and Management</h1>
 						<h3 class='main__direction'>Please adjust the sliders based on your organization’s security and management.</h3>		
 						<div class="pagination pagination--2">
-							<span class="pagination__num pagination__num--1">1</span>
-							<span class="pagination__num pagination__num--2">2</span>
-							<span class="pagination__num pagination__num--3">3</span>
-							<span class="pagination__num pagination__num--4">4</span>
+							<span class="pagination__num pagination__num--0 pagination--active">1</span>
+							<span class="pagination__num pagination__num--1">2</span>
+							<span class="pagination__num pagination__num--2">3</span>
+							<span class="pagination__num pagination__num--3">4</span>
 						</div>
 						<div class="scroller__wrapper scroller__wrapper--1">
 							<div class="scroller__content scroller__content--1 scroller__content--active">
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--1"></div>
 									<div class="scroller__title">Cyber Security Prevention</div>
 									<div class="scroller__step">1/4</div>
 									<div class="scroller__down"></div>
@@ -279,7 +319,7 @@
 							</div>
 							<div class="scroller__content scroller__content--2">								
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--2"></div>
 									<div class="scroller__title">Cyber Security Threat Detection</div>
 									<div class="scroller__step">2/4</div>
 									<div class="scroller__down"></div>
@@ -292,7 +332,7 @@
 							</div>
 							<div class="scroller__content scroller__content--3">
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--3"></div>
 									<div class="scroller__title">Capacity Planning</div>
 									<div class="scroller__step">3/4</div>
 									<div class="scroller__down"></div>
@@ -305,7 +345,7 @@
 							</div>
 							<div class="scroller__content scroller__content--4">
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--4"></div>
 									<div class="scroller__title">Outage Prevention</div>
 									<div class="scroller__step">4/4</div>
 									<div class="scroller__down"></div>
@@ -317,7 +357,10 @@
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
 						</div>
-						<button class='btn__progress btn__progress--6'></button>								
+						<button class='btn__progress btn__progress--6' data-val='6'></button>								
+						<button class="btn__regress btn__regress--6">
+							<img src="assets/graphics/back.svg" alt="back.svg">
+						</button>
 					</div>
 				</section>
 				<section class='page page--7'>
@@ -326,17 +369,20 @@
 							<div class="cta__txt cta__txt--3 cta__txt--3-a">
 								The gap between cloud-mature businesses and late adopters is widest in data analytics.
 							</div>
-							<div class="cta__btn cta__btn--2"></div>
+							<div class="cta__btn cta__btn--2">
+								<div class="btn__txt">Read the brief</div>
+								<div class="btn__arrow"></div>
+							</div>
 						</div>						
 						<h1 class="main__title main__title--3">Data and Analytics</h1>
 						<h3 class='main__direction'>Please adjust the sliders based on your organization’s data and analytics.</h3>		
 						<div class="pagination pagination--3">
-							<span class="pagination__num pagination__num--1">1</span>
-							<span class="pagination__num pagination__num--2">2</span>
-							<span class="pagination__num pagination__num--3">3</span>
-							<span class="pagination__num pagination__num--4">4</span>
-							<span class="pagination__num pagination__num--5">5</span>
-							<span class="pagination__num pagination__num--6">6</span>														
+							<span class="pagination__num pagination__num--0 pagination--active">1</span>
+							<span class="pagination__num pagination__num--1">2</span>
+							<span class="pagination__num pagination__num--2">3</span>
+							<span class="pagination__num pagination__num--3">4</span>
+							<span class="pagination__num pagination__num--4">5</span>
+							<span class="pagination__num pagination__num--5">6</span>														
 						</div>
 						<div class="scroller__wrapper scroller__wrapper--2">
 							<div class="scroller__content scroller__content--1 scroller__content--active">
@@ -354,7 +400,7 @@
 							</div>
 							<div class="scroller__content scroller__content--2">								
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--2"></div>
 									<div class="scroller__title">Cyber Security Threat Detection</div>
 									<div class="scroller__step">2/6</div>
 									<div class="scroller__down"></div>
@@ -367,7 +413,7 @@
 							</div>
 							<div class="scroller__content scroller__content--3">
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--3"></div>
 									<div class="scroller__title">Capacity Planning</div>
 									<div class="scroller__step">3/6</div>
 									<div class="scroller__down"></div>
@@ -380,7 +426,7 @@
 							</div>
 							<div class="scroller__content scroller__content--4">
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--4"></div>
 									<div class="scroller__title">Outage Prevention</div>
 									<div class="scroller__step">4/6</div>
 									<div class="scroller__down"></div>
@@ -393,7 +439,7 @@
 							</div>		
 							<div class="scroller__content scroller__content--5">
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--5"></div>
 									<div class="scroller__title">Outage Prevention</div>
 									<div class="scroller__step">5/6</div>
 									<div class="scroller__down"></div>
@@ -406,7 +452,7 @@
 							</div>		
 							<div class="scroller__content scroller__content--6">
 								<div class="scroller__header">
-									<div class="scroller__icon"></div>
+									<div class="scroller__icon scroller__icon--6"></div>
 									<div class="scroller__title">Outage Prevention</div>
 									<div class="scroller__step">6/6</div>
 									<div class="scroller__down"></div>
@@ -418,45 +464,127 @@
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>																			
 						</div>											
-						<button class='btn__progress btn__progress--7'></button>						
+						<button class='btn__progress btn__progress--7' data-val='7'></button>			
+						<button class="btn__regress btn__regress--7">
+							<img src="assets/graphics/back.svg" alt="back.svg">
+						</button>									
 					</div>					
 				</section>
 				<section class='page page--8'>
 					<div class="page__content">
 						<div class="results__logo">Cloud Confidence Results</div>
-						 <div class="cloud__wrapper">
-							
-						</div>
-						
-						<div class="results__copy">
-							<span class='block'>
-								Your score indicates that you are behind your peers with cloud-confidence and cloud adoption.
-							</span>	
-							<span class='block'>&nbsp;</span>
-							<span class='block'>
-								To remain competitive, your company should actively pursue the promise of lower costs, greater topline growth, and easier access to innovation that comes with cloud adoption.
-							</span>
-						</div>
-
-						<div class="results__main">
-						
-							<div class="results__body">
-								<div class="detailed-score__wrapper"></div>
-
-								<div class="cta-group__wrapper">
-<!-- 									<div class="cta__wrapper"></div>
-									<div class="cta__wrapper"></div>
-									<div class="cta__wrapper"></div>
-									<div class="cta__wrapper"></div>
-									<div class="cta__wrapper"></div> -->
+							<div class="cloud__wrapper">
+								<div class="cloud__text">
+									<span class="cloud__span cloud__span--1">You Score: <b id='userValue'>0</b></span>
+									<span class="cloud__span cloud__span--2">You Peers: <b id='peersValue'>77</b></span>
 								</div>
 							</div>
-							<div class="results__sidebar"></div>
-						
-						</div> 
+							
+							<div class="results__copy">
+								<span class='block'>
+									Your score indicates that you are <b>behind your peers</b> with cloud-confidence and cloud adoption.
+								</span>	
+								<span class='block'>&nbsp;</span>
+								<span class='block'>
+									To remain competitive, your company should actively pursue the promise of lower costs, greater topline growth, and easier access to innovation that comes with cloud adoption.
+								</span>
+							</div>
+
+							<div class="results__main">
+							
+								<div class="results__body">
+									<div class="detailed-score__wrapper">
+										<div class="detailed-score__container detailed-score__container--1">
+											<div class="detailed-score__title">Detailed Score Report</div>
+											<div class="detailed-score__copy">Value proposition, look at all the cool features you can have access to.</div>
+											<div class="detailed-score__btn">
+													<div class="btn__txt">Get Access</div>
+													<div class="btn__arrow"></div>												
+											</div>									
+										</div>
+										<div class="detailed-score__container detailed-score__container--2"></div>
+									</div>
+
+									<div class="cta-group__wrapper">
+										<div class="cta-group__container cta-group__container--1">
+											<div class="cta-group__group">
+												<div class="cta-group__title">Further Information</div>
+												<div class="cta-group__copy">Please go to oracle.com/cloud</div>
+												<div class="cta-group__btn cta-group__btn--1">
+													<div class="btn__txt">Visit the site</div>
+													<div class="btn__arrow"></div>
+												</div>
+											</div>
+											<div class="cta-group__group">
+												<div class="cta-group__title">Cloud Events</div>
+												<div class="cta-group__copy">Check out cloud events near you.</div>
+												<div class="cta-group__btn cta-group__btn--1">
+													<div class="btn__txt">See the List</div>
+													<div class="btn__arrow"></div>													
+												</div>
+											</div>
+											<div class="cta-group__group">
+												<div class="cta-group__title">TCO Calculator</div>
+												<div class="cta-group__copy">See how much you could save by moving your data management to Oracle DataBase Cloud Serices: Oracle Database Cloud TCO Calculator</div>
+												<div class="cta-group__btn cta-group__btn--1">
+													<div class="btn__txt">See the List</div>
+													<div class="btn__arrow"></div>															
+												</div>
+											</div>
+										</div>
+										<div class="cta-group__container cta-group__container--2">
+											<div class="cta-group__group">
+												<div class="cta-group__title">Get Cloud Overview</div>
+												<div class="cta-group__copy">An overview of how Oracle can help with your cloud implementation.</div>
+												<div class="cta-group__btn cta-group__btn--2">
+													<div class="btn__txt">See the Guide</div>
+													<div class="btn__arrow"></div>															
+												</div>
+											</div>
+											<div class="cta-group__group">
+												<div class="cta-group__title">New Frontiers of Automation</div>
+												<div class="cta-group__copy">Read the IT Leaders’ Guide to Oracle Autonomous Database.</div>
+												<div class="cta-group__btn cta-group__btn--2">
+													<div class="btn__txt">Read the article</div>
+													<div class="btn__arrow"></div>															
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="results__sidebar">
+									<div class="sidebar__title">
+										Recommended for you
+									</div>
+									<hr class='sidebar__line'>
+									<div class="sidebar__group">
+										<div class="sidebar__video--container"></div>
+										<div class="sidebar__info--wrapper">
+											<div class="sidebar__info--title">Independent Research Report</div>
+											<div class="sidebar__info--subtitle">By Longitude</div>
+											<div class="sidebar__btn">
+												<div class="btn__txt">See the Guide</div>
+												<div class="btn__arrow"></div>
+											</div>
+										</div>
+									</div>
+									<div class="sidebar__group">
+										<div class="sidebar__video--container"></div>
+										<div class="sidebar__info--wrapper">
+											<div class="sidebar__info--title">Oracle Autonomous Database</div>
+											<div class="sidebar__info--subtitle">Innovate for tomorrow, today with Oracle Cloud.</div>
+											<div class="sidebar__btn">
+												<div class="btn__txt">Start for free</div>
+												<div class="btn__arrow"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							</div> 
 					</div>
 				</section>
-			</div>
+			</div>			
 		</div>
-	<script type="text/javascript" src="js/bundle.js"></script></body>
+	<script type="text/javascript" src="js/bundle.js"></script></body>		
 </html>

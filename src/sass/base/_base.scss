@@ -68,4 +68,9 @@ table {
 body{
   margin: 0;
   background-color: $color-blue-2;
+
+
+  &.bg-white{
+    background-color: $color-white-1;
+  }
 }

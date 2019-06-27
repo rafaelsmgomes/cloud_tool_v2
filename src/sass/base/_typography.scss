@@ -13,6 +13,13 @@ b {
 	  text-align: center;
 	  color: $color-white-1;
 	  font-family: $font-reg;
+		transition-delay: .5s;
+		transition-property: opacity;
+    transition-duration: 0.5s;
+
+	  &--fadeout{	  	
+			opacity: 0;	
+	  }
 	}
 	&__subtitle{
 	  font-family: $font-reg;
@@ -26,6 +33,13 @@ b {
 		width: 23.35rem;	
 		padding: 0 0.50rem;
 		color: $color-blue-4;
+		transition-delay: 1s;
+		transition-property: opacity;
+    transition-duration: .5s;
+
+	  &--fadeout{	  	
+			opacity: 0;	
+	  }	
 	}
 	&__txt{
 		color: $color-white-1;

@@ -1,21 +1,25 @@
 .detailed-score{
 	&__wrapper{
 		height: 23.35rem;
-		background-color: green;
+		background-color: $color-blue-2;
 		width: 100%;
 		padding: 4.37rem 2.40rem 4.38rem 2.60rem;
 		display: flex;
+
+		&:hover > .detailed-score__container--2{
+	    filter: blur(0.10rem);
+	  }
 	}
 	&__container{
 		&--1{
 			flex: 0 0 17.95rem;
-			background-color: dodgerblue;
 			margin-right: auto;
 			padding-top: 2.98rem;
 		}
 		&--2{
 			flex: 0 0 25.90rem;
-			background-color: pink;
+	    background-image: url(../assets/images/desktop/pathmap.png);
+      background-size: 100%;
 		}
 	}
 	&__btn{
@@ -23,6 +27,12 @@
 	  height: 1.90rem;
 	  border: solid 0.10rem $color-white-1;
 	  margin-top: 1.25rem;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 0.30rem;
+    padding-right: 0.45rem;
 	}
 }
 
@@ -32,7 +42,6 @@
 		display: flex;
 		width: 45.00rem;
 		margin-top: 2.80rem;
-		background-color: blue;
 		justify-content: space-between;
 	}
 	&__container{
@@ -41,10 +50,25 @@
 	}
 	&__btn{
 		border:  solid .1rem $color-blue-2;
-	  background-color: $color-blue-2;
+	  background-color: $color-white-1;	  
 	  height: 1.80rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;	  
 	  margin-bottom: 2.80rem;
 	  margin-top: 0.85rem;
+		padding-left: 0.30rem;
+		cursor: pointer;
+    padding-right: 0.45rem;
+		
+		& > *{
+			color: $color-blue-2;
+		}
+
+		& > .btn__arrow{			
+			background-image: url(../assets/graphics/arrow-blue.svg);
+		}
+
 		&--1{
 			width: 7.15rem;
 		}
@@ -63,17 +87,16 @@
 	}
 	
 	&__group{
-		height: 15.40rem;
-
-		background-color: orange;
+		height: 15.40rem;		
 		width: 100%;
 		margin-top: 1.20rem;
+	  box-shadow: 0 0.10rem 0.40rem 0 rgba(0, 0, 0, 0.15);
 	}
 	&__video{
 		&--container{
-			width: 100%;
-			height: 9.30rem;
 			background-color: green;
+			width: 100%;
+			height: 9.30rem;			
 		}
 	}
 	&__btn{
@@ -81,5 +104,25 @@
 	  height: 1.80rem;
 	  background-color: #fff;
 	  border: solid 0.10rem $color-blue-2;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  cursor: pointer;
+	  padding-left: .3rem;
+	  padding-right: .45rem;
+
+
+	  & > * {
+	  	color: $color-blue-2;	
+	  }
+	  & > .btn__arrow{
+	    background-image: url(../assets/graphics/arrow-blue.svg);
+	  }
+	}
+	&__info{
+		&--wrapper{
+	    padding-top: 0.50rem;
+	    padding-left: 0.50rem;
+		}
 	}
 }

@@ -8,5 +8,6 @@
 }
 .pathfinder{
   background-color: dodgerblue;
-  transition: all 400ms ease-out 0s;
+  transition: all 3000ms;
+  transition-timing-function: cubic-bezier(.84,.09,.19,.92);
 }
