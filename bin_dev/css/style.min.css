@@ -963,6 +963,7 @@ b {
   .page--6 .page__content > *,
   .page--7 .page__content > *,
   .page--8 .page__content > * {
+    opacity: 0;
     transition-property: opacity;
     transition-duration: 1.5s;
     transition-delay: .5s; }

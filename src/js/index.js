@@ -13,7 +13,7 @@ import Page from './models/Page';
 import * as PeersData from './models/PeersData';
 import SliderGroup from './models/Slider';
 
-//import * as bP from './views/buttonProgressView';
+import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as header from './views/headerView';
@@ -24,11 +24,11 @@ import * as sl from './views/sliderView';
 
 import * as func from './functions';
 
-import dataJson from './data.json';
+import peersJson from './peerCloud.json';
+import userJson from './userCloud.json';
 
-const datax = dataJson;
 
-datax.layers[0].shapes[1].e.k[1].s[0] = PeersData.highlightPagination;
+
 
 $(document).ready(function(){	
 
@@ -51,30 +51,42 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	$('.btn__progress--6').click();
+	// $('.btn__progress--6').click();
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
 		state.pageNum.incrementPageNum();
+		bP.animateStuff(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 		
-		//bP.animateStuff(value);
 	});
 
 	e.btnProgress7.on('click',function(){
+		
+		// Change color after click
 		css.changeBodyColor('white');
+
+		// Shows score in results after click
 		userAggregateValue = 
 			state.dial1.val +
 			state.dial2.val +
 			state.dial3.val +
 			state.slider1.val +
 			state.slider2.val;
+
 		result.displayValues(userAggregateValue, PeersData.highlightPagination);
 
+		// Animate cloud after click
+		const cloudPeer = peersJson;
+		const cloudUser = userJson;
+
+		cloudPeer.layers[0].shapes[1].e.k[1].s[0] = PeersData.highlightPagination;
+		cloudUser.layers[0].shapes[1].e.k[1].s[0] = userAggregateValue;
+
 		setTimeout(function(){
-			loadCloudAnimation()		
-		},8000)
+			loadCloudAnimation(cloudUser, cloudPeer);		
+		},8000);
 
 	});
 
@@ -191,13 +203,19 @@ $(document).ready(function(){
 
 /****************  CLOUD LOTTIE  ********************/ 
 
-function loadCloudAnimation(){
+function loadCloudAnimation(user,peer){
 	lottie.loadAnimation({
 	  container: document.getElementById('cloud__wrapper'), // the dom element that will contain the animation
-	  renderer: 'svg',
-	  // loop: 1,
+	  renderer: 'svg',	  
 	  autoplay: true,
-	  animationData: dataJson,
+	  animationData: user,
+	});
+
+	lottie.loadAnimation({
+	  container: document.getElementById('cloud__wrapper'), // the dom element that will contain the animation
+	  renderer: 'svg',	  
+	  autoplay: true,
+	  animationData: peer,
 	});
 }
 
