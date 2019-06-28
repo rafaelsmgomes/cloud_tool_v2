@@ -14,15 +14,21 @@ module.exports = {
 	plugins: [
 		new webpack.ProvidePlugin({
 			$: 'jquery',
+			bodymovin: 'bodymovin',
 			jQuery: 'jquery',
 			range: 'rangeslider.js',
 			knob: 'jquery-knob',
 			sp: 'cpr_scrollpath',
+			lottie: 'lottie-web',
+
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: './src/index.html',
 		}),		
+    // new CopyWebpackPlugin([
+    //   {from:'src/js/datax',to:'js'} 
+    // ]), 		
 	],
 	module: {
 		rules: [
@@ -32,7 +38,8 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 				},
-			}
+			},
 		]
-	}
+	},
+
 };
