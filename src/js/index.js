@@ -28,12 +28,7 @@ import dataJson from './data.json';
 
 const datax = dataJson;
 
-// console.log(datax.layers.shapes[1].e.a.s);
-console.log(datax.layers[0].shapes[1].e.k[1].s[0]);
-
-datax.layers[0].shapes[1].e.k[1].s[0] = 100;
-
-console.log(datax.layers[0].shapes[1].e.k[1].s)
+datax.layers[0].shapes[1].e.k[1].s[0] = PeersData.highlightPagination;
 
 $(document).ready(function(){	
 
@@ -56,7 +51,7 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	$('.btn__progress--7').click();
+	$('.btn__progress--6').click();
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
@@ -76,6 +71,11 @@ $(document).ready(function(){
 			state.slider1.val +
 			state.slider2.val;
 		result.displayValues(userAggregateValue, PeersData.highlightPagination);
+
+		setTimeout(function(){
+			loadCloudAnimation()		
+		},8000)
+
 	});
 
 /****** DIAL CONTROLLER ******/
@@ -176,16 +176,6 @@ $(document).ready(function(){
     }
 	});
 
-/****************  CLOUD LOTTIE  ********************/ 
-
-lottie.loadAnimation({
-  container: document.getElementById('cloud__wrapper'), // the dom element that will contain the animation
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  animationData: dataJson,
-});
-
 	function assignDial(dataId){
 		let x;
 		if(dataId === 1){
@@ -197,6 +187,20 @@ lottie.loadAnimation({
 		}
 		return x;		
 	}
-
 });  
+
+/****************  CLOUD LOTTIE  ********************/ 
+
+function loadCloudAnimation(){
+	lottie.loadAnimation({
+	  container: document.getElementById('cloud__wrapper'), // the dom element that will contain the animation
+	  renderer: 'svg',
+	  // loop: 1,
+	  autoplay: true,
+	  animationData: dataJson,
+	});
+}
+
+
+
 
