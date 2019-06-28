@@ -318,7 +318,7 @@ b {
     display: block; }
 
 .scroller__description {
-  width: 8.99rem;
+  width: 14rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
@@ -326,10 +326,10 @@ b {
   font-stretch: normal;
   line-height: 1.32;
   letter-spacing: normal;
-  color: #324b5c; }
+  color: #324b5c;
+  align-self: flex-end; }
   .scroller__description--2 {
-    text-align: right;
-    width: 6.65rem; }
+    text-align: right; }
 
 .cloud__text {
   width: 100%;
@@ -763,7 +763,8 @@ b {
   justify-content: space-between;
   cursor: pointer;
   padding-left: .3rem;
-  padding-right: .45rem; }
+  padding-right: .45rem;
+  margin-top: 1rem; }
   .sidebar__btn > * {
     color: #324b5c; }
   .sidebar__btn > .btn__arrow {
@@ -814,6 +815,8 @@ b {
     margin-top: .6rem;
     height: 2.20rem;
     width: 2.2rem; }
+    .scroller__content--active .scroller__icon--2 {
+      background-image: url("../assets/graphics/illustration/illustration-cyber-security-threat-detection.svg"); }
 
 .scroller__mid {
   justify-content: space-between;
@@ -852,7 +855,7 @@ b {
       border: solid 2px #cad9de;
       margin-top: 0.65rem; }
   .rangeslider__fill {
-    background: #00ff00;
+    background: #324b5c;
     position: absolute;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
@@ -872,10 +875,12 @@ b {
       display: block;
       width: 0.80rem;
       height: 1.05rem;
-      background-color: green;
+      background-color: #324b5c;
       position: absolute;
       transform: translateX(-50%);
-      margin-top: 2.45rem; }
+      margin-top: 2.45rem;
+      -webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+      clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%); }
 
 .selection__wrapper {
   width: 46.45rem;
@@ -958,7 +963,6 @@ b {
   .page--6 .page__content > *,
   .page--7 .page__content > *,
   .page--8 .page__content > * {
-    opacity: 0;
     transition-property: opacity;
     transition-duration: 1.5s;
     transition-delay: .5s; }
