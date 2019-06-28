@@ -1,7 +1,9 @@
+import 'bodymovin';
 import 'jquery';
 import 'rangeslider.js';
 import 'jquery-knob';
 import 'cpr_scrollpath';
+import 'lottie-web';
 
 import {e} from './views/base';
 
@@ -22,6 +24,17 @@ import * as sl from './views/sliderView';
 
 import * as func from './functions';
 
+import dataJson from './data.json';
+
+const datax = dataJson;
+
+// console.log(datax.layers.shapes[1].e.a.s);
+console.log(datax.layers[0].shapes[1].e.k[1].s[0]);
+
+datax.layers[0].shapes[1].e.k[1].s[0] = 100;
+
+console.log(datax.layers[0].shapes[1].e.k[1].s)
+
 $(document).ready(function(){	
 
  	const state = {};
@@ -36,11 +49,13 @@ $(document).ready(function(){
 		['d','r'],
 		['r1','d1'],
 	];
+
 	let userAggregateValue = 0;
 
 	e.btnProgress.sp(movement);
 
 	state.pageNum = new Page();
+
 
 	$('.btn__progress--6').click();
 
@@ -63,9 +78,6 @@ $(document).ready(function(){
 			state.slider2.val;
 		result.displayValues(userAggregateValue, PeersData.highlightPagination);
 	});
-
-
-
 
 /****** DIAL CONTROLLER ******/
 	state.dial1 = new Dial();
@@ -164,6 +176,16 @@ $(document).ready(function(){
     	};      		   
     }
 	});
+
+/****************  CLOUD LOTTIE  ********************/ 
+
+lottie.loadAnimation({
+  container: document.getElementById('cloud__wrapper'), // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  animationData: dataJson,
+});
 
 	function assignDial(dataId){
 		let x;
