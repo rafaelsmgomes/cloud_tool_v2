@@ -13,7 +13,7 @@ import Page from './models/Page';
 import * as PeersData from './models/PeersData';
 import SliderGroup from './models/Slider';
 
-import * as bP from './views/buttonProgressView';
+//import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as header from './views/headerView';
@@ -59,7 +59,7 @@ $(document).ready(function(){
 		header.toggleRestartBtn(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 		
-		bP.animateStuff(value);
+		//bP.animateStuff(value);
 	});
 
 	e.btnProgress7.on('click',function(){

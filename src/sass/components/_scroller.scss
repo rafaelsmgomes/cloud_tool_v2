@@ -54,7 +54,12 @@
 			margin-top: .6rem;
 			height: 2.20rem;
 			width: 2.2rem;			
+			
+			&--2 {
+				background-image: url("../assets/graphics/illustration/illustration-cyber-security-threat-detection.svg");
+			}
 		}
+
 	}
 	&__mid{
     justify-content: space-between;		
@@ -109,7 +114,7 @@
   }
 
   &__fill{
-	  background: #00ff00;
+	  background: $color-blue-2;
 	  position: absolute;  	
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
@@ -123,20 +128,23 @@
 	  background: white;
 	  cursor: pointer;
 	  display: inline-block;
-	  position: absolute;  	
+	  position: absolute;
 	  &::after{
 			content: "";
 			height: 0;
 	  }
 		.scroller__content--active &::after {
 			content: "";
-	    display: block;
+		display: block;
 	    width: 0.80rem;
 	    height: 1.05rem;
-	    background-color: green;
+	    background-color: $color-blue-2;
 	    position: absolute;
 	    transform: translateX(-50%);
 	    margin-top: 2.45rem;
+
+		-webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+		clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);  
 		}  
   }
 }
