@@ -830,7 +830,6 @@ b {
 .scroller__icon {
   height: 2.00rem;
   width: 2.00rem;
-  background-color: red;
   margin-right: 0.75rem; }
   .scroller__content--active .scroller__icon {
     margin-right: 1.05rem;
@@ -934,6 +933,10 @@ b {
     padding: 0.60rem 0.75rem 0 0.80rem; }
   .selection__container--8 {
     margin-bottom: 5.95rem; }
+
+.icon__scroller {
+  height: 100%;
+  width: 100%; }
 
 .main_container {
   width: 100vw;
