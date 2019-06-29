@@ -15,6 +15,26 @@ $Breakpoint argument choices:
   to {
     stroke-dashoffset: 0; } }
 
+@keyframes strokeWhite {
+  0% {
+    stroke-dasharray: 4; }
+  100% {
+    stroke-dasharray: none; } }
+
+@keyframes fadewhite {
+  0% {
+    stroke-dasharray: 4;
+    stroke: #939699; }
+  100% {
+    stroke-dasharray: 0;
+    stroke: #fff; } }
+
+@keyframes btnregress {
+  0% {
+    border: dashed 0.1rem #00758f; }
+  100% {
+    border: solid 0.1rem #00758f; } }
+
 *,
 *::after,
 *::before {
@@ -60,9 +80,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
-body {
-  line-height: 1; }
-
 ol, ul {
   list-style: none; }
 
@@ -80,9 +97,11 @@ table {
 
 body {
   margin: 0;
-  background-color: #324b5c; }
+  background-color: #324b5c;
+  line-height: 1; }
   body.bg-white {
-    background-color: #fff; }
+    background-color: #fff;
+    animation: fadewhite 2s linear; }
 
 b {
   font-weight: 700; }
@@ -494,14 +513,19 @@ b {
   justify-content: center;
   align-items: center;
   background-color: #324b5c;
-  animation: border-dance 4s infinite linear;
   cursor: pointer; }
+  .btn__regress.activate {
+    border: solid 0.1rem #00758f;
+    animation: btnregress .5s linear; }
   .btn__regress--2, .btn__regress--5 {
     margin-top: 4.80rem; }
   .btn__regress--3, .btn__regress--6 {
     margin-top: 6.10rem; }
   .btn__regress--4 {
-    margin-top: 7.90rem; }
+    margin-top: 7.90rem;
+    margin-left: auto; }
+  .btn__regress--5 {
+    margin-left: auto; }
   .btn__regress--7 {
     margin-top: -0.85rem; }
 
@@ -645,7 +669,7 @@ b {
     width: 100%; }
 
 .line {
-  stroke: black;
+  stroke: #939699;
   stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
@@ -656,12 +680,10 @@ b {
     position: absolute;
     z-index: 1;
     overflow: visible; }
-  .line--1 {
-    background-color: #120; }
-  .line--2 {
-    background-color: #230; }
-  .line--3 {
-    background-color: #340; }
+  .line.activate {
+    animation: fadewhite .5s linear;
+    stroke: #fff;
+    stroke-dasharray: 0; }
 
 .pagination {
   display: flex;

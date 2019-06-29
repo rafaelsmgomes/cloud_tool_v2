@@ -3,3 +3,36 @@
     stroke-dashoffset: 0;
   }
 }
+
+
+@keyframes strokeWhite{
+	0%{
+		// stroke: $color-grey-1;
+		stroke-dasharray: 4;
+	}
+	100%{
+		// stroke: $color-white-1;
+		stroke-dasharray: none;
+	}
+}
+
+
+@keyframes fadewhite{
+	0% {
+	  stroke-dasharray: 4;
+		stroke: #939699;
+	}
+	100% {
+		stroke-dasharray: 0;
+		stroke: $color-white-1;
+	}
+}
+
+@keyframes btnregress{
+	0%{
+		border: dashed 0.1rem $color-blue-1;
+	}
+	100%{
+		border: solid 0.1rem $color-blue-1;
+	}
+}

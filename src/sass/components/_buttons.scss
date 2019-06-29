@@ -19,10 +19,13 @@
     justify-content: center;
     align-items: center;
     background-color: $color-blue-2;
-    // background-color: transparent;
-    animation: border-dance 4s infinite linear;
     cursor: pointer;
     
+		&.activate{
+			border: solid 0.1rem $color-blue-1;
+			animation: btnregress .5s linear;
+		}
+
 		&--2,
 		&--5,{
 			margin-top: 4.80rem;
@@ -31,8 +34,14 @@
 		&--6{
 			margin-top: 6.10rem;
 		}    
+
+
 		&--4{
 			margin-top: 7.90rem;
+			margin-left: auto;
+		}
+		&--5{
+			margin-left: auto;
 		}
 		// &--6{
 	 //    margin-top: -0.85rem;

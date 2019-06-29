@@ -7,19 +7,15 @@
     overflow: visible;			
 	}
   
-  stroke: black;
+  stroke: $color-grey-1;
   stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
-  animation: stroke 0.2s linear infinite;
+  animation: stroke 0.2s linear infinite;		
 
-	&--1{
-	  background-color: #120;
-	}
-	&--2{
-	  background-color: #230;
-	}
-	&--3{
-	  background-color: #340;
-	}		
+  &.activate{
+  	animation: fadewhite .5s linear;  	
+  	stroke: $color-white-1;
+  	stroke-dasharray: 0;
+  }
 }
