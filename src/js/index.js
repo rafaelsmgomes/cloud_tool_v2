@@ -45,13 +45,13 @@ $(document).ready(function(){
 		['r1','d1'],
 	];
 
-	let userAggregateValue = 0;
+	state.userAggregateValue = 0;
 
 	e.btnProgress.sp(movement);
 
 	state.pageNum = new Page();
 
-	$('.btn__progress--5').click();
+	// $('.btn__progress--5').click();
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
@@ -62,27 +62,33 @@ $(document).ready(function(){
 		
 	});
 
+	e.btnProgress1.on('click',function(){
+		e.headerWrapper.addClass('activate');
+	});
+
 	e.btnProgress7.on('click',function(){
 		
 		// Change color after click
 		css.changeBodyColor('white');
 
 		// Shows score in results after click
-		userAggregateValue = 
+		state.userAggregateValue = 
 			state.dial1.val +
 			state.dial2.val +
 			state.dial3.val +
 			state.slider1.val +
 			state.slider2.val;
 
-		result.displayValues(userAggregateValue, PeersData.highlightPagination);
+		result.displayValues(state.userAggregateValue, PeersData.highlightPagination);
 
 		// Animate cloud after click
 		const cloudPeer = peersJson;
 		const cloudUser = userJson;
 
 		cloudPeer.layers[0].shapes[1].e.k[1].s[0] = PeersData.highlightPagination;
-		cloudUser.layers[0].shapes[1].e.k[1].s[0] = userAggregateValue;
+		cloudUser.layers[0].shapes[1].e.k[1].s[0] = state.userAggregateValue;
+
+		result.displayResultsCopy(state.userAggregateValue, PeersData.highlightPagination);
 
 		setTimeout(function(){
 			loadCloudAnimation(cloudUser, cloudPeer);		
@@ -205,14 +211,14 @@ $(document).ready(function(){
 
 function loadCloudAnimation(user,peer){
 	lottie.loadAnimation({
-	  container: document.getElementById('cloud__wrapper'), // the dom element that will contain the animation
+	  container: document.getElementById('cloud__wrapper'),
 	  renderer: 'svg',	  
 	  autoplay: true,
 	  animationData: user,
 	});
 
 	lottie.loadAnimation({
-	  container: document.getElementById('cloud__wrapper'), // the dom element that will contain the animation
+	  container: document.getElementById('cloud__wrapper'),
 	  renderer: 'svg',	  
 	  autoplay: true,
 	  animationData: peer,

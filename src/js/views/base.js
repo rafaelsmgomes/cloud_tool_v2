@@ -8,12 +8,14 @@ export const e = {
 	btnProgress6: $('.btn__progress--6'),	
 	btnProgress7: $('.btn__progress--7'),
 	dialTracker: $(".dial-tracker"),
+	headerWrapper: $(".header__wrapper"),
 	selection: $(".selection__container"),
 	restartBtn: $('.header__rectangle--1'),
 	firstScrollers: $('scroller__wrapper--1'),
 	secondScrollers: $('scroller__wrapper--2'),
 	userValue: $('#userValue'),
 	peersValue: $('#peersValue'),
+	results__copy: $('.results__copy'),
 
 	thisDialElement: function(start,reference,end){
 		$(start)[0].$div.closest(reference).find(end); 	

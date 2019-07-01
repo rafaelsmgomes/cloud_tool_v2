@@ -29,6 +29,12 @@ $Breakpoint argument choices:
     stroke-dasharray: 0;
     stroke: #fff; } }
 
+@keyframes bgWhite {
+  0% {
+    background-color: #324b5c; }
+  100% {
+    background-color: #fff; } }
+
 @keyframes btnregress {
   0% {
     border: dashed 0.1rem #00758f; }
@@ -101,7 +107,7 @@ body {
   line-height: 1; }
   body.bg-white {
     background-color: #fff;
-    animation: fadewhite 2s linear; }
+    animation: bgWhite 2s linear; }
 
 b {
   font-weight: 700; }
@@ -233,10 +239,10 @@ b {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
-  background-color: orangered;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.32;
+  color: #324b5c;
   letter-spacing: normal;
   text-align: center;
   margin: 0 auto;
@@ -625,7 +631,10 @@ b {
   display: flex;
   justify-content: space-between; }
   .header__wrapper--1 {
+    flex: 0 0 5.20rem;
     height: 2.00rem; }
+    .header__wrapper--1.activate {
+      flex: 0 0 8.40rem; }
 
 .header__rectangle {
   flex: 0 0 2.00rem;

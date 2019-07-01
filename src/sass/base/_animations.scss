@@ -28,6 +28,15 @@
 	}
 }
 
+@keyframes bgWhite{
+	0% {
+		background-color: $color-blue-2;
+	}
+	100%{
+		background-color: $color-white-1;
+	}
+}
+
 @keyframes btnregress{
 	0%{
 		border: dashed 0.1rem $color-blue-1;

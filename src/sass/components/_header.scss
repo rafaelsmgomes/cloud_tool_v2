@@ -8,7 +8,12 @@
 		display: flex;
 		justify-content: space-between;
 		&--1{
+			flex: 0 0 5.20rem;
 			height: 2.00rem;
+		
+			&.activate{
+				flex: 0 0 8.40rem;
+			}
 		}
 	}
 	&__rectangle {
