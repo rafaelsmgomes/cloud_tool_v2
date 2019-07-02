@@ -1,10 +1,17 @@
-.main_container{
-	width: 100vw;
-  height: 100vh;
-  position: absolute;
-  border: solid 0.25rem black;
-  left: 50%;
-  transform: translateX(-50%);
+.main-container{
+	// width: 100vw;
+ //  height: 100vh;
+ //  position: absolute;
+ //  border: solid 0.25rem black;
+ //  left: 50%;
+ //  transform: translateX(-50%);
+	opacity: 1;
+	&-resize{	
+		opacity: 0;
+		transition: opacity 500ms; 
+		transition-timing-function: ease-in-out;
+	  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+	}
 }
 .pathfinder{
   background-color: dodgerblue;

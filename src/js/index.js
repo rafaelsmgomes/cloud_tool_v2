@@ -18,6 +18,7 @@ import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as header from './views/headerView';
 import * as pagination from './views/paginationView';
+import * as page from './views/pageView';
 import * as result from './views/resultsView';
 import * as selector from './views/selectorView';
 import * as sl from './views/sliderView';
@@ -27,12 +28,20 @@ import * as func from './functions';
 import peersJson from './peerCloud.json';
 import userJson from './userCloud.json';
 
-
-
-
 $(document).ready(function(){	
 
  	const state = {};
+
+/****** PAGE/LINE CONTROLLER ******/ 
+	// state.width = e.page.width();
+	// state.height = e.page.height();
+	// page.reformWandH(state.width, state.height);
+
+	$(window).on('resize',function(){
+		state.width = $(window).width();
+		state.height = $(window).height();				
+		page.reformWandH(state.width, state.height);
+	});
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
 	let movement = [

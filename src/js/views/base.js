@@ -7,6 +7,7 @@ export const e = {
 	btnProgress5: $('.btn__progress--5'),
 	btnProgress6: $('.btn__progress--6'),	
 	btnProgress7: $('.btn__progress--7'),
+
 	dialTracker: $(".dial-tracker"),
 	headerWrapper: $(".header__wrapper"),
 	selection: $(".selection__container"),
@@ -15,6 +16,7 @@ export const e = {
 	secondScrollers: $('scroller__wrapper--2'),
 	userValue: $('#userValue'),
 	peersValue: $('#peersValue'),
+	page: $('.page'),
 	results__copy: $('.results__copy'),
 
 	thisDialElement: function(start,reference,end){

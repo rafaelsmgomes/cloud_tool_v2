@@ -530,7 +530,7 @@ b {
   .btn__regress--4 {
     margin-top: 7.90rem;
     margin-left: auto; }
-  .btn__regress--5 {
+  .btn__regress--5, .btn__regress--6 {
     margin-left: auto; }
   .btn__regress--7 {
     margin-top: -0.85rem; }
@@ -947,13 +947,13 @@ b {
   height: 100%;
   width: 100%; }
 
-.main_container {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  border: solid 0.25rem black;
-  left: 50%;
-  transform: translateX(-50%); }
+.main-container {
+  opacity: 1; }
+  .main-container-resize {
+    opacity: 0;
+    transition: opacity 500ms;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
 .pathfinder {
   background-color: dodgerblue;
