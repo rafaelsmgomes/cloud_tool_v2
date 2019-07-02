@@ -19,7 +19,7 @@ const lineItems = {
 export const reformWandH = (width, height) =>{
 
 	e.page.css( "width", `${width}px` );
-	e.page.css( "height", `${height}px` );
+	// e.page.css( "height", `${height}px` );
 
 	const line = $('.line');
 
