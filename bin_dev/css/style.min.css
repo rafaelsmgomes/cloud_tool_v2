@@ -458,7 +458,6 @@ b {
 .cloud__wrapper {
   width: 33.85rem;
   height: 19.13rem;
-  background-color: orangered;
   margin: 0 auto;
   margin-top: -1.70rem;
   position: relative; }
@@ -689,6 +688,8 @@ b {
     position: absolute;
     z-index: 1;
     overflow: visible; }
+    .line__wrapper--1.activate {
+      opacity: 1; }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #fff;
@@ -712,7 +713,8 @@ b {
   background-color: #324b5c;
   width: 100%;
   padding: 4.37rem 2.40rem 4.38rem 2.60rem;
-  display: flex; }
+  display: flex;
+  cursor: pointer; }
   .detailed-score__wrapper:hover > .detailed-score__container--2 {
     filter: blur(0.1rem); }
 
@@ -804,6 +806,12 @@ b {
 .sidebar__info--wrapper {
   padding-top: 0.50rem;
   padding-left: 0.50rem; }
+
+#scroll_down {
+  height: 6.00rem;
+  width: 0.60rem;
+  margin: 0 auto;
+  position: relative; }
 
 .scroller__wrapper {
   width: 40.90rem;
@@ -1033,7 +1041,7 @@ b {
     top: 200vh;
     left: -200vw; }
   .page--8 {
-    top: 300vh;
+    top: 375vh;
     overflow-y: overlay; }
 
 .block {

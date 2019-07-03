@@ -5,6 +5,7 @@
 		width: 100%;
 		padding: 4.37rem 2.40rem 4.38rem 2.60rem;
 		display: flex;
+		cursor: pointer;
 
 		&:hover > .detailed-score__container--2{
 	    filter: blur(0.10rem);
@@ -126,4 +127,11 @@
 	    padding-left: 0.50rem;
 		}
 	}
+}
+
+#scroll_down{
+	height: 6.00rem;
+	width: 0.60rem;    
+  margin: 0 auto;
+  position: relative;
 }

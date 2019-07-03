@@ -1,8 +1,15 @@
 import {e} from './base';
 
 export const displayValues = (user, peers) =>{
-		e.userValue.text(`${user}`);
-		e.peersValue.text(`${peers}`);
+	e.userValue.text(`${user}`);
+	e.peersValue.text(`${peers}`);
+
+	setTimeout(function(){
+		$('.cloud__text').css('opacity', 1);		
+		$('.results__logo').css('opacity',1);
+		$('.results__copy').css('opacity',1);
+		$('#scroll_down').css('opacity',1);
+	},8000);
 }
 
 export const displayResultsCopy = (user, peers) => {

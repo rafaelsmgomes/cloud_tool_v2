@@ -27,7 +27,7 @@ export const animateStuff = (btnVal) => {
 			$('.page--4').addClass('activate');		
 			$('.line--5, .line--6, .line--7').addClass('activate');
 			$('.btn__regress--4').addClass('activate');		
-		},9000);		
+		},10000);		
 	}else if(btnVal === 4){
 		$('.page--4').removeClass('activate');
 
@@ -56,8 +56,8 @@ export const animateStuff = (btnVal) => {
 		$('.page--7').removeClass('activate');
 		
 		setTimeout(function(){
-			$('.page--8').addClass('activate');				
-		},7500);	
+			$('.line__wrapper--1').css('opacity',1)
+		}, 7000);	
 	}
 
 

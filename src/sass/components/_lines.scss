@@ -5,6 +5,12 @@
     position: absolute;
 		z-index: 1;
     overflow: visible;			
+
+    &--1{
+      &.activate{
+        opacity: 1;
+      }
+    }
 	}
   
   stroke: $color-grey-1;
