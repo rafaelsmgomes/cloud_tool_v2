@@ -51,6 +51,9 @@ $Breakpoint argument choices:
 *:focus {
   outline: none; }
 
+* {
+  outline: 1px solid hotpink; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -684,10 +687,12 @@ b {
   animation: stroke 0.2s linear infinite; }
   .line__wrapper {
     height: 1px;
-    width: 1px;
+    width: 70rem;
     position: absolute;
     z-index: 1;
-    overflow: visible; }
+    overflow: visible;
+    left: 50%;
+    transform: translateX(-50%); }
     .line__wrapper--1.activate {
       opacity: 1; }
   .line.activate {
@@ -714,7 +719,8 @@ b {
   width: 100%;
   padding: 4.37rem 2.40rem 4.38rem 2.60rem;
   display: flex;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: filter 500ms; }
   .detailed-score__wrapper:hover > .detailed-score__container--2 {
     filter: blur(0.1rem); }
 

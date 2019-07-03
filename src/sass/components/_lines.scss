@@ -1,11 +1,13 @@
 .line{
 	&__wrapper{
     height: 1px;
-    width: 1px;
+    width: 70rem;
     position: absolute;
 		z-index: 1;
     overflow: visible;			
-
+    left: 50%;
+    transform: translateX(-50%);
+    
     &--1{
       &.activate{
         opacity: 1;

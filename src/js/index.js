@@ -39,9 +39,9 @@ $(document).ready(function(){
 	// page.reformWandH(state.width, state.height);
 
 	$(window).on('resize',function(){
-		state.width = $(window).width();
-		state.height = $(window).height();				
-		page.reformWandH(state.width, state.height);
+		// state.width = $(window).width();
+		// state.height = $(window).height();				
+		page.reformWandH();
 	});
 
 	$('.page--8').on('scroll',function(){
@@ -65,7 +65,7 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	// $('.btn__progress--6').click();
+	$('.btn__progress--6').click();
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
