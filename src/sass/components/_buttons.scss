@@ -14,16 +14,23 @@
     width: 2.00rem;
     height: 2rem;
     border-radius: 1rem;
-    border: dashed 0.1rem $color-blue-1;
+    border: solid 0.1rem $color-white-1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $color-blue-2;
     cursor: pointer;
-    
+    z-index: -1;
+    opacity: 0;
+
+		transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-delay: .5s;    
 		&.activate{
-			border: solid 0.1rem $color-blue-1;
-			animation: btnregress .5s linear;
+			z-index: 1;
+			opacity: 1;
+			// border: solid 0.1rem $color-blue-1;
+			// animation: btnregress .5s linear;
 		}
 
 		&--2,

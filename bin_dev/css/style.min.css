@@ -51,6 +51,9 @@ $Breakpoint argument choices:
 *:focus {
   outline: none; }
 
+* {
+  outline: 1px solid hotpink; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -475,7 +478,7 @@ b {
     top: 30.20rem;
     height: 7.20rem; }
   .cta__wrapper--3 {
-    top: 14.3rem;
+    top: 15.35rem;
     height: 6.55rem; }
   .cta__wrapper--4 {
     top: 35.70rem;
@@ -513,15 +516,20 @@ b {
   width: 2.00rem;
   height: 2rem;
   border-radius: 1rem;
-  border: dashed 0.1rem #00758f;
+  border: solid 0.1rem #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #324b5c;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: -1;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1.5s;
+  transition-delay: .5s; }
   .btn__regress.activate {
-    border: solid 0.1rem #00758f;
-    animation: btnregress .5s linear; }
+    z-index: 1;
+    opacity: 1; }
   .btn__regress--2, .btn__regress--5 {
     margin-top: 4.80rem; }
   .btn__regress--3, .btn__regress--6 {
@@ -980,7 +988,7 @@ b {
   right: 0;
   display: flex;
   justify-content: space-between;
-  top: 45.55rem; }
+  top: 51.20rem; }
 
 .header__container {
   position: fixed;
