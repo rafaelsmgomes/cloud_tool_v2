@@ -1,7 +1,7 @@
 export const resizeLines = width => {	
 	let size1 = 102.6;
 
-	if(width < 1050){
+	if(width <= 1050){
 		size1 = 86.35;
 	}
 

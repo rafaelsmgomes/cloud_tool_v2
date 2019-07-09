@@ -67,18 +67,5 @@ export const animateStuff = (btnVal) => {
 		setTimeout(function(){
 			$('.line__wrapper--1').css('opacity',1)
 		}, 7000);	
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-	;
+	};
 };
