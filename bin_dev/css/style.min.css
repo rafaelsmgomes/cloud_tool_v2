@@ -567,6 +567,8 @@ b {
   align-items: center;
   background-color: #324b5c;
   cursor: pointer; }
+  .btn__regress.rotate {
+    transform: rotate(180deg); }
   .btn__regress--2, .btn__regress--5 {
     margin-top: 4.80rem; }
   .btn__regress--3, .btn__regress--6 {
