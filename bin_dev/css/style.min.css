@@ -667,6 +667,9 @@ b {
       left: 50%;
       transform: translateX(-50%);
       top: 22.45rem; }
+      @media only screen and (max-width: 1050px) {
+        .dial__context-section--3 {
+          top: 13.80rem; } }
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {

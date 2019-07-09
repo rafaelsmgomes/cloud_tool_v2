@@ -102,6 +102,10 @@
 		    left: 50%;
 		    transform: translateX(-50%);
 		    top: 22.45rem;		
+		    
+		    @include bp(1050){
+		    	top: 13.80rem;
+		    }
 			}
 
 		}
