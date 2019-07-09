@@ -73,6 +73,18 @@ b {
 		&--1{
 			width: 43.25rem;
 		  height: 6.60rem;
+		  @include bp(1050){
+	  	  width: 32.50rem;
+			  height: 4.90rem;
+			  font-family: $font-reg;
+			  font-size: 1.80rem;
+			  font-weight: bold;
+			  font-style: normal;
+			  font-stretch: normal;
+			  line-height: 1.33;
+			  letter-spacing: normal;
+			  color: $color-white-1;
+		  }
 		}
 		&--2{
 			width: 39.55rem;
@@ -93,6 +105,20 @@ b {
 	  letter-spacing: normal;
 	  color: #fff;		
 		margin-top: 0.80rem;
+		
+		@include bp(1050){
+		  width: 39.55rem;
+		  height: 2.10rem;
+		  font-family: $font-reg;
+		  font-size: 0.95rem;
+		  font-weight: normal;
+		  margin-top: .7rem;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;			
+		}
+
 
 		&--1{
 			width: 21.30rem;
@@ -415,5 +441,23 @@ b {
 	  line-height: 1.29;
 	  letter-spacing: normal;
 	  color: $color-white-1;
+	}
+}
+
+.footer{
+	&-text{
+	  width: 1.30rem;
+	  height: 0.90rem;
+	  font-family: $font-reg;
+	  font-size: 0.70rem;
+	  font-weight: bold;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+		top: -1.10rem;
+	  text-align: center;
+	  position: absolute;
 	}
 }

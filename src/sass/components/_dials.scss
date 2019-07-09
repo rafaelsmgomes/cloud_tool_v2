@@ -3,6 +3,12 @@
 		width: 40.48rem;
 		height: 20.27rem;
 		position: relative;
+
+		@include bp(1050){
+	    width: 25.35rem;
+	    height: 12.70rem;
+	    margin-top: 0.70rem;
+		}
 		&--1,
 		&--3{
 			margin-top: 5.80rem;
@@ -39,18 +45,27 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 100%;
+    @include bp(1050){
+    	width: 2rem;
+    	height: 2rem;
+    	bottom: -1rem;
+    }
 	}
 	&__hand{
     width: 0;
     position: absolute;
     height: 0;
     border-style: solid;
-    border-width: 0 0.62rem 17.80rem 0.62rem;
+		border-width: 0 0.62rem 17.80rem 0.62rem;
+
     border-color: transparent transparent $color-blue-1 transparent;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%)rotate(-90deg);
     transform-origin: 50% 100%;		
+   	@include bp(1050){    
+    	border-width: 0 0.496rem 12.675rem 0.496rem;
+    }
 	}
 	&__context{
 		height: 100%;
@@ -62,13 +77,22 @@
 		    flex-direction: column;
 		    align-items: center;
 		    padding-top: 2.00rem;
+		    @include bp(1050){
+		    	padding-top: 1rem;
+		    }
 			}
 			&--2{
 				margin-top: 8.05rem;
 		    justify-content: space-between;
+				@include bp(1050){
+					margin-top: 5.5rem;
+				}
+
 				&-a{
 					margin-top: 13.88rem;
 				}
+
+
 			}
 
 			&--3{
@@ -87,6 +111,7 @@
 
 			&--1{
 				padding-left: 3.30rem;
+
 			}
 			&--2{
 				padding-right: 3.30rem;	
@@ -94,9 +119,15 @@
 
 			&--1{
 				padding-left: 3.70rem;
+				@include bp(1050){
+					padding-left: 1.65rem;
+				}				
 			}
 			&--2{
 				padding-right: 3.70rem;	
+				@include bp(1050){
+					padding-right: 1.65rem;
+				}				
 			}						
 		}
 	}

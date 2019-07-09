@@ -6,10 +6,22 @@ const retrieveGroupText = (dialGroup) => {
   	textGroup.first = 'Not using the cloud';
   	textGroup.second = 'Planning for the cloud';
   	textGroup.third = 'Using cloud services';
+
+    if($('body').width() < 1050){
+      textGroup.first = 'Not using';
+      textGroup.second = 'Planning';
+      textGroup.third = 'Using';
+    }
   }else if(dialGroup.hasClass('dial-group--3')){
   	textGroup.first = 'Impede current process';
   	textGroup.second = 'No Impact';
   	textGroup.third = 'Improve Data use';
+    
+    if($('body').width() < 1050){
+      textGroup.first = 'Impede';
+      textGroup.second = 'No Impact';
+      textGroup.third = 'Improve';        
+    }
   }else{
   	textGroup.first = 'Less impact';
   	textGroup.second = 'No Impact';
@@ -67,8 +79,21 @@ export const dialContextualize = (dial, angle) => {
   dialContextMainText.text(text);     
 };
 
+export const changeDialText = () => {
+  $('.dial__text--1c').text('Planning for the cloud');
+  $('.dial__text--2c').text('Not using the cloud');
+  $('.dial__text--3c').text('Using cloud services');
+
+  if($('body').width() < 1050){
+    $('.dial__text--1c').text('Planning');
+    $('.dial__text--2c').text('Not using');
+    $('.dial__text--3c').text('Using');
+  }
+}
+
 export const progressBtn = (dial) => {
   const pageBtnProgress = dial[0].$div.closest('.page__content').find( ".btn__progress");
   pageBtnProgress.click();
 }
+
 

@@ -17,6 +17,7 @@ import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as header from './views/headerView';
+import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
 import * as page from './views/pageView';
 import * as result from './views/resultsView';
@@ -34,14 +35,18 @@ $(document).ready(function(){
  	const state = {};
 
 /****** PAGE/LINE CONTROLLER ******/ 
-	// state.width = e.page.width();
+	state.width = $('body').width();
 	// state.height = e.page.height();
 	// page.reformWandH(state.width, state.height);
 
+	line.resizeLines(state.width);
+
 	$(window).on('resize',function(){
-		// state.width = $(window).width();
+		state.width = $('body').width();
 		// state.height = $(window).height();				
 		page.reformWandH();
+
+		line.resizeLines(state.width);
 	});
 
 	$('.page--8').on('scroll',function(){
@@ -65,7 +70,7 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	$('.btn__progress--3').click();
+	// $('.btn__progress--3').click();
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
@@ -144,6 +149,12 @@ $(document).ready(function(){
     },
 	});
 
+	dial.changeDialText();
+
+	$(window).on('resize',function(){
+		dial.changeDialText();
+	});
+
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
 
@@ -219,6 +230,9 @@ $(document).ready(function(){
 		}
 		return x;		
 	}
+/****************  LINE CONTROLLER  ********************/ 
+
+
 
 /****************  CLOUD/ LOTTIE INIT  ********************/ 
 	lottie.loadAnimation({

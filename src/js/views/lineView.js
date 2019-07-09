@@ -1,0 +1,22 @@
+export const resizeLines = width => {	
+	let size1 = 102.6;
+
+	if(width < 1050){
+		size1 = 86.35;
+	}
+
+	$('.line--1').attr({
+	  y2: `${size1}rem`
+	});
+	$('.line--2').attr({
+		y1: `${size1}rem`,
+	  y2: `${size1}rem`
+	});
+	$('.line--2-a').attr({
+		y1: `${size1}rem`,
+	  y2: `${size1}rem`
+	});
+	$('.line--3').attr({
+	  y1: `${size1}rem`
+	});
+}

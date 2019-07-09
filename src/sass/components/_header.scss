@@ -1,8 +1,9 @@
 .header {
 	&__logo{		
 	  flex: 0 0 5.20rem;
-	  height: 1.60rem;
-	  background-color: $color-white-2;
+	  height: 1.60rem;	 
+	  align-self: flex-end;
+	  background-image: url("../assets/images/desktop/logo-white.svg");
 	}			
 	&__wrapper{
 		display: flex;

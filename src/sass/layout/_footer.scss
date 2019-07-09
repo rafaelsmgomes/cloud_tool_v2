@@ -8,4 +8,21 @@
     display: flex;
     justify-content: space-between;
     top: 51.20rem;
+
+    z-index: -1;
+    opacity: 0;
+
+		transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-delay: .5s;    
+		
+		&.activate{
+			z-index: 1;
+			opacity: 1;
+		}
+
+    @include bp(1050){
+    	width: 42.49rem;
+    	top: 34.80rem;
+    }
 }
