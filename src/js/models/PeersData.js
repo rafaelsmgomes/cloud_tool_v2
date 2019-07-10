@@ -1,1 +1,1 @@
-export const highlightPagination = Math.round(70.4);
+export const peerScore = Math.round(70.4);

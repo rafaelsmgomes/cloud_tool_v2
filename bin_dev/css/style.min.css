@@ -27,7 +27,7 @@ $Breakpoint argument choices:
     stroke: #939699; }
   100% {
     stroke-dasharray: 0;
-    stroke: #fff; } }
+    stroke: #cad9de; } }
 
 @keyframes bgWhite {
   0% {
@@ -112,6 +112,11 @@ body {
     background-color: #fff;
     animation: bgWhite 2s linear; }
 
+@font-face {
+  font-family: "Univers";
+  src: url("../fonts/UniversLTStd.otf");
+  font-weight: normal; }
+
 b {
   font-weight: 700; }
 
@@ -124,7 +129,7 @@ b {
   letter-spacing: normal;
   text-align: center;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   transition-delay: .5s;
   transition-property: opacity;
   transition-duration: 0.5s; }
@@ -132,7 +137,7 @@ b {
     opacity: 0; }
 
 .landing__subtitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: normal;
   font-style: normal;
@@ -154,7 +159,7 @@ b {
   .landing__txt--1 {
     width: 11.95rem;
     height: 1.50rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Univers, Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
     font-style: normal;
@@ -165,7 +170,7 @@ b {
     margin-top: 10.05rem; }
 
 .main__title {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   font-weight: bold;
   font-style: normal;
@@ -177,11 +182,11 @@ b {
   .main__title--1 {
     width: 43.25rem;
     height: 6.60rem; }
-    @media only screen and (max-width: 1050px) {
+    @media only screen and (max-width: 1440px) {
       .main__title--1 {
         width: 32.50rem;
         height: 4.90rem;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Univers, Arial, Helvetica, sans-serif;
         font-size: 1.80rem;
         font-weight: bold;
         font-style: normal;
@@ -197,7 +202,7 @@ b {
     height: 3.25rem; }
 
 .main__direction {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -206,11 +211,11 @@ b {
   letter-spacing: normal;
   color: #fff;
   margin-top: 0.80rem; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .main__direction {
       width: 39.55rem;
       height: 2.10rem;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Univers, Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
       font-weight: normal;
       margin-top: .7rem;
@@ -224,7 +229,7 @@ b {
 .pagination__num {
   flex: 0 0 0.55rem;
   height: 0.90rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   font-style: normal;
   font-stretch: normal;
@@ -236,7 +241,7 @@ b {
     font-weight: 700; }
 
 .selection__text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   font-style: normal;
@@ -245,13 +250,11 @@ b {
   line-height: 1.2;
   letter-spacing: normal;
   letter-spacing: -0.01em; }
-  .selection__container--active .selection__text {
-    color: #00758f; }
 
 .results__logo {
   width: 12.65rem;
   height: 3.20rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   margin-top: 3.05rem;
   font-size: 1.25rem;
   font-weight: bold;
@@ -263,7 +266,7 @@ b {
 
 .results__copy {
   width: 30.00rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -276,7 +279,7 @@ b {
   margin-top: 3.80rem; }
 
 .dial__text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -295,7 +298,7 @@ b {
 
 .cta__txt {
   width: 15.55rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
   font-weight: normal;
   font-style: normal;
@@ -316,7 +319,7 @@ b {
 
 .cta-group__title {
   height: 1.70rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   font-style: normal;
@@ -326,7 +329,7 @@ b {
   color: #324b5c; }
 
 .cta-group__copy {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -338,7 +341,7 @@ b {
   width: 95%; }
 
 .scroller__title {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: bold;
   font-style: normal;
@@ -355,7 +358,7 @@ b {
     line-height: 1.67; }
 
 .scroller__step {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
   font-style: normal;
@@ -371,7 +374,7 @@ b {
 
 .scroller__description {
   width: 14rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -388,7 +391,7 @@ b {
   height: 100%;
   position: absolute;
   padding: 9.10rem 4.05rem 3.83rem 4.05rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   font-weight: normal;
   font-style: normal;
@@ -408,7 +411,7 @@ b {
 
 .detailed-score__title {
   height: 1.70rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   font-style: normal;
@@ -420,7 +423,7 @@ b {
 .detailed-score__copy {
   width: 100%;
   height: 3.20rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -432,7 +435,7 @@ b {
 
 .sidebar__title {
   height: 1.60rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   font-style: normal;
@@ -444,7 +447,7 @@ b {
 
 .sidebar__info--title {
   height: 0.90rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.70rem;
   font-weight: bold;
   font-style: normal;
@@ -455,7 +458,7 @@ b {
 
 .sidebar__info--subtitle {
   height: 1.15rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.70rem;
   font-weight: 300;
   font-style: normal;
@@ -466,7 +469,7 @@ b {
 
 .btn__txt {
   height: 1.20rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
   font-style: normal;
@@ -480,7 +483,7 @@ b {
 .footer-text {
   width: 1.30rem;
   height: 0.90rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.70rem;
   font-weight: bold;
   font-style: normal;
@@ -491,6 +494,17 @@ b {
   top: -1.10rem;
   text-align: center;
   position: absolute; }
+
+.header__copyright {
+  font-size: 0.8rem;
+  color: #00758f; }
+  .header__copyright > a {
+    color: #cad9de;
+    text-decoration: none;
+    margin-top: 0.25rem;
+    margin-right: 0.40rem;
+    margin-left: 0.40rem;
+    font-family: Univers, Arial, Helvetica, sans-serif; }
 
 .btn__arrow {
   background-image: url("../assets/graphics/arrow.svg");
@@ -510,13 +524,13 @@ b {
   position: absolute;
   left: 52.40rem;
   padding: 0.50rem 0 0.80rem 0.80rem; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .cta__wrapper {
       left: 30.10rem; } }
   .cta__wrapper--1 {
     top: 31.6rem;
     height: 8.40rem; }
-    @media only screen and (max-width: 1050px) {
+    @media only screen and (max-width: 1440px) {
       .cta__wrapper--1 {
         top: 22.90rem; } }
   .cta__wrapper--2 {
@@ -585,7 +599,7 @@ b {
   width: 40.48rem;
   height: 20.27rem;
   position: relative; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .dial-group {
       width: 25.35rem;
       height: 12.70rem;
@@ -618,7 +632,7 @@ b {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 100%; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .dial__crown {
       width: 2rem;
       height: 2rem;
@@ -635,7 +649,7 @@ b {
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
   transform-origin: 50% 100%; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .dial__hand {
       border-width: 0 0.496rem 12.675rem 0.496rem; } }
 
@@ -649,13 +663,13 @@ b {
       flex-direction: column;
       align-items: center;
       padding-top: 2.00rem; }
-      @media only screen and (max-width: 1050px) {
+      @media only screen and (max-width: 1440px) {
         .dial__context-section--1 {
           padding-top: 1rem; } }
     .dial__context-section--2 {
       margin-top: 8.05rem;
       justify-content: space-between; }
-      @media only screen and (max-width: 1050px) {
+      @media only screen and (max-width: 1440px) {
         .dial__context-section--2 {
           margin-top: 5.5rem; } }
       .dial__context-section--2-a {
@@ -667,7 +681,7 @@ b {
       left: 50%;
       transform: translateX(-50%);
       top: 22.45rem; }
-      @media only screen and (max-width: 1050px) {
+      @media only screen and (max-width: 1440px) {
         .dial__context-section--3 {
           top: 13.80rem; } }
   .dial__context--wrapper {
@@ -678,12 +692,12 @@ b {
       padding-right: 3.30rem; }
     .dial__context--wrapper--1 {
       padding-left: 3.70rem; }
-      @media only screen and (max-width: 1050px) {
+      @media only screen and (max-width: 1440px) {
         .dial__context--wrapper--1 {
           padding-left: 1.65rem; } }
     .dial__context--wrapper--2 {
       padding-right: 3.70rem; }
-      @media only screen and (max-width: 1050px) {
+      @media only screen and (max-width: 1440px) {
         .dial__context--wrapper--2 {
           padding-right: 1.65rem; } }
 
@@ -700,16 +714,23 @@ b {
   flex: 0 0 5.20rem;
   height: 1.60rem;
   align-self: flex-end;
-  background-image: url("../assets/images/desktop/logo-white.svg"); }
+  background-image: url("../assets/images/desktop/logo-white.svg");
+  margin-right: auto; }
 
 .header__wrapper {
   display: flex;
   justify-content: space-between; }
   .header__wrapper--1 {
-    flex: 0 0 5.20rem;
-    height: 2.00rem; }
+    flex: 0 0 8.4rem;
+    height: 2.00rem;
+    padding-left: 3.20rem; }
     .header__wrapper--1.activate {
-      flex: 0 0 8.40rem; }
+      padding-left: 0; }
+
+.header__copyright {
+  margin-right: 1.25rem;
+  display: flex;
+  align-items: center; }
 
 .header__rectangle {
   flex: 0 0 2.00rem;
@@ -718,7 +739,8 @@ b {
   border: solid 0.1rem #00758f;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
   .header__rectangle:not(:last-of-type) {
     margin-right: 1.20rem; }
   .header__rectangle--1 {
@@ -753,7 +775,7 @@ b {
     width: 100%; }
 
 .line {
-  stroke: #939699;
+  stroke: #00758f;
   stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
@@ -770,13 +792,15 @@ b {
       opacity: 1; }
   .line.activate {
     animation: fadewhite .5s linear;
-    stroke: #fff;
+    stroke: #cad9de;
     stroke-dasharray: 0; }
 
 .pagination {
   display: flex;
   margin-top: 1rem;
-  justify-content: space-between; }
+  justify-content: space-between;
+  font-weight: 700;
+  transform: all 500ms; }
   .pagination--1 {
     width: 2.55rem; }
   .pagination--2 {
@@ -784,7 +808,7 @@ b {
   .pagination--3 {
     width: 5.10rem; }
   .pagination--active {
-    font-weight: 700; }
+    color: #00758f; }
 
 .detailed-score__wrapper {
   height: 23.35rem;
@@ -1013,8 +1037,12 @@ b {
   background-color: transparent;
   border: solid 2px #00758f;
   cursor: pointer; }
+  .selection__container:hover {
+    background-color: rgba(0, 117, 143, 0.15); }
   .selection__container--active {
-    background-color: #fff; }
+    background-color: #00758f; }
+    .selection__container--active:hover {
+      background-color: #00758f; }
   .selection__container--1 {
     flex: 0 0 9.45rem;
     padding: 0.75rem 0.75rem 0 0.80rem; }
@@ -1065,23 +1093,22 @@ b {
   .footer.activate {
     z-index: 1;
     opacity: 1; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .footer {
       width: 42.49rem;
       top: 34.80rem; } }
 
 .header__container {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 70.00rem;
   margin: 0 auto;
   height: 2.95rem;
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
   padding-top: 0.95rem; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .header__container {
       width: 42.49rem; } }
 
@@ -1103,7 +1130,7 @@ b {
   margin: 0 auto;
   padding-top: 4.00rem;
   position: relative; }
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 1440px) {
     .page__content {
       width: 42.49rem; } }
   .page--2 .page__content > *,
@@ -1128,8 +1155,7 @@ b {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  z-index: 10; }
+  display: flex; }
   .page--2 {
     top: 50.45rem;
     left: 92.70rem; }

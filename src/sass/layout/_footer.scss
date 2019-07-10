@@ -12,7 +12,7 @@
     z-index: -1;
     opacity: 0;
 
-		transition-property: opacity;
+	transition-property: opacity;
     transition-duration: 1.5s;
     transition-delay: .5s;    
 		
@@ -21,7 +21,7 @@
 			opacity: 1;
 		}
 
-    @include bp(1050){
+    @include bp(1440){
     	width: 42.49rem;
     	top: 34.80rem;
     }

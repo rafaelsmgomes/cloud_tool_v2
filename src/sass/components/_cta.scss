@@ -5,7 +5,7 @@
     position: absolute;
     left: 52.40rem;
 
-		@include bp(1050){
+		@include bp(1440){
     	left: 30.10rem;
     }
     
@@ -14,7 +14,7 @@
 		&--1{
       top: 31.6rem;
 	    height: 8.40rem;
-	    @include bp(1050){
+	    @include bp(1440){
 	    	top: 22.90rem;    
 	    }
 		}

@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	// $('.btn__progress--3').click();
+	// $('.btn__progress--5').click();
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
@@ -98,16 +98,16 @@ $(document).ready(function(){
 			state.slider1.val +
 			state.slider2.val;
 
-		result.displayValues(state.userAggregateValue, PeersData.highlightPagination);
+		result.displayValues(state.userAggregateValue, PeersData.peerScore);
 
 		// Animate cloud after click
 		const cloudPeer = peersJson;
 		const cloudUser = userJson;
 
-		cloudPeer.layers[0].shapes[1].e.k[1].s[0] = PeersData.highlightPagination;
+		cloudPeer.layers[0].shapes[1].e.k[1].s[0] = PeersData.peerScore;
 		cloudUser.layers[0].shapes[1].e.k[1].s[0] = state.userAggregateValue;
 
-		result.displayResultsCopy(state.userAggregateValue, PeersData.highlightPagination);
+		result.displayResultsCopy(state.userAggregateValue, PeersData.peerScore);
 
 		setTimeout(function(){
 			loadCloudAnimation(cloudUser, cloudPeer);		
@@ -203,8 +203,7 @@ $(document).ready(function(){
     	}else if(pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--2')){
     		sliderGroup = state.slider2;
     	}
-    	sliderGroup.progression++;
-    	
+    	sliderGroup.progression++;    	    	
     	pagination.highlightPagination(pageContentElement, sliderGroup.progression);
 
     	sliderGroup.pushToVal(value);

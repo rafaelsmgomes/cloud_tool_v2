@@ -15,8 +15,16 @@
     border: solid 2px $color-blue-1;
 		cursor: pointer;
 		
+		&:hover{
+			background-color: rgba(0, 117, 143, 0.15);
+		}
+
 		&--active{
-			background-color: $color-white-1;
+			background-color: $color-blue-1;
+
+			&:hover{
+				background-color: $color-blue-1;
+			}
 		}
 		&--1{
 			flex: 0 0 9.45rem;
