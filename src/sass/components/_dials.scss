@@ -1,14 +1,14 @@
 .dial{
 	&-group{
-		width: 40.48rem;
-		height: 20.27rem;
+		width: 50vw;
+		height: 25vw;
 		position: relative;
 
-		@include bp(1050){
-	    width: 25.35rem;
-	    height: 12.70rem;
-	    margin-top: 0.70rem;
-		}
+		// @include bp(1440){
+	    // width: 25.35rem;
+	    // height: 12.70rem;
+	    // margin-top: 0.70rem;
+		// }
 		&--1,
 		&--3{
 			margin-top: 5.80rem;
@@ -45,7 +45,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 100%;
-    @include bp(1050){
+    @include bp(1440){
     	width: 2rem;
     	height: 2rem;
     	bottom: -1rem;
@@ -63,29 +63,31 @@
     left: 50%;
     transform: translateX(-50%)rotate(-90deg);
     transform-origin: 50% 100%;		
-   	@include bp(1050){    
-    	border-width: 0 0.496rem 12.675rem 0.496rem;
+   	@include bp(1440){    
+    	border-width: 0 0.496rem 25vw 0.496rem;
     }
 	}
 	&__context{
 		height: 100%;
 		width: 100%;
 		position: absolute;
+		
 		&-section{
 	    display: flex;
-	    &--1{
+		
+		&--1{
 		    flex-direction: column;
 		    align-items: center;
 		    padding-top: 2.00rem;
-		    @include bp(1050){
-		    	padding-top: 1rem;
+		    @include bp(1440){
+		    	padding-top: 2vw;
 		    }
 			}
 			&--2{
 				margin-top: 8.05rem;
 		    justify-content: space-between;
-				@include bp(1050){
-					margin-top: 5.5rem;
+				@include bp(1440){
+					margin-top: 11vw;
 				}
 
 				&-a{
@@ -103,7 +105,7 @@
 		    transform: translateX(-50%);
 		    top: 22.45rem;		
 		    
-		    @include bp(1050){
+		    @include bp(1440){
 		    	top: 13.80rem;
 		    }
 			}
@@ -123,14 +125,14 @@
 
 			&--1{
 				padding-left: 3.70rem;
-				@include bp(1050){
-					padding-left: 1.65rem;
+				@include bp(1440){
+					padding-left: 4vw;
 				}				
 			}
 			&--2{
 				padding-right: 3.70rem;	
-				@include bp(1050){
-					padding-right: 1.65rem;
+				@include bp(1440){
+					padding-right: 4vw;
 				}				
 			}						
 		}
@@ -138,7 +140,7 @@
 	&__line{
 		background-color: $color-white-1;
 	  height: 1.08rem;
-	  border: solid 0.20rem $color-white-1;
+	  border: solid 0.10rem $color-white-1;
 		
 		&--1{
 
