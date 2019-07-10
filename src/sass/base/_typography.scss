@@ -73,7 +73,8 @@ b {
 		&--1{
 			width: 43.25rem;
 		  height: 6.60rem;
-		  @include bp(1050){
+
+		  @include bp(1440){
 	  	  width: 32.50rem;
 			  height: 4.90rem;
 			  font-family: $font-reg;
@@ -106,7 +107,7 @@ b {
 	  color: #fff;		
 		margin-top: 0.80rem;
 		
-		@include bp(1050){
+		@include bp(1440){
 		  width: 39.55rem;
 		  height: 2.10rem;
 		  font-family: $font-reg;
