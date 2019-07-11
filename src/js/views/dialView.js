@@ -87,7 +87,7 @@ export const changeDialText = () => {
   if($('body').width() <= 1440){
     $('.dial__text--1c').text('Planning');
     $('.dial__text--2c').text('Not using');
-    $('.dial__text--3c').text('Using');
+    $('.dial__text--3c').text('Using services');
   }
 }
 
