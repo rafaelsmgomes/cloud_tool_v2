@@ -11,7 +11,7 @@
 
 		@include bp(1440){
 			width: 73%;
-			height: 14rem;
+			height: 14.2rem;
 			margin-top: 1rem;
 		}
 	}
@@ -65,9 +65,9 @@
 			}
 			}
 	@include bp(1440){
-		width: 10rem;
+		width: 31%;
 		flex: 0 0 auto;
-		padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+		padding: 0.5rem;
 	}
 }	
 }

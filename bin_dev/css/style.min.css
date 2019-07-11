@@ -263,6 +263,9 @@ b {
   letter-spacing: -0.01em; }
   @media only screen and (max-width: 1440px) {
     .selection__text {
+      font-size: .9rem; } }
+  @media only screen and (max-width: 1300px) {
+    .selection__text {
       font-size: .8rem; } }
 
 .results__logo {
@@ -1069,7 +1072,7 @@ b {
   @media only screen and (max-width: 1440px) {
     .selection__wrapper {
       width: 73%;
-      height: 14rem;
+      height: 14.2rem;
       margin-top: 1rem; } }
 
 .selection__container {
@@ -1106,9 +1109,9 @@ b {
         margin-top: .8rem; } }
   @media only screen and (max-width: 1440px) {
     .selection__container {
-      width: 10rem;
+      width: 31%;
       flex: 0 0 auto;
-      padding: 0.5rem 0.5rem 0.5rem 0.6rem; } }
+      padding: 0.5rem; } }
 
 .icon__scroller {
   height: 100%;
