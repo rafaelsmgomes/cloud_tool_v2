@@ -20,6 +20,7 @@ import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
 import * as page from './views/pageView';
+import * as path from './views/pathView';
 import * as result from './views/resultsView';
 import * as selector from './views/selectorView';
 import * as sl from './views/sliderView';
@@ -54,19 +55,12 @@ $(document).ready(function(){
 	})
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
-	let movement = [
-		['d','r'],
-		['d','r'],
-		['r2','u2','l2'],
-		['l'],
-		['l'],
-		['d','r'],
-		['r1','d1'],
-	];
 
 	state.userAggregateValue = 0;
 
-	e.btnProgress.sp(movement);
+	e.btnProgress.sp(path.movement,path.easing);
+
+	// e.btnBack.dp(path.movement2,pageList);
 
 	state.pageNum = new Page();
 
@@ -109,9 +103,12 @@ $(document).ready(function(){
 
 		result.displayResultsCopy(state.userAggregateValue, PeersData.peerScore);
 
+		// setTimeout(function(){
+		// 	loadCloudAnimation(cloudUser, cloudPeer);		
+		// },7000);
 		setTimeout(function(){
 			loadCloudAnimation(cloudUser, cloudPeer);		
-		},7000);
+		},3000);
 
 	});
 

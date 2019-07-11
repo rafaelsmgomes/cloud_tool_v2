@@ -1072,8 +1072,7 @@ b {
 
 .pathfinder {
   background-color: dodgerblue;
-  transition: all 3000ms;
-  transition-timing-function: cubic-bezier(0.84, 0.09, 0.19, 0.92); }
+  transition: all 1500ms; }
 
 .footer {
   position: fixed;
@@ -1088,8 +1087,7 @@ b {
   z-index: -1;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 1.5s;
-  transition-delay: .5s; }
+  transition-duration: .5s; }
   .footer.activate {
     z-index: 1;
     opacity: 1; }
@@ -1142,10 +1140,9 @@ b {
   .page--8 .page__content > * {
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 1.5s;
-    transition-delay: .5s; }
+    transition-duration: .5s; }
   .page .page__content > .cta__wrapper {
-    transition-delay: 1s; }
+    transition-delay: .5s; }
   .page.activate .page__content > * {
     opacity: 1; }
   .page__content > .btn__regress {
