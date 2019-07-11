@@ -69,7 +69,11 @@ b {
 	  line-height: 1.25;
 	  letter-spacing: normal;
 	  color: #fff;
-		margin-top: 1.05rem;
+	  margin-top: 1.05rem;
+
+		@include bp(1440) {
+			margin-top: .65rem;
+		}
 		&--1{
 			width: 43.25rem;
 		  height: 6.60rem;
@@ -223,7 +227,7 @@ b {
 
 .cta{
 	&__txt{
-	  width: 15.55rem;
+	  width: 15.25rem;
 	  font-family: $font-reg;
 	  font-size: $font-size-5;
 	  font-weight: normal;
