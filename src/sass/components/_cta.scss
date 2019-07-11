@@ -34,7 +34,15 @@
 		
 		&--3{
 	    top: 15.35rem;
-	    height: 6.55rem;			
+		height: 6.55rem;	
+		
+		@include bp(1440){
+			top: 13.6rem;
+		}
+		
+		@include bp(1150){
+			right: -27rem;
+		}
 		}
 		
 		&--4{
