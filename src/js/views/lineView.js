@@ -13,19 +13,19 @@ export const resizeLines = width => {
 
 	//Line for Question 1
 	$('.line--1').attr({
-	  y2: `${size1}rem`
+	    y2: `${size1}rem`
 	});
 	$('.line--2').attr({
 		y1: `${size1}rem`,
-	  y2: `${size1}rem`,
-	  x2: `${size2}rem`
+	    y2: `${size1}rem`,
+	    x2: `${size2}rem`
 	});
 	$('.line--2-a').attr({
 		y1: `${size1}rem`,
-	  y2: `${size1}rem`
+	    y2: `${size1}rem`
 	});
 	$('.line--3').attr({
-	  y1: `${size1}rem`
+	    y1: `${size1}rem`
 	});
 
 	//Line for Question 3
