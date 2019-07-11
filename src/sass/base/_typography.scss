@@ -68,10 +68,14 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.25;
 	  letter-spacing: normal;
-	  color: #fff;
+	  color: $color-white-1;
 	  margin-top: 1.05rem;
 
 		@include bp(1440) {
+			font-size: 1.80rem;
+			line-height: 1.33;
+			width: 32.50rem;
+			height: 4.90rem;
 			margin-top: .65rem;
 		}
 		&--1{
@@ -79,22 +83,19 @@ b {
 		  height: 6.60rem;
 
 		  @include bp(1440){
-	  	  width: 32.50rem;
-			  height: 4.90rem;
-			  font-family: $font-reg;
-			  font-size: 1.80rem;
-			  font-weight: bold;
-			  font-style: normal;
-			  font-stretch: normal;
-			  line-height: 1.33;
-			  letter-spacing: normal;
-			  color: $color-white-1;
+			width: 32.50rem;
+			height: 4.90rem;
 		  }
 		}
 		&--2{
 			width: 39.55rem;
 			height: 9.20rem;
-		}
+
+			@include bp(1440){
+				width: 36.10rem;
+				height: 4.90rem;
+			}
+			}
 		&--3{
 			width: auto;
 			height: 3.25rem;
