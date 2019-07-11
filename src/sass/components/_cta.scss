@@ -6,7 +6,8 @@
     left: 52.40rem;
 
 		@include bp(1440){
-    	left: 30.10rem;
+    	// left: 30.10rem;
+    	right: -22.50rem;
     }
     
 
