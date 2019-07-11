@@ -2,31 +2,41 @@
 	&__wrapper{
     width: 35.40rem;
     border: 2px solid $color-blue-1;
-    position: absolute;
-    left: 52.40rem;
+	position: absolute;
+	right: -17rem;
+	padding: 0.50rem 0 0.80rem 0.80rem;
 
 		@include bp(1440){
-    	// left: 30.10rem;
-    	right: -22.50rem;
-    }
+
+
+    		right: -22.50rem;
+    	}
+
     
 
-    padding: 0.50rem 0 0.80rem 0.80rem;
 		&--1{
-      top: 31.6rem;
-	    height: 8.40rem;
-	    @include bp(1440){
-	    	top: 22.90rem;    
-	    }
+
+	        top: 31.6rem;
+		    height: 8.40rem;
+
+			@include bp(1440){
+				top: 18.30rem;    
+			}
 		}
 		&--2{
 			top: 30.20rem;	    
-	    height: 7.20rem;
+		    height: 7.20rem;
+		
+			@include bp(1440){
+			top: 19.20rem;    
+			}
 		}		
+		
 		&--3{
 	    top: 15.35rem;
 	    height: 6.55rem;			
 		}
+		
 		&--4{
 			top: 35.70rem;
 			height: 6.55rem;
