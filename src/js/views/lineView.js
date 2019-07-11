@@ -3,6 +3,9 @@ export const resizeLines = width => {
 	let size2 = 92.7;
 	let size3 = 153.1;
 	let size4 = 278.6;
+	let size5 = 99.15;
+	let size6 = 280;
+	let size7 = 1;
 
 	if(width <= 1440){
 
@@ -10,6 +13,9 @@ export const resizeLines = width => {
 		size2 = 106.7;
 		size3 = 131.7;
 		size4 = 292.6;
+		size5 = -120.65;
+		size6 = 293;
+		size7 = 15;
 
 	}
 
@@ -46,5 +52,30 @@ export const resizeLines = width => {
 	$('.line--6').attr({
 		y1: `${size3}rem`
 	});
+
+	//Line height for Question 3
+	$('.line--6').attr({
+		y2: `${size5}rem`
+	});
+	$('.line--7').attr({
+		y1: `${size5}rem`,
+		y2: `${size5}rem`,
+		x2: `${size6}rem`
+	});
+	$('.line--8').attr({
+		y1: `${size5}rem`,
+		y2: `${size5}rem`,
+		x1: `${size6}rem`,
+		x2: `${size7}rem`
+	});
+	$('.line--9').attr({
+		y1: `${size5}rem`,
+		y2: `${size5}rem`,
+		x1: `${size7}rem`
+	});
+	$('.line--10').attr({
+		y1: `${size5}rem`
+	});
+
 
 }
