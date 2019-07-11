@@ -273,6 +273,9 @@ b {
 	  }	  
 	  &--3{
 		height: 2.75rem;
+	  }
+	  &--4{
+		height: 2.75rem;
 		  
 		@include bp(1150){
 			width: 10rem;

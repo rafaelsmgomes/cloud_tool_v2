@@ -332,10 +332,12 @@ b {
     height: 3.20rem; }
   .cta__txt--3 {
     height: 2.75rem; }
+  .cta__txt--4 {
+    height: 2.75rem; }
     @media only screen and (max-width: 1150px) {
-      .cta__txt--3 {
+      .cta__txt--4 {
         width: 10rem; } }
-    .cta__txt--3-a {
+    .cta__txt--4-a {
       letter-spacing: -.01em; }
 
 .cta-group__title {
