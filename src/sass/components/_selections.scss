@@ -8,12 +8,22 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
+		@include bp(1440){
+			width: 73%;
+			height: 14rem;
+			margin-top: 1rem;
+		}
 	}
 	&__container{
 		width: 14.65rem;
 		background-color: transparent;
     border: solid 2px $color-blue-1;
 		cursor: pointer;
+
+		@include bp(1440){
+			width: 11rem;
+		}
 		
 		&--active{
 			background-color: $color-white-1;
@@ -32,15 +42,24 @@
 		&--7{
 			flex: 0 0 7.70rem;
 			padding: 0.75rem 0.60rem 0 0.65rem;
-		}
+			}
 
 		&--5,
 		&--8{
 			flex: 0 0 6.25rem;
 			    padding: 0.60rem 0.75rem 0 0.80rem;
-		}
+				}
 		&--8{
 			margin-bottom: 5.95rem;
-		}
-	}	
+			@include bp(1440){
+				margin-bottom: auto;
+				margin-top: .8rem;
+			}
+			}
+	@include bp(1440){
+		width: 10rem;
+		flex: 0 0 auto;
+		padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+	}
+}	
 }
