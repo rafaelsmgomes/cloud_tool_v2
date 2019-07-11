@@ -2,7 +2,7 @@ export const resizeLines = width => {
 	let size1 = 102.6;
 
 	if(width <= 1440){
-		size1 = 86.35;
+		size1 = 81.15;
 	}
 
 	$('.line--1').attr({
