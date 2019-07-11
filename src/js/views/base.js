@@ -8,6 +8,8 @@ export const e = {
 	btnProgress6: $('.btn__progress--6'),	
 	btnProgress7: $('.btn__progress--7'),
 
+	btnBack: $('.btn__regress'),
+
 	dialTracker: $(".dial-tracker"),
 	headerWrapper: $(".header__wrapper"),
 	selection: $(".selection__container"),

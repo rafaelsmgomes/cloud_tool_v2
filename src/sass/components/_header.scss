@@ -4,18 +4,24 @@
 	  height: 1.60rem;	 
 	  align-self: flex-end;
 	  background-image: url("../assets/images/desktop/logo-white.svg");
+	  margin-right: auto;
 	}			
 	&__wrapper{
 		display: flex;
 		justify-content: space-between;
 		&--1{
-			flex: 0 0 5.20rem;
+			flex: 0 0 8.4rem;
 			height: 2.00rem;
-		
+			padding-left: 3.20rem;
 			&.activate{
-				flex: 0 0 8.40rem;
+				padding-left: 0;
 			}
 		}
+	}
+	&__copyright{
+		margin-right: 1.25rem;
+		display: flex;
+		align-items: center;
 	}
 	&__rectangle {
   flex: 0 0 2.00rem;
@@ -26,6 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 	
 		&:not(:last-of-type){
 			  margin-right: 1.20rem;

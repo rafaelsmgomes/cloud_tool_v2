@@ -1,13 +1,13 @@
 .header__container{
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
   width: 70.00rem;
   margin: 0 auto;
 	height: 2.95rem;
   left: 0;
   right: 0;
   display: flex;
-	justify-content: space-between;
+	// justify-content: space-between;
 	padding-top: 0.95rem;
 
 	@include bp(1440){
