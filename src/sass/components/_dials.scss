@@ -86,14 +86,14 @@
 		    align-items: center;
 		    padding-top: 2.00rem;
 		    @include bp(1440){
-		    	padding-top: 1rem;
+		    	padding-top: .8rem;
 		    }
 			}
 			&--2{
 				margin-top: 8.05rem;
 		    justify-content: space-between;
 				@include bp(1440){
-					margin-top: 5.5rem;
+					margin-top: 5.2rem;
 				}
 
 				&-a{
