@@ -2,11 +2,11 @@
 	&__wrapper{
     width: 35.40rem;
     border: 2px solid $color-blue-1;
-    position: absolute;
-    left: 52.40rem;
+	position: absolute;
+	right: -17rem;
 
-		@include bp(1050){
-    	left: 30.10rem;
+		@include bp(1440){
+    	right: -22.50rem;
     }
     
 
@@ -14,8 +14,8 @@
 		&--1{
       top: 31.6rem;
 	    height: 8.40rem;
-	    @include bp(1050){
-	    	top: 22.90rem;    
+	    @include bp(1440){
+	    	top: 18.30rem;    
 	    }
 		}
 		&--2{
