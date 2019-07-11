@@ -47,6 +47,10 @@
 		&--4{
 			top: 35.70rem;
 			height: 6.55rem;
+
+			@include bp(1440){
+				top: 19.7rem;
+			}
 			&-a{
 				top: 37.80rem;
 			}
