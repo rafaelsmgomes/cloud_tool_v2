@@ -5,10 +5,12 @@ export const resizeLines = width => {
 	let size4 = 278.6;
 
 	if(width <= 1440){
+
 		size1 = 81.15;
 		size2 = 106.7;
 		size3 = 131.7;
 		size4 = 292.6;
+
 	}
 
 	//Line for Question 1

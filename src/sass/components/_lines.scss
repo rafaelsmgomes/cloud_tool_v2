@@ -15,7 +15,7 @@
     }
 	}
   
-  stroke: $color-grey-1;
+  stroke: $color-blue-1;
   stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
@@ -23,7 +23,7 @@
 
   &.activate{
   	animation: fadewhite .5s linear;  	
-  	stroke: $color-white-1;
+  	stroke: $color-blue-4;
   	stroke-dasharray: 0;
   }
 }
