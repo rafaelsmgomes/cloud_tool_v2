@@ -574,6 +574,9 @@ b {
   .cta__wrapper--4 {
     top: 35.70rem;
     height: 6.55rem; }
+    @media only screen and (max-width: 1440px) {
+      .cta__wrapper--4 {
+        top: 19.7rem; } }
     .cta__wrapper--4-a {
       top: 37.80rem; }
 
