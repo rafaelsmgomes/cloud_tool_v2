@@ -74,11 +74,20 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.25;
 	  letter-spacing: normal;
-	  color: #fff;
-		margin-top: 1.05rem;
+	  color: $color-white-1;
+	  margin-top: 1.05rem;
+
+		@include bp(1440) {
+			font-size: 1.80rem;
+			line-height: 1.33;
+			width: 32.50rem;
+			height: 4.90rem;
+			margin-top: .65rem;
+		}
 		&--1{
 			width: 43.25rem;
 		  height: 6.60rem;
+
 		  @include bp(1440){
 	  	  width: 32.50rem;
 			  height: 4.90rem;
@@ -95,7 +104,12 @@ b {
 		&--2{
 			width: 39.55rem;
 			height: 9.20rem;
-		}
+
+			@include bp(1440){
+				width: 36.10rem;
+				height: 4.90rem;
+			}
+			}
 		&--3{
 			width: auto;
 			height: 3.25rem;
@@ -215,6 +229,7 @@ b {
 		&--1{
 		  text-align: center;
 			width: 6.60rem;
+			margin-top: 1rem;
 
   	}
   	&--2{
@@ -228,7 +243,7 @@ b {
 
 .cta{
 	&__txt{
-	  width: 15.55rem;
+	  width: 15.25rem;
 	  font-family: $font-reg;
 	  font-size: $font-size-5;
 	  font-weight: normal;

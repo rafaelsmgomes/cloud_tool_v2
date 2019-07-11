@@ -1,20 +1,29 @@
 .dial{
+
 	&-group{
 		width: 40.48rem;
 		height: 20.27rem;
 		position: relative;
 
 		@include bp(1440){
-	    width: 25.35rem;
-	    height: 12.70rem;
-	    margin-top: 0.70rem;
+	    width: 25.625rem;
+	    height: 12.8125rem;
 		}
+
 		&--1,
 		&--3{
 			margin-top: 5.80rem;
+
+			@include bp(1440){
+				margin-top: 1.10rem;
+			}
 		}
 		&--2{
 			margin-top: 1.90rem;
+
+			@include bp(1440){
+				margin-top: 1.10rem;
+			}
 		}
 	}
 
@@ -64,32 +73,40 @@
     transform: translateX(-50%)rotate(-90deg);
     transform-origin: 50% 100%;		
    	@include bp(1440){    
-    	border-width: 0 0.496rem 12.675rem 0.496rem;
+    	border-width: 0 0.496rem 12.8125rem 0.496rem;
     }
 	}
 	&__context{
 		height: 100%;
 		width: 100%;
 		position: absolute;
+		
 		&-section{
 	    display: flex;
-	    &--1{
+		
+		&--1{
 		    flex-direction: column;
 		    align-items: center;
 		    padding-top: 2.00rem;
 		    @include bp(1440){
-		    	padding-top: 1rem;
+
+		    	padding-top: .8rem;
 		    }
 			}
 			&--2{
 				margin-top: 8.05rem;
 		    justify-content: space-between;
 				@include bp(1440){
-					margin-top: 5.5rem;
+					margin-top: 5.2rem;
 				}
 
-				&-a{
+				&-a{					
+
 					margin-top: 13.88rem;
+
+					@include bp(1440){
+						margin-top: 9.6rem;
+					}
 				}
 
 
@@ -124,13 +141,13 @@
 			&--1{
 				padding-left: 3.70rem;
 				@include bp(1440){
-					padding-left: 1.65rem;
+					padding-left: 1.7rem;
 				}				
 			}
 			&--2{
 				padding-right: 3.70rem;	
 				@include bp(1440){
-					padding-right: 1.65rem;
+					padding-right: 1.7rem;
 				}				
 			}						
 		}
@@ -138,7 +155,7 @@
 	&__line{
 		background-color: $color-white-1;
 	  height: 1.08rem;
-	  border: solid 0.20rem $color-white-1;
+	  border: solid 0.10rem $color-white-1;
 		
 		&--1{
 
