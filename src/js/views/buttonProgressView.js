@@ -109,7 +109,7 @@ export const animateFwd = (btnVal) => {
 export const animateBack = (btnVal) => {
 	btnVal=Number(btnVal)+1;
 
-	if(btnVal === 1){
+	if(btnVal === 1){ //to Landing
 		$('.page--2').removeClass('activate');
 		$('.footer').removeClass('activate');		
 		setTimeout(function(){
@@ -117,15 +117,16 @@ export const animateBack = (btnVal) => {
 			$('.landing__title').removeClass('landing__title--fadeout');
 			$('.landing__subtitle').removeClass('landing__subtitle--fadeout');							
 		},3000);				
-	}else if(btnVal === 2){
+	}else if(btnVal === 2){ //to Q2
 		$('.page--3').removeClass('activate');
 		$('.footer').removeClass('activate');		
 		setTimeout(function(){
 			$('.page--2').addClass('activate');				
 			// $('.line--1, .line--2').addClass('activate');
-			$('.footer').addClass('activate');							
+			$('.footer').addClass('activate');
+			$('.footer-text').text('1/6');								
 		},3000);				
-	}else if(btnVal === 3){
+	}else if(btnVal === 3){ //to Q3
 
 		$('.page--4').removeClass('activate');
 		$('.footer').removeClass('activate');	
@@ -134,28 +135,32 @@ export const animateBack = (btnVal) => {
 			$('.btn__regress').removeClass('rotate');
 			$('.page--3').addClass('activate');
 			$('.footer').addClass('activate');		
+			$('.footer-text').text('2/6');			
 		},4500);		
-	}else if(btnVal === 4){
+	}else if(btnVal === 4){ //to Q4
 		$('.page--5').removeClass('activate')
 		$('.footer').removeClass('activate');		
 		setTimeout(function(){
 			$('.page--4').addClass('activate');			
-			$('.footer').addClass('activate');					
+			$('.footer').addClass('activate');		
+			$('.footer-text').text('3/6');			
 		},1500);
-	}else if(btnVal === 5){
+	}else if(btnVal === 5){ //to Q5
 		$('.page--6').removeClass('activate')
 		$('.footer').removeClass('activate');		
 		setTimeout(function(){
 			$('.page--5').addClass('activate');			
-			$('.footer').addClass('activate');					
+			$('.footer').addClass('activate');		
+			$('.footer-text').text('4/6');			
 		},1500);		
-	}else if(btnVal === 6){
+	}else if(btnVal === 6){ //to Q6
 		$('.page--7').removeClass('activate')
 		$('.footer').removeClass('activate');		
 		setTimeout(function(){
 			$('.btn__regress').removeClass('rotate');			
 			$('.page--6').addClass('activate');			
-			$('.footer').addClass('activate');					
+			$('.footer').addClass('activate');		
+			$('.footer-text').text('5/6');			
 		},3000);			
 	}
 };
