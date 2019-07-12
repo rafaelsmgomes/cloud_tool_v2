@@ -281,6 +281,9 @@ b {
 		}
 	  &--1{
 		  height: 4.20rem;
+		  @include bp(1025){
+			  width: 13rem;
+		  }
 	  }
 	  &--2{
 	  	height: 3.20rem;

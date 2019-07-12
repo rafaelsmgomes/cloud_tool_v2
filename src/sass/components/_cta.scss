@@ -16,10 +16,14 @@
 		&--1{
 
 	        top: 31.6rem;
-		    height: 8.40rem;
+		    height: 8.50rem;
 
 			@include bp(1440){
 				top: 18.30rem;    
+			}
+			@include bp(1025){
+				top: 10.7rem;
+				right: -24rem;
 			}
 		}
 		&--2{
