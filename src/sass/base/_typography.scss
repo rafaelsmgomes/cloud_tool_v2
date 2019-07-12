@@ -78,42 +78,40 @@ b {
 	  margin-top: 1.05rem;
 
 		@include bp(1440) {
-			font-size: 2.40rem;
-			line-height: 1.33;
+			font-size: 1.80rem;
 			width: 32.50rem;
-			height: 4.90rem;
 			margin-top: .65rem;
 		}
+	
+		@include bp(1024){
+			font-size: 1.30rem;
+			margin-top: .55rem;
+		}
+	
 		&--1{
 			width: 43.25rem;
-		  height: 6.60rem;
 
 		  @include bp(1440){
-	  	  width: 32.50rem;
-			  height: 4.90rem;
-			  font-family: $font-reg;
-			  font-size: 1.80rem;
-			  font-weight: bold;
-			  font-style: normal;
-			  font-stretch: normal;
-			  line-height: 1.33;
-			  letter-spacing: normal;
-			  color: $color-white-1;
-		  }
+	  	  	width: 32.50rem;
+			}
+		  @include bp(1024){
+	  	  	width: 22.50rem;
+			}
 		}
 		&--2{
 			width: 39.55rem;
-			height: 9.20rem;
 
 			@include bp(1440){
 				width: 36.10rem;
-				height: 4.90rem;
 			}
+			@include bp(1024){
+				width: 27rem;
 			}
+		}
 		&--3{
 			width: auto;
-			height: 3.25rem;
 		}
+
 	}
 	&__direction{	 
 	  font-family: $font-reg;
@@ -139,6 +137,11 @@ b {
 		  letter-spacing: normal;			
 		}
 
+		@include bp(1024){
+			font-size: .95rem;
+			width: 19.65rem;
+			margin-top: .4rem;
+		}
 
 		&--1{
 			width: 21.30rem;
@@ -178,6 +181,10 @@ b {
 	  letter-spacing: -0.01em;
 
 	  @include bp(1440){
+		  font-size: .9rem;
+	  }
+	
+	  @include bp(1300){
 		  font-size: .8rem;
 	  }
 	
@@ -235,12 +242,22 @@ b {
 			width: 6.60rem;
 			margin-top: 1rem;
 
+			@include bp(1024){
+				margin-top: .2rem;
+			}
+
   	}
   	&--2{
-  		margin-left: 1.00rem;
+		  margin-left: 1.00rem;
+		  @include bp(1024){ margin-left: 0.75rem; }
   	}
   	&--3{
-  		margin-right: 1.00rem;
+		  margin-right: 1.00rem;
+		  @include bp(1024){ 
+			  margin-right: 0rem;
+			  margin-left: 1rem;
+			  margin-top: -.5rem;
+		   }
   	}
   }
 }
@@ -263,11 +280,17 @@ b {
 		}
 	  &--1{
 		  height: 4.20rem;
+		  @include bp(1024){
+			  width: 13rem;
+		  }
 	  }
 	  &--2{
 	  	height: 3.20rem;
 	  }	  
 	  &--3{
+		height: 2.75rem;
+	  }
+	  &--4{
 		height: 2.75rem;
 		  
 		@include bp(1150){

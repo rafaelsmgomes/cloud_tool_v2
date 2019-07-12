@@ -17,10 +17,14 @@
 		&--1{
 
 	        top: 31.6rem;
-		    height: 8.40rem;
+		    height: 8.50rem;
 
 			@include bp(1440){
 				top: 18.30rem;    
+			}
+			@include bp(1024){
+				top: 10.7rem;
+				right: -24rem;
 			}
 		}
 		&--2{
@@ -30,6 +34,9 @@
 			@include bp(1440){
 			top: 19.20rem;    
 			}
+			@include bp(1024){
+			top: 11.70rem;    
+			}
 		}		
 		
 		&--3{
@@ -37,7 +44,7 @@
 		height: 6.55rem;	
 		
 		@include bp(1440){
-			top: 13.6rem;
+			top: 12.6rem;
 		}
 		
 		@include bp(1150){
@@ -48,6 +55,13 @@
 		&--4{
 			top: 35.70rem;
 			height: 6.55rem;
+
+			@include bp(1440){
+				top: 19.7rem;
+			}
+			@include bp(1024){
+				top: 13.4rem;
+			}
 			&-a{
 				top: 37.80rem;
 			}

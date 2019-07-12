@@ -9,12 +9,19 @@
 	    width: 25.625rem;
 	    height: 12.8125rem;
 		}
+		@include bp(1024){
+	    width: 15rem;
+	    height: 7.5rem;
+		}
 
 		&--1,
 		&--3{
 			margin-top: 5.80rem;
 
 			@include bp(1440){
+				margin-top: 1.10rem;
+			}
+			@include bp(1024){
 				margin-top: 1.10rem;
 			}
 		}
@@ -59,6 +66,11 @@
     	height: 2rem;
     	bottom: -1rem;
     }
+    @include bp(1024){
+    	width: 1.2rem;
+    	height: 1.2rem;
+    	bottom: -.6rem;
+    }
 	}
 	&__hand{
     width: 0;
@@ -75,6 +87,9 @@
    	@include bp(1440){    
     	border-width: 0 0.496rem 12.8125rem 0.496rem;
     }
+   	@include bp(1024){    
+    	border-width: 0 0.3rem 7.4rem 0.3rem;
+    }
 	}
 	&__context{
 		height: 100%;
@@ -89,8 +104,10 @@
 		    align-items: center;
 		    padding-top: 2.00rem;
 		    @include bp(1440){
-
 		    	padding-top: .8rem;
+		    }
+		    @include bp(1024){
+		    	padding-top: .2rem;
 		    }
 			}
 			&--2{
@@ -99,6 +116,9 @@
 				@include bp(1440){
 					margin-top: 5.2rem;
 				}
+				@include bp(1024){
+					margin-top: 2.5rem;
+				}
 
 				&-a{					
 
@@ -106,6 +126,9 @@
 
 					@include bp(1440){
 						margin-top: 9.6rem;
+					}
+					@include bp(1024){
+						margin-top: 5.3rem;
 					}
 				}
 
@@ -131,23 +154,22 @@
 			display: flex;
 
 			&--1{
-				padding-left: 3.30rem;
-
-			}
-			&--2{
-				padding-right: 3.30rem;	
-			}
-
-			&--1{
 				padding-left: 3.70rem;
 				@include bp(1440){
 					padding-left: 1.7rem;
+				}				
+				@include bp(1024){
+					padding-left: .75rem;
 				}				
 			}
 			&--2{
 				padding-right: 3.70rem;	
 				@include bp(1440){
 					padding-right: 1.7rem;
+				}				
+				@include bp(1024){
+					padding-right: .75rem;
+					width: 6.5rem;
 				}				
 			}						
 		}
