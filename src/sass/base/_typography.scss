@@ -78,7 +78,7 @@ b {
 	  margin-top: 1.05rem;
 
 		@include bp(1440) {
-			font-size: 1.80rem;
+			font-size: 2.40rem;
 			line-height: 1.33;
 			width: 32.50rem;
 			height: 4.90rem;
@@ -323,6 +323,21 @@ b {
 		  height: 3.55rem;
 		  font-size: $font-size-6;
 		  line-height: 1.67;
+
+		  @include bp(1300){
+		  	font-size: $font-size-8;		 
+		    line-height: 1;
+		    height: auto;
+		    margin-top: 0.55rem;		  	
+		  }
+		  @include bp(1150){
+		  	margin-top: 0;
+		  	height: auto;
+		  	line-height: 1.4;
+		  }
+		  @include bp(1050){
+		  	letter-spacing: -0.03em;
+		  }
 		}
 	}
 	&__step{
@@ -340,6 +355,9 @@ b {
 		
 		.scroller__content--active &{
 			display: block;
+			// @include bp(1440){
+			// 	margin-top: 0;
+			// }
 		}
 	}
 	&__description{
@@ -354,6 +372,9 @@ b {
 	  color: $color-blue-2;
 	  align-self: flex-end;
 
+		@include bp(1050){
+	    letter-spacing: -0.03em;
+		}
 		&--2{
 			text-align: right;		
 

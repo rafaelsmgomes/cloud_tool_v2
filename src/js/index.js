@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	// $('.btn__progress--5').click();
+	$('.btn__progress--5').click();
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
