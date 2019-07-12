@@ -181,7 +181,7 @@ b {
   margin-top: 1.05rem; }
   @media only screen and (max-width: 1440px) {
     .main__title {
-      font-size: 1.80rem;
+      font-size: 1.80rem;\
       width: 32.50rem;
       margin-top: .65rem; } }
   @media only screen and (max-width: 1024px) {
@@ -393,6 +393,20 @@ b {
     height: 3.55rem;
     font-size: 1.8rem;
     line-height: 1.67; }
+    @media only screen and (max-width: 1300px) {
+      .scroller__content--active .scroller__title {
+        font-size: 1.4rem;
+        line-height: 1;
+        height: auto;
+        margin-top: 0.55rem; } }
+    @media only screen and (max-width: 1150px) {
+      .scroller__content--active .scroller__title {
+        margin-top: 0;
+        height: auto;
+        line-height: 1.4; } }
+    @media only screen and (max-width: 1050px) {
+      .scroller__content--active .scroller__title {
+        letter-spacing: -0.03em; } }
 
 .scroller__step {
   font-family: Univers, Arial, Helvetica, sans-serif;
@@ -420,6 +434,9 @@ b {
   letter-spacing: normal;
   color: #324b5c;
   align-self: flex-end; }
+  @media only screen and (max-width: 1050px) {
+    .scroller__description {
+      letter-spacing: -0.03em; } }
   .scroller__description--2 {
     text-align: right; }
 
@@ -1013,6 +1030,9 @@ b {
 .scroller__wrapper {
   width: 40.90rem;
   margin-top: 3.00rem; }
+  @media only screen and (max-width: 1300px) {
+    .scroller__wrapper {
+      width: 60%; } }
   .scroller__wrapper--1 {
     height: 23.15rem; }
   .scroller__wrapper--2 {
@@ -1026,6 +1046,9 @@ b {
   margin: 0 auto;
   padding-left: 0.8rem;
   padding-right: 0.8rem; }
+  @media only screen and (max-width: 1350px) {
+    .scroller__content {
+      width: 97%; } }
   .scroller__content > * {
     display: none; }
   .scroller__content--active {
@@ -1034,6 +1057,9 @@ b {
     width: 40.90rem;
     padding-left: 0.86rem;
     padding-right: 0.86rem; }
+    @media only screen and (max-width: 1440px) {
+      .scroller__content--active {
+        width: 100%; } }
     .scroller__content--active > * {
       display: flex; }
   .scroller__content--deactive {
@@ -1050,6 +1076,13 @@ b {
     margin-top: .6rem;
     height: 2.20rem;
     width: 2.2rem; }
+    @media only screen and (max-width: 1150px) {
+      .scroller__content--active .scroller__icon {
+        margin: 0;
+        margin-right: 1.05rem; } }
+    @media only screen and (max-width: 1050px) {
+      .scroller__content--active .scroller__icon {
+        margin-right: 0.80rem; } }
     .scroller__content--active .scroller__icon--2 {
       background-image: url("../assets/graphics/illustration/illustration-cyber-security-threat-detection.svg"); }
 
@@ -1063,8 +1096,11 @@ b {
   height: 100%;
   align-items: center; }
   .scroller__content--active .scroller__header {
-    height: auto;
-    align-items: flex-start; }
+    height: auto; }
+    @media only screen and (max-width: 1150px) {
+      .scroller__content--active .scroller__header {
+        height: 3.3rem;
+        align-items: flex-end; } }
 
 .scroller__down {
   width: 1.20rem;
@@ -1085,6 +1121,9 @@ b {
     height: 0;
     border: 0;
     cursor: pointer; }
+    @media only screen and (max-width: 1350px) {
+      .rangeslider--horizontal {
+        width: 100%; } }
     .scroller__content--active .rangeslider--horizontal {
       height: 2.20rem;
       border: solid 2px #cad9de;
