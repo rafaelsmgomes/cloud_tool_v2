@@ -598,6 +598,9 @@ b {
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--4 {
         top: 19.7rem; } }
+    @media only screen and (max-width: 1024px) {
+      .cta__wrapper--4 {
+        top: 13.4rem; } }
     .cta__wrapper--4-a {
       top: 37.80rem; }
 

@@ -58,6 +58,9 @@
 			@include bp(1440){
 				top: 19.7rem;
 			}
+			@include bp(1024){
+				top: 13.4rem;
+			}
 			&-a{
 				top: 37.80rem;
 			}
