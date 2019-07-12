@@ -137,7 +137,7 @@ b {
 		  letter-spacing: normal;			
 		}
 
-		@include bp(1025){
+		@include bp(1024){
 			font-size: .95rem;
 			width: 19.65rem;
 			margin-top: .4rem;
@@ -242,18 +242,18 @@ b {
 			width: 6.60rem;
 			margin-top: 1rem;
 
-			@include bp(1025){
+			@include bp(1024){
 				margin-top: .2rem;
 			}
 
   	}
   	&--2{
 		  margin-left: 1.00rem;
-		  @include bp(1025){ margin-left: 0.75rem; }
+		  @include bp(1024){ margin-left: 0.75rem; }
   	}
   	&--3{
 		  margin-right: 1.00rem;
-		  @include bp(1025){ 
+		  @include bp(1024){ 
 			  margin-right: 0rem;
 			  margin-left: 1rem;
 			  margin-top: -.5rem;
@@ -280,7 +280,7 @@ b {
 		}
 	  &--1{
 		  height: 4.20rem;
-		  @include bp(1025){
+		  @include bp(1024){
 			  width: 13rem;
 		  }
 	  }
