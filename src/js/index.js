@@ -57,22 +57,17 @@ $(document).ready(function(){
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
 
 	state.userAggregateValue = 0;
-
-	e.btnProgress.sp(path.movement,path.easing);
-
-	// e.btnBack.dp(path.movement2,pageList);
+	
+	// PROGRESS 
+	e.btnProgress.sp(path.movement, path.easing);
 
 	state.pageNum = new Page();
-
-	$('.btn__progress--5').click();
-
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
 		state.pageNum.incrementPageNum();
-		bP.animateStuff(value);
+		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
-		
 	});
 
 	e.btnProgress1.on('click',function(){
@@ -110,6 +105,15 @@ $(document).ready(function(){
 			loadCloudAnimation(cloudUser, cloudPeer);		
 		},3000);
 
+	});
+
+	// REGRESS
+
+	e.btnBack.dp(path.movement2,path.easing2,path.pageList);	
+
+	e.btnBack.on('click', function(){
+		const x = $(this).attr('context');
+		bP.animateBack(x);
 	});
 
 /****** DIAL CONTROLLER ******/

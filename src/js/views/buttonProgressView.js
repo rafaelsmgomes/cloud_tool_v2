@@ -1,4 +1,4 @@
-export const animateStuff = (btnVal) => {
+export const animateFwd = (btnVal) => {
 
 	if(btnVal === 1){
 		$('.landing__container').addClass('landing__container--fadeout');
@@ -40,13 +40,7 @@ export const animateStuff = (btnVal) => {
 		$('.footer').removeClass('activate');		
 
 		$('.btn__regress').attr('context', '2')
-		// setTimeout(function(){
-		// 	$('.btn__regress').addClass('rotate');
-		// 	$('.page--4').addClass('activate');		
-		// 	$('.line--5, .line--6, .line--7').addClass('activate');
-		// 	$('.footer').addClass('activate');
-		// 	$('.footer-text').text('3/6');				
-		// },10000);
+
 		setTimeout(function(){
 			$('.btn__regress').addClass('rotate');
 			$('.page--4').addClass('activate');		
@@ -110,4 +104,58 @@ export const animateStuff = (btnVal) => {
 			$('.line__wrapper--1').css('opacity',1)
 		}, 3000);	
 	};
+};
+
+export const animateBack = (btnVal) => {
+	btnVal=Number(btnVal)+1;
+
+	if(btnVal === 1){
+		$('.page--2').removeClass('activate');
+		$('.footer').removeClass('activate');		
+		setTimeout(function(){
+			$('.landing__container').removeClass('landing__container--fadeout');
+			$('.landing__title').removeClass('landing__title--fadeout');
+			$('.landing__subtitle').removeClass('landing__subtitle--fadeout');							
+		},3000);				
+	}else if(btnVal === 2){
+		$('.page--3').removeClass('activate');
+		$('.footer').removeClass('activate');		
+		setTimeout(function(){
+			$('.page--2').addClass('activate');				
+			// $('.line--1, .line--2').addClass('activate');
+			$('.footer').addClass('activate');							
+		},3000);				
+	}else if(btnVal === 3){
+
+		$('.page--4').removeClass('activate');
+		$('.footer').removeClass('activate');	
+		
+		setTimeout(function(){
+			$('.btn__regress').removeClass('rotate');
+			$('.page--3').addClass('activate');
+			$('.footer').addClass('activate');		
+		},4500);		
+	}else if(btnVal === 4){
+		$('.page--5').removeClass('activate')
+		$('.footer').removeClass('activate');		
+		setTimeout(function(){
+			$('.page--4').addClass('activate');			
+			$('.footer').addClass('activate');					
+		},1500);
+	}else if(btnVal === 5){
+		$('.page--6').removeClass('activate')
+		$('.footer').removeClass('activate');		
+		setTimeout(function(){
+			$('.page--5').addClass('activate');			
+			$('.footer').addClass('activate');					
+		},1500);		
+	}else if(btnVal === 6){
+		$('.page--7').removeClass('activate')
+		$('.footer').removeClass('activate');		
+		setTimeout(function(){
+			$('.btn__regress').removeClass('rotate');			
+			$('.page--6').addClass('activate');			
+			$('.footer').addClass('activate');					
+		},3000);			
+	}
 };

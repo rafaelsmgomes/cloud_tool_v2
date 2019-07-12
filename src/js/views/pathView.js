@@ -19,23 +19,29 @@ export const easing = [
 ];
 
 	// Regress
-// export const movement2 = [
-// 	['l','u'],
-// 	['l','u'],
-// 	['r2','d2','l2'],
-// 	['r'],
-// 	['r'],
-// 	['l','u'],
-// ];
+export const movement2 = [
+	['l','u'], // Q1 to landing
+	['l','u'], // Q2 to Q1
+	['r2','d2','l2'], // Q3 to Q2
+	['r'], // Q4 to Q3
+	['r'], // Q5 to Q4
+	['l','u'], // Q6 to Q5
+];
 
-// export const easing2 = [
-// 	];
+export const easing2 = [
+	['(.11,1.08,1,-0.3)','(.22,.65,.52,1.03)'], // Q1 to landing
+	['(.77,.15,0,1.02)','(.77,.15,.43,.88)'], // Q2 to Q1
+	['(1,.49,.12,.56)','(1,0,0,.22)','(1,0,.62,-0.05)'], // Q3 to Q2
+	['(.59,.76,.05,.17)','(.36,1.05,.34,.77)'], // Q4 to Q3
+	['(.36,1.05,.28,.99)','(.36,1.05,0,.84)'], // Q5 to Q4
+	['(.36,1.05,.24,.29)','(1,0,0,.22)'], // Q6 to Q5	
+];
 
-// export const pageList = [
-// 	'.page--2',
-// 	'.page--3',
-// 	'.page--4',
-// 	'.page--5',
-// 	'.page--6',
-// 	'.page--7',
-// ];	
+export const pageList = [
+	'.page--2',
+	'.page--3',
+	'.page--4',
+	'.page--5',
+	'.page--6',
+	'.page--7',
+];	
