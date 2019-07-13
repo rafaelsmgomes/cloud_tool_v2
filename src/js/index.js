@@ -231,8 +231,12 @@ $(document).ready(function(){
 		return x;		
 	}
 /****************  LINE CONTROLLER  ********************/ 
-
-
+	
+	
+/****************  ELOQUA CONTROLLER  ********************/ 
+	$('.detailed-score__btn').on('click',function(){
+		css.displayEloqua();
+	});
 
 /****************  CLOUD/ LOTTIE INIT  ********************/ 
 	lottie.loadAnimation({
