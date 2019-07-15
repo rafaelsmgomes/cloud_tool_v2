@@ -131,21 +131,22 @@
 						margin-top: 5.3rem;
 					}
 				}
-
-
 			}
 
 			&--3{
 				display: none;
 				justify-content: center;
-		    position: absolute;
-		    left: 50%;
-		    transform: translateX(-50%);
-		    top: 22.45rem;		
-		    
-		    @include bp(1440){
-		    	top: 13.80rem;
-		    }
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 22.45rem;		
+				
+				@include bp(1440){
+					top: 13.80rem;
+				}
+				@include bp(1024){
+					top: 8.5rem;
+				}
 			}
 
 		}
