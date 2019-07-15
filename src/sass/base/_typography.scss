@@ -187,6 +187,9 @@ b {
 	  @include bp(1300){
 		  font-size: .8rem;
 	  }
+	  @include bp(995){
+		  font-size: .7rem;
+	  }
 	
 		// .selection__container--active &{
 		// 	color: $color-blue-1;
