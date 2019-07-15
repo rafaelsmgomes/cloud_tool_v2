@@ -3,7 +3,7 @@ export const resizeLines = width => {
 	let size2 = 92.7;
 	let size3 = 153.1;
 	let size4 = 278.6;
-	let size5 = 99.15;
+	let size5 = -99.15;
 	let size6 = 280;
 	let size7 = 1;
 
