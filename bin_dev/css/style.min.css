@@ -1240,14 +1240,14 @@ b {
 .main-container {
   opacity: 1; }
   .main-container-resize {
-    opacity: 0;
-    transition: opacity 1500ms;
+    opacity: 1;
+    transition: opacity 500ms;
     transition-timing-function: ease-in;
     transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
 .pathfinder {
   background-color: dodgerblue;
-  transition: all 1500ms; }
+  transition: all 800ms; }
 
 .footer {
   position: fixed;

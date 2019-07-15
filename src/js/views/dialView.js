@@ -1,5 +1,5 @@
 const retrieveGroupText = (dialGroup) => {
-	const textGroup = {};	
+	const textGroup = {};
 
 
   if(dialGroup.hasClass('dial-group--1')){
@@ -16,11 +16,11 @@ const retrieveGroupText = (dialGroup) => {
   	textGroup.first = 'Impede current process';
   	textGroup.second = 'No Impact';
   	textGroup.third = 'Improve Data use';
-    
+
     if($('body').width() <= 1440){
       textGroup.first = 'Impede';
       textGroup.second = 'No Impact';
-      textGroup.third = 'Improve';        
+      textGroup.third = 'Improve';
     }
   }else{
   	textGroup.first = 'Less impact';
@@ -32,7 +32,7 @@ const retrieveGroupText = (dialGroup) => {
 
 const retrieveText = (dialGroup, angle) => {
 
-	const textGroup = retrieveGroupText(dialGroup); 
+	const textGroup = retrieveGroupText(dialGroup);
 
 // Dial 1 + 3
 
@@ -76,7 +76,7 @@ export const dialContextualize = (dial, angle) => {
 
   dialContext.css('display', 'none');
   dialContextMain.css('display', 'flex');
-  dialContextMainText.text(text);     
+  dialContextMainText.text(text);
 };
 
 export const changeDialText = () => {
@@ -95,5 +95,3 @@ export const progressBtn = (dial) => {
   const pageBtnProgress = dial[0].$div.closest('.page__content').find( ".btn__progress");
   pageBtnProgress.click();
 }
-
-
