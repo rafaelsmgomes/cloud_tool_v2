@@ -166,11 +166,16 @@
 				padding-right: 3.70rem;	
 				@include bp(1440){
 					padding-right: 1.7rem;
-				}				
+				}
 				@include bp(1024){
 					padding-right: .75rem;
-					width: 6.5rem;
-				}				
+				}
+
+				&-a {
+					@include bp(1024){
+						width: 6.5rem;
+					}				
+				}
 			}						
 		}
 	}
