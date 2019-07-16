@@ -5,7 +5,7 @@ export const e = {
 	btnProgress3: $('.btn__progress--3'),
 	btnProgress4: $('.btn__progress--4'),
 	btnProgress5: $('.btn__progress--5'),
-	btnProgress6: $('.btn__progress--6'),	
+	btnProgress6: $('.btn__progress--6'),
 	btnProgress7: $('.btn__progress--7'),
 
 	btnBack: $('.btn__regress'),
@@ -22,10 +22,10 @@ export const e = {
 	results__copy: $('.results__copy'),
 
 	thisDialElement: function(start,reference,end){
-		$(start)[0].$div.closest(reference).find(end); 	
+		$(start)[0].$div.closest(reference).find(end);
 	},
 	thisScrollElement: function(slider){
-		return $(`#${slider}`).closest('.scroller__content');	
+		return $(`#${slider}`).closest('.scroller__content');
 	},
 	thisNextScrollElement: function(slider){
 		return $(`#${slider}`).closest('.scroller__content').next('.scroller__content');

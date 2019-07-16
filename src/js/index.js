@@ -31,11 +31,11 @@ import peersJson from './peerCloud.json';
 import userJson from './userCloud.json';
 import scrollJson from './scrollDown.json';
 
-$(document).ready(function(){	
+$(document).ready(function(){
 
  	const state = {};
 
-/****** PAGE/LINE CONTROLLER ******/ 
+/****** PAGE/LINE CONTROLLER ******/
 	state.width = $('body').width();
 	// state.height = e.page.height();
 	// page.reformWandH(state.width, state.height);
@@ -44,21 +44,21 @@ $(document).ready(function(){
 
 	$(window).on('resize',function(){
 		state.width = $('body').width();
-		// state.height = $(window).height();				
+		// state.height = $(window).height();
 		page.reformWandH();
 
 		line.resizeLines(state.width);
 	});
 
 	$('.page--8').on('scroll',function(){
-		$('.page--8').addClass('activate');	
+		$('.page--8').addClass('activate');
 	})
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
 
 	state.userAggregateValue = 0;
-	
-	// PROGRESS 
+
+	// PROGRESS
 	e.btnProgress.sp(path.movement, path.easing);
 
 	state.pageNum = new Page();
@@ -75,12 +75,12 @@ $(document).ready(function(){
 	});
 
 	e.btnProgress7.on('click',function(){
-		
+
 		// Change color after click
 		css.changeBodyColor('white');
 
 		// Shows score in results after click
-		state.userAggregateValue = 
+		state.userAggregateValue =
 			state.dial1.val +
 			state.dial2.val +
 			state.dial3.val +
@@ -99,17 +99,17 @@ $(document).ready(function(){
 		result.displayResultsCopy(state.userAggregateValue, PeersData.peerScore);
 
 		// setTimeout(function(){
-		// 	loadCloudAnimation(cloudUser, cloudPeer);		
+		// 	loadCloudAnimation(cloudUser, cloudPeer);
 		// },7000);
 		setTimeout(function(){
-			loadCloudAnimation(cloudUser, cloudPeer);		
+			loadCloudAnimation(cloudUser, cloudPeer);
 		},3000);
 
 	});
 
 	// REGRESS
 
-	e.btnBack.dp(path.movement2,path.easing2,path.pageList);	
+	e.btnBack.dp(path.movement2,path.easing2,path.pageList);
 
 	e.btnBack.on('click', function(){
 		const x = $(this).attr('context');
@@ -125,24 +125,24 @@ $(document).ready(function(){
     'min':0,
     'max':180,
     'angleArc':180,
-    'angleOffset': -90,   
+    'angleOffset': -90,
     'thickness': .12,
 		'height': '200%',
 		'displayInput': false,
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
-		
+
 
     'change' : function (v) {
       const self = $(this);
 
 	 		dial.dialRotator(self,v);
-			dial.dialContextualize(self,v);	 		
+			dial.dialContextualize(self,v);
     },
     'release': function (v){
       const self = $(this);
-	 		this.selfID = self[0].$div.prevObject.data('id');	 		
-	 		this.dial = assignDial(this.selfID);	
+	 		this.selfID = self[0].$div.prevObject.data('id');
+	 		this.dial = assignDial(this.selfID);
 
 	 		this.dial.changeValue(v);
 
@@ -190,32 +190,32 @@ $(document).ready(function(){
 	  polyfill: false,
 
     // Callback function on slide
-    onSlide: function(position, value) {    	
+    onSlide: function(position, value) {
     },
 
     // Callback function on end
     onSlideEnd: function(position, value) {
-    	const slider = this.identifier;    	
+    	const slider = this.identifier;
     	const pageContentElement = $(`#${slider}`).closest('.page__content');
     	let sliderGroup;
 
     	if(pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--1')){
-    		sliderGroup = state.slider1;    		    		
+    		sliderGroup = state.slider1;
     	}else if(pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--2')){
     		sliderGroup = state.slider2;
     	}
-    	sliderGroup.progression++;    	    	
+    	sliderGroup.progression++;
     	pagination.highlightPagination(pageContentElement, sliderGroup.progression);
 
     	sliderGroup.pushToVal(value);
 
-    	if(sl.nextScrollerExist(slider)){    	
-    		sl.progressScrollerContent(slider);    			
+    	if(sl.nextScrollerExist(slider)){
+    		sl.progressScrollerContent(slider);
     		sliderGroup.calculateVal();
     	}else{
     		sliderGroup.calculateVal();
-	    	sl.progressBtn(slider);	    	
-    	};      		   
+	    	sl.progressBtn(slider);
+    	};
     }
 	});
 
@@ -228,46 +228,42 @@ $(document).ready(function(){
 		}else{
 			x = state.dial3;
 		}
-		return x;		
+		return x;
 	}
-/****************  LINE CONTROLLER  ********************/ 
-	
-	
-/****************  ELOQUA CONTROLLER  ********************/ 
+/****************  LINE CONTROLLER  ********************/
+
+
+/****************  ELOQUA CONTROLLER  ********************/
 	$('.detailed-score__btn').on('click',function(){
 		css.displayEloqua();
 	});
 
-/****************  CLOUD/ LOTTIE INIT  ********************/ 
+/****************  CLOUD/ LOTTIE INIT  ********************/
 	lottie.loadAnimation({
 	  container: document.getElementById('scroll_down'),
-	  renderer: 'svg',	  
+	  renderer: 'svg',
 	  autoplay: true,
 	  animationData: scrollJson,
 	  loop: true,
 	});
-});  
+});
 
-/****************  CLOUD LOTTIE  ********************/ 
+/****************  CLOUD LOTTIE  ********************/
 
 function loadCloudAnimation(user,peer){
 	$('#cloud__wrapper').css('opacity', 1);
 
 	lottie.loadAnimation({
 	  container: document.getElementById('cloud__wrapper'),
-	  renderer: 'svg',	  
+	  renderer: 'svg',
 	  autoplay: true,
 	  animationData: user,
 	});
 
 	lottie.loadAnimation({
 	  container: document.getElementById('cloud__wrapper'),
-	  renderer: 'svg',	  
+	  renderer: 'svg',
 	  autoplay: true,
 	  animationData: peer,
 	});
 }
-
-
-
-
