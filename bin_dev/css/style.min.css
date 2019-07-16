@@ -267,6 +267,9 @@ b {
   @media only screen and (max-width: 1300px) {
     .selection__text {
       font-size: .8rem; } }
+  @media only screen and (max-width: 995px) {
+    .selection__text {
+      font-size: .7rem; } }
 
 .results__logo {
   width: 12.65rem;
@@ -321,6 +324,9 @@ b {
     margin-right: 1.00rem; }
     @media only screen and (max-width: 1024px) {
       .dial__text--3 {
+        margin-right: 0.75rem; } }
+    @media only screen and (max-width: 1024px) {
+      .dial__text--3c, .dial__text--3-a {
         margin-right: 0rem;
         margin-left: 1rem;
         margin-top: -.5rem; } }
@@ -596,42 +602,45 @@ b {
     .cta__wrapper {
       right: -22.50rem; } }
   .cta__wrapper--1 {
-    top: 31.6rem;
+    top: 30.6rem;
     height: 8.50rem; }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--1 {
-        top: 18.30rem; } }
+        top: 17.40rem; } }
     @media only screen and (max-width: 1024px) {
       .cta__wrapper--1 {
-        top: 10.7rem;
+        top: 10.3rem;
         right: -24rem; } }
   .cta__wrapper--2 {
-    top: 30.20rem;
+    top: 31.00rem;
     height: 7.20rem; }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--2 {
-        top: 19.20rem; } }
+        top: 18.70rem; } }
     @media only screen and (max-width: 1024px) {
       .cta__wrapper--2 {
-        top: 11.70rem; } }
+        top: 11.60rem; } }
   .cta__wrapper--3 {
-    top: 15.35rem;
+    top: 15.15rem;
     height: 6.55rem; }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--3 {
         top: 12.6rem; } }
+    @media only screen and (max-width: 1024px) {
+      .cta__wrapper--3 {
+        top: 11.55rem; } }
     @media only screen and (max-width: 1150px) {
       .cta__wrapper--3 {
         right: -27rem; } }
   .cta__wrapper--4 {
-    top: 35.70rem;
+    top: 32.60rem;
     height: 6.55rem; }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--4 {
-        top: 19.7rem; } }
+        top: 19.3rem; } }
     @media only screen and (max-width: 1024px) {
       .cta__wrapper--4 {
-        top: 13.4rem; } }
+        top: 12.3rem; } }
     .cta__wrapper--4-a {
       top: 37.80rem; }
 
@@ -806,6 +815,9 @@ b {
       @media only screen and (max-width: 1440px) {
         .dial__context-section--3 {
           top: 13.80rem; } }
+      @media only screen and (max-width: 1024px) {
+        .dial__context-section--3 {
+          top: 8.5rem; } }
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {
@@ -823,7 +835,9 @@ b {
           padding-right: 1.7rem; } }
       @media only screen and (max-width: 1024px) {
         .dial__context--wrapper--2 {
-          padding-right: .75rem;
+          padding-right: .75rem; } }
+      @media only screen and (max-width: 1024px) {
+        .dial__context--wrapper--2-a {
           width: 6.5rem; } }
 
 .dial__line {

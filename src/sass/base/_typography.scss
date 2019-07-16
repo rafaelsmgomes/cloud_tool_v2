@@ -187,6 +187,9 @@ b {
 	  @include bp(1300){
 		  font-size: .8rem;
 	  }
+	  @include bp(995){
+		  font-size: .7rem;
+	  }
 	
 		// .selection__container--active &{
 		// 	color: $color-blue-1;
@@ -246,18 +249,26 @@ b {
 				margin-top: .2rem;
 			}
 
-  	}
-  	&--2{
+  		}
+  		&--2{
 		  margin-left: 1.00rem;
-		  @include bp(1024){ margin-left: 0.75rem; }
-  	}
-  	&--3{
+		  @include bp(1024){ 
+			margin-left: 0.75rem; 
+		  }
+  		}
+  		&--3{
 		  margin-right: 1.00rem;
 		  @include bp(1024){ 
-			  margin-right: 0rem;
-			  margin-left: 1rem;
-			  margin-top: -.5rem;
-		   }
+			margin-right: 0.75rem; 
+		  }
+		  &c,
+		  &-a {
+			@include bp(1024){ 
+				margin-right: 0rem;
+				margin-left: 1rem;
+				margin-top: -.5rem;
+			}
+		  }
   	}
   }
 }
