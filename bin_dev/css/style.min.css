@@ -835,6 +835,60 @@ b {
   .dial__line--3 {
     transform: rotate(71deg); }
 
+.detailed__map {
+  width: 100%;
+  height: 34.40rem;
+  background-color: orangered;
+  margin-top: 3.60rem;
+  position: relative; }
+  .detailed__map--center {
+    height: 1.50rem;
+    width: 1.5rem;
+    border: 0.05rem dashed #00758f;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 40.7%; }
+
+.detailed__square {
+  position: absolute;
+  width: 9.55rem;
+  background-color: blue;
+  z-index: 2; }
+  .detailed__square--1 {
+    height: 15.70rem; }
+  .detailed__square--2 {
+    height: 8.25rem;
+    background-color: dodgerblue;
+    transform: translateX(-50%); }
+    .detailed__square--2-1 {
+      left: 50%; }
+    .detailed__square--2-2 {
+      background-color: green;
+      left: 65.41%;
+      bottom: 19.179%; }
+    .detailed__square--2-3 {
+      left: 90%;
+      bottom: 0%; }
+  .detailed__square--3 {
+    transform: translateX(-50%);
+    height: 10.25rem;
+    left: 90%; }
+  .detailed__square--4 {
+    background-color: hotpink;
+    height: 19.70rem;
+    bottom: 0;
+    left: 19.714%; }
+
+.detailed__link {
+  height: 5.05rem;
+  width: 100%;
+  border-radius: 0.20rem;
+  border: solid 0.05rem #324b5c;
+  bottom: 0;
+  position: absolute; }
+
 .header__logo {
   flex: 0 0 5.20rem;
   height: 1.60rem;
@@ -925,52 +979,6 @@ b {
     animation: fadewhite .5s linear;
     stroke: #cad9de;
     stroke-dasharray: 0; }
-
-.detailed__map {
-  width: 100%;
-  height: 34.40rem;
-  background-color: orangered;
-  margin-top: 3.60rem;
-  position: relative; }
-  .detailed__map--center {
-    height: 1.50rem;
-    width: 1.5rem;
-    border: 0.05rem dashed #00758f;
-    border-radius: 100%;
-    position: absolute;
-    transform: translate(-50%);
-    left: 50%;
-    top: 40.7%; }
-
-.detailed__square {
-  position: absolute;
-  width: 9.55rem;
-  background-color: blue;
-  z-index: 2; }
-  .detailed__square--1 {
-    height: 15.70rem; }
-  .detailed__square--2 {
-    height: 8.25rem;
-    background-color: dodgerblue;
-    transform: translateX(-50%); }
-    .detailed__square--2-1 {
-      left: 50%; }
-    .detailed__square--2-2 {
-      background-color: green;
-      left: 65.41%;
-      bottom: 19.179%; }
-    .detailed__square--2-3 {
-      left: 90%;
-      bottom: 0%; }
-  .detailed__square--3 {
-    transform: translateX(-50%);
-    height: 10.25rem;
-    left: 90%; }
-  .detailed__square--4 {
-    background-color: hotpink;
-    height: 19.70rem;
-    bottom: 0;
-    left: 19.714%; }
 
 .pagination {
   display: flex;

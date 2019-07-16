@@ -56,4 +56,14 @@
 			left: 19.714%;
 		}
 	}
+
+	&__link{
+	  height: 5.05rem;
+	  width: 100%;
+	  border-radius: 0.20rem;
+	  border: solid 0.05rem $color-blue-2;		
+
+	  bottom: 0;
+	  position: absolute;
+	}
 }
