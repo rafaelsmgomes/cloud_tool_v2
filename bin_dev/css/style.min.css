@@ -560,6 +560,20 @@ b {
     margin-left: 0.40rem;
     font-family: Univers, Arial, Helvetica, sans-serif; }
 
+.detailed__results--title {
+  width: 10.40rem;
+  height: 1.95rem;
+  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #fff;
+  display: flex;
+  align-items: center; }
+
 .btn__arrow {
   background-image: url("../assets/graphics/arrow.svg");
   width: 1.20rem;
@@ -899,12 +913,64 @@ b {
     overflow: visible;
     left: 50%;
     transform: translateX(-50%); }
+    .line__wrapper--x {
+      height: 100%;
+      width: 100%; }
     .line__wrapper--1.activate {
       opacity: 1; }
+  .line--x {
+    stroke-width: 1;
+    animation: none; }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #cad9de;
     stroke-dasharray: 0; }
+
+.detailed__map {
+  width: 100%;
+  height: 34.40rem;
+  background-color: orangered;
+  margin-top: 3.60rem;
+  position: relative; }
+  .detailed__map--center {
+    height: 1.50rem;
+    width: 1.5rem;
+    border: 0.05rem dashed #00758f;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 40.7%; }
+
+.detailed__square {
+  position: absolute;
+  width: 9.55rem;
+  background-color: blue;
+  z-index: 2; }
+  .detailed__square--1 {
+    height: 15.70rem; }
+  .detailed__square--2 {
+    height: 8.25rem;
+    background-color: dodgerblue;
+    transform: translateX(-50%); }
+    .detailed__square--2-1 {
+      left: 50%; }
+    .detailed__square--2-2 {
+      background-color: green;
+      left: 65.41%;
+      bottom: 19.179%; }
+    .detailed__square--2-3 {
+      left: 90%;
+      bottom: 0%; }
+  .detailed__square--3 {
+    transform: translateX(-50%);
+    height: 10.25rem;
+    left: 90%; }
+  .detailed__square--4 {
+    background-color: hotpink;
+    height: 19.70rem;
+    bottom: 0;
+    left: 19.714%; }
 
 .pagination {
   display: flex;
@@ -1307,6 +1373,8 @@ b {
   margin: 0 auto;
   padding-top: 4.00rem;
   position: relative; }
+  .page__content--x {
+    padding-top: 6.00rem; }
   @media only screen and (max-width: 1440px) {
     .page__content {
       width: 83.333%; } }
@@ -1353,6 +1421,11 @@ b {
   .page--8 {
     top: 189.19rem;
     overflow-y: overlay; }
+  .page--x {
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    background-color: green; }
 
 .block {
   display: block; }

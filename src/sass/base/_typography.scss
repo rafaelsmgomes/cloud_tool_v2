@@ -549,3 +549,23 @@ b {
 		}
 	}
 }
+
+.detailed{
+	&__results{
+		&--title{
+			width: 10.40rem;
+		  height: 1.95rem;
+		  font-family: $font-reg;
+		  font-size: $font-size-4;
+		  font-weight: bold;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.2;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+
+		  display: flex;
+		  align-items: center;
+		}
+	}
+}

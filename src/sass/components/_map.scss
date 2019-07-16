@@ -1,0 +1,59 @@
+.detailed{
+	&__map{
+		width: 100%;
+		height: 34.40rem;
+		background-color: orangered;
+		margin-top: 3.60rem;
+		position: relative;
+	
+		&--center{
+		  height: 1.50rem;
+		  width: 1.5rem;
+		  border: 0.05rem dashed $color-blue-1;
+		  border-radius: 100%;
+		  position: absolute;
+		  transform: translate(-50%);
+		  left: 50%;
+		  top: 40.7%;	    		
+		}
+	}
+	
+	&__square{
+		position: absolute;
+		width: 9.55rem;
+		background-color: blue;
+		z-index: 2;
+		&--1{
+			height: 15.70rem
+		}
+		&--2{
+			height: 8.25rem;
+			background-color: dodgerblue;
+			transform: translateX(-50%);
+
+	    &-1{		    
+		    left: 50%;	
+	    }
+	    &-2{
+	    	background-color: green;		    
+        left: 65.41%;		    
+  	    bottom: 19.179%;
+	    }
+	    &-3{		    
+		    left: 90%;	
+		    bottom: 0%;
+	    }			
+		}
+		&--3{
+			transform: translateX(-50%);
+			height: 10.25rem;
+			left: 90%;		
+		}
+		&--4{
+			background-color: hotpink;
+			height: 19.70rem;
+			bottom: 0;
+			left: 19.714%;
+		}
+	}
+}
