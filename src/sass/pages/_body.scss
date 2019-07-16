@@ -4,7 +4,12 @@
     margin: 0 auto;
 		padding-top: 4.00rem;	
 		position: relative;
-	
+
+				
+		&--x{
+			padding-top: 6.00rem;
+		}
+
 		@include bp(1440){
 			width: 83.333%;
 		}

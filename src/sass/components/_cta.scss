@@ -16,35 +16,38 @@
 
 		&--1{
 
-	        top: 31.6rem;
+	        top: 30.6rem;
 		    height: 8.50rem;
 
 			@include bp(1440){
-				top: 18.30rem;    
+				top: 17.40rem;    
 			}
 			@include bp(1024){
-				top: 10.7rem;
+				top: 10.3rem;
 				right: -24rem;
 			}
 		}
 		&--2{
-			top: 30.20rem;	    
+			top: 31.00rem;	    
 		    height: 7.20rem;
 		
 			@include bp(1440){
-			top: 19.20rem;    
+			top: 18.70rem;    
 			}
 			@include bp(1024){
-			top: 11.70rem;    
+			top: 11.60rem;    
 			}
 		}		
 		
 		&--3{
-	    top: 15.35rem;
+	    top: 15.15rem;
 		height: 6.55rem;	
 		
 		@include bp(1440){
 			top: 12.6rem;
+		}
+		@include bp(1024){
+			top: 11.55rem;
 		}
 		
 		@include bp(1150){
@@ -53,14 +56,14 @@
 		}
 		
 		&--4{
-			top: 35.70rem;
+			top: 32.60rem;
 			height: 6.55rem;
 
 			@include bp(1440){
-				top: 19.7rem;
+				top: 19.3rem;
 			}
 			@include bp(1024){
-				top: 13.4rem;
+				top: 12.3rem;
 			}
 			&-a{
 				top: 37.80rem;

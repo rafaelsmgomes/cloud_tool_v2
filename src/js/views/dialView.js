@@ -24,7 +24,7 @@ const retrieveGroupText = (dialGroup) => {
     }
   }else{
   	textGroup.first = 'Less impact';
-  	textGroup.second = 'No Impact';
+  	textGroup.second = 'More Impact';
   }
 
   return textGroup;
@@ -76,18 +76,24 @@ export const dialContextualize = (dial, angle) => {
 
   dialContext.css('display', 'none');
   dialContextMain.css('display', 'flex');
+
   dialContextMainText.text(text);
+
 };
 
 export const changeDialText = () => {
   $('.dial__text--1c').text('Planning for the cloud');
   $('.dial__text--2c').text('Not using the cloud');
   $('.dial__text--3c').text('Using cloud services');
+  $('.dial__text--2b').text('Impede current process');
+  $('.dial__text--3b').text('Improve data use');
 
   if($('body').width() <= 1440){
     $('.dial__text--1c').text('Planning');
     $('.dial__text--2c').text('Not using');
     $('.dial__text--3c').text('Using services');
+    $('.dial__text--2b').text('Impede');
+    $('.dial__text--3b').text('Improve');
   }
 }
 
