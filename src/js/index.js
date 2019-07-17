@@ -155,6 +155,10 @@ $(document).ready(function(){
 	$(window).on('resize',function(){
 		dial.changeDialText();
 	});
+/****** DETAILED MAP CONTROLLER ******/
+	$('.detailed__square').on('click',function(){
+		$(this).addClass('activate');
+	})
 
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
