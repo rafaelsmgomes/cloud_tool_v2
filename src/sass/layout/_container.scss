@@ -6,15 +6,15 @@
  //  left: 50%;
  //  transform: translateX(-50%);
 	opacity: 1;
-	&-resize{	
-		opacity: 0;
-		transition: opacity 1500ms; 
+	&-resize{
+		opacity: 1;
+		transition: opacity 500ms;
 		transition-timing-function: ease-in;
 	  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 	}
 }
 .pathfinder{
   background-color: dodgerblue;
-  transition: all 1500ms;
+  transition: all 800ms;
   // transition-timing-function: cubic-bezier(.84,.09,.19,.92);
 }

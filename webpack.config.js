@@ -25,7 +25,11 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: './src/index.html',
-		}),		
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'results.html',
+			template: './src/results.html',
+		}),				
     // new CopyWebpackPlugin([
     //   {from:'src/js/datax',to:'js'} 
     // ]), 		
