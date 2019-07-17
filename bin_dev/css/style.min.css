@@ -1347,25 +1347,25 @@ b {
   height: 100vh;
   display: flex; }
   .page--2 {
-    top: 50.45rem;
+    top: 155vh;
     left: 92.70rem; }
   .page--3 {
-    top: 100.90rem;
+    top: 310vh;
     left: 278.10rem; }
   .page--4 {
-    top: -151.35rem;
+    top: -472vh;
     left: 278.10rem; }
   .page--5 {
-    top: -151.35rem;
+    top: -472vh;
     left: 0px; }
   .page--6 {
-    top: -151.35rem;
+    top: -472vh;
     left: -278.10rem; }
   .page--7 {
-    top: 100.90rem;
+    top: 310vh;
     left: -185.40rem; }
   .page--8 {
-    top: 189.19rem;
+    top: 582vh;
     overflow-y: overlay; }
 
 .block {
