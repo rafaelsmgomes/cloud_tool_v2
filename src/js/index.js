@@ -56,6 +56,7 @@ $(document).ready(function(){
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
 
+// 
 	state.userAggregateValue = 0;
 
 	// PROGRESS
@@ -157,8 +158,28 @@ $(document).ready(function(){
 	});
 /****** DETAILED MAP CONTROLLER ******/
 	$('.detailed__square').on('click',function(){
-		$(this).addClass('activate');
-	})
+		const self = $(this);
+		const val = self.data('val');
+		const context = $(`.page--${val}`);
+		const nextTop = context.css('top');
+		const nextLeft = context.css('left');		
+		console.log(nextTop, nextLeft);
+
+		context.addClass('activate');
+		
+		$('.detailed__map--container').addClass('activate');
+		$('.detailed__results--title').addClass('deactivate');
+		// $('.detailed__map > *').addClass('deactivate');
+		$('.detailed__map').children().not(this).addClass('deactivate');
+
+		setTimeout(function(){
+			self.addClass('activate');
+		}, 800)
+		// $(this).addClass('activate');	
+
+		$('.pathfinder').css("transform", `translate(-${nextLeft},-${nextTop})`);
+
+	});
 
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();

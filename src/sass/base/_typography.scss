@@ -574,9 +574,14 @@ b {
 		  line-height: 1.2;
 		  letter-spacing: normal;
 		  color: $color-white-1;
-
 		  display: flex;
 		  align-items: center;
+			transition: all 700ms;
+
+		
+			&.deactivate{
+				opacity: 0;
+			}
 		}
 	}
 }

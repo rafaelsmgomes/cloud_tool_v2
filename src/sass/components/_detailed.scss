@@ -6,12 +6,30 @@
     height: 840px;		
 		background-color: orangered;
 		position: relative;
+		transition: all 800ms;	
+		// zoom: 100%;
 	
+		
+		// &.activate{
+		// 	 // zoom: 734%; 
+  //   	// transform: scale(7.34) translate(-820px, -565px);
+  //   	transform: scale(7.34);
+		// 	// &--1{
+		// 	// 	// left: -820px;
+		//  //  //   top: -565px;
+		// 	// }	
+		// }
+
 		&--container{
 			width: 100%;
 			height: 840px;
 			overflow: hidden;
 	    margin-top: 3.60rem;
+	    transition: all 800ms;	
+
+	    &.activate{
+	    	margin-top: -0.15rem;
+	    }
 		}
 
 		&--center{
@@ -32,7 +50,11 @@
 		width: 191.00px;
 		background-color: blue;
 		z-index: 2;
-		transition: all 500ms;
+		transition: all 800ms;
+		
+		&.deactivate{
+			opacity: 0;
+		}
 
 		&--1{
 			// height: 15.70rem;
@@ -44,54 +66,45 @@
 			background-color: dodgerblue;
 			transform: translateX(-50%);
 
+		
+
 	    &-1{		    
 		    left: 50%;	
-		    &.activate{
-		    	left: 0;
-		    }
+
 	    }
 	    &-2{
-	    	background-color: green;		    
+	    	background-color: black;		    
         left: 65.41%;		    
   	    bottom: 19.179%;
+
   	    &.activate{
-  	    	left: 0;
-  	    	bottom: 0;
-  	    }
+  	    	transform: scale(7.34) translateX(0);
+    	    left: 603px;
+			    top: 363px;
+  	    }  	   
 	    }
 	    &-3{		    
 		    left: 90%;	
 		    bottom: 0%;
-		    &.activate{
-		    	left: 0;
-		    }
 	    }			
 		}
 		&--3{
 			transform: translateX(-50%);
 			// height: 10.25rem;
 			height: 205.00px;
-			left: 90%;		
-	    &.activate{
-	    	left: 0;
-	    }			
+			left: 90%;			
 		}
 		&--4{
 			background-color: hotpink;
 			// height: 19.70rem;
 			height: 394.00px;
 			bottom: 0;
-			left: 19.714%;
-	    &.activate{
-	    	left: 0;
-	    }					
+			left: 19.714%;				
 		}
 
 		&.activate{
-			transform: translateX(0%);
-			width: 100%;
-			height: 100%;
-		}		
+			height: 114.6px;
+		}
 	}
 
 	&__link{

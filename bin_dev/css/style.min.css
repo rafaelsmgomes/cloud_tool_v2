@@ -41,6 +41,16 @@ $Breakpoint argument choices:
   100% {
     border: solid 0.1rem #00758f; } }
 
+@keyframes detailedActivate {
+  0% {
+    zoom: 100%;
+    left: 0px;
+    top: 0px; }
+  100% {
+    zoom: 734%;
+    left: -820px;
+    top: -565px; } }
+
 *,
 *::after,
 *::before {
@@ -578,7 +588,10 @@ b {
   letter-spacing: normal;
   color: #fff;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  transition: all 700ms; }
+  .detailed__results--title.deactivate {
+    opacity: 0; }
 
 .btn__arrow {
   background-image: url("../assets/graphics/arrow.svg");
@@ -853,12 +866,16 @@ b {
   width: 1400px;
   height: 840px;
   background-color: orangered;
-  position: relative; }
+  position: relative;
+  transition: all 800ms; }
   .detailed__map--container {
     width: 100%;
     height: 840px;
     overflow: hidden;
-    margin-top: 3.60rem; }
+    margin-top: 3.60rem;
+    transition: all 800ms; }
+    .detailed__map--container.activate {
+      margin-top: -0.15rem; }
   .detailed__map--center {
     height: 1.50rem;
     width: 1.5rem;
@@ -874,7 +891,9 @@ b {
   width: 191.00px;
   background-color: blue;
   z-index: 2;
-  transition: all 500ms; }
+  transition: all 800ms; }
+  .detailed__square.deactivate {
+    opacity: 0; }
   .detailed__square--1 {
     height: 314.00px; }
   .detailed__square--2 {
@@ -883,37 +902,28 @@ b {
     transform: translateX(-50%); }
     .detailed__square--2-1 {
       left: 50%; }
-      .detailed__square--2-1.activate {
-        left: 0; }
     .detailed__square--2-2 {
-      background-color: green;
+      background-color: black;
       left: 65.41%;
       bottom: 19.179%; }
       .detailed__square--2-2.activate {
-        left: 0;
-        bottom: 0; }
+        transform: scale(7.34) translateX(0);
+        left: 603px;
+        top: 363px; }
     .detailed__square--2-3 {
       left: 90%;
       bottom: 0%; }
-      .detailed__square--2-3.activate {
-        left: 0; }
   .detailed__square--3 {
     transform: translateX(-50%);
     height: 205.00px;
     left: 90%; }
-    .detailed__square--3.activate {
-      left: 0; }
   .detailed__square--4 {
     background-color: hotpink;
     height: 394.00px;
     bottom: 0;
     left: 19.714%; }
-    .detailed__square--4.activate {
-      left: 0; }
   .detailed__square.activate {
-    transform: translateX(0%);
-    width: 100%;
-    height: 100%; }
+    height: 114.6px; }
 
 .detailed__link {
   height: 5.05rem;
