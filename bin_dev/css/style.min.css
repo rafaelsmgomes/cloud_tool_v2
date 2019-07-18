@@ -865,7 +865,6 @@ b {
 .detailed__map {
   width: 1400px;
   height: 840px;
-  background-color: orangered;
   position: relative;
   transition: all 800ms; }
   .detailed__map--container {
@@ -873,7 +872,7 @@ b {
     height: 840px;
     overflow: hidden;
     margin-top: 3.60rem;
-    transition: all 800ms; }
+    transition: margin-top 800ms; }
     .detailed__map--container.activate {
       margin-top: -0.15rem; }
   .detailed__map--center {
@@ -908,7 +907,7 @@ b {
     .detailed__square--2-1 {
       left: 50%; }
     .detailed__square--2-2 {
-      background-color: black;
+      background-color: transparent;
       left: 65.41%;
       bottom: 19.179%; }
       .detailed__square--2-2.activate {
@@ -929,7 +928,8 @@ b {
     left: 19.714%; }
   .detailed__square.activate {
     height: 114.6px;
-    border: 0.27px solid blue; }
+    border: 0.27px solid blue;
+    opacity: 0; }
 
 .detailed__link {
   height: 5.05rem;
@@ -1422,6 +1422,27 @@ b {
     .header__container {
       width: 83.333%; } }
 
+.header__nav {
+  width: 14.70rem;
+  height: 1.20rem;
+  bottom: -3.95rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  justify-self: center;
+  position: absolute;
+  z-index: -100;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between; }
+  .header__nav.activate {
+    z-index: 1;
+    opacity: 1; }
+  .header__nav--btn {
+    background-color: red;
+    height: 1.20rem;
+    width: 1.20rem; }
+
 .results__main {
   height: 51.80rem;
   width: 100%;
@@ -1499,8 +1520,7 @@ b {
   .page--x {
     z-index: 5;
     height: 100vh;
-    width: 100vw;
-    background-color: green; }
+    width: 100vw; }
     .page--x.deactivate {
       z-index: -1;
       background-color: transparent; }

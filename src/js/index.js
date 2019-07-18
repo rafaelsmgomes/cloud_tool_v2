@@ -63,8 +63,14 @@ $(document).ready(function(){
 	e.btnProgress.sp(path.movement, path.easing);
 
 	state.pageNum = new Page();
+
+	e.hdrProgress.on('click',function(){
+		console.log(this);
+	});	
+
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
+		console.log(value);
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
@@ -180,6 +186,7 @@ $(document).ready(function(){
 			setTimeout(function(){						
 				$('.page--x').addClass('deactivate');
 				$('.main-container').addClass('activate');
+				$('.header__nav').addClass('activate');
 			}, 800)
 			
 		}, 800);

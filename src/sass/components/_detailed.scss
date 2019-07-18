@@ -4,7 +4,7 @@
 		// height: 34.40rem;
     width: 1400px;
     height: 840px;		
-		background-color: orangered;
+		// background-color: orangered;
 		position: relative;
 		transition: all 800ms;	
 		// zoom: 100%;
@@ -25,7 +25,7 @@
 			height: 840px;
 			overflow: hidden;
 	    margin-top: 3.60rem;
-	    transition: all 800ms;	
+	    transition: margin-top 800ms;	
 
 	    &.activate{
 	    	margin-top: -0.15rem;
@@ -81,7 +81,7 @@
 
 	    }
 	    &-2{
-	    	background-color: black;		    
+	    	background-color: transparent;		    
         left: 65.41%;		    
   	    bottom: 19.179%;
 
@@ -113,6 +113,7 @@
 		&.activate{
 			height: 114.6px;
 	    border: 0.27px solid blue;
+	    opacity: 0;
 		}
 	}
 
