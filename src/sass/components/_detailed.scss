@@ -40,7 +40,12 @@
 		  position: absolute;
 		  transform: translate(-50%);
 		  left: 50%;
-		  top: 40.7%;	    		
+		  top: 40.7%;	    
+			transition: opacity 800ms;
+
+			&.deactivate{
+				opacity: 0;
+			}
 		}
 	}
 	
@@ -51,6 +56,9 @@
 		background-color: blue;
 		z-index: 2;
 		transition: all 800ms;
+
+	  border-radius: 0.20rem;
+	  border: solid 0.10rem $color-blue-1;
 		
 		&.deactivate{
 			opacity: 0;
@@ -104,6 +112,7 @@
 
 		&.activate{
 			height: 114.6px;
+	    border: 0.27px solid blue;
 		}
 	}
 

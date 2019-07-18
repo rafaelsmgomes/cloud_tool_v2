@@ -171,11 +171,19 @@ $(document).ready(function(){
 		$('.detailed__results--title').addClass('deactivate');
 		// $('.detailed__map > *').addClass('deactivate');
 		$('.detailed__map').children().not(this).addClass('deactivate');
+		$('.line__wrapper').addClass('deactivate');
+		$('.detailed__map--center').addClass('deactivate');
 
 		setTimeout(function(){
 			self.addClass('activate');
-		}, 800)
-		// $(this).addClass('activate');	
+			
+			setTimeout(function(){						
+				$('.page--x').addClass('deactivate');
+				$('.main-container').addClass('activate');
+			}, 800)
+			
+		}, 800);
+		
 
 		$('.pathfinder').css("transform", `translate(-${nextLeft},-${nextTop})`);
 

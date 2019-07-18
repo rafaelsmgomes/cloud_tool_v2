@@ -42,11 +42,21 @@
     overflow-y: overlay;
   }
 
+  .main-container--x &{
+    padding-top: 7.80rem;
+  }
+
   &--x{
     z-index: 5;
     height: 100vh;
     width: 100vw;
     background-color: green;
+    
+    &.deactivate{
+      z-index: -1;
+      background-color: transparent;  
+    }
   }
+
 
 }
