@@ -84,7 +84,7 @@ b {
 		}
 	
 		@include bp(1024){
-			font-size: 1.30rem;
+			font-size: 1.80rem;
 			margin-top: .55rem;
 		}
 	
@@ -95,7 +95,7 @@ b {
 	  	  	width: 32.50rem;
 			}
 		  @include bp(1024){
-	  	  	width: 22.50rem;
+	  	  	width: 34.90rem;
 			}
 		}
 		&--2{
@@ -139,8 +139,9 @@ b {
 
 		@include bp(1024){
 			font-size: .95rem;
-			width: 19.65rem;
-			margin-top: .4rem;
+			width: 34.90rem;
+			height: 2.8rem;
+			margin-top: .5rem;
 		}
 
 		&--1{
@@ -243,10 +244,10 @@ b {
 		&--1{
 		  text-align: center;
 			width: 6.60rem;
-			margin-top: calc(#{$dial-width} * .025);
+			margin-top: calc(#{$dial-DeskL} * .025);
 
 			@include bp(1024){
-				margin-top: .2rem;
+				margin-top: calc(#{$dial-DeskS} * .025);
 			}
 
   		}
