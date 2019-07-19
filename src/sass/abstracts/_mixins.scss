@@ -16,6 +16,12 @@
   @media only screen and (max-width: $point+px){ @content; }           
 }
 
+@mixin bp_wh($point_width, $point_height) {
+	@media only screen 
+	and (max-width: $point_width+px)
+	and (max-height: $point_height+px)
+}
+
 // MEDIA QUERY MANAGER
 
 /*
