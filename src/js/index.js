@@ -146,7 +146,7 @@ $(document).ready(function(){
 
 	 		this.dial.changeValue(v);
 
-      dial.progressBtn(self);
+	  dial.progressBtn(self);
     },
 	});
 
@@ -154,7 +154,11 @@ $(document).ready(function(){
 
 	$(window).on('resize',function(){
 		dial.changeDialText();
+		dial.handResize();
 	});
+
+	
+	dial.handResize();
 
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
