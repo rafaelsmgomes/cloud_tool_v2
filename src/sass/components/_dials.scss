@@ -1,8 +1,14 @@
 .dial{
 
 	&-group{
-		width: 40.48rem;
-		height: 20.27rem;
+		// width: 40.48rem;
+		// height: 20.27rem;
+		width: $dial-width;
+		height: calc(#{$dial-width} / 2);
+		max-width: $dial-width-max;
+		max-height: calc(#{$dial-width-max} / 2);
+		// max-width: 56.2vw;
+		// max-height: 26.1vw;
 		position: relative;
 
 		@include bp(1440){
@@ -16,7 +22,7 @@
 
 		&--1,
 		&--3{
-			margin-top: 5.80rem;
+			margin-top: 4.63vh;
 
 			@include bp(1440){
 				margin-top: 1.10rem;
@@ -54,10 +60,10 @@
 	}
 	&__crown{
 		background-color: $color-blue-1;
-		width: 2.50rem;
-		height: 2.50rem;
+		width: calc(#{$dial-width} * .06);
+		height: calc(#{$dial-width} * .06);
 		position: absolute;
-		bottom: -1.25rem;
+		bottom: calc(-#{$dial-width} * .06 / 2);
     left: 50%;
     transform: translateX(-50%);
     border-radius: 100%;
@@ -77,7 +83,7 @@
     position: absolute;
     height: 0;
     border-style: solid;
-		border-width: 0 0.62rem 17.80rem 0.62rem;
+		border-width: 0 calc(#{$dial-width} * .0175) calc(#{$dial-width} * .5) calc(#{$dial-width} * .0175);
 
     border-color: transparent transparent $color-blue-1 transparent;
     bottom: 0px;
@@ -102,7 +108,7 @@
 		&--1{
 		    flex-direction: column;
 		    align-items: center;
-		    padding-top: 2.00rem;
+		    padding-top: calc(#{$dial-width} * .049);
 		    @include bp(1440){
 		    	padding-top: .8rem;
 		    }
@@ -111,7 +117,7 @@
 		    }
 			}
 			&--2{
-				margin-top: 8.05rem;
+				margin-top: calc(#{$dial-width} * .2);
 		    justify-content: space-between;
 				@include bp(1440){
 					margin-top: 5.2rem;
@@ -155,7 +161,7 @@
 			display: flex;
 
 			&--1{
-				padding-left: 3.70rem;
+				padding-left: calc(#{$dial-width} * .08);
 				@include bp(1440){
 					padding-left: 1.7rem;
 				}				
@@ -164,7 +170,7 @@
 				}				
 			}
 			&--2{
-				padding-right: 3.70rem;	
+				padding-right: calc(#{$dial-width} * .08);	
 				@include bp(1440){
 					padding-right: 1.7rem;
 				}
@@ -182,7 +188,7 @@
 	}
 	&__line{
 		background-color: $color-white-1;
-	  height: 1.08rem;
+	  height: calc(#{$dial-width} * .025);
 	  border: solid 0.10rem $color-white-1;
 		
 		&--1{
