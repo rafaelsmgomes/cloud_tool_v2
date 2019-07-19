@@ -32,7 +32,10 @@ $color-red-1: #f80000;
 
 // DINAMIC DIAL 
     //width
-$dial-width: 93.5vh;
+$dial-DeskL: 93.5vh;
+$dial_DeskS: 78vh;
+$dial_TabL: 69.232vh;
+$dial_TabL: 69.232vh;
 
 
 @include bp_wh(2000, 751) {
