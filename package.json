@@ -38,7 +38,7 @@
     "@babel/polyfill": "^7.4.3",
     "axios": "^0.19.0",
     "bodymovin": "^4.13.0",
-    "cpr_scrollpath": "^1.0.7",
+    "cpr_scrollpath": "^1.0.8",
     "i": "^0.3.6",
     "jquery": "^3.4.1",
     "jquery-knob": "^1.2.11",
