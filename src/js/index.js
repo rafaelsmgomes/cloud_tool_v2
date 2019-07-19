@@ -64,10 +64,6 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	e.hdrProgress.on('click',function(){
-		console.log(this);
-	});	
-
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
 		console.log(value);
@@ -113,6 +109,14 @@ $(document).ready(function(){
 		},3000);
 
 	});
+
+
+	// Hooking header nav buttons to btnprogress
+	e.hdrProgress.on('click',function(){
+		const hdrValue = $(this).data('val');
+
+		$(`.btn__progress--${hdrValue}`).click();
+	});		
 
 	// REGRESS
 
