@@ -7,6 +7,7 @@
 		// background-color: orangered;
 		position: relative;
 		transition: all 800ms;	
+		transition-timing-function: cubic-bezier(.14,.26,.06,1.05);
 		// zoom: 100%;
 	
 		
@@ -43,9 +44,9 @@
 		  top: 40.7%;	    
 			transition: opacity 800ms;
 
-			&.deactivate{
-				opacity: 0;
-			}
+			// &.deactivate{
+			// 	opacity: 0;
+			// }
 		}
 	}
 	
@@ -55,8 +56,8 @@
 		width: 191.00px;
 		background-color: blue;
 		z-index: 2;
-		transition: all 800ms;
-
+		transition: all 900ms;
+		transition: opacity 1500ms;
 	  border-radius: 0.20rem;
 	  border: solid 0.10rem $color-blue-1;
 		
@@ -85,11 +86,10 @@
         left: 65.41%;		    
   	    bottom: 19.179%;
 
-  	    &.activate{
-  	    	transform: scale(7.34) translateX(0);
-    	    left: 603px;
-			    top: 363px;
-  	    }  	   
+  	    // &.activate{
+    	  //   left: 603px;
+			    // top: 363px;	 
+  	    // }  	   
 	    }
 	    &-3{		    
 		    left: 90%;	
@@ -113,7 +113,10 @@
 		&.activate{
 			height: 114.6px;
 	    border: 0.27px solid blue;
-	    opacity: 0;
+	    // opacity: 0;
+  	  // transform: scale(7.34) translateX(0);
+    	//     left: 603px;
+			  //   top: 363px;	   	  
 		}
 	}
 

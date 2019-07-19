@@ -173,7 +173,10 @@ $(document).ready(function(){
 		const context = $(`.page--${val}`);
 		const nextTop = context.css('top');
 		const nextLeft = context.css('left');		
+
 		console.log(nextTop, nextLeft);
+
+		// Number(position.slice(0,-2))*-1
 
 		context.addClass('activate');
 		
@@ -186,7 +189,22 @@ $(document).ready(function(){
 
 		setTimeout(function(){
 			self.addClass('activate');
+			if(val === 2){
+				$('.detailed__map').css('transform','scale(7.34) translate(-15.45%,-24.05%)');
+			}else if(val === 3){
+				$('.detailed__map').css('transform','scale(7.34) translate(-40%,-43.1%)');
+			}else if(val === 4){
+				$('.detailed__map').css('transform', 'scale(7.34) translate(-40%,43.1%)');
+			}else if(val === 5){
+				$('.detailed__map').css('transform', 'scale(7.34) translateY(43.1%)');
+			}else if(val === 6){
+				$('.detailed__map').css('transform', 'scale(7.34) translate(43.16%,43.1%)');
+			}else if(val === 7){
+				$('.detailed__map').css('transform', 'scale(7.34) translate(23.48%,-43.2%)');
+			}
+
 			
+
 			setTimeout(function(){						
 				$('.page--x').addClass('deactivate');
 				$('.main-container').addClass('activate');
@@ -195,7 +213,6 @@ $(document).ready(function(){
 			
 		}, 800);
 		
-
 		$('.pathfinder').css("transform", `translate(-${nextLeft},-${nextTop})`);
 
 	});
