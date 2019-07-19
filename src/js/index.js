@@ -171,12 +171,10 @@ $(document).ready(function(){
 		const self = $(this);
 		const val = self.data('val');
 		const context = $(`.page--${val}`);
-		const nextTop = context.css('top');
-		const nextLeft = context.css('left');		
+		const nextTop = Number(context.css('top').slice(0,-2))*-1;
+		const nextLeft = Number(context.css('left').slice(0,-2))*-1;		
 
 		console.log(nextTop, nextLeft);
-
-		// Number(position.slice(0,-2))*-1
 
 		context.addClass('activate');
 		
@@ -213,7 +211,7 @@ $(document).ready(function(){
 			
 		}, 800);
 		
-		$('.pathfinder').css("transform", `translate(-${nextLeft},-${nextTop})`);
+		$('.pathfinder').css("transform", `translate(${nextLeft}px,${nextTop}px)`);
 
 	});
 
