@@ -335,11 +335,6 @@ b {
     @media only screen and (max-width: 1024px) {
       .dial__text--3 {
         margin-right: 0.75rem; } }
-    @media only screen and (max-width: 1024px) {
-      .dial__text--3c, .dial__text--3-a {
-        margin-right: 0rem;
-        margin-left: 1rem;
-        margin-top: -.5rem; } }
 
 .cta__txt {
   width: 15.25rem;
@@ -708,17 +703,39 @@ b {
     margin-top: -0.85rem; }
 
 .dial-group {
-  width: 40.48rem;
-  height: 20.27rem;
-  position: relative; }
-  @media only screen and (max-width: 1440px) {
+  width: 50%;
+  position: relative;
+  padding-top: 25%; }
+  @media only screen and (max-height: 700px) {
     .dial-group {
-      width: 25.625rem;
-      height: 12.8125rem; } }
+      width: 40%;
+      padding-top: 20%; } }
+  @media only screen and (max-height: 500px) {
+    .dial-group {
+      width: 35%;
+      padding-top: 17.50%; } }
   @media only screen and (max-width: 1024px) {
     .dial-group {
-      width: 15rem;
-      height: 7.5rem; } }
+      width: 70%;
+      padding-top: 35%; } }
+  @media only screen and (max-width: 1024px) and (max-height: 500px) {
+    .dial-group {
+      width: 60%;
+      padding-top: 30%; } }
+  @media only screen and (max-width: 767px) {
+    .dial-group {
+      width: 80%;
+      padding-top: 40%; } }
+  @media only screen and (max-width: 767px) and (max-height: 500px) {
+    .dial-group {
+      width: 50%;
+      padding-top: 25%; } }
+  @media only screen and (max-width: 666px) {
+    .dial-group {
+      width: 100%;
+      padding-top: 50%; } }
+  .dial-group > * {
+    margin-top: -50%; }
   .dial-group--1, .dial-group--3 {
     margin-top: 5.80rem; }
     @media only screen and (max-width: 1440px) {
@@ -749,30 +766,20 @@ b {
 
 .dial__crown {
   background-color: #00758f;
-  width: 2.50rem;
-  height: 2.50rem;
+  width: 7.14%;
+  padding-top: 7.14%;
   position: absolute;
-  bottom: -1.25rem;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  border-radius: 100%; }
-  @media only screen and (max-width: 1440px) {
-    .dial__crown {
-      width: 2rem;
-      height: 2rem;
-      bottom: -1rem; } }
-  @media only screen and (max-width: 1024px) {
-    .dial__crown {
-      width: 1.2rem;
-      height: 1.2rem;
-      bottom: -.6rem; } }
+  /* transform: translate(56%,-50%); */
+  border-radius: 100%;
+  transform: translate(-50%, 50%); }
 
 .dial__hand {
   width: 0;
   position: absolute;
   height: 0;
   border-style: solid;
-  border-width: 0 0.62rem 17.80rem 0.62rem;
   border-color: transparent transparent #00758f transparent;
   bottom: 0px;
   left: 50%;
@@ -794,22 +801,10 @@ b {
     .dial__context-section--1 {
       flex-direction: column;
       align-items: center;
-      padding-top: 2.00rem; }
-      @media only screen and (max-width: 1440px) {
-        .dial__context-section--1 {
-          padding-top: .8rem; } }
-      @media only screen and (max-width: 1024px) {
-        .dial__context-section--1 {
-          padding-top: .2rem; } }
+      padding-top: 6%; }
     .dial__context-section--2 {
-      margin-top: 8.05rem;
+      margin-top: 16%;
       justify-content: space-between; }
-      @media only screen and (max-width: 1440px) {
-        .dial__context-section--2 {
-          margin-top: 5.2rem; } }
-      @media only screen and (max-width: 1024px) {
-        .dial__context-section--2 {
-          margin-top: 2.5rem; } }
       .dial__context-section--2-a {
         margin-top: 13.88rem; }
         @media only screen and (max-width: 1440px) {
@@ -834,24 +829,9 @@ b {
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {
-      padding-left: 3.70rem; }
-      @media only screen and (max-width: 1440px) {
-        .dial__context--wrapper--1 {
-          padding-left: 1.7rem; } }
-      @media only screen and (max-width: 1024px) {
-        .dial__context--wrapper--1 {
-          padding-left: .75rem; } }
+      padding-left: 9%; }
     .dial__context--wrapper--2 {
-      padding-right: 3.70rem; }
-      @media only screen and (max-width: 1440px) {
-        .dial__context--wrapper--2 {
-          padding-right: 1.7rem; } }
-      @media only screen and (max-width: 1024px) {
-        .dial__context--wrapper--2 {
-          padding-right: .75rem; } }
-      @media only screen and (max-width: 1024px) {
-        .dial__context--wrapper--2-a {
-          width: 6.5rem; } }
+      padding-right: 9%; }
 
 .dial__line {
   background-color: #fff;

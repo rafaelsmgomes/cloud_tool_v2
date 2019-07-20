@@ -101,3 +101,9 @@ export const progressBtn = (dial) => {
   const pageBtnProgress = dial[0].$div.closest('.page__content').find( ".btn__progress");
   pageBtnProgress.click();
 }
+
+export const handResize = () => {
+  const baseWidth = $('.dial-group').width();
+
+  $('.dial__hand').css('border-width', `0 ${baseWidth*0.017}px ${baseWidth/2}px ${baseWidth*0.017}px`);
+};

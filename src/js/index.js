@@ -116,6 +116,7 @@ $(document).ready(function(){
 		const hdrValue = $(this).data('val');
 
 		$(`.btn__progress--${hdrValue}`).click();
+		$(this).data('val',`${Number(hdrValue)+1}`);
 	});		
 
 	// REGRESS
@@ -161,10 +162,12 @@ $(document).ready(function(){
     },
 	});
 
+	dial.handResize();
 	dial.changeDialText();
 
 	$(window).on('resize',function(){
 		dial.changeDialText();
+		dial.handResize();
 	});
 /****** DETAILED MAP CONTROLLER ******/
 	$('.detailed__square').on('click',function(){
@@ -212,6 +215,11 @@ $(document).ready(function(){
 		}, 800);
 		
 		$('.pathfinder').css("transform", `translate(${nextLeft}px,${nextTop}px)`);
+
+		// Changing header nav value's to corresponding square
+
+		$('.header__nav--btn--2').data('val',val);
+		$('.header__nav--btn--1').attr('context',`${val-2}`);
 
 	});
 

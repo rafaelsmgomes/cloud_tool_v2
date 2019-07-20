@@ -261,16 +261,16 @@ b {
 		  @include bp(1024){ 
 			margin-right: 0.75rem; 
 		  }
-		  &c,
-		  &-a {
-			@include bp(1024){ 
-				margin-right: 0rem;
-				margin-left: 1rem;
-				margin-top: -.5rem;
-			}
+		 //  &c,
+		 //  &-a {
+			// @include bp(1024){ 
+			// 	margin-right: 0rem;
+			// 	margin-left: 1rem;
+			// 	margin-top: -.5rem;
+			// }
 		  }
   	}
-  }
+  // }
 }
 
 .cta{

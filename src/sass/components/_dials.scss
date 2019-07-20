@@ -1,18 +1,51 @@
 .dial{
-
+// DESKTOP LARGE //SMALL
 	&-group{
-		width: 40.48rem;
-		height: 20.27rem;
+		width: 50%;
 		position: relative;
+    padding-top: 25%;
+		
+		@include bph(700){
+    	width: 40%;
+    	padding-top: 20%;
+    }
 
-		@include bp(1440){
-	    width: 25.625rem;
-	    height: 12.8125rem;
+    @include bph(500){
+    	width: 35%;
+    	padding-top: 17.50%;
+    }
+// TABLET LARGE  //TABLET SMALL
+		@include bp(1024){  //width
+			width: 70%;
+			padding-top: 35%;
+			
+			@include bph(500){ 
+				width: 60%;
+				padding-top: 30%;
+			}
 		}
-		@include bp(1024){
-	    width: 15rem;
-	    height: 7.5rem;
+// TABLET SMALL
+		@include bp(767){
+			width: 80%;
+			padding-top: 40%;
+
+			@include bph(500){
+				width: 50%;
+				padding-top: 25%;
+			}
 		}
+
+		@include bp(666){
+			width: 100%;
+			padding-top: 50%;
+		}
+
+		
+		& > *{
+			margin-top: -50%;
+		}
+
+
 
 		&--1,
 		&--3{
@@ -54,30 +87,31 @@
 	}
 	&__crown{
 		background-color: $color-blue-1;
-		width: 2.50rem;
-		height: 2.50rem;
-		position: absolute;
-		bottom: -1.25rem;
+    width: 7.14%;
+    padding-top: 7.14%;
+    position: absolute;
+    bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translate(56%,-50%); */
     border-radius: 100%;
-    @include bp(1440){
-    	width: 2rem;
-    	height: 2rem;
-    	bottom: -1rem;
-    }
-    @include bp(1024){
-    	width: 1.2rem;
-    	height: 1.2rem;
-    	bottom: -.6rem;
-    }
+    transform: translate(-50%,50%);
+    // @include bp(1440){
+    // 	width: 2rem;
+    // 	height: 2rem;
+    // 	bottom: -1rem;
+    // }
+    // @include bp(1024){
+    // 	width: 1.2rem;
+    // 	height: 1.2rem;
+    // 	bottom: -.6rem;
+    // }
 	}
 	&__hand{
     width: 0;
     position: absolute;
     height: 0;
     border-style: solid;
-		border-width: 0 0.62rem 17.80rem 0.62rem;
+		// height: ;
 
     border-color: transparent transparent $color-blue-1 transparent;
     bottom: 0px;
@@ -102,23 +136,12 @@
 		&--1{
 		    flex-direction: column;
 		    align-items: center;
-		    padding-top: 2.00rem;
-		    @include bp(1440){
-		    	padding-top: .8rem;
-		    }
-		    @include bp(1024){
-		    	padding-top: .2rem;
-		    }
+		    padding-top: 6%;
 			}
 			&--2{
-				margin-top: 8.05rem;
+				margin-top: 16%;
 		    justify-content: space-between;
-				@include bp(1440){
-					margin-top: 5.2rem;
-				}
-				@include bp(1024){
-					margin-top: 2.5rem;
-				}
+				
 
 				&-a{					
 
@@ -155,28 +178,16 @@
 			display: flex;
 
 			&--1{
-				padding-left: 3.70rem;
-				@include bp(1440){
-					padding-left: 1.7rem;
-				}				
-				@include bp(1024){
-					padding-left: .75rem;
-				}				
+				padding-left: 9%;		
 			}
 			&--2{
-				padding-right: 3.70rem;	
-				@include bp(1440){
-					padding-right: 1.7rem;
-				}
-				@include bp(1024){
-					padding-right: .75rem;
-				}
+				padding-right: 9%;
 
-				&-a {
-					@include bp(1024){
-						width: 6.5rem;
-					}				
-				}
+				// &-a {
+				// 	@include bp(1024){
+				// 		width: 6.5rem;
+				// 	}				
+				// }
 			}						
 		}
 	}
