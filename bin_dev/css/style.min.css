@@ -606,6 +606,10 @@ b {
     top: calc(13.2rem + 4.63vh + 93.5vh / 2);
     transform: translateY(-100%);
     height: 8.50rem; }
+
+@media only screen and (min-width: 1441px) and (min-height: 866px) {
+  .cta__wrapper--1 {
+    top: calc(11.6rem + 4.63vh + 21.75rem); } }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--1 {
         top: calc(11.6rem + 4.63vh + 78vh / 2); } }
@@ -699,21 +703,13 @@ b {
 .dial-group {
   width: 93.5vh;
   height: calc(93.5vh / 2);
+  max-width: 56.15vw;
+  max-height: calc(56.15vw / 2);
   position: relative; }
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (min-width: 1441px) {
     .dial-group {
-      width: 78vh;
-      height: calc(78vh / 2); } }
-  @media only screen and (max-width: 1024px) {
-    .dial-group {
-      width: 69.232vh;
-      height: calc(69.232vh / 2); } }
-  @media only screen and (max-width: 550px) {
-    .dial-group {
-      width: 15rem;
-      height: 7.5rem;
-      max-width: 88vw;
-      max-height: 44vw; } }
+      max-width: 40.45rem;
+      max-height: calc(40.45rem / 2); } }
   .dial-group--1, .dial-group--3 {
     margin-top: 4.63vh; }
     @media only screen and (max-width: 1440px) {
@@ -772,18 +768,11 @@ b {
   position: absolute;
   height: 0;
   border-style: solid;
-  border-width: 0 calc(93.5vh * .0175) calc(93.5vh * .5) calc(93.5vh * .0175);
   border-color: transparent transparent #00758f transparent;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
   transform-origin: 50% 100%; }
-  @media only screen and (max-width: 1440px) {
-    .dial__hand {
-      border-width: 0 calc(78vh * .0175) calc(78vh * .5) calc(78vh * .0175); } }
-  @media only screen and (max-width: 1024px) {
-    .dial__hand {
-      border-width: 0 calc(69.232vh * .0175) calc(69.232vh * .5) calc(69.232vh * .0175); } }
 
 .dial__context {
   height: 100%;
@@ -1009,7 +998,7 @@ b {
 
 .pagination {
   display: flex;
-  margin-top: .85rem;
+  margin-top: 1rem;
   justify-content: space-between;
   font-weight: 700;
   transform: all 500ms; }
@@ -1284,8 +1273,7 @@ b {
 
 .selection__wrapper {
   width: 46.45rem;
-  height: 61%;
-  max-height: 21.25rem;
+  height: 21.25rem;
   display: flex;
   margin-top: 1.85rem;
   flex-direction: column;
@@ -1294,6 +1282,7 @@ b {
   @media only screen and (max-width: 1440px) {
     .selection__wrapper {
       width: 73%;
+      height: 14.2rem;
       margin-top: 1rem; } }
 
 .selection__container {
@@ -1378,7 +1367,7 @@ b {
 .header__container {
   position: fixed;
   z-index: 10;
-  width: 70rem;
+  width: 70.00rem;
   margin: 0 auto;
   height: 2.95rem;
   left: 0;

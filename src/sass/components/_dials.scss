@@ -5,29 +5,19 @@
 		// height: 20.27rem;
 		width: $dial-DeskL;
 		height: calc(#{$dial-DeskL} / 2);
-		// max-width: $dial-width-max;
-		// max-height: calc(#{$dial-width-max} / 2);
+		max-width: $dial-width-max;
+		max-height: calc(#{$dial-width-max} / 2);
 		// max-width: 56.2vw;
 		// max-height: 26.1vw;
 		position: relative;
-
-		@include bp(1440){
-	    // width: 25.625rem;
-		// height: 12.8125rem;
-		width: $dial_DeskS;
-		height: calc(#{$dial_DeskS} / 2);
-	}
-		@include bp(1024){
-			width: $dial_TabL;
-			height: calc(#{$dial_TabL} / 2);
+		
+		@include bp_min(1441){
+			max-width: 40.45rem;
+			max-height: calc(40.45rem / 2);
 		}
-		@include bp(550){
-	    width: 15rem;
-		height: 7.5rem;
-		max-width: 88vw;
-		max-height: 44vw;
+		
+		
 
-		}
 
 		&--1,
 		&--3{
