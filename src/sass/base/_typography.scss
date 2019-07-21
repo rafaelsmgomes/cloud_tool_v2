@@ -244,10 +244,10 @@ b {
 		&--1{
 		  text-align: center;
 			width: 6.60rem;
-			margin-top: calc(#{$dial-DeskL} * .025);
+			margin-top: 2.5%;
 
 			@include bp(1024){
-				margin-top: calc(#{$dial-DeskS} * .025);
+				margin-top: 2.5%;
 			}
 
   		}

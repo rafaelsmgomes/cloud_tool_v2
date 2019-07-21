@@ -5,11 +5,12 @@
 		// height: 20.27rem;
 		width: $dial-DeskL;
 		height: calc(#{$dial-DeskL} / 2);
-		// max-width: $dial-width-max;
-		// max-height: calc(#{$dial-width-max} / 2);
+		max-width: $dial-width-max;
+		max-height: calc(#{$dial-width-max} / 2);
 		// max-width: 56.2vw;
 		// max-height: 26.1vw;
 		position: relative;
+
 
 		@include bp(1440){
 	    // width: 25.625rem;
@@ -69,29 +70,14 @@
 	}
 	&__crown{
 		background-color: $color-blue-1;
-		width: calc(#{$dial-DeskL} * .06);
-		height: calc(#{$dial-DeskL} * .06);
+		width: 6%;
+		height: 12%;
 		position: absolute;
-		bottom: calc(-#{$dial-DeskL} * .06 / 2);
+		bottom: -6%;
 		left: 50%;
 		transform: translateX(-50%);
 		border-radius: 100%;
 	
-    @include bp(1440){
-		width: calc(#{$dial-DeskS} * .06);
-		height: calc(#{$dial-DeskS} * .06);
-		bottom: calc(-#{$dial-DeskS} * .06 / 2);
-    }
-    @include bp(1024){
-		width: calc(#{$dial-TabL} * .06);
-		height: calc(#{$dial-TabL} * .06);
-		bottom: calc(-#{$dial-TabL} * .06 / 2);
-    }
-    @include bp(910){
-		width: calc(#{$dial-TabS} * .06);
-		height: calc(#{$dial-TabS} * .06);
-		bottom: calc(-#{$dial-TabS} * .06 / 2);
-    }
 	}
 	&__hand{
     width: 0;
@@ -105,12 +91,6 @@
     left: 50%;
     transform: translateX(-50%)rotate(-90deg);
     transform-origin: 50% 100%;		
-   	@include bp(1440){    
-		border-width: 0 calc(#{$dial-DeskS} * .0175) calc(#{$dial-DeskS} * .5) calc(#{$dial-DeskS} * .0175);
-    }
-   	@include bp(1024){    
-		border-width: 0 calc(#{$dial-TabL} * .0175) calc(#{$dial-TabL} * .5) calc(#{$dial-TabL} * .0175);
-	}
 	}
 
 	&__context{
@@ -124,7 +104,7 @@
 		&--1{
 		    flex-direction: column;
 		    align-items: center;
-		    padding-top: 4.9%);
+		    padding-top: 4.9%;
 			}
 			&--2{
 				margin-top: 20%;
@@ -172,7 +152,7 @@
 
 				&-a {
 					@include bp(1024){
-						width: 6.5rem;
+						width: 7.5rem;
 					}				
 				}
 			}						
