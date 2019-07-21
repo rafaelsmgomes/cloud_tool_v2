@@ -104,6 +104,5 @@ export const progressBtn = (dial) => {
 
 export const handResize = () => {
   const baseWidth = $('.dial-group').width();
- 
   $('.dial__hand').css('border-width', `0 ${baseWidth*0.017}px ${baseWidth/2}px ${baseWidth*0.017}px`);
  };

@@ -262,16 +262,16 @@ b {
 		  @include bp(1024){ 
 			margin-right: 0.75rem; 
 		  }
-		  &c,
-		  &-a {
-			@include bp(1024){ 
-				margin-right: 0rem;
-				margin-left: 1rem;
-				margin-top: -.5rem;
-			}
+		 //  &c,
+		 //  &-a {
+			// @include bp(1024){ 
+			// 	margin-right: 0rem;
+			// 	margin-left: 1rem;
+			// 	margin-top: -.5rem;
+			// }
 		  }
   	}
-  }
+  // }
 }
 
 .cta{
@@ -575,9 +575,14 @@ b {
 		  line-height: 1.2;
 		  letter-spacing: normal;
 		  color: $color-white-1;
-
 		  display: flex;
 		  align-items: center;
+			transition: all 700ms;
+
+		
+			&.deactivate{
+				opacity: 0;
+			}
 		}
 	}
 }

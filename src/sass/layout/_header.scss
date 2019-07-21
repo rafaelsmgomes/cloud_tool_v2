@@ -1,18 +1,44 @@
-.header__container{
-	position: fixed;
-	z-index: 10;
-  width: 70rem;
-  margin: 0 auto;
-	height: 2.95rem;
-  left: 0;
-  right: 0;
-  display: flex;
-	// justify-content: space-between;
-	padding-top: 0.95rem;
+.header{
+	&__container{
+		position: fixed;
+		z-index: 10;
+	  width: 70.00rem;
+	  margin: 0 auto;
+		height: 2.95rem;
+	  left: 0;
+	  right: 0;
+	  display: flex;
+		// justify-content: space-between;
+		padding-top: 0.95rem;
 
-	@include bp(1440){
-		width: 83.333%;
+		@include bp(1440){
+			width: 83.333%;
+		}
 	}
+	
+	&__nav{
+    width: 14.70rem;
+    height: 1.20rem;
+    bottom: -3.95rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    justify-self: center;	
+    position: absolute;
+		z-index: -100;
+		opacity: 0;
+		display: flex;
+		justify-content: space-between;
+		
+		&.activate{
+			z-index: 1;
+			opacity: 1;
+		}
 
+		&--btn{
+			background-color: red;
+			height: 1.20rem;
+			width: 1.20rem;
+		}
+	}
 }
-

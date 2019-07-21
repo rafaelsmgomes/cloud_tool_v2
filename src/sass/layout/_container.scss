@@ -6,6 +6,17 @@
  //  left: 50%;
  //  transform: translateX(-50%);
 	opacity: 1;
+	&--x{
+		z-index: 	4;
+		& > *{
+			opacity: 	0;
+		}
+		&.activate{
+			& > *{
+				opacity: 	1;
+			}
+		}		
+	}
 	&-resize{
 		opacity: 1;
 		transition: opacity 500ms;
@@ -18,3 +29,4 @@
   transition: all 800ms;
   // transition-timing-function: cubic-bezier(.84,.09,.19,.92);
 }
+
