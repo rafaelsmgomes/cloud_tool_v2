@@ -134,7 +134,6 @@ b {
 		
 		@include bp(1440){
 		  width: 39.55rem;
-		  height: 2.10rem;
 		  font-family: $font-reg;
 		  font-size: 0.95rem;
 		  font-weight: normal;
@@ -281,7 +280,7 @@ b {
 		}
 
   	}
-  // }
+}
 }
 
 .cta{
