@@ -24,9 +24,9 @@
 			opacity: 1;
 		}
 
-    @include bp(1440){
-    	width: 42.49rem;
-    }
+	@include bp(1440){
+		width: 83.333%;
+	}
     @include bp(1024){
     	width: 42.09rem;
     }
