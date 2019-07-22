@@ -107,3 +107,9 @@ export const handResize = () => {
  
   $('.dial__hand').css('border-width', `0 ${baseWidth*0.017}px ${baseWidth/2}px ${baseWidth*0.017}px`);
  };
+
+export const lineResize = () => {
+  const baseWidth = $('.dial-group').width();
+  
+  $('.dial__line').css('height', `${baseWidth*0.03}px`)
+}

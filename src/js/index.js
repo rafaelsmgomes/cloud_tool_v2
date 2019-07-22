@@ -155,10 +155,12 @@ $(document).ready(function(){
 	$(window).on('resize',function(){
 		dial.changeDialText();
 		dial.handResize();
+		dial.lineResize();
 	});
 
 	
 	dial.handResize();
+	dial.lineResize();
 
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
