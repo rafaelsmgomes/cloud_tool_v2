@@ -3,8 +3,8 @@
 	&-group{
 		// width: 40.48rem;
 		// height: 20.27rem;
-		width: $dial-DeskL;
-		height: calc(#{$dial-DeskL} / 2);
+		width: $dial-large;
+		height: calc(#{$dial-large} / 2);
 		max-width: $dial-width-max;
 		max-height: calc(#{$dial-width-max} / 2);
 		// max-width: 56.2vw;
@@ -14,6 +14,26 @@
 		@include bp_min(1441){
 			max-width: 40.45rem;
 			max-height: calc(40.45rem / 2);
+
+			@include bph(750){
+				width: $dial-mediumL;
+				height: calc(#{$dial-mediumL} / 2);
+			}
+			@include bph(550){
+				width: $dial-small;
+				height: calc(#{$dial-small} / 2);
+			}
+		}
+
+		@include bp(1440){
+			@include bph(675){
+				width: $dial-mediumL;
+				height: calc(#{$dial-mediumL} / 2);		
+			}
+			@include bph(565){
+				width: $dial-small;
+				height: calc(#{$dial-small} / 2);		
+			}
 		}
 		
 		
@@ -59,48 +79,27 @@
 	}
 	&__crown{
 		background-color: $color-blue-1;
-		width: calc(#{$dial-DeskL} * .06);
-		height: calc(#{$dial-DeskL} * .06);
+		width: 6%;
+		height: 12%;
 		position: absolute;
-		bottom: calc(-#{$dial-DeskL} * .06 / 2);
+		bottom: -6%;
 		left: 50%;
 		transform: translateX(-50%);
 		border-radius: 100%;
 	
-    @include bp(1440){
-		width: calc(#{$dial-DeskS} * .06);
-		height: calc(#{$dial-DeskS} * .06);
-		bottom: calc(-#{$dial-DeskS} * .06 / 2);
-    }
-    @include bp(1024){
-		width: calc(#{$dial-TabL} * .06);
-		height: calc(#{$dial-TabL} * .06);
-		bottom: calc(-#{$dial-TabL} * .06 / 2);
-    }
-    @include bp(910){
-		width: calc(#{$dial-TabS} * .06);
-		height: calc(#{$dial-TabS} * .06);
-		bottom: calc(-#{$dial-TabS} * .06 / 2);
-    }
 	}
 	&__hand{
     width: 0;
     position: absolute;
     height: 0;
     border-style: solid;
-	border-width: 0 calc(#{$dial-DeskL} * .0175) calc(#{$dial-DeskL} * .5) calc(#{$dial-DeskL} * .0175);
+	border-width: 0 calc(#{$dial-large} * .0175) calc(#{$dial-large} * .5) calc(#{$dial-large} * .0175);
 
     border-color: transparent transparent $color-blue-1 transparent;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%)rotate(-90deg);
     transform-origin: 50% 100%;		
-   	@include bp(1440){    
-		border-width: 0 calc(#{$dial-DeskS} * .0175) calc(#{$dial-DeskS} * .5) calc(#{$dial-DeskS} * .0175);
-    }
-   	@include bp(1024){    
-		border-width: 0 calc(#{$dial-TabL} * .0175) calc(#{$dial-TabL} * .5) calc(#{$dial-TabL} * .0175);
-	}
 	}
 
 	&__context{
@@ -114,22 +113,25 @@
 		&--1{
 		    flex-direction: column;
 		    align-items: center;
-		    padding-top: 4.9%);
+		    padding-top: 4.9%;
 			}
 			&--2{
 				margin-top: 20%;
-		    justify-content: space-between;
+		    	justify-content: space-between;
+
+				@include bp_min(1441){
+					@include bph(650){
+						margin-top: 15%;
+					}
+				}
+				@include bp(1440){
+					@include bph(565){
+						margin-top: 15%;
+					}
+				}
 
 				&-a{					
-
 					margin-top: 13.88rem;
-
-					@include bp(1440){
-						margin-top: 9.6rem;
-					}
-					@include bp(1024){
-						margin-top: 5.3rem;
-					}
 				}
 			}
 
@@ -139,14 +141,8 @@
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
-				top: 22.45rem;		
+				top: 108%;		
 				
-				@include bp(1440){
-					top: 13.80rem;
-				}
-				@include bp(1024){
-					top: 8.5rem;
-				}
 			}
 
 		}
@@ -156,31 +152,50 @@
 
 			&--1{
 				padding-left: 8%;
+				
+				@include bph(650){
+					width: 11rem;
+				}
 			}
 			&--2{
 				padding-right: 8%;	
-
-				&-a {
-					@include bp(1024){
-						width: 6.5rem;
-					}				
-				}
 			}						
 		}
 	}
 	&__line{
-		background-color: $color-white-1;
-	  height: calc(#{$dial-DeskL} * .025);
+	  background-color: $color-white-1;
+	  height: calc(#{$dial-large} * .025);
 	  border: solid 0.10rem $color-white-1;
 		
 		&--1{
-
+			
 		}
 		&--2{
-	    transform: rotate(-71deg);
+			transform: rotate(-71deg);
 		}
 		&--3{
-	    transform: rotate(71deg);
-		}		
+	    	transform: rotate(71deg);
+		}
+		&--2,
+		&--3{
+			
+			@include bp_min(1441){
+				@include bph_min(866){
+					height: 100%;
+				}
+				
+				@include bph(650){
+					height: 85%;
+				}
+			}
+			@include bp(1440){
+				@include bph(675){
+					height: 50%;
+				}
+				@include bph(565){
+					height: 25%;
+				}
+			}
+		}
 	}
 }
