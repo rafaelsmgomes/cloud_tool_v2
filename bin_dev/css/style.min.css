@@ -235,7 +235,6 @@ b {
   @media only screen and (max-width: 1440px) {
     .main__direction {
       width: 39.55rem;
-      height: 2.10rem;
       font-family: Univers, Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
       font-weight: normal;
@@ -346,7 +345,6 @@ b {
 @media only screen and (max-width: 1440px) and (max-height: 565px) {
   .dial__text--3c, .dial__text--3-a {
     transform: translateY(-25%); } }
-
 
 .cta__txt {
   width: 15.25rem;
@@ -631,18 +629,38 @@ b {
   .cta__wrapper--2 {
     height: 7.20rem; }
   .cta__wrapper--3 {
-    height: 6.55rem; }
-  .cta__wrapper--4 {
-    top: 32.60rem;
-    height: 6.55rem; }
+    top: 21.6rem;
+    height: 6.55rem;
+    left: auto;
+    right: -21rem; }
     @media only screen and (max-width: 1440px) {
-      .cta__wrapper--4 {
-        top: 19.3rem; } }
-    @media only screen and (max-width: 1024px) {
-      .cta__wrapper--4 {
-        top: 12.3rem; } }
+      .cta__wrapper--3 {
+        top: 19.6rem;
+        left: auto;
+        right: -23rem; } }
+    @media only screen and (max-width: 1150px) {
+      .cta__wrapper--3 {
+        right: -25rem; } }
+  .cta__wrapper--4 {
+    height: 6.55rem; }
     .cta__wrapper--4-a {
       top: 37.80rem; }
+  .cta__wrapper--5 {
+    top: 38.1rem;
+    left: auto;
+    right: -21rem; }
+    @media only screen and (max-width: 1440px) {
+      .cta__wrapper--5 {
+        top: 36.9rem;
+        right: -22rem; } }
+  .cta__wrapper--6 {
+    left: auto;
+    top: 45.1rem;
+    right: -20.5rem; }
+    @media only screen and (max-width: 1440px) {
+      .cta__wrapper--6 {
+        top: 43.9rem;
+        right: -22rem; } }
 
 .cta__btn {
   width: 8.45rem;
@@ -722,7 +740,6 @@ b {
   .dial-group {
     width: 57.443vh;
     height: calc(57.443vh / 2); } }
-
   .dial-group--1, .dial-group--3 {
     margin-top: 4.63vh; }
     @media only screen and (max-width: 1440px) {
@@ -753,7 +770,6 @@ b {
 
 .dial__crown {
   background-color: #00758f;
-
   width: 6%;
   height: 12%;
   position: absolute;
@@ -768,7 +784,6 @@ b {
   height: 0;
   border-style: solid;
   border-width: 0 calc(93.5vh * .0175) calc(93.5vh * .5) calc(93.5vh * .0175);
-
   border-color: transparent transparent #00758f transparent;
   bottom: 0px;
   left: 50%;
@@ -784,7 +799,6 @@ b {
     .dial__context-section--1 {
       flex-direction: column;
       align-items: center;
-
       padding-top: 4.5%; }
     .dial__context-section--2 {
       margin-top: 20%;
@@ -797,9 +811,8 @@ b {
 @media only screen and (max-width: 1440px) and (max-height: 565px) {
   .dial__context-section--2 {
     margin-top: 15%; } }
-
       .dial__context-section--2-a {
-        margin-top: 13.88rem; }
+        margin-top: 34%; }
     .dial__context-section--3 {
       display: none;
       justify-content: center;
@@ -810,10 +823,13 @@ b {
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {
-
-      padding-left: 9%; }
+      padding-left: 8.5%; }
+      @media only screen and (max-height: 650px) {
+        .dial__context--wrapper--1 {
+          width: 11rem; } }
     .dial__context--wrapper--2 {
-      padding-right: 9%; }
+      padding-right: 8.5%; }
+
 .dial__line {
   background-color: #fff;
   height: 2%;
@@ -1366,7 +1382,7 @@ b {
 .header__container {
   position: fixed;
   z-index: 10;
-  width: 70rem;
+  width: 70.00rem;
   margin: 0 auto;
   height: 2.95rem;
   left: 0;
