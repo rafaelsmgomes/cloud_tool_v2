@@ -31,14 +31,14 @@ $color-red-1: #f80000;
 
 
 // DINAMIC DIAL 
-    //width
-$dial-DeskL: 93.5vh;
-$dial_DeskS: 78vh;
-$dial_TabL: 69.232vh;
-$dial_TabL: 69.232vh;
 
+    //width with relation to height (vh)
+$dial-large: 93.5vh;
+$dial-mediumL: 78vh;
+$dial-mediumS: 65vh;
+$dial-small: 57.443vh;
 
     //max-width
-$dial-width-max: 56.15vw;
+$dial-width-max: 50vw;
 
 
