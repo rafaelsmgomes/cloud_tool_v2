@@ -45,3 +45,16 @@
 		border: solid 0.1rem $color-blue-1;
 	}
 }
+
+@keyframes detailedActivate{
+	0%{
+		zoom: 100%;
+		left: 0px;
+    top: 0px;
+	}
+	100%{
+		zoom: 734%;
+		left: -820px;
+    top: -565px;		
+	}
+}

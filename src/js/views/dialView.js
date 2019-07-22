@@ -113,3 +113,4 @@ export const lineResize = () => {
   
   $('.dial__line').css('height', `${baseWidth*0.03}px`)
 }
+

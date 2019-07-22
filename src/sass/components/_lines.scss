@@ -11,6 +11,10 @@
     &--x{
       height: 100%;
       width: 100%;
+      &.deactivate{
+        transition: opacity 800ms;
+        opacity: 0;
+      }  
     }
 
     &--1{
@@ -18,7 +22,9 @@
         opacity: 1;
       }
     }
+      
 	}
+
   
   stroke: $color-blue-1;
   stroke-width: 2;

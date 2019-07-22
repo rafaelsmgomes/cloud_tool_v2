@@ -10,6 +10,15 @@
 			padding-top: 6.00rem;
 		}
 
+
+		.main-container--x &{
+			padding-top: 0;
+			border-radius: 0.20rem;
+		  border: solid 0.10rem $color-blue-1;
+			height: 42.00rem;
+			background-color: green;
+		}
+
 		@include bp(1440){
 			width: 83.333%;
 		}
