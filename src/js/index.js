@@ -111,9 +111,9 @@ $(document).ready(function(){
 	e.hdrProgress.on('click',function(){
 		const hdrValue = $(this).data('val');
 		const regressValue = $('.btn__regress').attr('context');
-		$(`.btn__progress--${hdrValue}`).click();
+		// $(`.btn__progress--${hdrValue}`).click();
 		$(this).data('val',`${Number(hdrValue)+1}`);
-		$('.btn__regress').attr('context',`${Number(regressValue)+1}`);
+		e.btnBackX.attr('context',`${Number(regressValue)+1}`);
 	});		
 
 	e.btnBackX.on('click',function(){
