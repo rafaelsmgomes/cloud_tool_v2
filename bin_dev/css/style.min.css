@@ -235,7 +235,6 @@ b {
   @media only screen and (max-width: 1440px) {
     .main__direction {
       width: 39.55rem;
-      height: 2.10rem;
       font-family: Univers, Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
       font-weight: normal;
@@ -630,18 +629,38 @@ b {
   .cta__wrapper--2 {
     height: 7.20rem; }
   .cta__wrapper--3 {
-    height: 6.55rem; }
-  .cta__wrapper--4 {
-    top: 32.60rem;
-    height: 6.55rem; }
+    top: 21.6rem;
+    height: 6.55rem;
+    left: auto;
+    right: -21rem; }
     @media only screen and (max-width: 1440px) {
-      .cta__wrapper--4 {
-        top: 19.3rem; } }
-    @media only screen and (max-width: 1024px) {
-      .cta__wrapper--4 {
-        top: 12.3rem; } }
+      .cta__wrapper--3 {
+        top: 19.6rem;
+        left: auto;
+        right: -23rem; } }
+    @media only screen and (max-width: 1150px) {
+      .cta__wrapper--3 {
+        right: -25rem; } }
+  .cta__wrapper--4 {
+    height: 6.55rem; }
     .cta__wrapper--4-a {
       top: 37.80rem; }
+  .cta__wrapper--5 {
+    top: 38.1rem;
+    left: auto;
+    right: -21rem; }
+    @media only screen and (max-width: 1440px) {
+      .cta__wrapper--5 {
+        top: 36.9rem;
+        right: -22rem; } }
+  .cta__wrapper--6 {
+    left: auto;
+    top: 45.1rem;
+    right: -20.5rem; }
+    @media only screen and (max-width: 1440px) {
+      .cta__wrapper--6 {
+        top: 43.9rem;
+        right: -22rem; } }
 
 .cta__btn {
   width: 8.45rem;
@@ -793,7 +812,7 @@ b {
   .dial__context-section--2 {
     margin-top: 15%; } }
       .dial__context-section--2-a {
-        margin-top: 13.88rem; }
+        margin-top: 34%; }
     .dial__context-section--3 {
       display: none;
       justify-content: center;

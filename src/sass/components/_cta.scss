@@ -15,6 +15,7 @@
 			left: 59vw;
 		}
 
+
 		&--1{
 			height: 8.50rem;
 		}
@@ -22,21 +23,47 @@
 		    height: 7.20rem;		
 		}				
 		&--3{
-		height: 6.55rem;			
+			top: 21.6rem;	
+			height: 6.55rem;
+			left: auto;
+			right: -21rem;
+		
+			@include bp(1440){
+				top: 19.6rem;
+				left: auto;
+				right: -23rem;
+			}
+			@include bp(1150){
+				right: -25rem;
+			}
 		}
 		
 		&--4{
-			top: 32.60rem;
 			height: 6.55rem;
-
-			@include bp(1440){
-				top: 19.3rem;
-			}
-			@include bp(1024){
-				top: 12.3rem;
-			}
 			&-a{
 				top: 37.80rem;
+			}
+		}
+
+		&--5{
+			top: 38.1rem;
+			left: auto;
+			right: -21rem;
+
+			@include bp(1440){
+				top: 36.9rem;
+				right: -22rem;
+			}
+		}
+
+		&--6{
+			left: auto;
+			top: 45.1rem;
+			right: -20.5rem;
+
+			@include bp(1440){
+				top: 43.9rem;
+				right: -22rem
 			}
 		}
 	}
