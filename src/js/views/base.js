@@ -7,9 +7,10 @@ export const e = {
 	btnProgress5: $('.btn__progress--5'),
 	btnProgress6: $('.btn__progress--6'),
 	btnProgress7: $('.btn__progress--7'),	
-	hdrProgress: $('.header__progress'),
+	hdrProgress: $('.header__progress'),	
 
 	btnBack: $('.btn__regress'),
+	btnBackX: $('.btn__regress--x'),
 
 	dialTracker: $(".dial-tracker"),
 	headerWrapper: $(".header__wrapper"),

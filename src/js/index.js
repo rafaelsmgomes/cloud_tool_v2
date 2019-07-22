@@ -66,7 +66,6 @@ $(document).ready(function(){
 
 	e.btnProgress.on('click',function(){
 		const value = $(this).data('val');
-		console.log(value);
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
@@ -101,9 +100,6 @@ $(document).ready(function(){
 
 		result.displayResultsCopy(state.userAggregateValue, PeersData.peerScore);
 
-		// setTimeout(function(){
-		// 	loadCloudAnimation(cloudUser, cloudPeer);
-		// },7000);
 		setTimeout(function(){
 			loadCloudAnimation(cloudUser, cloudPeer);
 		},3000);
@@ -114,18 +110,28 @@ $(document).ready(function(){
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
 		const hdrValue = $(this).data('val');
-
+		const regressValue = $('.btn__regress').attr('context');
 		$(`.btn__progress--${hdrValue}`).click();
 		$(this).data('val',`${Number(hdrValue)+1}`);
+		$('.btn__regress').attr('context',`${Number(regressValue)+1}`);
 	});		
+
+	e.btnBackX.on('click',function(){
+		const contextValue = e.btnBackX.attr('context');
+
+		e.btnBackX.attr('context', `${Number(contextValue)-1}`);
+	});
 
 	// REGRESS
 
 	e.btnBack.dp(path.movement2,path.easing2,path.pageList);
 
 	e.btnBack.on('click', function(){
-		const x = $(this).attr('context');
-		bP.animateBack(x);
+		const contextVal = $(this).attr('context');
+		const hdrVal = e.hdrProgress.data('val');
+		bP.animateBack(contextVal);
+
+		e.hdrProgress.data('val', `${Number(hdrVal)-1}`);
 	});
 
 /****** DIAL CONTROLLER ******/
@@ -219,7 +225,7 @@ $(document).ready(function(){
 		// Changing header nav value's to corresponding square
 
 		$('.header__nav--btn--2').data('val',val);
-		$('.header__nav--btn--1').attr('context',`${val-2}`);
+		$('.header__nav--btn--1').attr('context',`${val-1}`);
 
 	});
 
