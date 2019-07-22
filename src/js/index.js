@@ -109,10 +109,18 @@ $(document).ready(function(){
 
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
-		const hdrValue = $(this).data('val');
+		const hdrValue = $(this).attr('context');
 		const regressValue = $('.btn__regress').attr('context');
-		// $(`.btn__progress--${hdrValue}`).click();
-		$(this).data('val',`${Number(hdrValue)+1}`);
+		const nextSection = $(`.page--${Number(hdrValue)+1}`);
+		const nextLeft = nextSection.css('left').slice(0, -2);
+		const nextTop = nextSection.css('top').slice(0, -2);
+
+		console.log(nextLeft,nextTop);
+
+		$('.pathfinder').css('transform',`translate(${Number(nextLeft)*-1}px,${Number(nextTop)*-1}px)`);
+
+		$(this).attr('context',`${Number(hdrValue)+1}`);
+
 		e.btnBackX.attr('context',`${Number(regressValue)+1}`);
 	});		
 
@@ -226,7 +234,7 @@ $(document).ready(function(){
 
 		// Changing header nav value's to corresponding square
 
-		$('.header__nav--btn--2').data('val',val);
+		$('.header__nav--btn--2').data('val',`${val+1}`);
 		$('.header__nav--btn--1').attr('context',`${val-1}`);
 	});
 
