@@ -605,10 +605,13 @@ b {
   left: 65vw;
   padding: 0.50rem 0 0.80rem 0.80rem;
   top: 100%;
-  transform: translateY(-100%); }
+  transform: translate(0%, -100%); }
   @media only screen and (min-width: 1441px) {
     .cta__wrapper {
-      right: -210%; } }
+      left: 53.4rem; } }
+  @media only screen and (max-width: 1250px) {
+    .cta__wrapper {
+      left: 59vw; } }
   .cta__wrapper--1 {
     height: 8.50rem; }
   .cta__wrapper--2 {
@@ -764,7 +767,7 @@ b {
     .dial__context-section--1 {
       flex-direction: column;
       align-items: center;
-      padding-top: 4.9%; }
+      padding-top: 4.5%; }
     .dial__context-section--2 {
       margin-top: 20%;
       justify-content: space-between; }
@@ -788,37 +791,21 @@ b {
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {
-      padding-left: 8%; }
+      padding-left: 8.5%; }
       @media only screen and (max-height: 650px) {
         .dial__context--wrapper--1 {
           width: 11rem; } }
     .dial__context--wrapper--2 {
-      padding-right: 8%; }
+      padding-right: 8.5%; }
 
 .dial__line {
   background-color: #fff;
-  height: calc(93.5vh * .025);
+  height: 2%;
   border: solid 0.1rem #fff; }
   .dial__line--2 {
     transform: rotate(-71deg); }
   .dial__line--3 {
     transform: rotate(71deg); }
-
-@media only screen and (min-width: 1441px) and (min-height: 866px) {
-  .dial__line--2, .dial__line--3 {
-    height: 100%; } }
-
-@media only screen and (min-width: 1441px) and (max-height: 650px) {
-  .dial__line--2, .dial__line--3 {
-    height: 85%; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 675px) {
-  .dial__line--2, .dial__line--3 {
-    height: 50%; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 565px) {
-  .dial__line--2, .dial__line--3 {
-    height: 25%; } }
 
 .detailed__map {
   width: 100%;
