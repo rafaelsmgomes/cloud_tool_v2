@@ -6,10 +6,13 @@
 	left: 65vw;
 	padding: 0.50rem 0 0.80rem 0.80rem;
 	top: 100%;
-	transform: translateY(-100%);
+	transform: translate(0%, -100%);
 	
 		@include bp_min(1441){
-			right: -210%;
+			left: 53.4rem;
+		}
+		@include bp(1250){
+			left: 59vw;
 		}
 
 		&--1{
