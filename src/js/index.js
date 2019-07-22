@@ -164,7 +164,7 @@ $(document).ready(function(){
 
 	 		this.dial.changeValue(v);
 
-      dial.progressBtn(self);
+	  dial.progressBtn(self);
     },
 	});
 
@@ -174,6 +174,8 @@ $(document).ready(function(){
 	$(window).on('resize',function(){
 		dial.changeDialText();
 		dial.handResize();
+
+		dial.lineResize();
 	});
 /****** DETAILED MAP CONTROLLER ******/
 	$('.detailed__square').on('click',function(){
@@ -226,8 +228,11 @@ $(document).ready(function(){
 
 		$('.header__nav--btn--2').data('val',val);
 		$('.header__nav--btn--1').attr('context',`${val-1}`);
-
 	});
+
+	
+	dial.handResize();
+	dial.lineResize();
 
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();

@@ -1,7 +1,7 @@
 export const movement = [
 	['d','r'], // Landing to Q1
 	['d','r'], // Q1 to Q2
-	['r2','u2','l2'], // Q2 to Q3
+	['r2','u2','r'], // Q2 to Q3
 	['l'], // Q3 to Q4
 	['l'], // Q4 to Q5
 	['d','r'], // Q5 to Q6

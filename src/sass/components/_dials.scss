@@ -1,55 +1,53 @@
 .dial{
 // DESKTOP LARGE //SMALL
 	&-group{
-		width: 50%;
+
+		// width: 40.48rem;
+		// height: 20.27rem;
+		width: $dial-large;
+		height: calc(#{$dial-large} / 2);
+		max-width: $dial-width-max;
+		max-height: calc(#{$dial-width-max} / 2);
+		// max-width: 56.2vw;
+		// max-height: 26.1vw;
 		position: relative;
-    padding-top: 25%;
 		
-		@include bph(700){
-    	width: 40%;
-    	padding-top: 20%;
-    }
+		@include bp_min(1441){
+			max-width: 40.45rem;
+			max-height: calc(40.45rem / 2);
 
-    @include bph(500){
-    	width: 35%;
-    	padding-top: 17.50%;
-    }
-// TABLET LARGE  //TABLET SMALL
-		@include bp(1024){  //width
-			width: 70%;
-			padding-top: 35%;
+			@include bph(750){
+				width: $dial-mediumL;
+				height: calc(#{$dial-mediumL} / 2);
+			}
+			@include bph(550){
+				width: $dial-small;
+				height: calc(#{$dial-small} / 2);
+			}
+		}
+
+		@include bp(1440){
+			@include bph(675){
+				width: $dial-mediumL;
+				height: calc(#{$dial-mediumL} / 2);		
+			}
+			@include bph(565){
+				width: $dial-small;
+				height: calc(#{$dial-small} / 2);		
+			}
+		}
+		
+		@include bp(1024){
 			
-			@include bph(500){ 
-				width: 60%;
-				padding-top: 30%;
-			}
 		}
-// TABLET SMALL
-		@include bp(767){
-			width: 80%;
-			padding-top: 40%;
-
-			@include bph(500){
-				width: 50%;
-				padding-top: 25%;
-			}
-		}
-
-		@include bp(666){
-			width: 100%;
-			padding-top: 50%;
-		}
-
 		
-		& > *{
-			margin-top: -50%;
-		}
+
 
 
 
 		&--1,
 		&--3{
-			margin-top: 5.80rem;
+			margin-top: 4.63vh;
 
 			@include bp(1440){
 				margin-top: 1.10rem;
@@ -87,44 +85,30 @@
 	}
 	&__crown{
 		background-color: $color-blue-1;
-    width: 7.14%;
-    padding-top: 7.14%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    /* transform: translate(56%,-50%); */
-    border-radius: 100%;
-    transform: translate(-50%,50%);
-    // @include bp(1440){
-    // 	width: 2rem;
-    // 	height: 2rem;
-    // 	bottom: -1rem;
-    // }
-    // @include bp(1024){
-    // 	width: 1.2rem;
-    // 	height: 1.2rem;
-    // 	bottom: -.6rem;
-    // }
+
+		width: 6%;
+		height: 12%;
+		position: absolute;
+		bottom: -6%;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 100%;
 	}
 	&__hand{
     width: 0;
     position: absolute;
     height: 0;
     border-style: solid;
-		// height: ;
+	border-width: 0 calc(#{$dial-large} * .0175) calc(#{$dial-large} * .5) calc(#{$dial-large} * .0175);
+
 
     border-color: transparent transparent $color-blue-1 transparent;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%)rotate(-90deg);
     transform-origin: 50% 100%;		
-   	@include bp(1440){    
-    	border-width: 0 0.496rem 12.8125rem 0.496rem;
-    }
-   	@include bp(1024){    
-    	border-width: 0 0.3rem 7.4rem 0.3rem;
-    }
 	}
+
 	&__context{
 		height: 100%;
 		width: 100%;
@@ -136,23 +120,26 @@
 		&--1{
 		    flex-direction: column;
 		    align-items: center;
-		    padding-top: 6%;
+		    padding-top: 4.5%;
 			}
 			&--2{
-				margin-top: 16%;
-		    justify-content: space-between;
-				
+				margin-top: 20%;
+		    	justify-content: space-between;
+
+				@include bp_min(1441){
+					@include bph(650){
+						margin-top: 15%;
+					}
+				}
+				@include bp(1440){
+					@include bph(565){
+						margin-top: 15%;
+					}
+				}
+
 
 				&-a{					
-
 					margin-top: 13.88rem;
-
-					@include bp(1440){
-						margin-top: 9.6rem;
-					}
-					@include bp(1024){
-						margin-top: 5.3rem;
-					}
 				}
 			}
 
@@ -162,14 +149,8 @@
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
-				top: 22.45rem;		
+				top: 108%;		
 				
-				@include bp(1440){
-					top: 13.80rem;
-				}
-				@include bp(1024){
-					top: 8.5rem;
-				}
 			}
 
 		}
@@ -178,32 +159,31 @@
 			display: flex;
 
 			&--1{
-				padding-left: 9%;		
+				padding-left: 8.5%;
+				
+				@include bph(650){
+					width: 11rem;
+				}
 			}
 			&--2{
-				padding-right: 9%;
+				padding-right: 8.5%;	
 
-				// &-a {
-				// 	@include bp(1024){
-				// 		width: 6.5rem;
-				// 	}				
-				// }
 			}						
 		}
 	}
 	&__line{
-		background-color: $color-white-1;
-	  height: 1.08rem;
+	  background-color: $color-white-1;
+	  height: 2%;
 	  border: solid 0.10rem $color-white-1;
 		
 		&--1{
-
+			
 		}
 		&--2{
-	    transform: rotate(-71deg);
+			transform: rotate(-71deg);
 		}
 		&--3{
-	    transform: rotate(71deg);
-		}		
+	    	transform: rotate(71deg);
+		}
 	}
 }

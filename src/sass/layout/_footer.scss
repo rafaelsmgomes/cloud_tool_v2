@@ -1,13 +1,13 @@
 .footer{
     position: fixed;
     z-index: 1;
-    width: 70.00rem;
+    width: 70rem;
     margin: 0 auto;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
-    top: 94.5vh;
+    top: 95vh;
     transform: translateY(-50%);
 
     z-index: -1;
@@ -24,9 +24,9 @@
 			opacity: 1;
 		}
 
-    @include bp(1440){
-    	width: 42.49rem;
-    }
+	@include bp(1440){
+		width: 83.333%;
+	}
     @include bp(1024){
     	width: 42.09rem;
     }

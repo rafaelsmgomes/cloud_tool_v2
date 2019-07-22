@@ -7,7 +7,7 @@ const retrieveGroupText = (dialGroup) => {
   	textGroup.second = 'Planning for the cloud';
   	textGroup.third = 'Using cloud services';
 
-    if($('body').width() <= 1440){
+    if($('body').width() <= 1440) {
       textGroup.first = 'Not using';
       textGroup.second = 'Planning';
       textGroup.third = 'Using';
@@ -88,7 +88,7 @@ export const changeDialText = () => {
   $('.dial__text--2b').text('Impede current process');
   $('.dial__text--3b').text('Improve data use');
 
-  if($('body').width() <= 1440){
+  if($('body').width() <= 1440 || $(window).height() <= 750){
     $('.dial__text--1c').text('Planning');
     $('.dial__text--2c').text('Not using');
     $('.dial__text--3c').text('Using services');
@@ -104,6 +104,13 @@ export const progressBtn = (dial) => {
 
 export const handResize = () => {
   const baseWidth = $('.dial-group').width();
-
+ 
   $('.dial__hand').css('border-width', `0 ${baseWidth*0.017}px ${baseWidth/2}px ${baseWidth*0.017}px`);
-};
+ };
+
+export const lineResize = () => {
+  const baseWidth = $('.dial-group').width();
+  
+  $('.dial__line').css('height', `${baseWidth*0.03}px`)
+}
+
