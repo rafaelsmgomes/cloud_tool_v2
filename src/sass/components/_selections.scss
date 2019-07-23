@@ -18,8 +18,9 @@
 	&__container{
 		width: 14.65rem;
 		background-color: transparent;
-    border: solid 2px $color-blue-1;
+    	border: solid 2px $color-blue-1;
 		cursor: pointer;
+		padding: .60rem;
 
 		@include bp(1440){
 			width: 11rem;
@@ -38,25 +39,21 @@
 		}
 		&--1{
 			flex: 0 0 9.45rem;
-	    padding: 0.75rem 0.75rem 0 0.80rem;
 		}
 		&--2,
 		&--3,
 		&--6{
 			flex: 0 0 4.65rem;
-	    padding: 0.70rem 0.75rem 0 0.80rem;
 		}
 		&--4,
 		&--7{
 			flex: 0 0 7.70rem;
-			padding: 0.75rem 0.60rem 0 0.65rem;
 			}
 
 		&--5,
 		&--8{
 			flex: 0 0 6.25rem;
-			    padding: 0.60rem 0.75rem 0 0.80rem;
-				}
+			}
 		&--8{
 			margin-bottom: 5.95rem;
 			@include bp(1440){
