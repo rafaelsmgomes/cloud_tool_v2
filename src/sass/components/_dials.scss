@@ -8,11 +8,13 @@
 		height: calc(#{$dial-large} / 2);
 		max-width: $dial-width-max;
 		max-height: calc(#{$dial-width-max} / 2);
+		min-width: 15.05rem;
+		min-height: calc(15.05rem / 2);
 		// max-width: 56.2vw;
 		// max-height: 26.1vw;
 		position: relative;
 		transform: translateY(-50%);
-		margin-top: calc((100vh - 14.15rem) / 2);
+		margin-top: calc((100vh - 15rem) / 2);
 		
 		@include bp_min(1441){
 			max-width: 40.45rem;
@@ -22,6 +24,10 @@
 				width: $dial-mediumL;
 				height: calc(#{$dial-mediumL} / 2);
 			}
+			@include bph(725){
+				width: $dial-mediumS;
+				height: calc(#{$dial-mediumS} / 2);
+			}
 			@include bph(550){
 				width: $dial-small;
 				height: calc(#{$dial-small} / 2);
@@ -29,9 +35,14 @@
 		}
 
 		@include bp(1440){
-			@include bph(675){
+			
+			@include bph(725){
 				width: $dial-mediumL;
 				height: calc(#{$dial-mediumL} / 2);		
+			}
+			@include bph(625){
+				width: $dial-mediumS;
+				height: calc(#{$dial-mediumS} / 2);		
 			}
 			@include bph(565){
 				width: $dial-small;
@@ -40,14 +51,27 @@
 		}
 		
 		@include bp(1024){
-			max-width: $dial-width-max2;
-			max-height: calc(#{$dial-width-max2} / 2);
+			width: $dial-mediumS;
+			height: calc(#{$dial-mediumS} / 2);		
 
-			@include bph(825){
-				max-width: $dial-width-max;
-				max-height: calc(#{$dial-width-max} / 2);		
+			@include bph_min(810){
+				max-width: $dial-width-max2;
+				max-height: calc(#{$dial-width-max2} / 2);		
+				margin-top: calc((100vh - 25rem) / 2);
 			}
 		}
+		
+		@include bp(910){
+			width: $dial-small;
+			height: calc(#{$dial-small} / 2);		
+
+			@include bph_min(750){
+				max-width: $dial-width-max2;
+				max-height: calc(#{$dial-width-max2} / 2);		
+				margin-top: calc((100vh - 25rem) / 2);
+			}
+		}
+
 		
 
 
@@ -170,7 +194,7 @@
 				padding-left: 8.5%;
 				
 				@include bph(650){
-					width: 11rem;
+					width: 13rem;
 				}
 			}
 			&--2{

@@ -19,13 +19,20 @@
 		&--2,
 		&--4{
 			@include bp(1024){
-				
-				@include bph_min(826){
-					top: calc(60% + 2 * 20vh);
-					left: 22.5vw;					
-	
+
+				@include bph_min(810){
+					top: 180%;
+					left: 24vw;
 				}
+			}
+		
+			@include bp(910){
+				left: 50vw;
+				@include bph_min(750){
+					top: 193%;
+					left: 24vw;
 				}
+			}
 		}
 	
 
