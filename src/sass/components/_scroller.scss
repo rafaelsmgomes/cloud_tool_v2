@@ -60,12 +60,13 @@
 		height: 2.00rem;
 		width: 2.00rem;
 		margin-right: 0.75rem;
+		transform: translateY(-7%);
 
 		.scroller__content--active &{
 			margin-right: 1.05rem;
-			margin-top: .6rem;
 			height: 2.20rem;
 			width: 2.2rem;			
+			transform: translateY(-10%);
 			
 			// @include bp(1440){
 			// 	margin: 0;
@@ -80,8 +81,8 @@
 			@include bp(1050){
 				margin-right: 0.80rem;
 			}
-			&--2 {
-				background-image: url("../assets/graphics/illustration/illustration-cyber-security-threat-detection.svg");
+			&--4 {
+				transform: translateY(-12%);
 			}
 		}
 
