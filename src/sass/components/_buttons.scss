@@ -14,12 +14,17 @@
     width: 2.00rem;
     height: 2rem;
     border-radius: 1rem;
-    border: solid 0.1rem $color-white-1;
+    border: solid 0.1rem $color-blue-1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $color-blue-2;
-    cursor: pointer;
+	cursor: pointer;
+	transition: all .1s;
+
+	&:hover{
+		border: solid 0.1rem $color-white-1;
+	}
 
     &.rotate{
     	transform: rotate(180deg);

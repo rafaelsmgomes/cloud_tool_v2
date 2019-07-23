@@ -147,7 +147,9 @@ b {
   font-family: Univers, Arial, Helvetica, sans-serif;
   transition-delay: .5s;
   transition-property: opacity;
-  transition-duration: 0.5s; }
+  transition-duration: 0.5s;
+  margin-top: 42%;
+  padding: 0 2%; }
   .landing__title--fadeout {
     opacity: 0; }
 
@@ -182,7 +184,7 @@ b {
     line-height: 1.2;
     letter-spacing: normal;
     text-align: center;
-    margin-top: 10.05rem; }
+    margin-top: 27.25%; }
 
 .main__title {
   font-family: Univers, Arial, Helvetica, sans-serif;
@@ -199,25 +201,32 @@ b {
       font-size: 1.80rem;
       width: 32.50rem;
       margin-top: .65rem; } }
+  @media only screen and (max-width: 1440px) and (max-height: 650px) {
+    .main__title {
+      font-size: 1.8rem;
+      width: 30rem; } }
   @media only screen and (max-width: 1024px) {
     .main__title {
       font-size: 1.80rem;
       margin-top: .55rem; } }
   .main__title--1 {
     width: 43.25rem; }
-
-@media only screen and (min-width: 1441px) and (max-height: 650px) {
-  .main__title--1 {
-    font-size: 1.8rem;
-    width: 30rem; } }
     @media only screen and (max-width: 1440px) {
       .main__title--1 {
         width: 32.50rem; } }
     @media only screen and (max-width: 1024px) {
       .main__title--1 {
         width: 34.90rem; } }
+  @media only screen and (max-width: 1024px) and (max-height: 525px) {
+    .main__title--1 {
+      font-size: 1.25rem;
+      width: 22.5rem; } }
   .main__title--2 {
     width: 39.55rem; }
+
+@media only screen and (min-width: 1441px) and (max-height: 680px) {
+  .main__title--2 {
+    font-size: 1.8rem; } }
     @media only screen and (max-width: 1440px) {
       .main__title--2 {
         width: 36.10rem; } }
@@ -247,13 +256,16 @@ b {
       font-style: normal;
       font-stretch: normal;
       line-height: 1.32;
-      letter-spacing: normal; } }
+      letter-spacing: normal;
+      height: 2.8rem; } }
   @media only screen and (max-width: 1024px) {
     .main__direction {
       font-size: .95rem;
       width: 34.90rem;
-      height: 2.8rem;
       margin-top: .5rem; } }
+  @media only screen and (max-width: 1024px) and (max-height: 525px) {
+    .main__direction {
+      width: 22.5rem; } }
   .main__direction--1 {
     width: 21.30rem; }
 
@@ -445,6 +457,7 @@ b {
   text-align: right;
   color: #324b5c;
   margin-top: 1.70rem;
+  padding-right: .2rem;
   display: none; }
   .scroller__content--active .scroller__step {
     display: block; }
@@ -463,8 +476,11 @@ b {
   @media only screen and (max-width: 1050px) {
     .scroller__description {
       letter-spacing: -0.03em; } }
+  .scroller__description--1 {
+    padding-left: .2rem; }
   .scroller__description--2 {
-    text-align: right; }
+    text-align: right;
+    padding-right: .2rem; }
 
 .cloud__text {
   width: 100%;
@@ -558,7 +574,8 @@ b {
   font-stretch: normal;
   line-height: 1.29;
   letter-spacing: normal;
-  color: #fff; }
+  color: #fff;
+  padding-top: .2rem; }
 
 .footer-text {
   width: 1.30rem;
@@ -573,7 +590,8 @@ b {
   color: #fff;
   top: -1.10rem;
   text-align: center;
-  position: absolute; }
+  position: absolute;
+  transform: translateX(25%); }
 
 .header__copyright {
   font-size: 0.8rem;
@@ -629,6 +647,24 @@ b {
   @media only screen and (max-width: 1250px) {
     .cta__wrapper {
       left: 59vw; } }
+
+@media only screen and (min-width: 1441px) and (min-height: 1200px) {
+  .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
+    top: 170%;
+    left: 24rem;
+    width: 90rem; } }
+
+@media only screen and (max-width: 1024px) and (min-height: 810px) {
+  .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
+    top: 180%;
+    left: 24vw; } }
+  @media only screen and (max-width: 910px) {
+    .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
+      left: 50vw; } }
+  @media only screen and (max-width: 910px) and (min-height: 750px) {
+    .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
+      top: 193%;
+      left: 24vw; } }
   .cta__wrapper--1 {
     height: 8.50rem; }
   .cta__wrapper--2 {
@@ -677,8 +713,6 @@ b {
   cursor: pointer;
   align-items: center;
   padding: 0.20rem 0.45rem; }
-  .cta__btn--2 {
-    margin-top: 0.50rem; }
   .cta__btn:hover {
     background-color: #fff; }
     .cta__btn:hover > .btn__txt {
@@ -697,12 +731,15 @@ b {
   width: 2.00rem;
   height: 2rem;
   border-radius: 1rem;
-  border: solid 0.1rem #fff;
+  border: solid 0.1rem #00758f;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #324b5c;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .1s; }
+  .btn__regress:hover {
+    border: solid 0.1rem #fff; }
   .btn__regress.rotate {
     transform: rotate(180deg); }
   .btn__regress--2, .btn__regress--5 {
@@ -722,42 +759,70 @@ b {
   height: calc(93.5vh / 2);
   max-width: 50vw;
   max-height: calc(50vw / 2);
-  position: relative; }
+  min-width: 15.05rem;
+  min-height: calc(15.05rem / 2);
+  position: relative;
+  transform: translateY(-50%);
+  margin-top: calc((100vh - 15rem) / 2); }
   @media only screen and (min-width: 1441px) {
     .dial-group {
       max-width: 40.45rem;
       max-height: calc(40.45rem / 2); } }
-  @media only screen and (min-width: 1441px) and (max-height: 750px) {
+  @media only screen and (min-width: 1441px) and (min-height: 1200px) {
+    .dial-group {
+      margin-top: calc((100vh - 30rem) / 2); } }
+  @media only screen and (min-width: 1441px) and (max-height: 825px) {
     .dial-group {
       width: 78vh;
       height: calc(78vh / 2); } }
-  @media only screen and (min-width: 1441px) and (max-height: 550px) {
+  @media only screen and (min-width: 1441px) and (max-height: 725px) {
+    .dial-group {
+      width: 65vh;
+      height: calc(65vh / 2); } }
+  @media only screen and (min-width: 1441px) and (max-height: 590px) {
     .dial-group {
       width: 57.443vh;
-      height: calc(57.443vh / 2); } }
+      height: calc(57.443vh / 2);
+      margin-top: calc((100vh - 17.2rem) / 2); } }
 
-@media only screen and (max-width: 1440px) and (max-height: 675px) {
+@media only screen and (max-width: 1440px) and (max-height: 725px) {
   .dial-group {
     width: 78vh;
     height: calc(78vh / 2); } }
+
+@media only screen and (max-width: 1440px) and (max-height: 625px) {
+  .dial-group {
+    width: 65vh;
+    height: calc(65vh / 2); } }
 
 @media only screen and (max-width: 1440px) and (max-height: 565px) {
   .dial-group {
     width: 57.443vh;
     height: calc(57.443vh / 2); } }
-  .dial-group--1, .dial-group--3 {
-    margin-top: 4.63vh; }
-    @media only screen and (max-width: 1440px) {
-      .dial-group--1, .dial-group--3 {
-        margin-top: 1.10rem; } }
-    @media only screen and (max-width: 1024px) {
-      .dial-group--1, .dial-group--3 {
-        margin-top: 1.10rem; } }
+  @media only screen and (max-width: 1024px) {
+    .dial-group {
+      width: 65vh;
+      height: calc(65vh / 2); } }
+  @media only screen and (max-width: 1024px) and (min-height: 810px) {
+    .dial-group {
+      max-width: 58.333vw;
+      max-height: calc(58.333vw / 2);
+      margin-top: calc((100vh - 25rem) / 2); } }
+  @media only screen and (max-width: 910px) {
+    .dial-group {
+      width: 57.443vh;
+      height: calc(57.443vh / 2); } }
+  @media only screen and (max-width: 910px) and (min-height: 750px) {
+    .dial-group {
+      max-width: 58.333vw;
+      max-height: calc(58.333vw / 2);
+      margin-top: calc((100vh - 25rem) / 2); } }
   .dial-group--2 {
-    margin-top: 1.90rem; }
-    @media only screen and (max-width: 1440px) {
-      .dial-group--2 {
-        margin-top: 1.10rem; } }
+    margin-top: calc((100vh - 18rem) / 2); }
+
+@media only screen and (min-width: 1441px) and (max-height: 680px) {
+  .dial-group--2 {
+    margin-top: calc((100vh - 15rem) / 2); } }
 
 .dial-tracker__wrapper {
   width: 100%;
@@ -804,20 +869,22 @@ b {
     .dial__context-section--1 {
       flex-direction: column;
       align-items: center;
-      padding-top: 4.5%; }
+      padding-top: 4.1%; }
     .dial__context-section--2 {
-      margin-top: 20%;
+      margin-top: 19%;
       justify-content: space-between; }
 
 @media only screen and (min-width: 1441px) and (max-height: 650px) {
   .dial__context-section--2 {
     margin-top: 15%; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 565px) {
-  .dial__context-section--2 {
-    margin-top: 15%; } }
+      @media only screen and (max-width: 1440px) {
+        .dial__context-section--2 {
+          margin-top: 21%; } }
+  @media only screen and (max-width: 1440px) and (max-height: 565px) {
+    .dial__context-section--2 {
+      margin-top: 15%; } }
       .dial__context-section--2-a {
-        margin-top: 34%; }
+        margin-top: 35%; }
     .dial__context-section--3 {
       display: none;
       justify-content: center;
@@ -828,12 +895,12 @@ b {
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {
-      padding-left: 8.5%; }
+      padding-left: 7.5%; }
       @media only screen and (max-height: 650px) {
         .dial__context--wrapper--1 {
-          width: 11rem; } }
+          width: 13rem; } }
     .dial__context--wrapper--2 {
-      padding-right: 8.5%; }
+      padding-right: 7.5%; }
 
 .dial__line {
   background-color: #fff;
@@ -922,6 +989,8 @@ b {
   align-self: flex-end;
   background-image: url("../assets/images/desktop/logo-white.svg");
   margin-right: auto; }
+  .header__logo:hover {
+    cursor: pointer; }
 
 .header__wrapper {
   display: flex;
@@ -947,6 +1016,8 @@ b {
   justify-content: center;
   align-items: center;
   cursor: pointer; }
+  .header__rectangle:hover {
+    background-color: #00758f; }
   .header__rectangle:not(:last-of-type) {
     margin-right: 1.20rem; }
   .header__rectangle--1 {
@@ -954,14 +1025,19 @@ b {
     .header__rectangle--1.toggle {
       display: flex; }
 
+.header__bar {
+  font-size: 1.4rem;
+  transform: translateY(9%); }
+
 .landing__container {
   margin: 0 auto;
   margin-top: 5.70rem;
-  height: 36.90rem;
-  width: 36.90rem;
+  height: 68.33vh;
+  width: 68.33vh;
+  max-width: 36.90rem;
+  max-height: 36.90rem;
   border: solid 2px #8aadbf;
-  border-radius: 36.9rem;
-  padding-top: 15.50rem;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1211,12 +1287,13 @@ b {
 .scroller__icon {
   height: 2.00rem;
   width: 2.00rem;
-  margin-right: 0.75rem; }
+  margin-right: 0.75rem;
+  transform: translateY(-7%); }
   .scroller__content--active .scroller__icon {
     margin-right: 1.05rem;
-    margin-top: .6rem;
     height: 2.20rem;
-    width: 2.2rem; }
+    width: 2.2rem;
+    transform: translateY(-10%); }
     @media only screen and (max-width: 1150px) {
       .scroller__content--active .scroller__icon {
         margin: 0;
@@ -1224,8 +1301,8 @@ b {
     @media only screen and (max-width: 1050px) {
       .scroller__content--active .scroller__icon {
         margin-right: 0.80rem; } }
-    .scroller__content--active .scroller__icon--2 {
-      background-image: url("../assets/graphics/illustration/illustration-cyber-security-threat-detection.svg"); }
+    .scroller__content--active .scroller__icon--4 {
+      transform: translateY(-12%); }
 
 .scroller__mid {
   justify-content: space-between;
@@ -1315,7 +1392,8 @@ b {
   width: 14.65rem;
   background-color: transparent;
   border: solid 2px #00758f;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: .60rem; }
   @media only screen and (max-width: 1440px) {
     .selection__container {
       width: 11rem; } }
@@ -1326,17 +1404,13 @@ b {
     .selection__container--active:hover {
       background-color: #00758f; }
   .selection__container--1 {
-    flex: 0 0 9.45rem;
-    padding: 0.75rem 0.75rem 0 0.80rem; }
+    flex: 0 0 9.45rem; }
   .selection__container--2, .selection__container--3, .selection__container--6 {
-    flex: 0 0 4.65rem;
-    padding: 0.70rem 0.75rem 0 0.80rem; }
+    flex: 0 0 4.65rem; }
   .selection__container--4, .selection__container--7 {
-    flex: 0 0 7.70rem;
-    padding: 0.75rem 0.60rem 0 0.65rem; }
+    flex: 0 0 7.70rem; }
   .selection__container--5, .selection__container--8 {
-    flex: 0 0 6.25rem;
-    padding: 0.60rem 0.75rem 0 0.80rem; }
+    flex: 0 0 6.25rem; }
   .selection__container--8 {
     margin-bottom: 5.95rem; }
     @media only screen and (max-width: 1440px) {
@@ -1381,7 +1455,7 @@ b {
   right: 0;
   display: flex;
   justify-content: space-between;
-  top: 95vh;
+  top: calc(100vh - 35px);
   transform: translateY(-50%);
   z-index: -1;
   opacity: 0;

@@ -7,7 +7,7 @@
     right: 0;
     display: flex;
     justify-content: space-between;
-    top: 95vh;
+    top: calc(100vh - 35px);
     transform: translateY(-50%);
 
     z-index: -1;
