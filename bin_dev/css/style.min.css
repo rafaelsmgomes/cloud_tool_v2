@@ -559,7 +559,8 @@ b {
   font-stretch: normal;
   line-height: 1.29;
   letter-spacing: normal;
-  color: #fff; }
+  color: #fff;
+  padding-top: .2rem; }
 
 .footer-text {
   width: 1.30rem;
@@ -574,7 +575,8 @@ b {
   color: #fff;
   top: -1.10rem;
   text-align: center;
-  position: absolute; }
+  position: absolute;
+  transform: translateX(25%); }
 
 .header__copyright {
   font-size: 0.8rem;
@@ -1334,7 +1336,8 @@ b {
   width: 14.65rem;
   background-color: transparent;
   border: solid 2px #00758f;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: .60rem; }
   @media only screen and (max-width: 1440px) {
     .selection__container {
       width: 11rem; } }
@@ -1345,17 +1348,13 @@ b {
     .selection__container--active:hover {
       background-color: #00758f; }
   .selection__container--1 {
-    flex: 0 0 9.45rem;
-    padding: 0.75rem 0.75rem 0 0.80rem; }
+    flex: 0 0 9.45rem; }
   .selection__container--2, .selection__container--3, .selection__container--6 {
-    flex: 0 0 4.65rem;
-    padding: 0.70rem 0.75rem 0 0.80rem; }
+    flex: 0 0 4.65rem; }
   .selection__container--4, .selection__container--7 {
-    flex: 0 0 7.70rem;
-    padding: 0.75rem 0.60rem 0 0.65rem; }
+    flex: 0 0 7.70rem; }
   .selection__container--5, .selection__container--8 {
-    flex: 0 0 6.25rem;
-    padding: 0.60rem 0.75rem 0 0.80rem; }
+    flex: 0 0 6.25rem; }
   .selection__container--8 {
     margin-bottom: 5.95rem; }
     @media only screen and (max-width: 1440px) {
