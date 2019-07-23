@@ -111,6 +111,12 @@ b {
 		&--2{
 			width: 39.55rem;
 
+			@include bp_min(1441){
+				@include bph(680){
+					font-size: 1.8rem;
+				}
+			}
+
 			@include bp(1440){
 				width: 36.10rem;
 			}
