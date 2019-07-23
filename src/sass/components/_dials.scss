@@ -20,6 +20,10 @@
 			max-width: 40.45rem;
 			max-height: calc(40.45rem / 2);
 
+			@include bph_min(1200){
+				margin-top: calc((100vh - 30rem) / 2);
+			}
+
 			@include bph(825){
 				width: $dial-mediumL;
 				height: calc(#{$dial-mediumL} / 2);
@@ -148,10 +152,10 @@
 		&--1{
 		    flex-direction: column;
 		    align-items: center;
-		    padding-top: 4.5%;
+		    padding-top: 4.1%;
 			}
 			&--2{
-				margin-top: 20%;
+				margin-top: 19%;
 		    	justify-content: space-between;
 
 				@include bp_min(1441){
@@ -160,14 +164,17 @@
 					}
 				}
 				@include bp(1440){
+					margin-top: 21%;
+
 					@include bph(565){
 						margin-top: 15%;
 					}
 				}
 
 
+
 				&-a{					
-					margin-top: 34%;
+					margin-top: 35%;
 				}
 			}
 
@@ -187,14 +194,14 @@
 			display: flex;
 
 			&--1{
-				padding-left: 8.5%;
+				padding-left: 7.5%;
 				
 				@include bph(650){
 					width: 13rem;
 				}
 			}
 			&--2{
-				padding-right: 8.5%;	
+				padding-right: 7.5%;	
 
 			}						
 		}
