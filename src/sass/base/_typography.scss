@@ -89,16 +89,14 @@ b {
 			font-size: 1.80rem;
 			margin-top: .55rem;
 		}
+
+		@include bph(650){
+			font-size: 1.8rem;
+			width: 30rem;
+		}
 	
 		&--1{
 			width: 43.25rem;
-
-			@include bp_min(1441){
-				@include bph(650){
-					font-size: 1.8rem;
-					width: 30rem;
-				}
-			}
 		 	@include bp(1440){
 	  	  		width: 32.50rem;
 				}
@@ -142,12 +140,12 @@ b {
 		  font-stretch: normal;
 		  line-height: 1.32;
 		  letter-spacing: normal;			
+		  height: 2.8rem;
 		}
 
 		@include bp(1024){
 			font-size: .95rem;
 			width: 34.90rem;
-			height: 2.8rem;
 			margin-top: .5rem;
 		}
 
