@@ -15,6 +15,19 @@
 			left: 59vw;
 		}
 
+		&--1,
+		&--2,
+		&--4{
+			@include bp(1024){
+				
+				@include bph_min(826){
+					top: calc(60% + 2 * 20vh);
+					left: 22.5vw;					
+	
+				}
+				}
+		}
+	
 
 		&--1{
 			height: 8.50rem;
