@@ -4,7 +4,7 @@
     border: 2px solid $color-blue-1;
 	position: absolute;
 	left: 65vw;
-	padding: 0.50rem 0 0.80rem 0.80rem;
+	padding: 0.80rem 0 0.80rem 0.80rem;
 	top: 100%;
 	transform: translate(0%, -100%);
 	
@@ -25,15 +25,12 @@
 					width: 90rem;
 				}
 			}
-
 			@include bp(1024){
-
 				@include bph_min(810){
 					top: 180%;
 					left: 24vw;
 				}
 			}
-		
 			@include bp(910){
 				left: 50vw;
 				@include bph_min(750){
@@ -45,14 +42,11 @@
 	
 
 		&--1{
-			height: 8.50rem;
 		}
 		&--2{
-		    height: 7.20rem;		
 		}				
 		&--3{
 			top: 21.6rem;	
-			height: 6.55rem;
 			left: auto;
 			right: -21rem;
 		
@@ -67,7 +61,6 @@
 		}
 		
 		&--4{
-			height: 6.55rem;
 			&-a{
 				top: 37.80rem;
 			}
