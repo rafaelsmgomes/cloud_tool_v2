@@ -21,7 +21,10 @@ b {
 	  font-family: $font-reg;
 		transition-delay: .5s;
 		transition-property: opacity;
-    transition-duration: 0.5s;
+    	transition-duration: 0.5s;
+		margin-top: 42%;
+		padding: 0 2%;
+
 
 	  &--fadeout{	  	
 			opacity: 0;	
@@ -60,7 +63,7 @@ b {
 		  line-height: 1.2;
 		  letter-spacing: normal;
 		  text-align: center;     
-	    margin-top: 10.05rem;
+	    margin-top: 27.25%;
 		}
 	}
 }
@@ -408,6 +411,7 @@ b {
 	  text-align: right;
 	  color: $color-blue-2;
 	  margin-top: 1.70rem;
+	  padding-right: .2rem;
 		display: none;
 		
 		.scroller__content--active &{
@@ -432,8 +436,12 @@ b {
 		@include bp(1050){
 	    letter-spacing: -0.03em;
 		}
+		&--1{
+			padding-left: .2rem;
+		}
 		&--2{
-			text-align: right;		
+			text-align: right;	
+			padding-right: .2rem;	
 
 		}
 	}
