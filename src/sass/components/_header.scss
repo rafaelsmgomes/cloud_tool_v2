@@ -38,10 +38,6 @@
   align-items: center;
 
   cursor: pointer;
-
-		&:hover{
-			background-color: $color-blue-1;
-		}
 	
 		&:not(:last-of-type){
 			  margin-right: 1.20rem;

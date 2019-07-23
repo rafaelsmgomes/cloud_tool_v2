@@ -1016,8 +1016,6 @@ b {
   justify-content: center;
   align-items: center;
   cursor: pointer; }
-  .header__rectangle:hover {
-    background-color: #00758f; }
   .header__rectangle:not(:last-of-type) {
     margin-right: 1.20rem; }
   .header__rectangle--1 {
