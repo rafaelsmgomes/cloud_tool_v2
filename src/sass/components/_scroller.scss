@@ -60,6 +60,7 @@
 		height: 2.00rem;
 		width: 2.00rem;
 		margin-right: 0.75rem;
+		transform: translateY(-3%);
 
 		.scroller__content--active &{
 			margin-right: 1.05rem;
@@ -79,7 +80,18 @@
 			@include bp(1050){
 				margin-right: 0.80rem;
 			}
-			&--4 {
+			&--2 {
+				transform: translateY(0%);
+			}
+			&--1-b {
+				transform: translateY(-11%);
+			}
+			&--2-b,
+			&--6-b {
+				transform: translateY(-5%);
+			}
+			&--5-b {
+				transform: translateY(-7%);
 			}
 		}
 
