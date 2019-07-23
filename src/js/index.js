@@ -156,6 +156,8 @@ $(document).ready(function(){
 		bP.animateBack(contextVal);
 
 		e.hdrProgress.data('val', `${Number(hdrVal)-1}`);
+
+		$(this).attr('context',`${Number(contextVal)-1}`)
 	});
 
 /****** DIAL CONTROLLER ******/
