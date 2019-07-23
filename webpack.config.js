@@ -19,6 +19,7 @@ module.exports = {
 			range: 'rangeslider.js',
 			knob: 'jquery-knob',
 			sp: 'cpr_scrollpath',
+			bPopup: 'cpr_bopup',
 			lottie: 'lottie-web',
 
 		}),

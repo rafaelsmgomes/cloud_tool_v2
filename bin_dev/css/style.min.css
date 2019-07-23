@@ -1496,5 +1496,9 @@ b {
       z-index: -1;
       background-color: transparent; }
 
+.b-modal {
+  height: 100vh;
+  transition: opacity 100ms; }
+
 .block {
   display: block; }

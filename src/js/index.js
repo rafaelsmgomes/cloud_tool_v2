@@ -3,6 +3,7 @@ import 'jquery';
 import 'rangeslider.js';
 import 'jquery-knob';
 import 'cpr_scrollpath';
+import 'cpr_bopup';
 import 'lottie-web';
 
 import {e} from './views/base';
@@ -35,6 +36,14 @@ $(document).ready(function(){
 
  	const state = {};
 
+/****** CTA POPUPS ******/ 
+	$('.cta__btn').on('click',function(){
+		const val = $(this).attr('val')
+		if(val === '1'){
+			func.openVideoOverlay('5703531352001');
+		}
+	});
+
 /****** PAGE/LINE CONTROLLER ******/
 	state.width = $('body').width();
 	// state.height = e.page.height();
@@ -55,8 +64,7 @@ $(document).ready(function(){
 	})
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
-
-// 
+ 
 	state.userAggregateValue = 0;
 
 	// PROGRESS
