@@ -64,10 +64,22 @@
 		
 		& > *{
 			color: $color-blue-2;
-		}
+		}		
 
 		& > .btn__arrow{			
 			background-image: url(../assets/graphics/arrow-blue.svg);
+		}
+
+		&:hover{
+			background-color: $color-blue-2;
+
+			& > .btn__txt{
+				color: $color-white-1
+			}
+
+			& > .btn__arrow{
+				background-image: url('../assets/graphics/arrow.svg');
+			}
 		}
 
 		&--1{
@@ -120,6 +132,18 @@
 	  & > .btn__arrow{
 	    background-image: url(../assets/graphics/arrow-blue.svg);
 	  }
+
+		&:hover{
+			background-color: $color-blue-2;
+
+			& > .btn__txt{
+				color: $color-white-1
+			}
+
+			& > .btn__arrow{
+				background-image: url('../assets/graphics/arrow.svg');
+			}
+		}	  
 	}
 	&__info{
 		&--wrapper{

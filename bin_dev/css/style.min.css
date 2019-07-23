@@ -127,6 +127,11 @@ body {
   src: url("../fonts/UniversLTStd.otf");
   font-weight: normal; }
 
+@font-face {
+  font-family: "UniversLite";
+  src: url("../fonts/UniversLTStd-Light.otf");
+  font-weight: normal; }
+
 b {
   font-weight: 700; }
 
@@ -459,7 +464,7 @@ b {
 
 .scroller__description {
   width: 14rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: UniverLite, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -1156,6 +1161,12 @@ b {
     color: #324b5c; }
   .cta-group__btn > .btn__arrow {
     background-image: url(../assets/graphics/arrow-blue.svg); }
+  .cta-group__btn:hover {
+    background-color: #324b5c; }
+    .cta-group__btn:hover > .btn__txt {
+      color: #fff; }
+    .cta-group__btn:hover > .btn__arrow {
+      background-image: url("../assets/graphics/arrow.svg"); }
   .cta-group__btn--1 {
     width: 7.15rem; }
   .cta-group__btn--2 {
@@ -1191,6 +1202,12 @@ b {
     color: #324b5c; }
   .sidebar__btn > .btn__arrow {
     background-image: url(../assets/graphics/arrow-blue.svg); }
+  .sidebar__btn:hover {
+    background-color: #324b5c; }
+    .sidebar__btn:hover > .btn__txt {
+      color: #fff; }
+    .sidebar__btn:hover > .btn__arrow {
+      background-image: url("../assets/graphics/arrow.svg"); }
 
 .sidebar__info--wrapper {
   padding-top: 0.50rem;
@@ -1426,7 +1443,8 @@ b {
 
 .pathfinder {
   background-color: dodgerblue;
-  transition: all 800ms; }
+  transition: all 800ms;
+  transition-delay: 300ms; }
 
 .footer {
   position: fixed;
@@ -1569,6 +1587,10 @@ b {
     .page--x.deactivate {
       z-index: -1;
       background-color: transparent; }
+
+.b-modal {
+  height: 100vh;
+  transition: opacity 100ms; }
 
 .block {
   display: block; }

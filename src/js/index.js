@@ -3,6 +3,7 @@ import 'jquery';
 import 'rangeslider.js';
 import 'jquery-knob';
 import 'cpr_scrollpath';
+import 'cpr_bopup';
 import 'lottie-web';
 
 import {e} from './views/base';
@@ -35,6 +36,14 @@ $(document).ready(function(){
 
  	const state = {};
 
+/****** CTA POPUPS ******/ 
+	$('.cta__btn').on('click',function(){
+		const val = $(this).attr('val')
+		if(val === '1'){
+			func.openVideoOverlay('5703531352001');
+		}
+	});
+
 /****** PAGE/LINE CONTROLLER ******/
 	state.width = $('body').width();
 	// state.height = e.page.height();
@@ -55,8 +64,7 @@ $(document).ready(function(){
 	})
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
-
-// 
+ 
 	state.userAggregateValue = 0;
 
 	// PROGRESS
@@ -110,7 +118,6 @@ $(document).ready(function(){
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
 		const hdrValue = $(this).attr('context');
-		const regressValue = $('.btn__regress').attr('context');
 		const nextSection = $(`.page--${Number(hdrValue)+1}`);
 		const nextLeft = nextSection.css('left').slice(0, -2);
 		const nextTop = nextSection.css('top').slice(0, -2);
@@ -121,13 +128,22 @@ $(document).ready(function(){
 
 		$(this).attr('context',`${Number(hdrValue)+1}`);
 
-		e.btnBackX.attr('context',`${Number(regressValue)+1}`);
+		e.btnBackX.attr('context',hdrValue);
 	});		
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
+		const hdrValue = e.hdrProgress.attr('context');
+		const prevSection = $(`.page--${contextValue}`);
 
-		e.btnBackX.attr('context', `${Number(contextValue)-1}`);
+		const prevLeft = prevSection.css('left').slice(0, -2);
+		const prevTop = prevSection.css('top').slice(0, -2);
+
+		$('.pathfinder').css('transform',`translate(${Number(prevLeft)*-1}px,${Number(prevTop)*-1}px)`);
+
+		$(this).attr('context', `${Number(contextValue)-1}`);
+		e.hdrProgress.attr('context', contextValue);
+		
 	});
 
 	// REGRESS
@@ -140,6 +156,8 @@ $(document).ready(function(){
 		bP.animateBack(contextVal);
 
 		e.hdrProgress.data('val', `${Number(hdrVal)-1}`);
+
+		$(this).attr('context',`${Number(contextVal)-1}`)
 	});
 
 /****** DIAL CONTROLLER ******/
@@ -182,9 +200,10 @@ $(document).ready(function(){
 	$(window).on('resize',function(){
 		dial.changeDialText();
 		dial.handResize();
-
 		dial.lineResize();
+
 	});
+
 /****** DETAILED MAP CONTROLLER ******/
 	$('.detailed__square').on('click',function(){
 		const self = $(this);
@@ -234,13 +253,11 @@ $(document).ready(function(){
 
 		// Changing header nav value's to corresponding square
 
-		$('.header__nav--btn--2').data('val',`${val+1}`);
-		$('.header__nav--btn--1').attr('context',`${val-1}`);
+		$('.header__nav--btn--2').attr('context',`${val}`);
+		$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
 	});
 
-	
-	dial.handResize();
-	dial.lineResize();
+
 
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
