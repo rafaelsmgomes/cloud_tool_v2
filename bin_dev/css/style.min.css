@@ -127,6 +127,11 @@ body {
   src: url("../fonts/UniversLTStd.otf");
   font-weight: normal; }
 
+@font-face {
+  font-family: "UniversLite";
+  src: url("../fonts/UniversLTStd-Light.otf");
+  font-weight: normal; }
+
 b {
   font-weight: 700; }
 
@@ -446,7 +451,7 @@ b {
 
 .scroller__description {
   width: 14rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: UniverLite, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;

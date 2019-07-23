@@ -4,6 +4,12 @@
   font-weight: normal; 
 }
 
+@font-face {
+  font-family: "UniversLite";
+  src: url("../fonts/UniversLTStd-Light.otf");
+  font-weight: normal; 
+}
+
 b {
 	font-weight: 700;
 }
@@ -407,7 +413,7 @@ b {
 	}
 	&__description{
 	  width: 14rem;	  
-	  font-family: $font-reg;
+	  font-family: $font-lite;
 	  font-size: $font-size-2;
 	  font-weight: normal;
 	  font-style: normal;
