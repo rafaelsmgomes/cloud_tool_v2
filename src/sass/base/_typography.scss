@@ -83,25 +83,29 @@ b {
 			font-size: 1.80rem;
 			width: 32.50rem;
 			margin-top: .65rem;
+			@include bph(650){
+				font-size: 1.8rem;
+				width: 30rem;
+			}
 		}
 	
 		@include bp(1024){
 			font-size: 1.80rem;
 			margin-top: .55rem;
 		}
-
-		@include bph(650){
-			font-size: 1.8rem;
-			width: 30rem;
-		}
-	
+			
 		&--1{
 			width: 43.25rem;
-		 	@include bp(1440){
-	  	  		width: 32.50rem;
-				}
+			@include bp(1440){
+				width: 32.50rem;
+			}
 			@include bp(1024){
 				width: 34.90rem;
+	
+				@include bph(525){
+					font-size: 1.25rem;
+					width: 22.5rem;
+				}
 			}
 		}
 		&--2{
@@ -147,6 +151,10 @@ b {
 			font-size: .95rem;
 			width: 34.90rem;
 			margin-top: .5rem;
+
+			@include bph(525){
+				width: 22.5rem;
+			}
 		}
 
 		&--1{
