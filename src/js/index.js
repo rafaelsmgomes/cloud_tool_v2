@@ -196,12 +196,12 @@ $(document).ready(function(){
 
 	dial.handResize();
 	dial.changeDialText();
+	dial.lineResize();
 
 	$(window).on('resize',function(){
 		dial.changeDialText();
 		dial.handResize();
 		dial.lineResize();
-
 	});
 
 /****** DETAILED MAP CONTROLLER ******/
