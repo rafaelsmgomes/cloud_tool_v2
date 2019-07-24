@@ -25,6 +25,9 @@
 		&:nth-child(n+4){
 	    transform: translateX(0.35rem);
 		}
+		&:nth-child(n+7){
+	    transform: translateX(0.75rem);
+		}
 
 		@include bp(1440){
 			width: 11rem;

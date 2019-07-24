@@ -38,6 +38,10 @@
 
 	    transition-duration: .5s;
 		}
+
+		.page--7 & > *{
+			transition-duration: .2s;
+		}
 		.page & > .cta__wrapper{
 			// transition-delay: 1s;	
 			transition-delay: .5s;	
