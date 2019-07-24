@@ -98,11 +98,21 @@ export const animateFwd = (btnVal) => {
 	}else if(btnVal === 7){
 		$('.page--7').removeClass('activate');
 		$('.footer').removeClass('activate');
+		$('.header__container').addClass('deactivate');
+
+		setTimeout(function(){
+			$('.header__container').addClass('header__container--x');
+		}, 200);
 
 		$('.btn__regress').attr('context', '6')
 		setTimeout(function(){
 			$('.line__wrapper--1').css('opacity',1)
 		}, 1900);
+
+		setTimeout(function(){
+			$('.line__wrapper--1').css('opacity',1)
+			$('.header__container').removeClass('deactivate');
+		}, 2400);		
 	};
 };
 

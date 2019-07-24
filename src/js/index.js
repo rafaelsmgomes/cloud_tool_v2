@@ -112,6 +112,9 @@ $(document).ready(function(){
 			loadCloudAnimation(cloudUser, cloudPeer);
 		},3000);
 
+		// Change button item color
+		$('.header__rectangle--1 > img').attr('src',$('.header__rectangle--1 > img').attr( "alt"));
+		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
 	});
 
 	//$('.btn__progress--6').click();

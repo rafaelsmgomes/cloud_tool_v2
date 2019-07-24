@@ -596,6 +596,10 @@ b {
 	    margin-right: 0.40rem;
 	    margin-left: 0.40rem;
 	    font-family: $font-reg;
+		
+			.header__container--x &{
+				color: $color-blue-1;
+			}
 		}
 	}
 	&__rectangle{
