@@ -28,16 +28,38 @@
 		align-items: center;
 	}
 	&__rectangle {
-  flex: 0 0 2.00rem;
-  height: 2.00rem;
-  border-radius: 1rem;
-  border: solid 0.10rem $color-blue-1;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+		width: 2rem;
+		position: relative;
 
-  cursor: pointer;
+		&__grow{
+			width: 2rem;
+			border-radius: 1rem;
+			border: solid 0.10rem $color-blue-1;
+			justify-content: center;
+			background-color: $color-blue-2;
+			padding: .3rem;
+			
+			display: flex;
+			align-items: center;
+		  
+			cursor: pointer;
+
+			position: absolute;
+			right: 0;
+
+			&:hover{
+				width: auto;
+
+				& > *{
+					display: block;
+				}
+			}
+		}
 	
 		&:not(:last-of-type){
 			  margin-right: 1.20rem;
@@ -54,14 +76,7 @@
 				display: flex;
 			}		
 		}
-		
-		&__grow{
-			position: relative;
-
-			display: flex;
-			align-items: center;
-		}
-	}
+			}
 
 	&__bar{
 		font-size: 1.4rem;

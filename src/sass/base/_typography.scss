@@ -602,17 +602,11 @@ b {
 		&__txt{
 			font-family: $font-reg;
 			font-size: $font-size-5;
-			font-weight: normal;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: 1.31;
-			letter-spacing: normal;
 			color: $color-white-1;
+			transform: translateY(10%);
+			padding: 0 .5rem;
 
-			&--1{
-				position: absolute;
-				right: 1.5rem;
-			}
+			display: none;
 		}
 	}
 }
