@@ -11,6 +11,12 @@
 	  display: flex;
 		// justify-content: space-between;
 		padding-top: 0.95rem;
+		transition-property: opacity;
+		transition-duration: .1s;
+		
+		&.deactivate{
+			opacity: 0;
+		}		
 
 		@include bp(1440){
 			width: 83.333%;
