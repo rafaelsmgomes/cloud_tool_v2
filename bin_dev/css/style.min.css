@@ -1441,8 +1441,7 @@ b {
 
 .pathfinder {
   background-color: dodgerblue;
-  transition: all 800ms;
-  transition-delay: 300ms; }
+  transition: all 800ms; }
 
 .footer {
   position: fixed;
