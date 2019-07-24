@@ -31,10 +31,38 @@
 		align-items: center;
 	}
 	&__rectangle {
-  flex: 0 0 2.00rem;
-  height: 2.00rem;
-  border-radius: 1rem;
-  border: solid 0.10rem $color-blue-1;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 2rem;
+		position: relative;
+
+		&__grow{
+			width: 2rem;
+			border-radius: 1rem;
+			border: solid 0.10rem $color-blue-1;
+			justify-content: center;
+			background-color: $color-blue-2;
+			padding: .3rem;
+			
+			display: flex;
+			align-items: center;
+		  
+			cursor: pointer;
+
+			position: absolute;
+			right: 0;
+
+			&:hover{
+				width: auto;
+
+				& > *{
+					display: block;
+				}
+			}
+		}
 
 		.header__container--x &{
 			border: solid 0.10rem $color-grey;
@@ -44,6 +72,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
 	
 		&:not(:last-of-type){
 			  margin-right: 1.20rem;
@@ -51,6 +80,10 @@
 
 		&--1{
 			display: none;
+
+			&:hover{
+				
+			}
 		
 			&.toggle{
 				display: flex;
@@ -58,6 +91,7 @@
 			.header__container--x &{
 				margin-left: auto;
 			}		
+
 		}		
 	
 		&--2{

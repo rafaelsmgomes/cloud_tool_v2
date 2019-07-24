@@ -60,14 +60,13 @@
 		height: 2.00rem;
 		width: 2.00rem;
 		margin-right: 0.75rem;
-		transform: translateY(-7%);
+		transform: translateY(-3%);
 
 		.scroller__content--active &{
 			margin-right: 1.05rem;
 			height: 2.20rem;
 			width: 2.2rem;			
-			transform: translateY(-10%);
-			
+
 			// @include bp(1440){
 			// 	margin: 0;
 			// 	height: 1.8rem;
@@ -81,8 +80,18 @@
 			@include bp(1050){
 				margin-right: 0.80rem;
 			}
-			&--4 {
-				transform: translateY(-12%);
+			&--2 {
+				transform: translateY(0%);
+			}
+			&--1-b {
+				transform: translateY(-11%);
+			}
+			&--2-b,
+			&--6-b {
+				transform: translateY(-5%);
+			}
+			&--5-b {
+				transform: translateY(-7%);
 			}
 		}
 
