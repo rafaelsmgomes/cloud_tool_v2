@@ -598,6 +598,23 @@ b {
 	    font-family: $font-reg;
 		}
 	}
+	&__rectangle{
+		&__txt{
+			font-family: $font-reg;
+			font-size: $font-size-5;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.31;
+			letter-spacing: normal;
+			color: $color-white-1;
+
+			&--1{
+				position: absolute;
+				right: 1.5rem;
+			}
+		}
+	}
 }
 
 .detailed{
