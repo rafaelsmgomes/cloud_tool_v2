@@ -18,9 +18,13 @@
 	&__container{
 		width: 14.65rem;
 		background-color: transparent;
-    	border: solid 2px $color-blue-1;
+   	border: solid 2px $color-blue-1;
 		cursor: pointer;
 		padding: .60rem;
+
+		&:nth-child(n+4){
+	    transform: translateX(0.35rem);
+		}
 
 		@include bp(1440){
 			width: 11rem;
