@@ -607,6 +607,17 @@ b {
 			padding: 0 .5rem;
 
 			display: none;
+
+			&--2{
+				width: 11rem;
+				transform: translateY(0%);
+				padding: .3rem;
+				line-height: 1.31;
+			}
+
+			&__description{
+				color: $color-blue-4;
+			}
 		}
 	}
 }

@@ -50,13 +50,19 @@
 			cursor: pointer;
 
 			position: absolute;
+			top: 0;
 			right: 0;
+			overflow: hidden;
 
 			&:hover{
 				width: auto;
 
 				& > *{
 					display: block;
+				}
+
+				& img{
+					align-self: flex-start;
 				}
 			}
 		}
