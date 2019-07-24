@@ -46,17 +46,21 @@
 		&--2{
 		}				
 		&--3{
-			top: 21.6rem;	
+			transform: translateY(0%);
+			top: 15.1rem;	
 			left: auto;
 			right: -21rem;
 		
 			@include bp(1440){
-				top: 19.6rem;
+				top: 13.3em;
 				left: auto;
 				right: -23rem;
 			}
 			@include bp(1150){
 				right: -25rem;
+			}
+			@include bp(1024){
+				top: 13rem
 			}
 		}
 		
@@ -67,12 +71,14 @@
 		}
 
 		&--5{
-			top: 38.1rem;
+			top: 38.2rem;
 			left: auto;
 			right: -21rem;
-
 			@include bp(1440){
-				top: 36.9rem;
+				top: 38.5rem;
+			}
+			@include bp(1024){
+				top: 38.2rem;
 				right: -22rem;
 			}
 		}
@@ -83,8 +89,11 @@
 			right: -20.5rem;
 
 			@include bp(1440){
-				top: 43.9rem;
+				top: 45.5rem;
 				right: -22rem
+			}
+			@include bp(1024){
+
 			}
 		}
 	}
@@ -99,6 +108,7 @@
 		cursor: pointer;
 		align-items: center;
 		padding: 0.20rem 0.45rem;
+		text-decoration: none;
 		
 		&--2{
 
