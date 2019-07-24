@@ -39,12 +39,19 @@
 	    transition-duration: .5s;
 		}
 
-		.page--7 & > *{
-			transition-duration: .2s;
-		}
+
 		.page & > .cta__wrapper{
 			// transition-delay: 1s;	
 			transition-delay: .5s;	
+		}
+
+		.page--7 & > *{
+			transition-property: opacity;			
+			transition-duration: .05s;
+		}
+		.page--7 & > .cta__wrapper{
+			transition-property: opacity;			
+			transition-duration: .1s;
 		}
 
 

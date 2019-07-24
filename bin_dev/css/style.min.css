@@ -1546,10 +1546,14 @@ b {
     opacity: 0;
     transition-property: opacity;
     transition-duration: .5s; }
-  .page--7 .page__content > * {
-    transition-duration: .2s; }
   .page .page__content > .cta__wrapper {
     transition-delay: .5s; }
+  .page--7 .page__content > * {
+    transition-property: opacity;
+    transition-duration: .05s; }
+  .page--7 .page__content > .cta__wrapper {
+    transition-property: opacity;
+    transition-duration: .1s; }
   .page.activate .page__content > * {
     opacity: 1; }
   .page__content > .btn__regress {
