@@ -596,6 +596,8 @@ b {
     margin-right: 0.40rem;
     margin-left: 0.40rem;
     font-family: Univers, Arial, Helvetica, sans-serif; }
+    .header__container--x .header__copyright > a {
+      color: #00758f; }
 
 .header__rectangle__txt {
   font-family: Univers, Arial, Helvetica, sans-serif;
@@ -911,7 +913,7 @@ b {
 
 .dial__line {
   background-color: #fff;
-  height: 2%;
+  height: 97%;
   border: solid 0.1rem #fff; }
   .dial__line--2 {
     transform: rotate(-71deg); }
@@ -996,6 +998,8 @@ b {
   align-self: flex-end;
   background-image: url("../assets/images/desktop/logo-white.svg");
   margin-right: auto; }
+  .header__container--x .header__logo {
+    background-image: url("../assets/images/desktop/logo-grey.svg"); }
   .header__logo:hover {
     cursor: pointer; }
 
@@ -1004,8 +1008,7 @@ b {
   justify-content: space-between; }
   .header__wrapper--1 {
     flex: 0 0 8.4rem;
-    height: 2.00rem;
-    padding-left: 3.20rem; }
+    height: 2.00rem; }
     .header__wrapper--1.activate {
       padding-left: 0; }
 
@@ -1023,20 +1026,33 @@ b {
   justify-content: center;
   align-items: center;
   cursor: pointer; }
+  .header__container--x .header__rectangle {
+    border: solid 0.1rem #dee0e0; }
   .header__rectangle:not(:last-of-type) {
     margin-right: 1.20rem; }
   .header__rectangle--1 {
     display: none; }
     .header__rectangle--1.toggle {
       display: flex; }
+
   .header__rectangle__grow {
     position: relative;
     display: flex;
     align-items: center; }
 
+    .header__container--x .header__rectangle--1 {
+      margin-left: auto; }
+  .header__container--x .header__rectangle--2 {
+    display: none; }
+  .header__rectangle > * {
+    flex: 0 0 1.20rem;
+    height: 1.2rem; }
+
 .header__bar {
   font-size: 1.4rem;
   transform: translateY(9%); }
+  .header__container--x .header__bar {
+    color: #00758f; }
 
 .landing__container {
   margin: 0 auto;
@@ -1497,7 +1513,11 @@ b {
   left: 0;
   right: 0;
   display: flex;
-  padding-top: 0.95rem; }
+  padding-top: 0.95rem;
+  transition-property: opacity;
+  transition-duration: .1s; }
+  .header__container.deactivate {
+    opacity: 0; }
   @media only screen and (max-width: 1440px) {
     .header__container {
       width: 83.333%; } }
