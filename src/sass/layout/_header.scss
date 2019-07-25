@@ -13,6 +13,10 @@
 		padding-top: 0.95rem;
 		transition-property: opacity;
 		transition-duration: .1s;
+
+		&--x{
+			background-color: $color-white-1
+		}
 		
 		&.deactivate{
 			opacity: 0;

@@ -32,6 +32,14 @@
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;		
 
+  &--13{
+    stroke: $color-grey-1;
+    animation: stroke 1s linear infinite;   
+    &.deactivate{
+      animation: none;
+    }
+  }
+
   &--x{
     stroke-width: 1;
     animation: none;

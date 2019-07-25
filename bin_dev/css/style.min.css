@@ -1090,6 +1090,11 @@ b {
         opacity: 0; }
     .line__wrapper--1.activate {
       opacity: 1; }
+  .line--13 {
+    stroke: #939699;
+    animation: stroke 1s linear infinite; }
+    .line--13.deactivate {
+      animation: none; }
   .line--x {
     stroke-width: 1;
     animation: none; }
@@ -1504,6 +1509,8 @@ b {
   padding-top: 0.95rem;
   transition-property: opacity;
   transition-duration: .1s; }
+  .header__container--x {
+    background-color: #fff; }
   .header__container.deactivate {
     opacity: 0; }
   @media only screen and (max-width: 1440px) {

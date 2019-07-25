@@ -34,7 +34,19 @@ import scrollJson from './scrollDown.json';
 
 $(document).ready(function(){
 
- 	const state = {};
+ 	const state = {};	
+/****************  CLOUD/ LOTTIE INIT  ********************/
+	var scrollTip = lottie.loadAnimation({
+	  container: document.getElementById('scroll_down'),
+	  renderer: 'svg',
+	  autoplay: true,
+	  animationData: scrollJson,
+	  loop: true,
+	});	
+
+	console.log(scrollTip.isPaused);
+
+
 
 /****** CTA POPUPS ******/ 
 	$('.cta__btn').on('click',function(){
@@ -60,8 +72,17 @@ $(document).ready(function(){
 	});
 
 	$('.page--8').on('scroll',function(){
+		const pos = $(this).scrollTop();
 		$('.page--8').addClass('activate');
-	})
+		
+		if(pos > 0 ){
+			$('.line--13').addClass('deactivate');
+			scrollTip.isPaused = true;		
+		}else{
+			$('.line--13').removeClass('deactivate');
+			scrollTip.isPaused = false;
+		}
+	});
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
  
@@ -346,14 +367,7 @@ $(document).ready(function(){
 		css.displayEloqua();
 	});
 
-/****************  CLOUD/ LOTTIE INIT  ********************/
-	lottie.loadAnimation({
-	  container: document.getElementById('scroll_down'),
-	  renderer: 'svg',
-	  autoplay: true,
-	  animationData: scrollJson,
-	  loop: true,
-	});
+
 });
 
 /****************  CLOUD LOTTIE  ********************/
