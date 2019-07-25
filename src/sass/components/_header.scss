@@ -53,8 +53,8 @@
 
 
 	
-		&:not(:last-of-type){
-			  margin-right: 1.20rem;
+		&:not(:first-of-type){
+			  margin-left: 1.20rem;
 		}
 
 		&--1{

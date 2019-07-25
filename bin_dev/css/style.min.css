@@ -1037,8 +1037,8 @@ b {
     border: solid .1rem transparent;
     transition-delay: 0s;
     z-index: 1000; }
-  .header__rectangle:not(:last-of-type) {
-    margin-right: 1.20rem; }
+  .header__rectangle:not(:first-of-type) {
+    margin-left: 1.20rem; }
   .header__rectangle--1 {
     display: none; }
     .header__rectangle--1.toggle {
@@ -1250,9 +1250,14 @@ b {
   box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.15); }
 
 .sidebar__video--container {
-  background-color: green;
   width: 100%;
-  height: 9.30rem; }
+  height: 9.30rem;
+  background-repeat: no-repeat;
+  background-size: 100%; }
+  .sidebar__video--container-1 {
+    background-image: url(../assets/images/desktop/tbnail-cover-240.png); }
+  .sidebar__video--container-2 {
+    background-image: url(../assets/images/desktop/img--1.svg); }
 
 .sidebar__btn {
   width: 7.35rem;
