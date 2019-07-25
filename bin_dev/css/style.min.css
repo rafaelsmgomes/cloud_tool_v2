@@ -1042,8 +1042,10 @@ b {
 
     .header__container--x .header__rectangle--1 {
       margin-left: auto; }
-  .header__container--x .header__rectangle--2 {
-    display: none; }
+  .header__rectangle--2 {
+    margin-left: auto; }
+    .header__container--x .header__rectangle--2 {
+      display: none; }
   .header__rectangle > * {
     flex: 0 0 1.20rem;
     height: 1.2rem; }
