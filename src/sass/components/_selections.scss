@@ -23,10 +23,10 @@
 		padding: .60rem;
 
 		&:nth-child(n+4){
-	    transform: translateX(0.35rem);
+	    transform: translateX(0.85rem);
 		}
 		&:nth-child(n+7){
-	    transform: translateX(0.75rem);
+	    transform: translateX(1.7rem);
 		}
 
 		@include bp(1440){
@@ -45,21 +45,21 @@
 			}
 		}
 		&--1{
-			flex: 0 0 9.45rem;
+			flex: 0 0 9.10rem;
 		}
 		&--2,
 		&--3,
 		&--6{
-			flex: 0 0 4.65rem;
+			flex: 0 0 4.30rem;
 		}
 		&--4,
 		&--7{
-			flex: 0 0 7.70rem;
+			flex: 0 0 7.35rem;
 			}
 
 		&--5,
 		&--8{
-			flex: 0 0 6.25rem;
+			flex: 0 0 5.90rem;
 			}
 		&--8{
 			margin-bottom: 5.95rem;

@@ -1173,7 +1173,8 @@ b {
   margin-top: 0.85rem;
   padding-left: 0.30rem;
   cursor: pointer;
-  padding-right: 0.45rem; }
+  padding-right: 0.45rem;
+  text-decoration: none; }
   .cta-group__btn > * {
     color: #324b5c;
     text-decoration: none; }
@@ -1418,9 +1419,9 @@ b {
   cursor: pointer;
   padding: .60rem; }
   .selection__container:nth-child(n+4) {
-    transform: translateX(0.35rem); }
+    transform: translateX(0.85rem); }
   .selection__container:nth-child(n+7) {
-    transform: translateX(0.75rem); }
+    transform: translateX(1.7rem); }
   @media only screen and (max-width: 1440px) {
     .selection__container {
       width: 11rem; } }
@@ -1431,13 +1432,13 @@ b {
     .selection__container--active:hover {
       background-color: #00758f; }
   .selection__container--1 {
-    flex: 0 0 9.45rem; }
+    flex: 0 0 9.10rem; }
   .selection__container--2, .selection__container--3, .selection__container--6 {
-    flex: 0 0 4.65rem; }
+    flex: 0 0 4.30rem; }
   .selection__container--4, .selection__container--7 {
-    flex: 0 0 7.70rem; }
+    flex: 0 0 7.35rem; }
   .selection__container--5, .selection__container--8 {
-    flex: 0 0 6.25rem; }
+    flex: 0 0 5.90rem; }
   .selection__container--8 {
     margin-bottom: 5.95rem; }
     @media only screen and (max-width: 1440px) {
