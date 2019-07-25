@@ -108,6 +108,9 @@ b {
 		@include bp(1024){
 			font-size: $font-size-6;
 			margin-top: .55rem;
+			@include bph(525){
+				font-size: 1.25rem;
+			}
 		}
 			
 		&--1{
@@ -126,7 +129,6 @@ b {
 			@include bp(1024){
 				width: 34.90rem;
 				@include bph(525){
-					font-size: 1.25rem;
 					width: 22.5rem;
 				}
 			}
@@ -134,17 +136,16 @@ b {
 		&--2{
 			width: 39.55rem;
 
-			@include bp_min(1441){
-				@include bph(680){
-					font-size: 1.8rem;
-				}
-			}
 
 			@include bp(1440){
-				width: 36.10rem;
+				width: 37.10rem;
 			}
 			@include bp(1024){
-				width: 27rem;
+				width: 37rem;
+			}
+			@include bp(910){
+				width: 34rem;
+				font-size: 1.25rem
 			}
 		}
 		&--3{
@@ -342,20 +343,23 @@ b {
 		& > b{
 			font-family: $font-b;
 		}
-	  &--1{
-		  @include bp(1024){
-			  width: 13rem;
-		  }
-	  }
-	  &--4{
-		  
-		@include bp(1150){
-			width: 10rem;
+	  	&--1{
+		  	@include bp(1024){
+				width: 13rem;
+			}
+	  	}
+		
+		&--2{
+			width: 13rem;
 		}
-	  	&-a{
-		    letter-spacing: -.01em;
-		  }
-		  
+		
+		&--4{
+			@include bp(1150){
+				width: 10rem;
+			}
+	  		&-a{
+		    	letter-spacing: -.01em;
+			}
 		}	 
 		&__focus{
 			font-size: 1.25rem;
