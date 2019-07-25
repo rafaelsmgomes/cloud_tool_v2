@@ -9,22 +9,27 @@
   src: url("../fonts/UniversLTStd-Light.otf");
   font-weight: normal; 
 }
+@font-face {
+  font-family: "UniversB";
+  src: url("../fonts/UniversLTStd-Bold.otf");
+  font-weight: normal; 
+}
 
 b {
-	font-weight: 700;
+	font-family: $font-b;
 }
 
 .landing{
 	&__title{
 	  font-size: $font-size-1;
 	  font-weight: 700;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.25;
 	  letter-spacing: normal;
 	  text-align: center;
 	  color: $color-white-1;
-	  font-family: $font-reg;
 		transition-delay: .5s;
 		transition-property: opacity;
     	transition-duration: 0.5s;
@@ -61,9 +66,8 @@ b {
 		&--1{
 			width: 11.95rem;
 		  height: 1.50rem;
-		  font-family: $font-reg;
 		  font-size: 1.25rem;
-		  font-weight: bold;
+		  font-family: $font-b;
 		  font-style: normal;
 		  font-stretch: normal;
 		  line-height: 1.2;
@@ -76,9 +80,8 @@ b {
 
 .main{
 	&__title{
-	  font-family: $font-reg;
 	  font-size: $font-size-1;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.25;
@@ -192,16 +195,15 @@ b {
 	  color: $color-white-1;
 
 	  &--active{
-	  	font-weight: 700;
+	  	font-family: $font-b;
 	  }
 	}
 }
 
 .selection{
 	&__text{
-	  font-family: $font-reg;
 	  font-size: 1.25rem;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  color: $color-white-1;
 	  font-stretch: normal;
@@ -230,10 +232,9 @@ b {
 	&__logo{
 	  width: 12.65rem;
 	  height: 3.20rem;
-	  font-family: $font-reg;
 	  margin-top: 3.05rem;
 	  font-size: 1.25rem;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.2;
@@ -319,7 +320,7 @@ b {
 
 
 		& > b{
-			font-weight: 700;
+			font-family: $font-b;
 		}
 	  &--1{
 		  @include bp(1024){
@@ -345,9 +346,8 @@ b {
 	&-group{
 		&__title{
 			height: 1.70rem;
-		  font-family: $font-reg;
 		  font-size: 1.25rem;
-		  font-weight: bold;
+		  font-family: $font-b;
 		  font-style: normal;
 		  font-stretch: normal;
 		  line-height: 1.2;
@@ -371,9 +371,8 @@ b {
 
 .scroller{
 	&__title{
-	  font-family: $font-reg;
 	  font-size: $font-size-2;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.58;
@@ -405,9 +404,8 @@ b {
 		}
 	}
 	&__step{
-	  font-family: $font-reg;
 	  font-size: $font-size-3;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.29;
@@ -479,7 +477,7 @@ b {
 		}
 
 		& > b{
-			font-weight: 700;
+			font-family: $font-b;
 		}
 	}
 }
@@ -487,9 +485,8 @@ b {
 .detailed-score{
 	&__title{
 		height: 1.70rem;
-	  font-family: $font-reg;
 	  font-size: $font-size-4;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.2;
@@ -514,9 +511,8 @@ b {
 .sidebar{
 	&__title{
 	  height: 1.60rem;
-	  font-family: $font-reg;
 	  font-size: $font-size-4;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.2;
@@ -526,9 +522,8 @@ b {
 	}
 	&__info--title{
 	  height: 0.90rem;
-	  font-family: $font-reg;
 	  font-size: 0.70rem;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.29;
@@ -551,9 +546,8 @@ b {
 .btn{
 	&__txt{
 	  height: 1.20rem;
-	  font-family: $font-reg;
 	  font-size: $font-size-3;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
     display: flex;
     align-items: center;
@@ -570,9 +564,8 @@ b {
 	&-text{
 	  width: 1.30rem;
 	  height: 0.90rem;
-	  font-family: $font-reg;
 	  font-size: 0.70rem;
-	  font-weight: bold;
+	  font-family: $font-b;
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.29;
@@ -620,9 +613,8 @@ b {
 		&--title{
 			width: 10.40rem;
 		  height: 1.95rem;
-		  font-family: $font-reg;
 		  font-size: $font-size-4;
-		  font-weight: bold;
+		  font-family: $font-b;
 		  font-style: normal;
 		  font-stretch: normal;
 		  line-height: 1.2;

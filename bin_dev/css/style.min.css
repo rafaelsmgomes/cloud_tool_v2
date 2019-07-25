@@ -129,19 +129,24 @@ body {
   src: url("../fonts/UniversLTStd-Light.otf");
   font-weight: normal; }
 
+@font-face {
+  font-family: "UniversB";
+  src: url("../fonts/UniversLTStd-Bold.otf");
+  font-weight: normal; }
+
 b {
-  font-weight: 700; }
+  font-family: UniverB, Arial, Helvetica, sans-serif; }
 
 .landing__title {
   font-size: 2.4rem;
   font-weight: 700;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
   text-align: center;
   color: #fff;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   transition-delay: .5s;
   transition-property: opacity;
   transition-duration: 0.5s;
@@ -173,9 +178,8 @@ b {
   .landing__txt--1 {
     width: 11.95rem;
     height: 1.50rem;
-    font-family: Univers, Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
-    font-weight: bold;
+    font-family: UniverB, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.2;
@@ -184,9 +188,8 @@ b {
     margin-top: 27.25%; }
 
 .main__title {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -278,12 +281,11 @@ b {
   text-align: right;
   color: #fff; }
   .pagination__num--active {
-    font-weight: 700; }
+    font-family: UniverB, Arial, Helvetica, sans-serif; }
 
 .selection__text {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   color: #fff;
   font-stretch: normal;
@@ -303,10 +305,9 @@ b {
 .results__logo {
   width: 12.65rem;
   height: 3.20rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   margin-top: 3.05rem;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -371,7 +372,7 @@ b {
   letter-spacing: normal;
   color: #fff; }
   .cta__txt > b {
-    font-weight: 700; }
+    font-family: UniverB, Arial, Helvetica, sans-serif; }
   @media only screen and (max-width: 1024px) {
     .cta__txt--1 {
       width: 13rem; } }
@@ -386,9 +387,8 @@ b {
 
 .cta-group__title {
   height: 1.70rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -408,9 +408,8 @@ b {
   width: 95%; }
 
 .scroller__title {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.58;
@@ -440,9 +439,8 @@ b {
         letter-spacing: -0.03em; } }
 
 .scroller__step {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -496,13 +494,12 @@ b {
   .cloud__span--2 {
     font-size: 1.75rem; }
   .cloud__span > b {
-    font-weight: 700; }
+    font-family: UniverB, Arial, Helvetica, sans-serif; }
 
 .detailed-score__title {
   height: 1.70rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -524,9 +521,8 @@ b {
 
 .sidebar__title {
   height: 1.60rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -536,9 +532,8 @@ b {
 
 .sidebar__info--title {
   height: 0.90rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.70rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -558,9 +553,8 @@ b {
 
 .btn__txt {
   height: 1.20rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   display: flex;
   align-items: center;
@@ -573,9 +567,8 @@ b {
 .footer-text {
   width: 1.30rem;
   height: 0.90rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.70rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -610,9 +603,8 @@ b {
 .detailed__results--title {
   width: 10.40rem;
   height: 1.95rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniverB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -1067,7 +1059,11 @@ b {
   width: 1.20rem;
   height: 1.20rem;
   margin-top: 0.85rem;
-  background-image: url("../assets/graphics/down.svg"); }
+  background-image: url("../assets/graphics/down.svg");
+  transform: translateY(-0.75rem);
+  transition: 300ms; }
+  .landing__container:hover .landing__img--1 {
+    transform: translateY(0); }
   .landing__img--1 > * {
     height: 100%;
     width: 100%; }

@@ -35,12 +35,19 @@
 
 	}
 	&__img{
+
+
 		&--1{
 			width: 1.20rem;
 			height: 1.20rem;
 			margin-top: 0.85rem;
 			background-image: url('../assets/graphics/down.svg');
-			
+	    transform: translateY(-0.75rem);
+	    transition: 300ms;
+			.landing__container:hover &{
+				transform: translateY(0);
+			}
+
 			> * {
 				height: 100%;
 				width: 100%;
