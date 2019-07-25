@@ -1170,7 +1170,8 @@ b {
   cursor: pointer;
   padding-right: 0.45rem; }
   .cta-group__btn > * {
-    color: #324b5c; }
+    color: #324b5c;
+    text-decoration: none; }
   .cta-group__btn > .btn__arrow {
     background-image: url(../assets/graphics/arrow-blue.svg); }
   .cta-group__btn:hover {

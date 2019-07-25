@@ -9,7 +9,7 @@ export const displayValues = (user, peers) =>{
 		$('.results__logo').css('opacity',1);
 		$('.results__copy').css('opacity',1);
 		$('#scroll_down').css('opacity',1);
-	},1500);
+	},2200);
 }
 
 export const displayResultsCopy = (user, peers) => {
