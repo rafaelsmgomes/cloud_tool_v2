@@ -23,7 +23,7 @@
 			@include bph_min(1200){
 				max-width: 50rem;
 				max-height: calc(50rem / 2);
-					margin-top: calc((100vh - 30rem) / 2);
+				margin-top: calc((100vh - 30rem) / 2);
 			}
 
 			@include bph(825){
