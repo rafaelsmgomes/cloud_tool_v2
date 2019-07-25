@@ -31,34 +31,35 @@
 		align-items: center;
 	}
 	&__rectangle {
-		
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		width: 2rem;
+		flex: 0 0 2rem;
 		position: relative;
-
-		&__grow{
-			width: 2rem;
-			border-radius: 1rem;
-			border: solid 0.10rem $color-blue-1;
-			justify-content: center;
-			background-color: $color-blue-2;
-			padding: .3rem;
+		border: solid 0.10rem $color-blue-1;
+		border-radius: 100%;
+		.header__container--x &{
+			border: solid 0.10rem $color-grey;
+		}		
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  cursor: pointer;		
+		// &__grow{
+		// 	width: 2rem;
+		// 	border-radius: 1rem;
+		// 	border: solid 0.10rem $color-blue-1;
+		// 	justify-content: center;
+		// 	background-color: $color-blue-2;
+		// 	padding: .3rem;
 			
-			display: flex;
-			align-items: center;
+		// 	display: flex;
+		// 	align-items: center;
 		  
-			cursor: pointer;
+		// 	cursor: pointer;
 
 			position: absolute;
 			top: 0;
 			right: 0;
 			overflow: hidden;
 
-			&:hover{
-				width: auto;
 
 				& > *{
 					display: block;
@@ -70,14 +71,7 @@
 			}
 		}
 
-		.header__container--x &{
-			border: solid 0.10rem $color-grey;
-		}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 
 	
 		&:not(:last-of-type){
