@@ -135,12 +135,12 @@ body {
   font-weight: normal; }
 
 b {
-  font-family: UniverB, Arial, Helvetica, sans-serif; }
+  font-family: UniversB, Arial, Helvetica, sans-serif; }
 
 .landing__title {
   font-size: 2.4rem;
   font-weight: 700;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -179,7 +179,7 @@ b {
     width: 11.95rem;
     height: 1.50rem;
     font-size: 1.25rem;
-    font-family: UniverB, Arial, Helvetica, sans-serif;
+    font-family: UniversB, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.2;
@@ -189,7 +189,7 @@ b {
 
 .main__title {
   font-size: 2.4rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -281,11 +281,11 @@ b {
   text-align: right;
   color: #fff; }
   .pagination__num--active {
-    font-family: UniverB, Arial, Helvetica, sans-serif; }
+    font-family: UniversB, Arial, Helvetica, sans-serif; }
 
 .selection__text {
   font-size: 1.25rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   color: #fff;
   font-stretch: normal;
@@ -307,7 +307,7 @@ b {
   height: 3.20rem;
   margin-top: 3.05rem;
   font-size: 1.25rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -372,7 +372,7 @@ b {
   letter-spacing: normal;
   color: #fff; }
   .cta__txt > b {
-    font-family: UniverB, Arial, Helvetica, sans-serif; }
+    font-family: UniversB, Arial, Helvetica, sans-serif; }
   @media only screen and (max-width: 1024px) {
     .cta__txt--1 {
       width: 13rem; } }
@@ -388,7 +388,7 @@ b {
 .cta-group__title {
   height: 1.70rem;
   font-size: 1.25rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -409,7 +409,7 @@ b {
 
 .scroller__title {
   font-size: 0.95em;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.58;
@@ -440,7 +440,7 @@ b {
 
 .scroller__step {
   font-size: 0.7em;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -494,12 +494,12 @@ b {
   .cloud__span--2 {
     font-size: 1.75rem; }
   .cloud__span > b {
-    font-family: UniverB, Arial, Helvetica, sans-serif; }
+    font-family: UniversB, Arial, Helvetica, sans-serif; }
 
 .detailed-score__title {
   height: 1.70rem;
   font-size: 1.25rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -522,7 +522,7 @@ b {
 .sidebar__title {
   height: 1.60rem;
   font-size: 1.25rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -533,7 +533,7 @@ b {
 .sidebar__info--title {
   height: 0.90rem;
   font-size: 0.70rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -554,7 +554,7 @@ b {
 .btn__txt {
   height: 1.20rem;
   font-size: 0.7em;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   display: flex;
   align-items: center;
@@ -568,7 +568,7 @@ b {
   width: 1.30rem;
   height: 0.90rem;
   font-size: 0.70rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -604,7 +604,7 @@ b {
   width: 10.40rem;
   height: 1.95rem;
   font-size: 1.25rem;
-  font-family: UniverB, Arial, Helvetica, sans-serif;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
