@@ -631,3 +631,28 @@ b {
 		}
 	}
 }
+
+.grow{
+	&--text{
+		font-size: 0.80rem;
+		font-family: $font-reg;
+    color: $color-blue-4;
+		transition: opacity 0s;
+		opacity: 0;
+
+    .header__rectangle:hover &{
+    	transition: opacity .3s;
+    	opacity: 1
+    }
+
+    & > b{
+    	display: block;
+    	opacity: 0;
+    	
+    	.header__rectangle:hover &{
+	    	transition: opacity .3s;
+	    	opacity: 1
+	    }
+    }
+	}
+}

@@ -616,6 +616,22 @@ b {
   .detailed__results--title.deactivate {
     opacity: 0; }
 
+.grow--text {
+  font-size: 0.80rem;
+  font-family: Univers, Arial, Helvetica, sans-serif;
+  color: #cad9de;
+  transition: opacity 0s;
+  opacity: 0; }
+  .header__rectangle:hover .grow--text {
+    transition: opacity .3s;
+    opacity: 1; }
+  .grow--text > b {
+    display: block;
+    opacity: 0; }
+    .header__rectangle:hover .grow--text > b {
+      transition: opacity .3s;
+      opacity: 1; }
+
 .btn__arrow {
   background-image: url("../assets/graphics/arrow.svg");
   width: 1.20rem;
@@ -1019,7 +1035,8 @@ b {
     border: solid 0.1rem #dee0e0; }
   .header__rectangle:hover {
     border: solid .1rem transparent;
-    transition-delay: 0s; }
+    transition-delay: 0s;
+    z-index: 1000; }
   .header__rectangle:not(:last-of-type) {
     margin-right: 1.20rem; }
   .header__rectangle--1 {
@@ -1045,9 +1062,23 @@ b {
     transition: width .2s;
     right: -.1rem;
     z-index: 5;
-    background-color: #324b5c; }
+    background-color: #324b5c;
+    overflow: hidden;
+    padding-left: 1.25rem; }
+    .header__rectangle--grow-1, .header__rectangle--grow-3 {
+      display: flex;
+      align-items: center; }
+    .header__rectangle--grow-2 {
+      border-radius: 1rem;
+      top: -.1rem; }
+      .header__rectangle--2:hover .header__rectangle--grow-2 {
+        padding: 0 1.25rem;
+        padding-top: 0.50rem; }
     .header__rectangle:hover .header__rectangle--grow {
       width: 7.5rem; }
+    .header__rectangle--2:hover .header__rectangle--grow {
+      width: 11rem;
+      height: 8.00rem; }
 
 .header__bar {
   font-size: 1.4rem;
