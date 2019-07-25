@@ -129,19 +129,24 @@ body {
   src: url("../fonts/UniversLTStd-Light.otf");
   font-weight: normal; }
 
+@font-face {
+  font-family: "UniversB";
+  src: url("../fonts/UniversLTStd-Bold.otf");
+  font-weight: normal; }
+
 b {
-  font-weight: 700; }
+  font-family: UniversB, Arial, Helvetica, sans-serif; }
 
 .landing__title {
   font-size: 2.4rem;
   font-weight: 700;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
   text-align: center;
   color: #fff;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   transition-delay: .5s;
   transition-property: opacity;
   transition-duration: 0.5s;
@@ -173,9 +178,8 @@ b {
   .landing__txt--1 {
     width: 11.95rem;
     height: 1.50rem;
-    font-family: Univers, Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
-    font-weight: bold;
+    font-family: UniversB, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.2;
@@ -184,9 +188,8 @@ b {
     margin-top: 27.25%; }
 
 .main__title {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -278,12 +281,11 @@ b {
   text-align: right;
   color: #fff; }
   .pagination__num--active {
-    font-weight: 700; }
+    font-family: UniversB, Arial, Helvetica, sans-serif; }
 
 .selection__text {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   color: #fff;
   font-stretch: normal;
@@ -303,10 +305,9 @@ b {
 .results__logo {
   width: 12.65rem;
   height: 3.20rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   margin-top: 3.05rem;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -371,7 +372,7 @@ b {
   letter-spacing: normal;
   color: #fff; }
   .cta__txt > b {
-    font-weight: 700; }
+    font-family: UniversB, Arial, Helvetica, sans-serif; }
   @media only screen and (max-width: 1024px) {
     .cta__txt--1 {
       width: 13rem; } }
@@ -386,9 +387,8 @@ b {
 
 .cta-group__title {
   height: 1.70rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -408,9 +408,8 @@ b {
   width: 95%; }
 
 .scroller__title {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.58;
@@ -440,9 +439,8 @@ b {
         letter-spacing: -0.03em; } }
 
 .scroller__step {
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -496,13 +494,12 @@ b {
   .cloud__span--2 {
     font-size: 1.75rem; }
   .cloud__span > b {
-    font-weight: 700; }
+    font-family: UniversB, Arial, Helvetica, sans-serif; }
 
 .detailed-score__title {
   height: 1.70rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -524,9 +521,8 @@ b {
 
 .sidebar__title {
   height: 1.60rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -536,9 +532,8 @@ b {
 
 .sidebar__info--title {
   height: 0.90rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.70rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -558,9 +553,8 @@ b {
 
 .btn__txt {
   height: 1.20rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   display: flex;
   align-items: center;
@@ -573,9 +567,8 @@ b {
 .footer-text {
   width: 1.30rem;
   height: 0.90rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.70rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.29;
@@ -615,9 +608,8 @@ b {
 .detailed__results--title {
   width: 10.40rem;
   height: 1.95rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
@@ -628,6 +620,22 @@ b {
   transition: all 700ms; }
   .detailed__results--title.deactivate {
     opacity: 0; }
+
+.grow--text {
+  font-size: 0.80rem;
+  font-family: Univers, Arial, Helvetica, sans-serif;
+  color: #cad9de;
+  transition: opacity 0s;
+  opacity: 0; }
+  .header__rectangle:hover .grow--text {
+    transition: opacity .3s;
+    opacity: 1; }
+  .grow--text > b {
+    display: block;
+    opacity: 0; }
+    .header__rectangle:hover .grow--text > b {
+      transition: opacity .3s;
+      opacity: 1; }
 
 .btn__arrow {
   background-image: url("../assets/graphics/arrow.svg");
@@ -1005,7 +1013,8 @@ b {
 
 .header__wrapper {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
   .header__wrapper--1 {
     flex: 0 0 8.4rem;
     height: 2.00rem; }
@@ -1022,14 +1031,20 @@ b {
   height: 2.00rem;
   border-radius: 1rem;
   border: solid 0.1rem #00758f;
+  border-radius: 50.00rem;
+  transition-delay: 1s;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer; }
   .header__container--x .header__rectangle {
     border: solid 0.1rem #dee0e0; }
-  .header__rectangle:not(:last-of-type) {
-    margin-right: 1.20rem; }
+  .header__rectangle:hover {
+    border: solid .1rem transparent;
+    transition-delay: 0s;
+    z-index: 1000; }
+  .header__rectangle:not(:first-of-type) {
+    margin-left: 1.20rem; }
   .header__rectangle--1 {
     display: none; }
     .header__rectangle--1.toggle {
@@ -1046,9 +1061,36 @@ b {
     margin-left: auto; }
     .header__container--x .header__rectangle--2 {
       display: none; }
-  .header__rectangle > * {
+  .header__rectangle > img {
     flex: 0 0 1.20rem;
-    height: 1.2rem; }
+    height: 1.2rem;
+    z-index: 10; }
+  .header__rectangle--grow {
+    position: absolute;
+    width: 2.00rem;
+    height: 2.00rem;
+    border-radius: 50.00rem;
+    border: solid 0.1rem #00758f;
+    transition: width .2s;
+    right: -.1rem;
+    z-index: 5;
+    background-color: #324b5c;
+    overflow: hidden;
+    padding-left: 1.25rem; }
+    .header__rectangle--grow-1, .header__rectangle--grow-3 {
+      display: flex;
+      align-items: center; }
+    .header__rectangle--grow-2 {
+      border-radius: 1rem;
+      top: -.1rem; }
+      .header__rectangle--2:hover .header__rectangle--grow-2 {
+        padding: 0 1.25rem;
+        padding-top: 0.50rem; }
+    .header__rectangle:hover .header__rectangle--grow {
+      width: 7.5rem; }
+    .header__rectangle--2:hover .header__rectangle--grow {
+      width: 11rem;
+      height: 8.00rem; }
 
 .header__bar {
   font-size: 1.4rem;
@@ -1078,7 +1120,11 @@ b {
   width: 1.20rem;
   height: 1.20rem;
   margin-top: 0.85rem;
-  background-image: url("../assets/graphics/down.svg"); }
+  background-image: url("../assets/graphics/down.svg");
+  transform: translateY(-0.75rem);
+  transition: 300ms; }
+  .landing__container:hover .landing__img--1 {
+    transform: translateY(0); }
   .landing__img--1 > * {
     height: 100%;
     width: 100%; }
@@ -1105,6 +1151,11 @@ b {
         opacity: 0; }
     .line__wrapper--1.activate {
       opacity: 1; }
+  .line--13 {
+    stroke: #939699;
+    animation: stroke 1s linear infinite; }
+    .line--13.deactivate {
+      animation: none; }
   .line--x {
     stroke-width: 1;
     animation: none; }
@@ -1183,9 +1234,11 @@ b {
   margin-top: 0.85rem;
   padding-left: 0.30rem;
   cursor: pointer;
-  padding-right: 0.45rem; }
+  padding-right: 0.45rem;
+  text-decoration: none; }
   .cta-group__btn > * {
-    color: #324b5c; }
+    color: #324b5c;
+    text-decoration: none; }
   .cta-group__btn > .btn__arrow {
     background-image: url(../assets/graphics/arrow-blue.svg); }
   .cta-group__btn:hover {
@@ -1209,9 +1262,14 @@ b {
   box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.15); }
 
 .sidebar__video--container {
-  background-color: green;
   width: 100%;
-  height: 9.30rem; }
+  height: 9.30rem;
+  background-repeat: no-repeat;
+  background-size: 100%; }
+  .sidebar__video--container-1 {
+    background-image: url(../assets/images/desktop/tbnail-cover-240.png); }
+  .sidebar__video--container-2 {
+    background-image: url(../assets/images/desktop/img--1.svg); }
 
 .sidebar__btn {
   width: 7.35rem;
@@ -1427,9 +1485,9 @@ b {
   cursor: pointer;
   padding: .60rem; }
   .selection__container:nth-child(n+4) {
-    transform: translateX(0.35rem); }
+    transform: translateX(0.85rem); }
   .selection__container:nth-child(n+7) {
-    transform: translateX(0.75rem); }
+    transform: translateX(1.7rem); }
   @media only screen and (max-width: 1440px) {
     .selection__container {
       width: 11rem; } }
@@ -1440,13 +1498,13 @@ b {
     .selection__container--active:hover {
       background-color: #00758f; }
   .selection__container--1 {
-    flex: 0 0 9.45rem; }
+    flex: 0 0 9.10rem; }
   .selection__container--2, .selection__container--3, .selection__container--6 {
-    flex: 0 0 4.65rem; }
+    flex: 0 0 4.30rem; }
   .selection__container--4, .selection__container--7 {
-    flex: 0 0 7.70rem; }
+    flex: 0 0 7.35rem; }
   .selection__container--5, .selection__container--8 {
-    flex: 0 0 6.25rem; }
+    flex: 0 0 5.90rem; }
   .selection__container--8 {
     margin-bottom: 5.95rem; }
     @media only screen and (max-width: 1440px) {
@@ -1518,6 +1576,8 @@ b {
   padding-top: 0.95rem;
   transition-property: opacity;
   transition-duration: .1s; }
+  .header__container--x {
+    background-color: #fff; }
   .header__container.deactivate {
     opacity: 0; }
   @media only screen and (max-width: 1440px) {

@@ -61,9 +61,10 @@
 		padding-left: 0.30rem;
 		cursor: pointer;
     padding-right: 0.45rem;
-		
+		text-decoration: none;
 		& > *{
 			color: $color-blue-2;
+			text-decoration: none;
 		}		
 
 		& > .btn__arrow{			
@@ -106,10 +107,17 @@
 	  box-shadow: 0 0.10rem 0.40rem 0 rgba(0, 0, 0, 0.15);
 	}
 	&__video{
-		&--container{
-			background-color: green;
+		&--container{			
 			width: 100%;
-			height: 9.30rem;			
+			height: 9.30rem;
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+			&-1{
+				background-image: url(../assets/images/desktop/tbnail-cover-240.png);
+			}	
+			&-2{
+				background-image: url(../assets/images/desktop/img--1.svg);
+			}			
 		}
 	}
 	&__btn{
