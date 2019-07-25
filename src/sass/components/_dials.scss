@@ -26,6 +26,7 @@
 				margin-top: calc((100vh - 30rem) / 2);
 			}
 
+			
 			@include bph(825){
 				width: $dial-mediumL;
 				height: calc(#{$dial-mediumL} / 2);
