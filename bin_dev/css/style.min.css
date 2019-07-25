@@ -595,10 +595,15 @@ b {
 .header__rectangle__txt {
   font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
-  color: #fff;
-  transform: translateY(10%);
-  padding: 0 .5rem;
-  display: none; }
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #fff; }
+  .header__rectangle__txt--1 {
+    position: absolute;
+    right: 1.5rem; }
 
 .detailed__results--title {
   width: 10.40rem;
@@ -1022,8 +1027,9 @@ b {
   align-items: center; }
 
 .header__rectangle {
-  flex: 0 0 2rem;
-  position: relative;
+  flex: 0 0 2.00rem;
+  height: 2.00rem;
+  border-radius: 1rem;
   border: solid 0.1rem #00758f;
   border-radius: 50.00rem;
   transition-delay: 1s;
@@ -1043,6 +1049,12 @@ b {
     display: none; }
     .header__rectangle--1.toggle {
       display: flex; }
+
+  .header__rectangle__grow {
+    position: relative;
+    display: flex;
+    align-items: center; }
+
     .header__container--x .header__rectangle--1 {
       margin-left: auto; }
   .header__rectangle--2 {

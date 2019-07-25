@@ -90,30 +90,41 @@ b {
 	  margin-top: 1.05rem;
 
 
-
+		@include bp_min(1441){
+			@include bph(650){
+				font-size: $font-size-6;
+				width: 32.50rem;
+			}
+		}
 		@include bp(1440) {
-			font-size: 1.80rem;
+			font-size: $font-size-6;
 			width: 32.50rem;
 			margin-top: .65rem;
 			@include bph(650){
-				font-size: 1.8rem;
 				width: 30rem;
 			}
 		}
 	
 		@include bp(1024){
-			font-size: 1.80rem;
+			font-size: $font-size-6;
 			margin-top: .55rem;
 		}
 			
 		&--1{
 			width: 43.25rem;
+			
+			@include bp_min(1441){
+				@include bph(650){
+					width: 32.50rem;
+				}
+			}
+
 			@include bp(1440){
 				width: 32.50rem;
 			}
+
 			@include bp(1024){
 				width: 34.90rem;
-	
 				@include bph(525){
 					font-size: 1.25rem;
 					width: 22.5rem;
@@ -269,7 +280,16 @@ b {
 	  letter-spacing: normal;
 		margin-top: 0.25rem;	  
 	  color: $color-white-1;	  	  
-		
+	
+		&--2,
+		&--3{
+			@include bp_min(1441){
+				@include bph_min(1200){
+					transform: translateY(25%)
+				}
+			}	
+		}	
+
 		&--1{
 		  text-align: center;
 			width: 6.60rem;
@@ -316,7 +336,7 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.31;
 	  letter-spacing: normal;
-	  color: $color-white-1;
+	  color: $color-blue-4;
 
 
 		& > b{
@@ -604,6 +624,17 @@ b {
 			padding: 0 .5rem;
 
 			display: none;
+
+			&--2{
+				width: 11rem;
+				transform: translateY(0%);
+				padding: .3rem;
+				line-height: 1.31;
+			}
+
+			&__description{
+				color: $color-blue-4;
+			}
 		}
 	}
 }
