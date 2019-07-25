@@ -20,9 +20,21 @@
 		&--4{
 			@include bp_min(1441){
 				@include bph_min(1200){
-					top: 170%;
+					top: 156%;
 					left: 24rem;
 					width: 90rem;
+				}
+			}
+			@include bp(1440){
+				@include bph_min(1000){
+					top: 180%;
+					left: 24vw;
+					width: 90rem;
+
+					@include bp_min(1200){
+						top: 170%;
+
+					}
 				}
 			}
 			@include bp(1024){
