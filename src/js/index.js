@@ -193,6 +193,7 @@ $(document).ready(function(){
 	});
 
 
+
 	// $('.btn__progress--7').click();
 
 
