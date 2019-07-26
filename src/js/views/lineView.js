@@ -1,5 +1,5 @@
-export const resizeLines = width => {	
-	let size1 = 102.6;
+export const resizeLines = (width,height) => {	
+	let size1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
 	let size2 = 92.7;
 	let size3 = 153.1;
 	let size4 = 278.6;
@@ -7,22 +7,16 @@ export const resizeLines = width => {
 	let size6 = 280;
 	let size7 = 1;
 
-	if(width <= 1440){
+	if(width <= 1450 && height <= 650){
 
-		size1 = 81.15;
-		size2 = 106.7;
-		size3 = 131.7;
-		size4 = 292.6;
-		size5 = -120.65;
-		size6 = 293;
-		size7 = 15;
+		size1 = `calc(14.35rem + 40.83vh)`;
 
 	}
 
 	//Line for Question 1
-	// $('.line--1').attr({
-	//     y2: `${size1}rem`
-	// });
+	$('.line--1').attr({
+	    y1: size1,
+	});
 	// $('.line--2').attr({
 	// 	y1: `${size1}rem`,
 	//     y2: `${size1}rem`,

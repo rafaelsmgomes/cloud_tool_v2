@@ -21,6 +21,9 @@
 
 		@include bp(1440){
 			width: 83.333%;
+			@include bp(600){
+				padding-top: 3.00rem;
+			}
 		}
 
 
