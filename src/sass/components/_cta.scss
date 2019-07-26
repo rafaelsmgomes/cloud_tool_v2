@@ -56,8 +56,13 @@
 			transform: translateY(0%);
 			top: 15.1rem;	
 			left: auto;
-			right: -21rem;
+			right: -20.5rem;
 		
+			@include bp_min(1441){
+				@include bph(650){
+					top: 11.1rem;
+				}
+			}
 			@include bp(1440){
 				top: 13.3em;
 				left: auto;
