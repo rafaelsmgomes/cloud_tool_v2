@@ -163,6 +163,10 @@ b {
 			}
 		}
 			
+		@include bph(650){
+			display: none;
+		}
+
 		&--1{
 			width: 43.25rem;
 			
@@ -273,6 +277,12 @@ b {
 	  letter-spacing: normal;
 	  letter-spacing: -0.01em;
 
+		@include bp_min(1441){
+			@include bph(800){
+				font-size: .95rem;
+			}
+		}
+	 
 	  @include bp(1440){
 		  font-size: .9rem;
 	  }
@@ -415,6 +425,7 @@ b {
 		&__focus{
 			font-size: 1.25rem;
 			height: 1.9rem;
+			color: $color-white-1;
 		}  
 	}
 
