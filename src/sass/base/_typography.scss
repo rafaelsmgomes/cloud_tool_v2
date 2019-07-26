@@ -36,13 +36,21 @@ b {
 		margin-top: 42%;
 		padding: 0 2%;
 
+		&--x{
+			display: none;
+		}
+
 
 		@include bp(1450){
 			@include bph(650){
 				margin-top: 1.00rem;
 				display: none;
 				&--x{
+					font-size: $font-size-6;
 					display: block;
+					height: 2.40rem;
+					text-align: left;
+					padding-left: 0;
 				}
 			}
 		}
@@ -71,7 +79,28 @@ b {
 
 	  &--fadeout{	  	
 			opacity: 0;	
-	  }	
+	  }
+		
+		&--x{
+			display: none;
+		}
+
+	  @include bp(1450){
+			@include bph(650){
+				margin-top: 1.00rem;
+				display: none;				
+
+				&--x{
+			    font-size: $font-size-4;
+			    height: 4.00rem;
+			    margin-top: 0.25rem;					
+					display: block;
+					padding: 0;
+					text-align: left;
+					width: 24.90rem;
+				}
+			}
+		}	
 	}
 	&__txt{
 		color: $color-white-1;
@@ -86,6 +115,15 @@ b {
 		  letter-spacing: normal;
 		  text-align: center;     
 	    margin-top: 27.25%;
+	    @include bp(1450){
+	    	@include bph(650){
+  		    height: 3.00rem;
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    margin-top: 0;
+	    	}
+	    }
 		}
 	}
 }

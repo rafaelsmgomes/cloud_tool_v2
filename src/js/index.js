@@ -110,17 +110,19 @@ $(document).ready(function(){
 
 /****** PAGE/LINE CONTROLLER ******/
 	state.width = $('body').width();
+	state.height = $('body').height();
 	// state.height = e.page.height();
 	// page.reformWandH(state.width, state.height);
 
-	line.resizeLines(state.width);
+	line.resizeLines(state.width,state.height);
 
 	$(window).on('resize',function(){
 		state.width = $('body').width();
+		state.height = $('body').height();		
 		// state.height = $(window).height();
 		page.reformWandH();
 
-		line.resizeLines(state.width);
+		line.resizeLines(state.width,state.height);
 	});
 
 	$('.page--8').on('scroll',function(){
