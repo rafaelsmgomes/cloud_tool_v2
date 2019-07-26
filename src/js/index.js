@@ -192,7 +192,7 @@ $(document).ready(function(){
 		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
 	});
 
-	// $('.btn__progress--3').click();
+	$('.btn__progress--3').click();
 
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
