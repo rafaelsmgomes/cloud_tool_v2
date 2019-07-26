@@ -9,7 +9,7 @@ export const resizeLines = (width,height) => {
 
 	if(width <= 1450 && height <= 650){
 
-		size1 = `calc(17.35rem + 40.83vh)`;
+		size1 = `calc(14.35rem + 40.83vh)`;
 
 	}
 

@@ -1183,7 +1183,8 @@ b {
     width: 40.83vh;
     max-width: 15.00rem;
     max-height: 15.00rem;
-    justify-content: center; } }
+    justify-content: center;
+    margin-top: 2.7rem; } }
   .landing__container--fadeout {
     transition-property: border-color;
     transition-duration: 0.5s;
