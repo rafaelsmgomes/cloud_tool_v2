@@ -12,7 +12,8 @@ export const displayValues = (user, peers) =>{
 	},2200);
 }
 
-export const displayResultsCopy = (user, peers) => {
+export const displayResultsCopy = (user, peers) => {	
+
 	if(user === peers){
 		e.results__copy.append(
 			"<span class='block'>Your score indicates that you are <b>on par with your peers</b> with cloud confidence and cloud adoption.</span><span class='block'>&nbsp;</span><span class='block'>To remain competitive, your company should actively pursue the promise of lower costs, greater topline growth, and easier access to innovation that comes with cloud adoption.</span>" 			
