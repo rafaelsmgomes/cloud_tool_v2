@@ -61,6 +61,9 @@ $Breakpoint argument choices:
 *:focus {
   outline: none; }
 
+* {
+  outline: 1px solid hotpink; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1500,29 +1503,22 @@ b {
       clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%); }
 
 .selection__wrapper {
-  width: 46.45rem;
-  height: 21.25rem;
+  width: 67%;
+  height: 42%;
+  max-width: 46.45rem;
+  max-height: 21.25rem;
   display: flex;
   margin-top: 1.85rem;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  @media only screen and (max-width: 1440px) {
-    .selection__wrapper {
-      width: 73%;
-      height: 14.2rem;
-      margin-top: 1rem; } }
+  flex-wrap: wrap; }
 
 .selection__container {
   width: 14.65rem;
   background-color: transparent;
   border: solid 2px #00758f;
   cursor: pointer;
-  padding: .60rem; }
-  .selection__container:nth-child(n+4) {
-    transform: translateX(0.85rem); }
-  .selection__container:nth-child(n+7) {
-    transform: translateX(1.7rem); }
+  padding: .60rem;
+  margin-bottom: 2%; }
   @media only screen and (max-width: 1440px) {
     .selection__container {
       width: 11rem; } }
@@ -1532,20 +1528,6 @@ b {
     background-color: #00758f; }
     .selection__container--active:hover {
       background-color: #00758f; }
-  .selection__container--1 {
-    flex: 0 0 9.10rem; }
-  .selection__container--2, .selection__container--3, .selection__container--6 {
-    flex: 0 0 4.30rem; }
-  .selection__container--4, .selection__container--7 {
-    flex: 0 0 7.35rem; }
-  .selection__container--5, .selection__container--8 {
-    flex: 0 0 5.90rem; }
-  .selection__container--8 {
-    margin-bottom: 5.95rem; }
-    @media only screen and (max-width: 1440px) {
-      .selection__container--8 {
-        margin-bottom: auto;
-        margin-top: .8rem; } }
   @media only screen and (max-width: 1440px) {
     .selection__container {
       width: 31%;

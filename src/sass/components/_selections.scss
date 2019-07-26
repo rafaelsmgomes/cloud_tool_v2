@@ -1,19 +1,16 @@
 .selection{	
 	&__wrapper{
-		width: 46.45rem;
-		height: 21.25rem;
+		width: 67%;
+		height: 42%;
+
+		max-width: 46.45rem;
+		max-height: 21.25rem;
 		display: flex;
 		margin-top: 1.85rem;
 
 		flex-direction: column;
 		flex-wrap: wrap;
-		justify-content: space-between;
 
-		@include bp(1440){
-			width: 73%;
-			height: 14.2rem;
-			margin-top: 1rem;
-		}
 	}
 	&__container{
 		width: 14.65rem;
@@ -21,13 +18,8 @@
    	border: solid 2px $color-blue-1;
 		cursor: pointer;
 		padding: .60rem;
+		margin-bottom: 2%;
 
-		&:nth-child(n+4){
-	    transform: translateX(0.85rem);
-		}
-		&:nth-child(n+7){
-	    transform: translateX(1.7rem);
-		}
 
 		@include bp(1440){
 			width: 11rem;
@@ -44,34 +36,11 @@
 				background-color: $color-blue-1;
 			}
 		}
-		&--1{
-			flex: 0 0 9.10rem;
-		}
-		&--2,
-		&--3,
-		&--6{
-			flex: 0 0 4.30rem;
-		}
-		&--4,
-		&--7{
-			flex: 0 0 7.35rem;
-			}
-
-		&--5,
-		&--8{
-			flex: 0 0 5.90rem;
-			}
-		&--8{
-			margin-bottom: 5.95rem;
-			@include bp(1440){
-				margin-bottom: auto;
-				margin-top: .8rem;
-			}
-			}
-	@include bp(1440){
+	
+		@include bp(1440){
 		width: 31%;
 		flex: 0 0 auto;
 		padding: 0.5rem;
-	}
-}	
+		}
+	}	
 }
