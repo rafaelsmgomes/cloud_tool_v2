@@ -1268,6 +1268,11 @@ b {
     width: 5.10rem; }
   .pagination--active {
     color: #00758f; }
+  @media only screen and (max-height: 650px) {
+    .pagination {
+      position: absolute;
+      bottom: 3.00rem;
+      right: 0; } }
 
 .detailed-score__wrapper {
   height: 23.35rem;

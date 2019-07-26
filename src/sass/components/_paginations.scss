@@ -17,7 +17,12 @@
 
 	&--active{
     color: $color-blue-1;
+	}
 
+	@include bph(650){
+		position: absolute;
+    bottom: 3.00rem;
+    right: 0;
 	}
 
 }
