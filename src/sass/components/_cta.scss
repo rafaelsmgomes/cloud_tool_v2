@@ -39,24 +39,19 @@
 			}
 			@include bp(1024){
 				@include bph_min(810){
-					top: 180%;
+					top: 187%;
 					left: 24vw;
 				}
 			}
 			@include bp(910){
-				left: 50vw;
+				left: 53vw;
 				@include bph_min(750){
-					top: 193%;
+					top: 200%;
 					left: 24vw;
 				}
 			}
-		}
-	
+		}	
 
-		&--1{
-		}
-		&--2{
-		}				
 		&--3{
 			transform: translateY(0%);
 			top: 15.1rem;	
