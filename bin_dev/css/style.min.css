@@ -404,7 +404,8 @@ b {
     margin-right: 1.00rem; }
     @media only screen and (max-height: 740px) {
       .dial__text--3 {
-        margin-right: 0.75rem; } }
+        margin-right: 0.75rem;
+        padding-left: 15%; } }
 
 @media only screen and (min-width: 1441px) and (max-height: 650px) {
   .dial__text--3c, .dial__text--3-a {
@@ -891,7 +892,7 @@ b {
     width: 78vh;
     height: calc(78vh / 2); } }
 
-@media only screen and (max-width: 1440px) and (max-height: 625px) {
+@media only screen and (max-width: 1440px) and (max-height: 650px) {
   .dial-group {
     width: 65vh;
     height: calc(65vh / 2); } }

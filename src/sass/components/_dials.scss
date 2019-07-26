@@ -67,7 +67,7 @@
 				width: $dial-mediumL;
 				height: calc(#{$dial-mediumL} / 2);		
 			}
-			@include bph(625){
+			@include bph(650){
 				width: $dial-mediumS;
 				height: calc(#{$dial-mediumS} / 2);		
 			}

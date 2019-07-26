@@ -357,6 +357,7 @@ b {
 		  margin-right: 1.00rem;
 		  @include bph(740){ 
 			margin-right: 0.75rem; 
+			padding-left: 15%;
 		  }
 		  &c,
 		  &-a {
