@@ -37,9 +37,21 @@ b {
 		padding: 0 2%;
 
 
+		@include bp(1450){
+			@include bph(650){
+				margin-top: 1.00rem;
+				display: none;
+				&--x{
+					display: block;
+				}
+			}
+		}
+
 	  &--fadeout{	  	
 			opacity: 0;	
 	  }
+
+
 	}
 	&__subtitle{
 	  font-family: $font-reg;

@@ -11,6 +11,8 @@
     &--x{
       height: 100%;
       width: 100%;
+      z-index: -1;
+
       &.deactivate{
         transition: opacity 800ms;
         opacity: 0;
