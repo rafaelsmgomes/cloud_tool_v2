@@ -40,11 +40,12 @@ export const openVideoOverlay = (ob) => {
     }
 }
 
-export const iterateObjSet = (obj) =>{
+export const iterateObjSet = (obj, callback) =>{
     
     const array = Array.prototype.slice.call(obj);
     array.forEach( function(element, index) {
-        console.log($(element));
+        callback(element);
+
     });
-}
+};
 
