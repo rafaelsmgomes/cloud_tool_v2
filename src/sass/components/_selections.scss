@@ -20,6 +20,10 @@
 			}
 		}
 
+		@include bp(1440){
+			height: 48%;
+			width: 48%;
+		}
 	}
 	&__container{
 		width: 14.65rem;
@@ -32,12 +36,18 @@
 
 		@include bp_min(1441){
 			@include bph(800){
-				width: 15.4vw;
+				width: 11.1rem;
+			}
+			@include bph(721){
+				&--3{
+					order: 1;
+				}
 			}
 		}
 
 		@include bp(1440){
-			width: 11rem;
+			width: 17.659vw;
+			padding: .25rem;
 		}
 		
 		&:hover{
@@ -50,11 +60,6 @@
 			&:hover{
 				background-color: $color-blue-1;
 			}
-		}
-	
-		@include bp(1440){
-		width: 31%;
-		flex: 0 0 auto;
 		}
 	}	
 }
