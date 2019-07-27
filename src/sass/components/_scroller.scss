@@ -17,10 +17,8 @@
 	}
 	&__content{
 		width: 97%;
-		@include bp(1450){
-			@include bph(650){
-
-			}
+		@include bph(650){
+			height: .4rem;
 		}
 		height: 2.70rem;
 		border-radius: 0.20rem;
@@ -62,6 +60,9 @@
 		}
 		&:not(:last-of-type){
 			margin-bottom: 0.80rem;
+			@include bph(650){
+				margin-bottom: .4rem;
+			}
 		}
 	}
 	&__icon{
