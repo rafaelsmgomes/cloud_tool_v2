@@ -48,3 +48,6 @@ export const iterateObjSet = (obj, callback) =>{
     });
 };
 
+export const returnNumOnly = (str, n) =>{
+    return Number(str.slice(0, `-${n}`));
+};

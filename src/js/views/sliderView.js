@@ -10,13 +10,22 @@ export const progressScrollerContent = slider => {
 	e.thisScrollElement(slider).removeClass('scroller__content--active');
 	e.thisNextScrollElement(slider).addClass('scroller__content--active');
 
-	const previousSiblingToActive = e.thisNextScrollElement(slider).prevAll();
-	
-	func.iterateObjSet(previousSiblingToActive, function(element, index){
-		let width = 97;
+	const pageHeight = func.returnNumOnly(e.pageContent.css('height'),2);
 
-		$(element).css('width',`${width - (index*3)}%`);		
-	});
+	//Shrinks previous siblings into a row if body is below height 650;
+	if(pageHeight <= 650){
+		const previousSiblingToActive = e.thisNextScrollElement(slider).prevAll();
+		const nextSiblingToActive = e.thisNextScrollElement(slider).nextAll();
+
+		console.log(nextSiblingToActive);
+		
+		func.iterateObjSet(previousSiblingToActive, function(element, index){
+			let width = 97;
+			let opacity = .8;
+			$(element).css('width',`${width - (index*3)}%`);
+			$(element).css('opacity',`${opacity - (index*.2)}`);		
+		});
+	};
 
 }
 
