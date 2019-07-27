@@ -20,20 +20,6 @@ export const progressScrollerContent = slider => {
 		applySliderGroupShrink(previousSiblingToActive);
 		applySliderGroupShrink(nextSiblingToActive);
 
-		// func.iterateObjSet(previousSiblingToActive, function(element, index){
-		// 	let width = 97;
-		// 	let opacity = .8;
-		// 	$(element).css('width',`${width - (index*3)}%`);
-		// 	$(element).css('opacity',`${opacity - (index*.2)}`);		
-		// });
-
-		// func.iterateObjSet(nextSiblingToActive, function(element, index){
-		// 	let width = 97;
-		// 	let opacity = .8;
-		// 	$(element).css('width',`${width - (index*3)}%`);
-		// 	$(element).css('opacity',`${opacity - (index*.2)}`);		
-		// });		
-
 		$('.scroller__content--active').css({
 			'width':'100%',
 			'opacity':'1'
@@ -41,11 +27,14 @@ export const progressScrollerContent = slider => {
 	};
 }
 
-// export setSliderGroupSize = () =>{
-// 	if(pageHeight <= 650){
-// 		const nextSiblingToActive = e.thisNextScrollElement(slider).nextAll();
-// 	} 
-// }
+export const setSliderGroupSize = () =>{
+	const pageHeight = func.returnNumOnly(e.pageContent.css('height'),2);
+	
+	if(pageHeight <= 650){
+		const nextSiblingToActive = $('.scroller__content--active').nextAll();
+		applySliderGroupShrink(nextSiblingToActive);
+	} 
+}
 
 export const progressBtn = slider => {
 	const pageBtnProgress =e.thisPageContent(slider).find( ".btn__progress");

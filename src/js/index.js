@@ -316,6 +316,12 @@ $(document).ready(function(){
 	state.slider1 = new SliderGroup($('.scroller__wrapper--1'));
 	state.slider2 = new SliderGroup($('.scroller__wrapper--2'));
 
+	sl.setSliderGroupSize();
+
+	$(window).on('resize',function(){
+		sl.setSliderGroupSize();
+	});
+
 	$('input[type="range"]').rangeslider({
 	  polyfill: false,
 

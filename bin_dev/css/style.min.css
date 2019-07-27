@@ -1513,6 +1513,11 @@ b {
   display: flex;
   height: 100%;
   align-items: center; }
+  @media only screen and (max-height: 650px) {
+    .scroller__header {
+      opacity: 0; }
+      .scroller__content--active .scroller__header {
+        opacity: 1; } }
   .scroller__content--active .scroller__header {
     height: auto; }
     @media only screen and (max-width: 1150px) {
