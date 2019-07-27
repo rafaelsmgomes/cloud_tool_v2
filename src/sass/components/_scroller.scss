@@ -1,11 +1,12 @@
 .scroller{
 	&__wrapper{
-		width: 40.90rem;		
-		margin-top: 3.00rem;
-		
+		width: 40.90rem;
 		@include bp(1300){
 			width: 60%;	
 		}
+		margin-top: 3.00rem;
+		
+
 		&--1{
 	    height: 23.15rem;
 		}
@@ -15,7 +16,12 @@
 
 	}
 	&__content{
-		width: 39.75rem;
+		width: 97%;
+		@include bp(1450){
+			@include bph(650){
+
+			}
+		}
 		height: 2.70rem;
 		border-radius: 0.20rem;
 		// opacity: 0.25;		
@@ -23,6 +29,8 @@
 		margin: 0 auto;
 		padding-left: 0.8rem;
 		padding-right: 0.8rem;
+		
+		
 
 		@include bp(1350){
 			width: 97%;
