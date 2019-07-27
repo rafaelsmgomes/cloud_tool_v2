@@ -194,7 +194,7 @@ $(document).ready(function(){
 
 
 
-	// $('.btn__progress--7').click();
+	$('.btn__progress--3').click();
 
 
 	// Hooking header nav buttons to btnprogress
