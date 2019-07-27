@@ -12,11 +12,12 @@ export const progressScrollerContent = slider => {
 
 	const previousSiblingToActive = e.thisNextScrollElement(slider).prevAll();
 	
-	func.iterateObjSet(previousSiblingToActive);
+	func.iterateObjSet(previousSiblingToActive, function(element, index){
+		let width = 97;
 
-	// e.thisNextScrollElement(slider).prevAll().each( function(e, i) {
-	// 	console.log(e);
-	// });
+		$(element).css('width',`${width - (index*3)}%`);		
+	});
+
 }
 
 export const progressBtn = slider => {

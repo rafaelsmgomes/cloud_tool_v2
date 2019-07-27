@@ -44,8 +44,7 @@ export const iterateObjSet = (obj, callback) =>{
     
     const array = Array.prototype.slice.call(obj);
     array.forEach( function(element, index) {
-        callback(element);
-
+        callback(element, index);
     });
 };
 
