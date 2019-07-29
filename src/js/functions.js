@@ -1,21 +1,3 @@
-// export const findElement1 = (start,reference,end){
-// 	$(start)[0].$div.closest(reference).find(end); 	
-// }
-
-// export const assignDial = (dataId) => {
-// 	let x;
-	
-// 	if(dataId === 1){
-// 		x = state.dial1;
-// 	}else if(dataId === 2){
-// 		x = state.dial2;
-// 	}else{
-// 		x = state.dial3;
-// 	}
-
-// 	return x;		
-// }
-
 export const openVideoOverlay = (ob) => {
     var videoID=ob;
   //  ob.data ? videoID = ob.data.video : videoID = $(ob.currentTarget).attr("vid");
@@ -57,3 +39,15 @@ export const openVideoOverlay = (ob) => {
         );        
     }
 }
+
+export const iterateObjSet = (obj, callback) =>{
+    
+    const array = Array.prototype.slice.call(obj);
+    array.forEach( function(element, index) {
+        callback(element, index);
+    });
+};
+
+export const returnNumOnly = (str, n) =>{
+    return Number(str.slice(0, `-${n}`));
+};

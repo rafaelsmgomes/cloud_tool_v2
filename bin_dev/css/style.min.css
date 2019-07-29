@@ -1487,13 +1487,16 @@ b {
     height: 30.15rem; }
 
 .scroller__content {
-  width: 39.75rem;
+  width: 97%;
   height: 2.70rem;
   border-radius: 0.20rem;
   background-color: #fff;
   margin: 0 auto;
   padding-left: 0.8rem;
   padding-right: 0.8rem; }
+  @media only screen and (max-height: 1000px) {
+    .scroller__content {
+      height: .4rem; } }
   @media only screen and (max-width: 1350px) {
     .scroller__content {
       width: 97%; } }
@@ -1514,6 +1517,9 @@ b {
     opacity: 0.25; }
   .scroller__content:not(:last-of-type) {
     margin-bottom: 0.80rem; }
+    @media only screen and (max-height: 1000px) {
+      .scroller__content:not(:last-of-type) {
+        margin-bottom: .4rem; } }
 
 .scroller__icon {
   height: 2.00rem;
@@ -1549,6 +1555,11 @@ b {
   display: flex;
   height: 100%;
   align-items: center; }
+  @media only screen and (max-height: 1000px) {
+    .scroller__header {
+      opacity: 0; }
+      .scroller__content--active .scroller__header {
+        opacity: 1; } }
   .scroller__content--active .scroller__header {
     height: auto; }
     @media only screen and (max-width: 1150px) {

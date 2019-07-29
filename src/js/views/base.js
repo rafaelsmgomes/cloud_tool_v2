@@ -21,7 +21,9 @@ export const e = {
 	userValue: $('#userValue'),
 	peersValue: $('#peersValue'),
 	page: $('.page'),
+	pageContent: $(".page__content"),
 	results__copy: $('.results__copy'),
+	body: $('body'),
 
 	thisDialElement: function(start,reference,end){
 		$(start)[0].$div.closest(reference).find(end);
