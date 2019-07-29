@@ -1,17 +1,27 @@
-export const resizeLines = (width,height) => {	
-	let ysize1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
-	let ysize2 = `calc(50rem + 100vh - 1.75rem)`;
+export const resizeLines = () => {	
+	const width = $('.page__content').width();
+	const height = $('.page').height();
+
+	/*** THIS IS example for size 1, I multiplied, (4x20) + (5.7x20) + 2 + (.6833 * height) ***/ 
+		// let size1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
+	let line1y1 = 80+114+2+.6833*height;
+	let line1y2 = 1000 + 1*height - 35.00;
+	let line1x1 = width/2;
+	let line1x2 = width/2;
+
 
 	if(width <= 1450 && height <= 650){
-
-		ysize1 = `calc(14.35rem + 40.83vh)`;
-		ysize2 = `calc(50rem + 100vh - 1.75rem)`
-
+		// size1 = 14.35rem + 40.83vh
+		line1y1 = 14.35*20 + .4083*height;
+		line1y2 = 1000 + 1*height - 35.00;
 	}
 
 	//Line for Page 1
 	$('.line--1').attr({
-	    y1: ysize1,
+	    y1: line1y1 ,
+	    y2: line1y2,
+	    x1: line1x1 ,
+	    x2: line1x2,
 	});
 	// //Line for Question 1
 	// $('.line--1').attr({

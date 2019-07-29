@@ -1306,6 +1306,9 @@ b {
     overflow: visible;
     left: 50%;
     transform: translateX(-50%); }
+    @media only screen and (max-width: 1440px) {
+      .line__wrapper {
+        width: 83.333%; } }
     .line__wrapper--x {
       height: 100%;
       width: 100%;
@@ -1665,11 +1668,11 @@ b {
   margin-top: 1.85rem;
   flex-direction: column;
   flex-wrap: wrap; }
-  @media only screen and (min-width: 1441px) {
+  @media only screen and (min-width: 1440px) {
     .selection__wrapper {
       height: 59%;
       max-height: 27.5rem; } }
-  @media only screen and (min-width: 1441px) and (max-height: 721px) {
+  @media only screen and (min-width: 1440px) and (max-height: 720px) {
     .selection__wrapper {
       height: 13rem; } }
   @media only screen and (max-width: 1440px) {

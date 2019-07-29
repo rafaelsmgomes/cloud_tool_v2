@@ -11,10 +11,10 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 
-		@include bp_min(1441){
+		@include bp_min(1440){
 			height: 59%;
 			max-height: 27.5rem;
-			@include bph(721){
+			@include bph(720){
 				height: 13rem;
 			}
 		}

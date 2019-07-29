@@ -109,12 +109,13 @@ $(document).ready(function(){
 	});
 
 /****** PAGE/LINE CONTROLLER ******/
-	state.width = $('body').width();
-	state.height = $('body').height();
-	// state.height = e.page.height();
-	// page.reformWandH(state.width, state.height);
+	state.width = $('body').width();	
+	state.height = e.page.height();
 
-	line.resizeLines(state.width,state.height);
+	page.reformWandH(state.width, state.height);
+
+	console.log(state.height);
+	line.resizeLines();
 
 	$(window).on('resize',function(){
 		state.width = $('body').width();
@@ -122,7 +123,7 @@ $(document).ready(function(){
 		// state.height = $(window).height();
 		page.reformWandH();
 
-		line.resizeLines(state.width,state.height);
+		line.resizeLines();
 	});
 
 	$('.page--8').on('scroll',function(){
@@ -372,9 +373,28 @@ $(document).ready(function(){
 
 
 /****************  ELOQUA CONTROLLER  ********************/
-	$('.detailed-score__btn').on('click',function(){
-		css.displayEloqua();
-	});
+	// $('.detailed-score__btn').on('click',function(){
+	// 	css.displayEloqua();
+	// });
+
+/****************  DISABLE ZOOM IN  ********************/
+// $(window).keydown(function(event) {
+// 	console.log(event);
+// 	if (event.ctrlKey==true && (event.which == '17' || event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
+//         console.log('');
+//         event.preventDefault();
+//  	}
+//     // 107 Num Key  +
+//     // 109 Num Key  -
+//     // 173 Min Key  hyphen/underscor Hey
+//     // 61 Plus key  +/= key
+// });
+
+// $(window).bind('mousewheel DOMMouseScroll', function (event) {
+//        if (event.ctrlKey == true) {
+//        event.preventDefault();
+//        }
+// });
 
 
 });
