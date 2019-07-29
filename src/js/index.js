@@ -346,6 +346,8 @@ $(document).ready(function(){
     	sliderGroup.pushToVal(value);
 
     	if(sl.nextScrollerExist(slider)){
+
+    		// console.log(slider);
     		sl.progressScrollerContent(slider);
     		sliderGroup.calculateVal();
     	}else{
