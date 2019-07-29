@@ -64,15 +64,41 @@
 				}
 			}
 			@include bp(1440){
-				top: 13.3em;
+				top: 14.2rem;
 				left: auto;
 				right: -23rem;
+				@include bph(650){
+					top: 9.3rem;
+				}
+				@include bph_min(850){
+					width: 38.5rem;
+					top: 32rem;
+					right: -8rem;
+				}
 			}
 			@include bp(1150){
 				right: -25rem;
+				@include bph_min(850){
+					width: 38.5rem;
+					top: 32rem;
+					right: -8rem;
+				}
 			}
 			@include bp(1024){
-				top: 13rem
+				@include bph(650){
+					top: 12rem;
+				}
+				@include bph(570){
+					display: none;
+				}
+				@include bph_min(651){
+					display: block;
+					top: 13.9rem;
+				}
+				@include bph_min(850){
+					top: 32rem;
+					right: -8rem;
+				}
 			}
 		}
 		
