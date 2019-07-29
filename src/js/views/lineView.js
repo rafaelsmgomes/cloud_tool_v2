@@ -1,17 +1,35 @@
 export const resizeLines = (width,height) => {	
-	let size1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
-	let ysize2 = 92.7;
+	let ysize1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
+	let ysize2 = `calc(50rem + 100vh - 1.75rem)`;
 
 	if(width <= 1450 && height <= 650){
 
-		size1 = `calc(14.35rem + 40.83vh)`;
+		ysize1 = `calc(14.35rem + 40.83vh)`;
+		ysize2 = `calc(50rem + 100vh - 1.75rem)`
 
 	}
 
-	//Line for Question 1
+	//Line for Page 1
 	$('.line--1').attr({
-	    y1: size1,
+	    y1: ysize1,
 	});
+	// //Line for Question 1
+	// $('.line--1').attr({
+	// 	y2: ysize2,
+	// });
+	// $('.line--2').attr({
+	// 	y1: ysize2,
+	// 	y2: ysize2
+	// });
+	// //Line for Question2
+	// $('.line--2').attr({
+	// 	y1: ysize2,
+	// 	y2: ysize2
+	// });
+
+
+
+
 
 
 	// $('.line--2').attr({
