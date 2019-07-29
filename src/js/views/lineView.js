@@ -1,11 +1,6 @@
 export const resizeLines = (width,height) => {	
 	let size1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
-	let size2 = 92.7;
-	let size3 = 153.1;
-	let size4 = 278.6;
-	let size5 = -99.15;
-	let size6 = 280;
-	let size7 = 1;
+	let ysize2 = 92.7;
 
 	if(width <= 1450 && height <= 650){
 
@@ -17,6 +12,8 @@ export const resizeLines = (width,height) => {
 	$('.line--1').attr({
 	    y1: size1,
 	});
+
+
 	// $('.line--2').attr({
 	// 	y1: `${size1}rem`,
 	//     y2: `${size1}rem`,
