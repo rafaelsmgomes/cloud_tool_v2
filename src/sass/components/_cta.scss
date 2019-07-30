@@ -32,7 +32,7 @@
 					width: 90rem;
 
 					@include bp_min(1200){
-						top: 170%;
+						top: 168%;
 
 					}
 				}
@@ -56,7 +56,7 @@
 			transform: translateY(0%);
 			top: 15.1rem;	
 			left: auto;
-			right: -20.5rem;
+			right: -23rem;
 		
 			@include bp_min(1441){
 				@include bph(650){
@@ -102,36 +102,55 @@
 			}
 		}
 		
-		&--4{
-			&-a{
-				top: 37.80rem;
-			}
-		}
-
 		&--5{
-			top: 38.2rem;
+			top: 38.5rem;
 			left: auto;
 			right: -21rem;
+			
 			@include bp(1440){
-				top: 38.5rem;
-			}
-			@include bp(1024){
-				top: 38.2rem;
 				right: -22rem;
+			}
+
+			@include bph(1000){
+				top: 30.4rem;
+			}
+			@include bph(725){
+				top: 27.5rem;
+			}
+			@include bph(675){
+				top: 27.0rem;
+			}
+			@include bph(650){
+				top: 24.1rem;
+			}
+			@include bph(600){
+				top: 22.6rem;
 			}
 		}
 
 		&--6{
 			left: auto;
-			top: 45.1rem;
+			top: 45.5rem;
 			right: -20.5rem;
 
 			@include bp(1440){
-				top: 45.5rem;
-				right: -22rem
+				right: -22rem;
 			}
-			@include bp(1024){
 
+			@include bph(1000){
+				top: 31.9rem;
+			}
+			@include bph(725){
+				top: 29.1rem;
+			}
+			@include bph(675){
+				top: 28.6rem;
+			}
+			@include bph(650){
+				top: 25.7rem;
+			}
+			@include bph(600){
+				top: 24.2rem;
 			}
 		}
 	}

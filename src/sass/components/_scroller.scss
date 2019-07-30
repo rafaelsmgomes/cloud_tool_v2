@@ -6,6 +6,18 @@
 		}
 		margin-top: 3.00rem;
 		
+		@include bph(725){
+			margin-top: 2rem;
+		}
+		@include bph(675){
+			margin-top: 1.5rem;
+		}
+		@include bph(650){
+			margin-top: 3.0rem;
+		}
+		@include bph(600){
+			margin-top: 1.5rem;
+		}
 
 		&--1{
 	    height: 23.15rem;
@@ -122,8 +134,9 @@
 			}
 		}
 
+		
 		.scroller__content--active &{
-			height: auto;
+			height: 3.3rem;
 			// align-items: flex-end; 
 			@include bp(1150){
 				height: 3.3rem;

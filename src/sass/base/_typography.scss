@@ -452,11 +452,17 @@ b {
 			}
 		}
 		
-		@include bp(1440){
-			@include bph_min(850){
-				width: 20rem;
+		&--1,
+		&--2,
+		&--3,
+		&--4{
+			@include bp(1440){
+				@include bph_min(1000){
+					width: 20rem;
+				}
 			}
 		}
+
 
 	}
 

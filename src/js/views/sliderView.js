@@ -12,7 +12,7 @@ export const progressScrollerContent = slider => {
 
 	const pageHeight = func.returnNumOnly(e.pageContent.css('height'),2);
 
-	//Shrinks previous siblings into a row if body is below height 650;
+	//Shrinks previous siblings into a row if body is below height 1000;
 	if(pageHeight <= 1000){
 		const previousSiblingToActive = e.thisNextScrollElement(slider).prevAll();
 		const nextSiblingToActive = e.thisNextScrollElement(slider).nextAll();
@@ -48,7 +48,7 @@ function applySliderGroupShrink(sibling){
 
 	func.iterateObjSet(sibling, function(element, index){
 		let width = 97;
-		let opacity = .8;
+		let opacity = .9;
 		$(element).css('width',`${width - (index*3)}%`);
 		$(element).css('opacity',`${opacity - (index*.2)}`);		
 	});	
