@@ -215,10 +215,7 @@
 
 			&--1{
 				padding-left: 7.75%;
-				
-				@include bph(650){
-					width: 13rem;
-				}
+				width: 13rem;
 			}
 			&--2{
 				padding-right: 7.75%;	
