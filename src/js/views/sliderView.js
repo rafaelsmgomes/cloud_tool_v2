@@ -46,11 +46,11 @@ export const progressBtn = slider => {
 }
 
 function applySliderGroupShrink(sibling){
-	// $('.scroller__content').css('transition-delay', '5s');
-	// func.iterateObjSet(sibling, function(element, index){
-	// 	let width = 97;
-	// 	let opacity = .9;
-	// 	$(element).css('width',`${width - (index*3)}%`);
-	// 	$(element).css('opacity',`${opacity - (index*.2)}`);				
-	// });	
+	// $('.scroller__content').css('transition-delay', '.s');
+	func.iterateObjSet(sibling, function(element, index){
+		let width = 97;
+		let opacity = .9;
+		$(element).css('width',`${width - (index*3)}%`);
+		$(element).css('opacity',`${opacity - (index*.2)}`);				
+	});	
 }
