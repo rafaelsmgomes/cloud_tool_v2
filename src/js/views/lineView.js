@@ -4,9 +4,9 @@ export const resizeLines = () => {
 
 	/*** THIS IS example for size 1, I multiplied, (4x20) + (5.7x20) + 2 + (.6833 * height) ***/ 
 		// let size1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
-	let line1x = width/2;
+	// let line1x = width/2;
 	let line1y1 = 80+114+2+.6833*height;
-	let line1y2 = 1000 + 1*height - 35.00;
+	// let line1y2 = 1000 + 1*height - 35.00;
 	
 	// let line2x1 = 700;
 	// let line2x2 = 1854; // Activation point
@@ -43,18 +43,18 @@ export const resizeLines = () => {
 
 
 	if(width <= 1450 && height <= 650){
-		// size1 = 14.35rem + 40.83vh
+		// size1 = 14.35rem + 40.83vh;
 		line1y1 = 14.35*20 + .4083*height;
-		line1y2 = 1000 + 1*height - 35.00;
+		// line1y2 = 1000 + 1*height - 35.00;
 	}
 
 	// //Line for Page 1
-	// $('.line--1').attr({
-	//     y1: line1y1,
+	$('.line--1').attr({
+	    y1: line1y1,
 	//     y2: line1y2,
 	//     x1: line1x,
 	//     x2: line1x,
-	// });
+	});
 	// //Lines 2 and 2-a for Question 1
 	// $('.line--2').attr({
 	//     y1: line2y,
