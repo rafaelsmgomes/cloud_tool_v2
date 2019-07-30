@@ -1928,6 +1928,7 @@ b {
   .page--8 .page__content > * {
     opacity: 0;
     transition-property: opacity;
+    transition-delay: .5s;
     transition-duration: .5s; }
   .page .page__content > .cta__wrapper {
     transition-delay: .5s; }
