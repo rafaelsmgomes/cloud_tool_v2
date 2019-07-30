@@ -1317,6 +1317,9 @@ b {
     overflow: visible;
     left: 50%;
     transform: translateX(-50%); }
+    @media only screen and (max-width: 1440px) {
+      .line__wrapper {
+        width: 83.333%; } }
     .line__wrapper--x {
       height: 100%;
       width: 100%;
@@ -1913,6 +1916,11 @@ b {
     border: solid 0.1rem #00758f;
     height: 42.00rem;
     background-color: green; }
+  .page__content--y {
+    padding-top: 2.00rem;
+    padding-left: 5.85rem; }
+    .main-container--x .page__content--y {
+      padding-top: 2rem; }
   @media only screen and (max-width: 1440px) {
     .page__content {
       width: 83.333%; } }

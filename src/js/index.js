@@ -17,6 +17,7 @@ import SliderGroup from './models/Slider';
 import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
 import * as dial from './views/dialView';
+import * as dp from './views/detailedProgress';
 import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
@@ -83,10 +84,16 @@ $(document).ready(function(){
 
 		// Changing header nav value's to corresponding square
 
-		$('.header__nav--btn--2').attr('context',`${val}`);
+		$('.header__nav--btn--2').attr('context',`${Number(val)+1}`);
 		$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
 	});
 
+/****** HEADER NAV BTN CONTROLLER ******/ 
+	$('.header__nav--btn').on('click',function(){
+		const self = $(this);
+		dp.movePathfinderX(self);
+	});
+	
 /****************  CLOUD/ LOTTIE INIT  ********************/
 	var scrollTip = lottie.loadAnimation({
 	  container: document.getElementById('scroll_down'),
@@ -397,6 +404,7 @@ $(document).ready(function(){
 //        event.preventDefault();
 //        }
 // });
+	
 
 
 });
