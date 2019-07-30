@@ -13,16 +13,14 @@
     align-items: center;
     cursor: pointer;
     
-    @include bp(1450){
-    	@include bph(650){
-    		height: 40.83vh;
-    		width: 40.83vh;
-				max-width: 15.00rem;
-				max-height: 15.00rem;
-				justify-content: center;    	
-				margin-top: 2.7rem;	
-    	}
-    }
+	@include bph(650){
+		height: 40.83vh;
+		width: 40.83vh;
+			max-width: 15.00rem;
+			max-height: 15.00rem;
+			justify-content: center;    	
+			margin-top: 2.7rem;	
+	}
 
 		&--fadeout{
 			transition-property: border-color;
@@ -41,11 +39,9 @@
 			background-image: url('../assets/graphics/down.svg');
 	    transform: translateY(-0.75rem);
 	    transition: 300ms;
-			@include bp(1450){
-				@include bph(650){
-					position: absolute;
-					margin-top: 2.85rem;
-				}
+			@include bph(650){
+				position: absolute;
+				margin-top: 2.85rem;
 			}
 
 
