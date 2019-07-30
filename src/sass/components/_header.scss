@@ -53,6 +53,10 @@
 	  justify-content: center;
 	  align-items: center;
 	  cursor: pointer;		
+		
+		@include bp(767){
+			border: none;
+		}
 
 
 
@@ -137,6 +141,10 @@
 			.header__rectangle--2:hover &{
 		    width: 11rem;
 		    height: 8.00rem;    
+			}
+
+			@include bp(767){
+				border: none;
 			}
 		}
 	}
