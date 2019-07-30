@@ -1306,9 +1306,6 @@ b {
     overflow: visible;
     left: 50%;
     transform: translateX(-50%); }
-    @media only screen and (max-width: 1440px) {
-      .line__wrapper {
-        width: 83.333%; } }
     .line__wrapper--x {
       height: 100%;
       width: 100%;
