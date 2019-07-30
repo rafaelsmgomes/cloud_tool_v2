@@ -2,9 +2,10 @@
 	&__wrapper{
     height: 5.00rem;
     width: 70rem;
-    // @include bp(1440){
-    //   width: 83.333%;
-    // }
+    @include bp(1440){
+      width: 83.333%;
+    }
+    
     position: absolute;
 		z-index: 1;
     overflow: visible;			
