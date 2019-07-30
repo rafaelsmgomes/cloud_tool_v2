@@ -9,6 +9,7 @@ export const progressScrollerContent = slider => {
 	e.thisScrollElement(slider).addClass('scroller__content--deactive');
 	e.thisScrollElement(slider).removeClass('scroller__content--active');
 	e.thisNextScrollElement(slider).addClass('scroller__content--active');
+	
 
 	const pageHeight = func.returnNumOnly(e.pageContent.css('height'),2);
 
@@ -45,11 +46,11 @@ export const progressBtn = slider => {
 }
 
 function applySliderGroupShrink(sibling){
-
-	func.iterateObjSet(sibling, function(element, index){
-		let width = 97;
-		let opacity = .9;
-		$(element).css('width',`${width - (index*3)}%`);
-		$(element).css('opacity',`${opacity - (index*.2)}`);		
-	});	
+	// $('.scroller__content').css('transition-delay', '5s');
+	// func.iterateObjSet(sibling, function(element, index){
+	// 	let width = 97;
+	// 	let opacity = .9;
+	// 	$(element).css('width',`${width - (index*3)}%`);
+	// 	$(element).css('opacity',`${opacity - (index*.2)}`);				
+	// });	
 }
