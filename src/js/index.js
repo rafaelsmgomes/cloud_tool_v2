@@ -197,8 +197,8 @@ $(document).ready(function(){
 
 
 
-	// $('.btn__progress--6').click();
 
+	// $('.btn__progress--6').click();
 
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
