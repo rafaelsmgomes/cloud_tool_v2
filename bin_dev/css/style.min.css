@@ -1041,6 +1041,7 @@ b {
   height: 0;
   border-style: solid;
   border-width: 0 calc(93.5vh * .0175) calc(93.5vh * .5) calc(93.5vh * .0175);
+  cursor: grab;
   border-color: transparent transparent #00758f transparent;
   bottom: 0px;
   left: 50%;
@@ -1543,7 +1544,7 @@ b {
   @media only screen and (max-height: 1000px) {
     .scroller__content {
       height: .4rem;
-      transition: width 0.6s linear, opacity 0.6s linear; } }
+      transition: width 0.4s linear, opacity 0.4s linear; } }
   @media only screen and (max-width: 1350px) {
     .scroller__content {
       width: 97%; } }
@@ -1561,7 +1562,7 @@ b {
     padding-right: 0.86rem; }
     @media only screen and (max-height: 1000px) {
       .scroller__content--active {
-        transition: height 0.6s linear 1.1s; } }
+        transition: height 0.4s linear 0.9s; } }
     @media only screen and (max-width: 1440px) {
       .scroller__content--active {
         width: 100%; } }
@@ -1570,13 +1571,13 @@ b {
       opacity: 1; }
       @media only screen and (max-height: 1000px) {
         .scroller__content--active > * {
-          transition: opacity 0.6s linear 1.1s; } }
+          transition: opacity 0.4s linear 0.9s; } }
   @media only screen and (max-height: 1000px) {
     .scroller__content--deactive {
-      transition: width 0.6s linear, opacity 0.6s linear, height 0.4s linear 0.6s; } }
+      transition: width 0.4s linear, opacity 0.4s linear, height 0.2s linear 0.4s; } }
   @media only screen and (max-height: 1000px) {
     .scroller__content--deactive > * {
-      transition: opacity 0.6s linear; } }
+      transition: opacity 0.4s linear; } }
   .scroller__content:not(:last-of-type) {
     margin-bottom: 0.80rem; }
     @media only screen and (max-height: 1000px) {
@@ -1624,12 +1625,12 @@ b {
   align-items: center; }
   @media only screen and (max-height: 1000px) {
     .scroller__header {
-      transition: opacity 0.6s linear;
+      transition: opacity 0.4s linear;
       opacity: 0;
       height: 3.55rem; }
       .scroller__content--active .scroller__header {
         opacity: 1;
-        transition: opacity 0.6s linear 1.1s; } }
+        transition: opacity 0.4s linear 0.9s; } }
   .scroller__content--active .scroller__header {
     height: 3.3rem; }
     @media only screen and (max-width: 1150px) {
@@ -1664,7 +1665,7 @@ b {
       .rangeslider--horizontal {
         width: 100%;
         height: 0;
-        transition: all 0.2s linear 0.6s;
+        transition: all 0.2s linear 0.2s;
         border: solid 0 #cad9de;
         margin-top: 0.65rem; } }
     @media only screen and (max-width: 1350px) {
@@ -1676,7 +1677,7 @@ b {
       margin-top: 0.65rem; }
       @media only screen and (max-height: 1000px) {
         .scroller__content--active .rangeslider--horizontal {
-          transition: all 0.6s linear 1.5s; } }
+          transition: all 0.4s linear 1.3s; } }
   .rangeslider__fill {
     background: #324b5c;
     position: absolute;
@@ -1818,7 +1819,7 @@ b {
 
 .pathfinder {
   background-color: dodgerblue;
-  transition: all 800ms; }
+  transition: all 1100ms; }
 
 .footer {
   position: fixed;
@@ -1927,6 +1928,7 @@ b {
   .page--8 .page__content > * {
     opacity: 0;
     transition-property: opacity;
+    transition-delay: .5s;
     transition-duration: .5s; }
   .page .page__content > .cta__wrapper {
     transition-delay: .5s; }
