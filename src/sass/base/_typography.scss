@@ -41,17 +41,19 @@ b {
 		}
 
 
-		@include bp(1450){
-			@include bph(650){
-				margin-top: 1.00rem;
-				display: none;
-				&--x{
-					font-size: $font-size-6;
-					display: block;
-					height: 2.40rem;
-					text-align: left;
-					padding-left: 0;
-				}
+		@include bph(920){
+			width: 90%;
+			margin-top: 31.5%;
+		}
+		@include bph(650){
+			margin-top: 1.00rem;
+			display: none;
+			&--x{
+				font-size: $font-size-6;
+				display: block;
+				height: 2.40rem;
+				text-align: left;
+				padding-left: 0;
 			}
 		}
 
@@ -85,22 +87,20 @@ b {
 			display: none;
 		}
 
-	  @include bp(1450){
-			@include bph(650){
-				margin-top: 1.00rem;
-				display: none;				
+		@include bph(650){
+			margin-top: 1.00rem;
+			display: none;				
 
-				&--x{
-			    font-size: $font-size-4;
-			    height: 4.00rem;
-			    margin-top: 0.25rem;					
-					display: block;
-					padding: 0;
-					text-align: left;
-					width: 24.90rem;
-				}
+			&--x{
+			font-size: $font-size-4;
+			height: 4.00rem;
+			margin-top: 0.25rem;					
+				display: block;
+				padding: 0;
+				text-align: left;
+				width: 24.90rem;
 			}
-		}	
+		}
 	}
 	&__txt{
 		color: $color-white-1;
@@ -115,15 +115,23 @@ b {
 		  letter-spacing: normal;
 		  text-align: center;     
 	    margin-top: 27.25%;
-	    @include bp(1450){
-	    	@include bph(650){
-  		    height: 3.00rem;
-			    display: flex;
-			    justify-content: center;
-			    align-items: center;
-			    margin-top: 0;
-	    	}
-	    }
+	    
+		@include bph(920){
+			margin-top: 20%
+		}
+		@include bph(780){
+			margin-top: 15%
+		}
+		@include bph(700){
+			margin-top: 10%
+		}
+		@include bph(650){
+		height: 3.00rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0;
+		}
 		}
 	}
 }

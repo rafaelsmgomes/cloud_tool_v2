@@ -191,12 +191,14 @@ $(document).ready(function(){
 		// Change button item color
 		$('.header__rectangle--1 > img').attr('src',$('.header__rectangle--1 > img').attr( "alt"));
 		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
+		$('.grow--text').css('color', '#00758f'); 
+		$('.header__rectangle--grow').css('background-color', 'white'); 
 	});
 
 
 
-	$('.btn__progress--5').click();
 
+	// $('.btn__progress--6').click();
 
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
