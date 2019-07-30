@@ -153,9 +153,9 @@
     position: absolute;
     height: 0;
     border-style: solid;
-	border-width: 0 calc(#{$dial-large} * .0175) calc(#{$dial-large} * .5) calc(#{$dial-large} * .0175);
+		border-width: 0 calc(#{$dial-large} * .0175) calc(#{$dial-large} * .5) calc(#{$dial-large} * .0175);
 
-
+		cursor: grab;
     border-color: transparent transparent $color-blue-1 transparent;
     bottom: 0px;
     left: 50%;
