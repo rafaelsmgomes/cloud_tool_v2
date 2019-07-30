@@ -42,7 +42,7 @@ export const animateFwd = (btnVal) => {
 		$('.btn__regress').attr('context', '2')
 
 		setTimeout(function(){
-			$('.btn__regress').addClass('rotate');
+			// $('.btn__regress').addClass('rotate');
 			$('.page--4').addClass('activate');
 			$('.line--5, .line--6, .line--7').addClass('activate');
 			$('.footer').addClass('activate');
@@ -89,7 +89,7 @@ export const animateFwd = (btnVal) => {
 		$('.btn__regress').attr('context', '5')
 
 		setTimeout(function(){
-			$('.btn__regress').removeClass('rotate');
+			// $('.btn__regress').removeClass('rotate');
 			$('.page--7').addClass('activate');
 			$('.line--10, .line--11').addClass('activate');
 			$('.footer').addClass('activate');
