@@ -1459,7 +1459,8 @@ b {
   cursor: pointer;
   padding-left: .3rem;
   padding-right: .45rem;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  text-decoration: none; }
   .sidebar__btn > * {
     color: #324b5c; }
   .sidebar__btn > .btn__arrow {
