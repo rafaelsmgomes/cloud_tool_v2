@@ -10,6 +10,10 @@
 	
 		@include bp_min(1441){
 			left: 53.4rem;
+	
+			.main-container--x &{
+		    left: 46.4rem;
+			}
 		}
 		@include bp(1250){
 			left: 59vw;

@@ -22,6 +22,7 @@ export const e = {
 	peersValue: $('#peersValue'),
 	page: $('.page'),
 	pageContent: $(".page__content"),
+	pathfinder: $('.pathfinder'),
 	results__copy: $('.results__copy'),
 	body: $('body'),
 
