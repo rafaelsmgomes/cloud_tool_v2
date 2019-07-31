@@ -16,6 +16,8 @@
 		transform: translateY(-50%);
 		margin-top: calc((100vh - 17rem) / 2);
 
+		
+
 		&--2{
 			margin-top: calc((100vh - 20.1rem) / 2);
 
@@ -116,6 +118,12 @@
 			@include bp(1440){
 				
 			}
+		}
+
+		&--x{
+			margin-top: 2.00rem;
+			transform: none;
+			height: 21.85rem;
 		}
 	}
 

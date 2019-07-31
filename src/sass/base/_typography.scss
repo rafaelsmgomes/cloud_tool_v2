@@ -226,6 +226,15 @@ b {
 
 		}
 
+		&--7{
+			width: 41.40rem;
+		  height: 6.60rem;
+		  font-family: $font-reg;	
+		  & > b{
+				font-family: $font-b;
+		  }
+		}
+
 	}
 	&__direction{	 
 	  font-family: $font-reg;
@@ -237,7 +246,7 @@ b {
 	  letter-spacing: normal;
 	  color: #fff;		
 		margin-top: 0.80rem;
-		
+
 		@include bp(1440){
 		  width: 39.55rem;
 		  font-family: $font-reg;
@@ -261,8 +270,18 @@ b {
 			}
 		}
 
+		& > b{
+			display: block;
+			font-family: $font-b;
+		}
+
+
 		&--1{
 			width: 21.30rem;
+		}
+
+		&--2{
+			width: 35%;
 		}
 	}
 }
