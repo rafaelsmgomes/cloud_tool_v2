@@ -1,5 +1,6 @@
 export const resizeLines = () => {	
 	const width = $('.page__content').width();
+	const screenWidth = $(window).width();
 	const height = $('.page').height();
 	const circleSize = $('.landing__container').height();
 
@@ -24,12 +25,19 @@ export const resizeLines = () => {
 
 	let y5_results = 3783.8; // Results Page
 
-	if(height >= 1080){
-		y1_start = 14.35*20 + 646;
-	} else if(height <= 810 && height >= 651){
-		y1_start = 154+circleSize;
-	} else if(height <= 650){
+	// if(height >= 1080){
+	// 	y1_start = 14.35*20 + circleSize;
+	// } else if(height <= 810 && height >= 651){
+	// 	y1_start = 154+circleSize;
+	// } else if(height <= 650){
+	// 	y1_start = 14.55*20 + circleSize;
+	// }; 
+	if(height <= 650 || screenWidth <= 600){
 		y1_start = 14.55*20 + circleSize;
+	} else if(height <= 810){
+		y1_start = 154+circleSize;
+	} else if(height >= 1080){
+		y1_start = 10.1*20 + circleSize;
 	}; 
 
 
