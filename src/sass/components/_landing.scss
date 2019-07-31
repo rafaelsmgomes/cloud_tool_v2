@@ -13,6 +13,11 @@
     align-items: center;
 	cursor: pointer;
 	
+	@include bp(910){
+		max-width: 83.33vw;
+		max-height: 83.33vw;
+	}
+	
 	@include bph(810){
 		margin-top: 3.5rem;
 	}
