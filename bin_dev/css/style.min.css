@@ -787,9 +787,11 @@ b {
       left: 24vw; } }
   @media only screen and (max-width: 767px) {
     .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
-      left: 52vw; } }
+      left: 52vw;
+      display: none; } }
   @media only screen and (max-width: 767px) and (min-height: 750px) {
     .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
+      display: block;
       top: 220%;
       left: 24vw; } }
   .cta__wrapper--3 {
