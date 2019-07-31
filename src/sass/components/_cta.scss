@@ -166,6 +166,10 @@
 				top: 24.2rem;
 			}
 		}
+
+		@include bp(767){
+			display: none;
+		}
 	}
 
 	&__btn{
