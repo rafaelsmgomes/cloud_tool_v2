@@ -50,6 +50,13 @@
 					left: 24vw;
 				}
 			}
+			@include bp(767){
+				left: 52vw;
+				@include bph_min(750){
+					top: 220%;
+					left: 24vw;
+				}
+			}
 		}	
 
 		&--3{

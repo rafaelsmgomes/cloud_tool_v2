@@ -469,6 +469,13 @@ b {
 					width: 20rem;
 				}
 			}
+
+			@include bp(767){
+				width: 10rem;
+				@include bph_min(750){
+					width: 15rem;
+				}
+			}
 		}
 
 
