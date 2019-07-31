@@ -477,6 +477,12 @@ b {
 @media only screen and (max-width: 1440px) and (min-height: 1000px) {
   .cta__txt--1, .cta__txt--2, .cta__txt--3, .cta__txt--4 {
     width: 20rem; } }
+  @media only screen and (max-width: 767px) {
+    .cta__txt--1, .cta__txt--2, .cta__txt--3, .cta__txt--4 {
+      width: 10rem; } }
+  @media only screen and (max-width: 767px) and (min-height: 750px) {
+    .cta__txt--1, .cta__txt--2, .cta__txt--3, .cta__txt--4 {
+      width: 15rem; } }
 
 .cta-group__title {
   height: 1.70rem;
@@ -792,6 +798,15 @@ b {
     .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
       top: 200%;
       left: 24vw; } }
+  @media only screen and (max-width: 767px) {
+    .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
+      left: 52vw;
+      display: none; } }
+  @media only screen and (max-width: 767px) and (min-height: 750px) {
+    .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
+      display: block;
+      top: 220%;
+      left: 24vw; } }
   .cta__wrapper--3 {
     transform: translateY(0%);
     top: 15.1rem;
@@ -925,6 +940,13 @@ b {
     border: solid 0.1rem #fff; }
   .btn__regress.rotate {
     transform: rotate(180deg); }
+  .btn__regress .hamburguer {
+    display: none; }
+  @media only screen and (max-width: 767px) {
+    .btn__regress .arrow {
+      display: none; }
+    .btn__regress .hamburguer {
+      display: block; } }
   .btn__regress--2, .btn__regress--5 {
     margin-top: 4.80rem; }
   .btn__regress--3, .btn__regress--6 {
@@ -1098,10 +1120,8 @@ b {
   .dial__context--wrapper {
     display: flex; }
     .dial__context--wrapper--1 {
-      padding-left: 7.75%; }
-      @media only screen and (max-height: 650px) {
-        .dial__context--wrapper--1 {
-          width: 13rem; } }
+      padding-left: 7.75%;
+      width: 13rem; }
     .dial__context--wrapper--2 {
       padding-right: 7.75%; }
 
@@ -1211,6 +1231,9 @@ b {
   margin-right: 1.25rem;
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 767px) {
+    .header__copyright {
+      display: none; } }
 
 .header__rectangle {
   flex: 0 0 2rem;
@@ -1228,6 +1251,9 @@ b {
     border: solid .1rem transparent;
     transition-delay: 0s;
     z-index: 1000; }
+  @media only screen and (max-width: 767px) {
+    .header__rectangle {
+      border: none; } }
   .header__rectangle:not(:first-of-type) {
     margin-left: 1.20rem; }
   .header__rectangle--1 {
@@ -1244,6 +1270,11 @@ b {
     flex: 0 0 1.20rem;
     height: 1.2rem;
     z-index: 10; }
+  @media only screen and (max-width: 767px) {
+    .header__rectangle--1, .header__rectangle--3 {
+      display: none; }
+      .header__rectangle--1.toggle, .header__rectangle--3.toggle {
+        display: none; } }
   .header__rectangle--grow {
     position: absolute;
     width: 2.00rem;
@@ -1270,6 +1301,9 @@ b {
     .header__rectangle--2:hover .header__rectangle--grow {
       width: 11rem;
       height: 8.00rem; }
+    @media only screen and (max-width: 767px) {
+      .header__rectangle--grow {
+        border: none; } }
 
 .header__bar {
   font-size: 1.4rem;
@@ -1862,9 +1896,6 @@ b {
   @media only screen and (max-width: 1440px) {
     .footer {
       width: 83.333%; } }
-  @media only screen and (max-width: 1024px) {
-    .footer {
-      width: 42.09rem; } }
 
 .header__container {
   position: fixed;
