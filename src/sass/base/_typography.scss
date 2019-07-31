@@ -45,6 +45,10 @@ b {
 			width: 90%;
 			margin-top: 31.5%;
 		}
+		@include bph(775){
+			width: 95%;
+			margin-top: 26%;
+		}
 		@include bph(650){
 			margin-top: 1.00rem;
 			display: none;

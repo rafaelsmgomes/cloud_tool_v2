@@ -23,10 +23,18 @@ export const resizeLines = () => {
 
 	let y5_results = 3783.8; // Results Page
 
-
 	if(height >= 1080){
-		y1_start = 14.35*20 + 645;
+		y1_start = 14.35*20 + 646;
+	} else if(height <= 810){
+		y1_start = 150+.6833*height;
+	} else if(height <= 650){
+		y1_start = 14.35*20 + .4083*height;
 	}
+	// if(height <= 650){
+	// 	y1_start = 14.35*20 + .4083*height;
+	// } else if(height >= 1080){
+	// 	y1_start = 14.35*20 + 646;
+	// } else if()
 
 	//Line for Page 1
 	$('.line--1').attr({
