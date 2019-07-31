@@ -1,6 +1,7 @@
 export const resizeLines = () => {	
 	const width = $('.page__content').width();
 	const height = $('.page').height();
+	const circleSize = $('.landing__container').height();
 
 	/*** THIS IS example for size 1, I multiplied, (4x20) + (5.7x20) + 2 + (.6833 * height) ***/ 
 		// let size1 = `calc(4rem + 5.7rem + 2px + 68.33vh)`;
@@ -15,7 +16,7 @@ export const resizeLines = () => {
 	let x8_q5_constWidth = - 5542; // Activation point and Constant Down
 	let x9_q6 = - 3681; // Line Activated
 	
-	let y1_start = 80+114+2+.6833*height;
+	let y1_start = 80+114+4+ circleSize;
 	let y2_constHeight = 1000 + 1*height - 35.00; // Constant Height for Q1
 	let y3_constHeight = 2000 + 1*height - 35; // Constant height for Q2
 	let y4_constHeight = - 3000 + 1*height - 35; // Constant height for Q3, Q4 and Q5
@@ -25,11 +26,13 @@ export const resizeLines = () => {
 
 	if(height >= 1080){
 		y1_start = 14.35*20 + 646;
-	} else if(height <= 810){
-		y1_start = 150+.6833*height;
+	} else if(height <= 810 && height >= 651){
+		y1_start = 154+circleSize;
 	} else if(height <= 650){
-		y1_start = 14.35*20 + .4083*height;
-	}
+		y1_start = 14.55*20 + circleSize;
+	}; 
+
+
 	// if(height <= 650){
 	// 	y1_start = 14.35*20 + .4083*height;
 	// } else if(height >= 1080){
