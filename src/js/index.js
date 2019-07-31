@@ -252,9 +252,9 @@ $(document).ready(function(){
 	});
 
 /****** DIAL CONTROLLER ******/
-	state.dial1 = new Dial();
-	state.dial2 = new Dial();
-	state.dial3 = new Dial();
+	state.dial1 = new Dial(); // do state.dial1.val to retrieve user's answer
+	state.dial2 = new Dial(); // do state.dial2.val to retrieve user's answer
+	state.dial3 = new Dial(); // do state.dial3.val to retrieve user's answer
 
 	e.dialTracker.knob({
     'min':0,
@@ -270,7 +270,6 @@ $(document).ready(function(){
 
     'change' : function (v) {
       const self = $(this);
-
 	 		dial.dialRotator(self,v);
 			dial.dialContextualize(self,v);
     },
@@ -281,7 +280,7 @@ $(document).ready(function(){
 
 	 		this.dial.changeValue(v);
 
-	  dial.progressBtn(self);
+	  	dial.progressBtn(self);
     },
 	});
 
