@@ -52,7 +52,9 @@
 			}
 			@include bp(767){
 				left: 52vw;
+				display: none;
 				@include bph_min(750){
+					display: block;
 					top: 220%;
 					left: 24vw;
 				}
