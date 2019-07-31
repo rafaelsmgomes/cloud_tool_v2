@@ -17,5 +17,7 @@ export const movePathfinderX = (btn) => {
   }else{
   	$('.header__nav--btn--2').attr('context',Number($('.header__nav--btn--2').attr('context'))-1);
   	$('.header__nav--btn--1').attr('context',Number($('.header__nav--btn--1').attr('context'))-1);
-  }
+  };
+
+  
 };

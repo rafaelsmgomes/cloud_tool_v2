@@ -299,6 +299,12 @@ b {
 @media only screen and (max-width: 1024px) and (max-height: 570px) {
   .main__title--3, .main__title--5, .main__title--6 {
     display: none; } }
+  .main__title--7 {
+    width: 41.40rem;
+    height: 6.60rem;
+    font-family: Univers, Arial, Helvetica, sans-serif; }
+    .main__title--7 > b {
+      font-family: UniversB, Arial, Helvetica, sans-serif; }
 
 .main__direction {
   font-family: Univers, Arial, Helvetica, sans-serif;
@@ -330,8 +336,13 @@ b {
   @media only screen and (max-width: 1024px) and (max-height: 525px) {
     .main__direction {
       width: 22.5rem; } }
+  .main__direction > b {
+    display: block;
+    font-family: UniversB, Arial, Helvetica, sans-serif; }
   .main__direction--1 {
     width: 21.30rem; }
+  .main__direction--2 {
+    width: 35%; }
 
 .pagination__num {
   flex: 0 0 0.55rem;
@@ -748,7 +759,9 @@ b {
   transform: translate(0%, -100%); }
   @media only screen and (min-width: 1441px) {
     .cta__wrapper {
-      left: 53.4rem; } }
+      left: 53.4rem; }
+      .main-container--x .cta__wrapper {
+        left: 46.4rem; } }
   @media only screen and (max-width: 1250px) {
     .cta__wrapper {
       left: 59vw; } }
@@ -1010,6 +1023,10 @@ b {
 @media only screen and (min-width: 1441px) and (max-height: 680px) {
   .dial-group--2 {
     margin-top: calc((100vh - 15rem) / 2); } }
+  .dial-group--x {
+    margin-top: 2.00rem;
+    transform: none;
+    height: 21.85rem; }
 
 .dial-tracker__wrapper {
   width: 100%;
