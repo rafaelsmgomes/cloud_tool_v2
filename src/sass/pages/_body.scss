@@ -33,6 +33,10 @@
 				padding-top: 3.00rem;
 			}
 		}
+		@include bp(767){
+			width: 100%;
+			padding: 4rem .8rem 0 .8rem;
+		}
 
 
 		.page--2 & > *,
