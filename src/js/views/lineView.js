@@ -24,10 +24,8 @@ export const resizeLines = () => {
 	let y5_results = 3783.8; // Results Page
 
 
-	if(width <= 1450 && height <= 650){
-		// size1 = 14.35rem + 40.83vh;
-		y1_start = 14.35*20 + .4083*height;
-		y2_constHeight = 1000 + 1*height - 35.00;
+	if(height >= 1080){
+		y1_start = 14.35*20 + 645;
 	}
 
 	//Line for Page 1
