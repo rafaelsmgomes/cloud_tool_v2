@@ -22,6 +22,14 @@
 		margin-top: 3.5rem;
 	}
     
+	@include bp(600){
+		height: 40.83vh;
+		width: 40.83vh;
+			max-width: 15.00rem;
+			max-height: 15.00rem;
+			justify-content: center;    	
+			margin-top: 2.7rem;	
+	}
 	@include bph(650){
 		height: 40.83vh;
 		width: 40.83vh;
