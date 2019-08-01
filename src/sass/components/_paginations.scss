@@ -24,5 +24,8 @@
     bottom: 3.00rem;
     right: 0;
 	}
+	@include bp(767){
+    right: 0.8rem;
+	}
 
 }

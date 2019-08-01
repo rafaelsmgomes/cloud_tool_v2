@@ -5,6 +5,10 @@
     @include bp(1440){
       width: 83.333%;
     }
+    @include bp(767){
+      width: 100%;
+      padding: 0 .8rem;
+    }
 
     position: absolute;
 		z-index: 1;

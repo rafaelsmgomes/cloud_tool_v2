@@ -40,22 +40,72 @@ b {
 			display: none;
 		}
 
+		// Width BreakPoints
+		@include bp(767){
+				width: 90%;
+				margin-top: 31.5%;
+				font-size: $font-size-4;
+		}
 
+		//Height BreakPoints
 		@include bph(920){
 			width: 90%;
 			margin-top: 31.5%;
 		}
-		@include bph(650){
+		@include bph(775){
+			width: 95%;
+			margin-top: 26%;
+		}
+		@include bp(767){
+			font-size: $font-size-4;
+			width: 17.15rem;
+			@include bph_min(650){
+				font-size: $font-size-6;
+				width: 90%;	
+				margin-top: 33%;
+			}
+		}
+		@include bp(600){
 			margin-top: 1.00rem;
 			display: none;
 			&--x{
-				font-size: $font-size-6;
+				font-size: $font-size-4;
+				width: 17.15rem;
+
 				display: block;
 				height: 2.40rem;
 				text-align: left;
 				padding-left: 0;
 			}
 		}
+		@include bph(650){
+			margin-top: 1.00rem;
+			display: none;
+			&--x{
+				font-size: $font-size-4;
+				width: 17.15rem;
+
+				display: block;
+				height: 2.40rem;
+				text-align: left;
+				padding-left: 0;
+
+				@include bp(767){
+					font-size: $font-size-4;
+					width: 17.15rem;
+	
+				}
+			}
+		}
+		@include bph(435){
+			height: auto;
+		}
+		@include bph(375){
+			height: 2.40rem;
+		}
+
+
+
 
 	  &--fadeout{	  	
 			opacity: 0;	
@@ -87,6 +137,20 @@ b {
 			display: none;
 		}
 
+		@include bp(600){
+			margin-top: 1.00rem;
+			display: none;				
+
+			&--x{
+			font-size: $font-size-4;
+			height: 4.00rem;
+			margin-top: 0.25rem;					
+				display: block;
+				padding: 0;
+				text-align: left;
+				width: 24.90rem;
+			}
+		}
 		@include bph(650){
 			margin-top: 1.00rem;
 			display: none;				
@@ -100,6 +164,11 @@ b {
 				text-align: left;
 				width: 24.90rem;
 			}
+		}
+		@include bp(767){
+			font-size: $font-size-2;
+			height: auto;
+			width: 17.15rem;
 		}
 	}
 	&__txt{
@@ -116,6 +185,10 @@ b {
 		  text-align: center;     
 	    margin-top: 27.25%;
 	    
+		@include bp(767){
+			margin-top: 20%;
+		}
+				
 		@include bph(920){
 			margin-top: 20%
 		}
@@ -124,6 +197,13 @@ b {
 		}
 		@include bph(700){
 			margin-top: 10%
+		}
+		@include bp(600){
+		height: 3.00rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0;
 		}
 		@include bph(650){
 		height: 3.00rem;
@@ -169,6 +249,9 @@ b {
 			@include bph(525){
 				font-size: 1.25rem;
 			}
+		}
+		@include bp(767){
+			font-size: $font-size-4;
 		}
 			
 
