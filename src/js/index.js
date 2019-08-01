@@ -41,7 +41,7 @@ $(document).ready(function(){
 
 
 	if(sessionStorage.dial2){
-		console.log('here');
+		dr.displayResults(sessionStorage);
 	};
 	// if(sessionStorage.dial2){
 	// 	// dr.displayResults(sessionStorage);
