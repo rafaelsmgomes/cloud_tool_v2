@@ -62,6 +62,7 @@ b {
 			@include bph_min(650){
 				font-size: $font-size-6;
 				width: 90%;	
+				margin-top: 33%;
 			}
 		}
 		@include bp(600){
@@ -248,6 +249,9 @@ b {
 			@include bph(525){
 				font-size: 1.25rem;
 			}
+		}
+		@include bp(767){
+			font-size: $font-size-4;
 		}
 			
 
