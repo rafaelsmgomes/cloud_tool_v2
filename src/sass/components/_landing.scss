@@ -8,42 +8,58 @@
 		max-height: 36.90rem;
 		border: solid 2px $color-blue-3;
 		border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		cursor: pointer;
 	
-	@include bp(910){
-		max-width: 83.33vw;
-		max-height: 83.33vw;
-	}
-	
-	@include bph(810){
-		margin-top: 3.5rem;
-	}
-    
-	@include bp(600){
-		height: 40.83vh;
-		width: 40.83vh;
-			max-width: 15.00rem;
-			max-height: 15.00rem;
-			justify-content: center;    	
-			margin-top: 2.7rem;	
-	}
-	@include bph(650){
-		height: 40.83vh;
-		width: 40.83vh;
-			max-width: 15.00rem;
-			max-height: 15.00rem;
-			justify-content: center;    	
-			margin-top: 2.7rem;	
-	}
-
 		&--fadeout{
 			transition-property: border-color;
-	    transition-duration: 0.5s;			
-	    border-color: transparent;			
+		transition-duration: 0.5s;			
+		border-color: transparent;			
 		}
+
+
+		@include bp(910){
+			max-width: 83.33vw;
+			max-height: 83.33vw;
+		}
+	
+		@include bph(810){
+			margin-top: 3.5rem;
+		}
+    
+		@include bp(600){
+			height: 40.83vh;
+			width: 40.83vh;
+				max-width: 15.00rem;
+				max-height: 15.00rem;
+				justify-content: center;    	
+				margin-top: 2.7rem;	
+		}
+		@include bph(650){
+			height: 40.83vh;
+			width: 40.83vh;
+				max-width: 15.00rem;
+				max-height: 15.00rem;
+				justify-content: center;    	
+				margin-top: 2.7rem;	
+		}
+		@include bph(500){
+			margin-top: 1.5rem;	
+		}
+		@include bph(435){
+			margin-top: 1rem;	
+		}
+		@include bph(375){
+			height: 67.1vh;
+			width: 67.1vh;
+
+			position: absolute;
+			top: 1.9rem;
+			right: 2.2rem;
+		}
+
 
 	}
 	&__img{

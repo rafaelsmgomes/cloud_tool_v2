@@ -81,7 +81,9 @@ b {
 			margin-top: 1.00rem;
 			display: none;
 			&--x{
-				font-size: $font-size-6;
+				font-size: $font-size-4;
+				width: 17.15rem;
+
 				display: block;
 				height: 2.40rem;
 				text-align: left;
@@ -94,6 +96,13 @@ b {
 				}
 			}
 		}
+		@include bph(435){
+			height: auto;
+		}
+		@include bph(375){
+			height: 2.40rem;
+		}
+
 
 
 
