@@ -32,7 +32,18 @@ export const resizeLines = () => {
 	// } else if(height <= 650){
 	// 	y1_start = 14.55*20 + circleSize;
 	// }; 
-	if(height <= 650 || screenWidth <= 600){
+	
+
+	if(height <= 375) {
+		y1_start = 3.2*20 + circleSize;
+		x1_center = screenWidth - 60 - circleSize/2 ;
+	} else if(height <= 435) {
+		y1_start = 10.3*20 + circleSize;		
+	} else if(height <= 500) {
+		y1_start = 11.65*20 + circleSize;		
+	} else if(height <= 650 && screenWidth <= 767){
+		y1_start = 12.85*20 + circleSize;
+	} else if(height <= 650 || screenWidth <= 600){
 		y1_start = 14.55*20 + circleSize;
 	} else if(height <= 810){
 		y1_start = 154+circleSize;
