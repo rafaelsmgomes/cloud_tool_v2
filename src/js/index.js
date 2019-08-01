@@ -16,6 +16,7 @@ import SliderGroup from './models/Slider';
 
 import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
+import * as dr from './views/detailedResults.js';
 import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
 import * as header from './views/headerView';
@@ -34,7 +35,25 @@ import userJson from './userCloud.json';
 import scrollJson from './scrollDown.json';
 
 $(document).ready(function(){
- 	const state = {};	
+ 	const state = {};
+
+/**************** DETAILED PAGE CONTROLLER ********************/
+
+
+	if(sessionStorage.dial2){
+		console.log('here');
+	};
+	// if(sessionStorage.dial2){
+	// 	// dr.displayResults(sessionStorage);
+	// 	console.log('not hererer');
+	// }else{
+	// 	alert('ITS HEREEE!');
+	// };
+
+ // 	$(window).on('load',function(){
+	// 	alert('teadfasta');
+	// });	
+
 /****** DETAILED MAP CONTROLLER ******/
 	$('.detailed__square').on('click',function(){
 		const self = $(this);
@@ -42,8 +61,6 @@ $(document).ready(function(){
 		const context = $(`.page--${val}`);
 		const nextTop = Number(context.css('top').slice(0,-2))*-1;
 		const nextLeft = Number(context.css('left').slice(0,-2))*-1;		
-
-		console.log(nextTop, nextLeft);
 
 		context.addClass('activate');
 		
@@ -103,7 +120,7 @@ $(document).ready(function(){
 	  loop: true,
 	});	
 
-	console.log(scrollTip.isPaused);
+
 
 
 
@@ -121,7 +138,7 @@ $(document).ready(function(){
 
 	page.reformWandH(state.width, state.height);
 
-	console.log(state.height);
+	
 	line.resizeLines();
 
 	$(window).on('resize',function(){
@@ -212,9 +229,7 @@ $(document).ready(function(){
 		const hdrValue = $(this).attr('context');
 		const nextSection = $(`.page--${Number(hdrValue)+1}`);
 		const nextLeft = nextSection.css('left').slice(0, -2);
-		const nextTop = nextSection.css('top').slice(0, -2);
-
-		console.log(nextLeft,nextTop);
+		const nextTop = nextSection.css('top').slice(0, -2);		
 
 		$('.pathfinder').css('transform',`translate(${Number(nextLeft)*-1}px,${Number(nextTop)*-1}px)`);
 
@@ -381,30 +396,20 @@ $(document).ready(function(){
 
 
 /****************  ELOQUA CONTROLLER  ********************/
-	// $('.detailed-score__btn').on('click',function(){
-	// 	css.displayEloqua();
-	// });
+	$('.detailed-score__btn').on('click',function(){
+		css.displayEloqua();
+		sessionStorage.dial1=state.dial1.val;
+		sessionStorage.dial2=state.dial2.val;
+		sessionStorage.dial3=state.dial3.val;
+		sessionStorage.selector1=state.selected.choices;
+		sessionStorage.slider1=state.slider1.val;
+		sessionStorage.slider2=state.slider2.val;
+	});
+/**************** SESSION STORAGE CONTROLLER ********************/
 
-/****************  DISABLE ZOOM IN  ********************/
-// $(window).keydown(function(event) {
-// 	console.log(event);
-// 	if (event.ctrlKey==true && (event.which == '17' || event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
-//         console.log('');
-//         event.preventDefault();
-//  	}
-//     // 107 Num Key  +
-//     // 109 Num Key  -
-//     // 173 Min Key  hyphen/underscor Hey
-//     // 61 Plus key  +/= key
-// });
-
-// $(window).bind('mousewheel DOMMouseScroll', function (event) {
-//        if (event.ctrlKey == true) {
-//        event.preventDefault();
-//        }
-// });
-	
-
+	$('.header__rectangle--1').on('click', function(){
+		sessionStorage.clear();
+	})
 
 });
 
