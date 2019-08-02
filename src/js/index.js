@@ -37,12 +37,10 @@ import scrollJson from './scrollDown.json';
 $(document).ready(function(){
  	const state = {};
 
- 	PeersData.displaySpecifics();
-
 /**************** DETAILED PAGE CONTROLLER ********************/
 
-	if(sessionStorage.dial2){
-		dr.displayResults(sessionStorage);
+	if(sessionStorage.dial2){	
+		dr.displayResults(sessionStorage, PeersData.retrievePeerScore);
 	};
 
 /****** DETAILED MAP CONTROLLER ******/

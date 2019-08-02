@@ -1,4 +1,6 @@
-export const displayResults = (session) => {
+
+
+export const displayResults = (session, peer) => {
 	$('#result-ex--1').append(
 		`<span class='block'>${session.dial1}</span>` 
 	);
@@ -16,5 +18,24 @@ export const displayResults = (session) => {
 	);
 	$('#result-ex--6').append(
 		`<span class='block'>${session.slider2}</span>` 
+	);
+
+	$('#result-peer--1').append(
+		`<span class='block'>${peer['1']}</span>`
+	);
+	$('#result-peer--2').append(
+		`<span class='block'>${peer['2']}</span>`
+	);
+	$('#result-peer--3').append(
+		`<span class='block'>${peer['3']}</span>`
+	);
+	$('#result-peer--4').append(
+		`<span class='block'>${peer['4']}</span>`
+	);
+	$('#result-peer--5').append(
+		`<span class='block'>${peer['5']}</span>`
+	);
+	$('#result-peer--6').append(
+		`<span class='block'>${peer['6']}</span>`
 	);
 };
