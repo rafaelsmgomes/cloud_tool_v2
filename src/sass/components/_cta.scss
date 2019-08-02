@@ -124,12 +124,21 @@
 				@include bph(570){
 					display: none;
 				}
-				@include bph_min(651){
-					// top: 13.9rem;
-				}
 				@include bph_min(850){
 					top: calc((100vh + 19rem) / 2);
-					right: -8rem;
+				} 
+			}
+			@include bp(910){
+				@include bph(660){
+					top: 9.2rem
+				}
+				@include bph(600){
+					display: none;
+				}
+				@include bph_min(850){
+					top: calc((100vh + 19.5rem) / 2);
+					right: auto;
+					left: 5.7rem;
 				}
 			}
 		}
