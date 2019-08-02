@@ -303,24 +303,19 @@ $(document).ready(function(){
 		dial.lineResize();
 	});
 
-  // $('.dial-tracker--1').data('context', true);
-
   $( ".dial-tracker__wrapper" ).mousemove(function( event ) {
-	  // var pageCoords = "( " + event.pageX + ", " + event.pageY + " )";
-	  // var clientCoords = "( " + event.clientX + ", " + event.clientY + " )";
-
-	  // console.log(event.pageX, 'this is page x', event.pageY, 'this is page y');
-
-
-	  // console.log(*Math.atan((event.pageX-633.5)/(event.pageY-819)));
-	  var dy = 819 - event.pageY;
-		var dx = 633.5 - event.pageX;
-		var theta = Math.atan2(dy, dx); // range (-PI, PI]
+	  const dy = 819 - event.pageY;
+		const dx = 633.5 - event.pageX;
+		let theta = Math.atan2(dy, dx); // range (-PI, PI]
 		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
-		console.log(theta);
 
+		const dial = $(this).find('.dial-tracker'); 
 
-
+		dial.data('context', true);
+		dial.val(theta).trigger('change');
+		
+		// $('.dial-tracker').data('context', true);
+		// $('.dial')
 	});
 
 
