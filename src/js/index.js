@@ -43,16 +43,6 @@ $(document).ready(function(){
 	if(sessionStorage.dial2){
 		dr.displayResults(sessionStorage);
 	};
-	// if(sessionStorage.dial2){
-	// 	// dr.displayResults(sessionStorage);
-	// 	console.log('not hererer');
-	// }else{
-	// 	alert('ITS HEREEE!');
-	// };
-
- // 	$(window).on('load',function(){
-	// 	alert('teadfasta');
-	// });	
 
 /****** DETAILED MAP CONTROLLER ******/
 	$('.detailed__square').on('click',function(){
@@ -222,7 +212,7 @@ $(document).ready(function(){
 
 
 
-	// $('.btn__progress--6').click();
+	$('.btn__progress--1').click();
 
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
@@ -282,11 +272,13 @@ $(document).ready(function(){
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
 
-
-    'change' : function (v) {
+    'change' : function (v,context) {
+    	// console.log(v, 'change');
       const self = $(this);
 	 		dial.dialRotator(self,v);
-			dial.dialContextualize(self,v);
+			dial.dialContextualize(self,v);			
+			this.context = (self[0].$div.prevObject.data('context'));
+			
     },
     'release': function (v){
       const self = $(this);
@@ -295,7 +287,9 @@ $(document).ready(function(){
 
 	 		this.dial.changeValue(v);
 
-	  	dial.progressBtn(self);
+	 		if(this.context=== false){
+	  		dial.progressBtn(self);
+    	}
     },
 	});
 
@@ -307,6 +301,26 @@ $(document).ready(function(){
 		dial.changeDialText();
 		dial.handResize();
 		dial.lineResize();
+	});
+
+  // $('.dial-tracker--1').data('context', true);
+
+  $( ".dial-tracker__wrapper" ).mousemove(function( event ) {
+	  // var pageCoords = "( " + event.pageX + ", " + event.pageY + " )";
+	  // var clientCoords = "( " + event.clientX + ", " + event.clientY + " )";
+
+	  // console.log(event.pageX, 'this is page x', event.pageY, 'this is page y');
+
+
+	  // console.log(*Math.atan((event.pageX-633.5)/(event.pageY-819)));
+	  var dy = 819 - event.pageY;
+		var dx = 633.5 - event.pageX;
+		var theta = Math.atan2(dy, dx); // range (-PI, PI]
+		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+		console.log(theta);
+
+
+
 	});
 
 
