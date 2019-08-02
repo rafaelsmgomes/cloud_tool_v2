@@ -282,7 +282,6 @@ $(document).ready(function(){
     },
     'release': function (v){
       const self = $(this);
-      console.log(self);
 	 		this.selfID = self[0].$div.prevObject.data('id');
 	 		this.dial = assignDial(this.selfID);
 
@@ -306,8 +305,12 @@ $(document).ready(function(){
 
 
   $( ".dial-tracker__wrapper" ).mousemove(function( event ) {
-	  const dy = 819 - event.pageY;
-		const dx = 633.5 - event.pageX;
+
+  	const yAxis = func.returnNumOnly($('.dial-group').css('height'),2)+func.returnNumOnly($('.dial-group').css('margin-top'),2)+func.returnNumOnly($('.page__content').css('padding-top'),2);
+  	const xAxis = func.returnNumOnly($('.page__content').css('margin-left'),2)+func.returnNumOnly($('.dial-group').css('height'),2);
+  	
+	  const dy = yAxis - event.pageY;
+		const dx = xAxis - event.pageX;
 		let theta = Math.atan2(dy, dx); // range (-PI, PI]
 		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
 
