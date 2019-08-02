@@ -37,8 +37,9 @@ import scrollJson from './scrollDown.json';
 $(document).ready(function(){
  	const state = {};
 
-/**************** DETAILED PAGE CONTROLLER ********************/
+ 	PeersData.displaySpecifics();
 
+/**************** DETAILED PAGE CONTROLLER ********************/
 
 	if(sessionStorage.dial2){
 		dr.displayResults(sessionStorage);

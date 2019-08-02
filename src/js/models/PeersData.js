@@ -1,1 +1,15 @@
-export const peerScore = Math.round(70.4);
+const specificPeerScore = {
+	'1': 56.65,
+	'2': 76,
+	'3': [1,4,7],
+	'4': 75.71, 
+	'5': 71.07,
+	'6': 72.14
+}
+
+
+export const peerScore = Math.round(70.314);
+
+export const displaySpecifics = () => {
+	console.log(specificPeerScore);
+}
