@@ -19,11 +19,6 @@
 		
 
 		&--2{
-			margin-top: calc((100vh - 20.1rem) / 2);
-
-			@include bp(1440){
-				margin-top: calc((100vh - 17rem) / 2);
-			}
 		}	
 
 		@include bp_min(1441){
@@ -101,22 +96,33 @@
 				margin-top: calc((100vh - 27rem) / 2);
 			}
 		}
-
+		@include bp(767){
+			@include bph_min(715){
+				margin-top: calc((100vh - 24rem) / 2);
+			}
+		}
+		@include bp(666){
+			margin-top: calc((100vh - 15rem) / 2);			
+		}
+		@include bp(450){
+			margin-left: auto;
+			margin-right: auto;
+		}
 		
 
 
 
 
 		&--2{
-
+			margin-top: calc((100vh - 20.1rem) / 2);
+			
 			@include bp_min(1441){
 				@include bph(680){
 					margin-top: calc((100vh - 15rem) / 2);
 				}
 			}
-
 			@include bp(1440){
-				
+				margin-top: calc((100vh - 17rem) / 2);
 			}
 		}
 
