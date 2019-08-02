@@ -98,7 +98,7 @@ export const changeDialText = () => {
 }
 
 export const progressBtn = (dial) => {
-  const pageBtnProgress = dial[0].$div.closest('.page__content').find( ".btn__progress");
+  const pageBtnProgress = dial.closest('.page__content').find( ".btn__progress");
   pageBtnProgress.click();
 }
 

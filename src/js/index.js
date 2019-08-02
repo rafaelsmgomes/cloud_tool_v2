@@ -282,6 +282,7 @@ $(document).ready(function(){
     },
     'release': function (v){
       const self = $(this);
+      console.log(self);
 	 		this.selfID = self[0].$div.prevObject.data('id');
 	 		this.dial = assignDial(this.selfID);
 
@@ -303,6 +304,7 @@ $(document).ready(function(){
 		dial.lineResize();
 	});
 
+
   $( ".dial-tracker__wrapper" ).mousemove(function( event ) {
 	  const dy = 819 - event.pageY;
 		const dx = 633.5 - event.pageX;
@@ -313,9 +315,22 @@ $(document).ready(function(){
 
 		dial.data('context', true);
 		dial.val(theta).trigger('change');
-		
-		// $('.dial-tracker').data('context', true);
-		// $('.dial')
+	
+	});
+
+	$('.dial-tracker__wrapper').mouseup(function(){
+		// console.log('hello');
+	  const dy = 819 - event.pageY;
+		const dx = 633.5 - event.pageX;
+		let theta = Math.atan2(dy, dx); // range (-PI, PI]
+		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]	
+	
+		const dtracker = $(this).find('.dial-tracker'); 
+
+		dtracker.data('context', false);
+		dtracker.val(theta).trigger('change');
+	
+		dial.progressBtn(dtracker);
 	});
 
 
