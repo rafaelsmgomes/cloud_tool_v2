@@ -57,15 +57,29 @@ $(document).ready(function(){
 		detailSecond = retrieveLottieDialAnimation(results.q2);
 		detailForth = retrieveLottieDialAnimation(results.q4);
 
-		console.log(detailFirst, detailSecond, detailForth);
+		var detailedResults1 = lottie.loadAnimation({
+		  container: document.getElementById('detail-1'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailFirst,
+		  loop: false,
+		});
 
-		// var detailedResults1 = lottie.loadAnimation({
-		//   container: document.getElementById('detail-1'),
+		var detailedResults2 = lottie.loadAnimation({
+		  container: document.getElementById('detail-2'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailSecond,
+		  loop: false,
+		});
+
+		// var detailedResults3 = lottie.loadAnimation({
+		//   container: document.getElementById('detail-4'),
 		//   renderer: 'svg',
 		//   autoplay: true,
-		//   animationData: callback(session.dial1,peer['1']),
+		//   animationData: detailForth,
 		//   loop: false,
-		// });
+		// });				
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
