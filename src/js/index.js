@@ -34,13 +34,38 @@ import peersJson from './peerCloud.json';
 import userJson from './userCloud.json';
 import scrollJson from './scrollDown.json';
 
+import largeDetailHigh from './large_high-score.json';
+import largeDetailMid from './large_mid-score.json';
+import largeDetailLow from './large_low-score.json';
+
+
+
+
+
 $(document).ready(function(){
  	const state = {};
 
 /**************** DETAILED PAGE CONTROLLER ********************/
 
 	if(sessionStorage.dial2){	
-		dr.displayResults(sessionStorage, PeersData.retrievePeerScore);
+		let detailFirst='';
+		let detailSecond='';
+		let detailForth='';
+		let results = dr.retrieveResults(sessionStorage, PeersData.retrievePeerScore);
+
+		detailFirst = retrieveLottieDialAnimation(results.q1);
+		detailSecond = retrieveLottieDialAnimation(results.q2);
+		detailForth = retrieveLottieDialAnimation(results.q4);
+
+		console.log(detailFirst, detailSecond, detailForth);
+
+		// var detailedResults1 = lottie.loadAnimation({
+		//   container: document.getElementById('detail-1'),
+		//   renderer: 'svg',
+		//   autoplay: true,
+		//   animationData: callback(session.dial1,peer['1']),
+		//   loop: false,
+		// });
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
@@ -101,17 +126,25 @@ $(document).ready(function(){
 	});
 	
 /****************  CLOUD/ LOTTIE INIT  ********************/
-	var scrollTip = lottie.loadAnimation({
-	  container: document.getElementById('scroll_down'),
-	  renderer: 'svg',
-	  autoplay: true,
-	  animationData: scrollJson,
-	  loop: true,
-	});	
 
-
-
-
+	if(document.getElementById('scroll_down')){
+		var scrollTip = lottie.loadAnimation({
+		  container: document.getElementById('scroll_down'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: scrollJson,
+		  loop: true,
+		});	
+	};
+	// if(document.getElementById('detail-1')){
+	// 	var detailedResults1 = lottie.loadAnimation({
+	// 	  container: document.getElementById('detail-1'),
+	// 	  renderer: 'svg',
+	// 	  autoplay: true,
+	// 	  animationData: callback(session.dial1,peer['1']),
+	// 	  loop: false,
+	// 	});
+	// };	
 
 /****** CTA POPUPS ******/ 
 	$('.cta__btn').on('click',function(){
@@ -457,4 +490,16 @@ function loadCloudAnimation(user,peer){
 	  autoplay: true,
 	  animationData: peer,
 	});
+}
+
+function retrieveLottieDialAnimation(result){
+		let  variable;
+		if(result > 10){
+			variable = largeDetailHigh;
+		}else if(result < 10 && result > 0){
+			variable = largeDetailMid;
+		}else{
+			variable = largeDetailLow;
+		}
+		return variable;
 }
