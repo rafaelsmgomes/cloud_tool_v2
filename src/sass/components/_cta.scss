@@ -141,6 +141,18 @@
 					left: 5.7rem;
 				}
 			}
+			@include bp(767){
+				top: 11.25rem;
+				@include bph_min(726){
+					top: calc((100vh + 19.5rem) / 2);
+					right: auto;
+					left: 5.7rem;
+				}
+			}
+			@include bp(666){
+				display: none;
+			}
+
 		}
 
 		&--5{

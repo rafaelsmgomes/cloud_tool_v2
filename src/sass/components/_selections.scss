@@ -60,6 +60,12 @@
 				margin-top: 1rem;
 			}
 		}
+		@include bp(767){
+			@include bph_min(726){
+				height: 16rem;
+				margin-top: calc((100vh - 38rem) / 2);
+			}
+		}
 	}
 	&__container{
 		width: 14.65rem;

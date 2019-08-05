@@ -613,6 +613,11 @@ b {
 					display: inline;
 				}
 			}
+			@include bp(767){
+				@include bph_min(800){
+					display: inline;
+				}
+			}
 		}
 		
 		&--1,
