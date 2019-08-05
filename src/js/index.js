@@ -34,25 +34,53 @@ import peersJson from './peerCloud.json';
 import userJson from './userCloud.json';
 import scrollJson from './scrollDown.json';
 
+import largeDetailHigh from './large_high-score.json';
+import largeDetailMid from './large_mid-score.json';
+import largeDetailLow from './large_low-score.json';
+
+
+
+
+
 $(document).ready(function(){
  	const state = {};
 
 /**************** DETAILED PAGE CONTROLLER ********************/
 
+	if(sessionStorage.dial2){	
+		let detailFirst='';
+		let detailSecond='';
+		let detailForth='';
+		let results = dr.retrieveResults(sessionStorage, PeersData.retrievePeerScore);
 
-	if(sessionStorage.dial2){
-		dr.displayResults(sessionStorage);
+		detailFirst = retrieveLottieDialAnimation(results.q1);
+		detailSecond = retrieveLottieDialAnimation(results.q2);
+		detailForth = retrieveLottieDialAnimation(results.q4);
+
+		var detailedResults1 = lottie.loadAnimation({
+		  container: document.getElementById('detail-1'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailFirst,
+		  loop: false,
+		});
+
+		var detailedResults2 = lottie.loadAnimation({
+		  container: document.getElementById('detail-2'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailSecond,
+		  loop: false,
+		});
+
+		// var detailedResults3 = lottie.loadAnimation({
+		//   container: document.getElementById('detail-4'),
+		//   renderer: 'svg',
+		//   autoplay: true,
+		//   animationData: detailForth,
+		//   loop: false,
+		// });				
 	};
-	// if(sessionStorage.dial2){
-	// 	// dr.displayResults(sessionStorage);
-	// 	console.log('not hererer');
-	// }else{
-	// 	alert('ITS HEREEE!');
-	// };
-
- // 	$(window).on('load',function(){
-	// 	alert('teadfasta');
-	// });	
 
 /****** DETAILED MAP CONTROLLER ******/
 	$('.detailed__square').on('click',function(){
@@ -112,17 +140,25 @@ $(document).ready(function(){
 	});
 	
 /****************  CLOUD/ LOTTIE INIT  ********************/
-	var scrollTip = lottie.loadAnimation({
-	  container: document.getElementById('scroll_down'),
-	  renderer: 'svg',
-	  autoplay: true,
-	  animationData: scrollJson,
-	  loop: true,
-	});	
 
-
-
-
+	if(document.getElementById('scroll_down')){
+		var scrollTip = lottie.loadAnimation({
+		  container: document.getElementById('scroll_down'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: scrollJson,
+		  loop: true,
+		});	
+	};
+	// if(document.getElementById('detail-1')){
+	// 	var detailedResults1 = lottie.loadAnimation({
+	// 	  container: document.getElementById('detail-1'),
+	// 	  renderer: 'svg',
+	// 	  autoplay: true,
+	// 	  animationData: callback(session.dial1,peer['1']),
+	// 	  loop: false,
+	// 	});
+	// };	
 
 /****** CTA POPUPS ******/ 
 	$('.cta__btn').on('click',function(){
@@ -219,10 +255,8 @@ $(document).ready(function(){
 		$('.header__rectangle--grow').css('background-color', 'white'); 
 	});
 
-
-
-
 	$('.btn__progress--3').click();
+
 
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
@@ -282,11 +316,13 @@ $(document).ready(function(){
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
 
-
-    'change' : function (v) {
+    'change' : function (v,context) {
+    	// console.log(v, 'change');
       const self = $(this);
 	 		dial.dialRotator(self,v);
-			dial.dialContextualize(self,v);
+			dial.dialContextualize(self,v);			
+			this.context = (self[0].$div.prevObject.data('context'));
+			
     },
     'release': function (v){
       const self = $(this);
@@ -295,7 +331,9 @@ $(document).ready(function(){
 
 	 		this.dial.changeValue(v);
 
-	  	dial.progressBtn(self);
+	 		if(this.context=== false){
+	  		dial.progressBtn(self);
+    	}
     },
 	});
 
@@ -307,6 +345,39 @@ $(document).ready(function(){
 		dial.changeDialText();
 		dial.handResize();
 		dial.lineResize();
+	});
+
+
+  $( ".dial-tracker__wrapper" ).mousemove(function( event ) {
+
+  	const yAxis = func.returnNumOnly($('.dial-group').css('height'),2)+func.returnNumOnly($('.dial-group').css('margin-top'),2)+func.returnNumOnly($('.page__content').css('padding-top'),2);
+  	const xAxis = func.returnNumOnly($('.page__content').css('margin-left'),2)+func.returnNumOnly($('.dial-group').css('height'),2);
+  	
+	  const dy = yAxis - event.pageY;
+		const dx = xAxis - event.pageX;
+		let theta = Math.atan2(dy, dx); // range (-PI, PI]
+		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+
+		const dial = $(this).find('.dial-tracker'); 
+
+		dial.data('context', true);
+		dial.val(theta).trigger('change');
+	
+	});
+
+	$('.dial-tracker__wrapper').mouseup(function(){
+		// console.log('hello');
+	  const dy = 819 - event.pageY;
+		const dx = 633.5 - event.pageX;
+		let theta = Math.atan2(dy, dx); // range (-PI, PI]
+		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]	
+	
+		const dtracker = $(this).find('.dial-tracker'); 
+
+		dtracker.data('context', false);
+		dtracker.val(theta).trigger('change');
+	
+		dial.progressBtn(dtracker);
 	});
 
 
@@ -431,4 +502,16 @@ function loadCloudAnimation(user,peer){
 	  autoplay: true,
 	  animationData: peer,
 	});
+}
+
+function retrieveLottieDialAnimation(result){
+		let  variable;
+		if(result > 10){
+			variable = largeDetailHigh;
+		}else if(result < 10 && result > 0){
+			variable = largeDetailMid;
+		}else{
+			variable = largeDetailLow;
+		}
+		return variable;
 }

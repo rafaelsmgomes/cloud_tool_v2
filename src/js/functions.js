@@ -1,3 +1,7 @@
+import largeDetailHigh from './large_high-score.json';
+import largeDetailMid from './large_mid-score.json';
+import largeDetailLow from './large_low-score.json';
+
 export const openVideoOverlay = (ob) => {
     var videoID=ob;
   //  ob.data ? videoID = ob.data.video : videoID = $(ob.currentTarget).attr("vid");
