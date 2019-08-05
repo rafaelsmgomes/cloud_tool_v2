@@ -97,7 +97,11 @@ export const changeDialText = () => {
   }
 }
 
-export const progressBtn = (dial) => {
+export const progressBtn = (dial) => {  
+  
+  if($('body').width() < 1040){
+    dial = dial[0].$;
+  };
   const pageBtnProgress = dial.closest('.page__content').find( ".btn__progress");
   pageBtnProgress.click();
 }

@@ -256,6 +256,7 @@ $(document).ready(function(){
 		$('.header__rectangle--grow').css('background-color', 'white'); 
 	});
 
+
 	// $('.btn__progress--3').click(); 
 
 
@@ -318,18 +319,17 @@ $(document).ready(function(){
 		'fgColor': '#00758f',
 
     'change' : function (v,context) {
-    	// console.log(v, 'change');
+
       const self = $(this);
 	 		dial.dialRotator(self,v);
 			dial.dialContextualize(self,v);			
 			this.context = (self[0].$div.prevObject.data('context'));
 			
     },
-    'release': function (v){
+    'release': function (v){;
       const self = $(this);
 	 		this.selfID = self[0].$div.prevObject.data('id');
 	 		this.dial = assignDial(this.selfID);
-
 	 		this.dial.changeValue(v);
 
 	 		if(this.context=== false){
