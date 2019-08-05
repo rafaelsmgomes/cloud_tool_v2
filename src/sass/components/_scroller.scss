@@ -6,18 +6,10 @@
 		}
 		margin-top: 3.00rem;
 		
-		@include bph(725){
-			margin-top: 2rem;
-		}
-		@include bph(675){
-			margin-top: 1.5rem;
-		}
-		@include bph(650){
-			margin-top: 3.0rem;
-		}
-		@include bph(600){
-			margin-top: 1.5rem;
-		}
+		@include bph(725){ margin-top: 2rem; }
+		@include bph(675){ margin-top: 1.5rem; }
+		@include bph(600){ margin-top: 1rem; }
+		@include bph(590){ margin-top: 0rem; }
 
 		&--1{
 	    height: 23.15rem;

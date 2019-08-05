@@ -1,4 +1,4 @@
-@font-face {
+@font-face { 
   font-family: "Univers";
   src: url("../fonts/UniversLTStd.otf");
   font-weight: normal; 
@@ -328,8 +328,20 @@ b {
 					display: none;
 				}
 			}
+		}
 
-
+		&--3{
+			@include bp(767){
+				display: block;
+				margin-top: 0;
+				margin-bottom: .2rem;
+				@include bph(514){
+					display: none;
+				}
+			}
+			@include bp(666){
+				display: none;
+			}
 		}
 
 		&--7{
@@ -390,6 +402,25 @@ b {
 			width: 21.30rem;
 			@include bph(530){
 				margin-top: 0;
+				line-height: auto;
+			}
+		}
+		&--3{
+			width: 21.30rem;
+			@include bph(530){
+				margin-top: 0;
+			}
+			@include bp(767){
+				@include bp_min(667){
+					@include bph(515){
+						width: 40%;
+					}
+				}
+			}
+			@include bp(525){
+				width: auto;
+				height: auto;
+				margin-top: 0;
 			}
 		}
 
@@ -437,6 +468,7 @@ b {
 	 
 	  	@include bp(1440){
 			font-size: $font-size-3;
+			font-family: $font-reg;
 		}
 
 		@include bp(1440){
@@ -447,7 +479,28 @@ b {
 		@include bp(910){
 			font-size: $font-size-3;
 		}
+		@include bp(767){
+			@include bph(514){
+				line-height: 1.2;
+
+			 	hyphens: auto;
+				word-break: keep-all;
+				@include bph(450){
+					display: block;
+				}
+			}
+		}
+		@include bp(666){
+			display: block;
+			line-height: 1.2;
+
+			hyphens: auto;
+			word-break: keep-all;
+		}
 	  
+		&__hidden{
+			@include bp(1440){ display: none; }
+		}
 		// .selection__container--active &{
 		// 	color: $color-blue-1;
 		// }
@@ -614,7 +667,7 @@ b {
 				}
 			}
 			@include bp(767){
-				@include bph_min(800){
+				@include bph_min(726){
 					display: inline;
 				}
 			}
