@@ -21,11 +21,29 @@
 
 	@include bph(725){
 		position: absolute;
-    bottom: 3.00rem;
+    bottom: 2.75rem;
     right: 0;
 	}
 	@include bp(767){
-    right: 0.8rem;
+		right: 0.8rem;
+		@include bp_min(667){
+			@include bph(514){
+				right: 18.2rem;
+				bottom: auto;
+				top: 17.2rem;
+			}
+			@include bph(450){
+				top: 14.4rem;
+			}
+			@include bph(380){
+				top: 11.7rem;
+			}
+		}
+	}
+	@include bp(666){
+		top: auto;
+		right: .6rem;
+		bottom: 2rem;
 	}
 
 }

@@ -213,6 +213,7 @@ $(document).ready(function(){
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
+		// header.hideHeader(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 	});
 
@@ -255,7 +256,8 @@ $(document).ready(function(){
 		$('.header__rectangle--grow').css('background-color', 'white'); 
 	});
 
-	$('.btn__progress--1').click();
+
+	// $('.btn__progress--3').click(); 
 
 
 	// Hooking header nav buttons to btnprogress

@@ -142,9 +142,10 @@
 				}
 			}
 			@include bp(767){
-				top: 11.25rem;
+				display: none;
 				@include bph_min(726){
-					top: calc((100vh + 19.5rem) / 2);
+					display: block;
+					top: calc((100vh + 12.7rem) / 2);
 					right: auto;
 					left: 5.7rem;
 				}
@@ -186,25 +187,14 @@
 			top: 45.5rem;
 			right: -20.5rem;
 
-			@include bp(1440){
-				right: -22rem;
-			}
+			@include bp(1440){ right: -22rem; }
 
-			@include bph(1000){
-				top: 31.9rem;
-			}
-			@include bph(725){
-				top: 29.1rem;
-			}
-			@include bph(675){
-				top: 28.6rem;
-			}
-			@include bph(650){
-				top: 25.7rem;
-			}
-			@include bph(600){
-				top: 24.2rem;
-			}
+			@include bph(1000){ top: 31.9rem; }
+			@include bph(725){ top: 29.1rem; }
+			@include bph(675){ top: 28.6rem; }
+			@include bph(650){ top: 25.7rem; }
+			@include bph(600){ top: 25.2rem; }
+			@include bph(590){ top: 24.2rem; }
 		}
 	}
 
