@@ -252,10 +252,17 @@ b {
 		}
 		@include bp(767){
 			font-size: $font-size-4;
+			line-height: 1.2;
+			height: auto;
+			margin-bottom: .6rem;
+		}
+		@include bp(666){
+			margin-top: -0.3rem;
 		}
 			
 
-		&--1{
+		&--1,
+		&--4{
 			width: 43.25rem;
 			
 			@include bp_min(1441){
@@ -274,6 +281,12 @@ b {
 					width: 22.5rem;
 				}
 			}
+			@include bp(767){
+				width: 24.3rem;
+			}
+			@include bp(500){
+				width: auto;
+			}
 		}
 		&--2{
 			width: 39.55rem;
@@ -289,6 +302,12 @@ b {
 				width: 34rem;
 				font-size: 1.25rem
 			}
+			@include bp(767){
+				width: 24.3rem;
+			}
+			@include bp(500){
+				width: auto;
+			}
 		}
 		&--3,
 		&--5,
@@ -299,9 +318,13 @@ b {
 					display: none;
 				}
 			}
-
 			@include bp(1024){
 				@include bph(570){
+					display: none;
+				}
+			}
+			@include bp(910){
+				@include bph(660){
 					display: none;
 				}
 			}
@@ -342,7 +365,6 @@ b {
 		  letter-spacing: normal;			
 		  height: 2.8rem;
 		}
-
 		@include bp(1024){
 			font-size: .95rem;
 			width: 34.90rem;
@@ -352,15 +374,23 @@ b {
 				width: 22.5rem;
 			}
 		}
+		@include bp(767){
+			width: 24.3rem;
+		}
+		@include bp(500){
+			width: auto;
+		}
 
 		& > b{
 			display: block;
 			font-family: $font-b;
 		}
 
-
 		&--1{
 			width: 21.30rem;
+			@include bph(530){
+				margin-top: 0;
+			}
 		}
 
 		&--2{
@@ -406,7 +436,7 @@ b {
 		}
 	 
 	  	@include bp(1440){
-			font-size: .7rem;
+			font-size: $font-size-3;
 		}
 
 		@include bp(1440){
@@ -414,7 +444,9 @@ b {
 				font-size: .95rem;
 			}
 		}
-	
+		@include bp(910){
+			font-size: $font-size-3;
+		}
 	  
 		// .selection__container--active &{
 		// 	color: $color-blue-1;
@@ -543,8 +575,24 @@ b {
 		}
 		
 		&--4{
+
+			@include bp_min(1441){
+				@include bph_min(1050){
+					width: 18rem;
+				}
+			}
 			@include bp(1150){
-				width: 10rem;
+				width: 14rem;
+			}
+			@include bp(1440){
+				@include bph_min(850){
+					width: 18rem;
+				}
+			}
+			@include bp(1024){
+				@include bph_min(850){
+					width: 18rem;
+				}
 			}
 	  		&-a{
 		    	letter-spacing: -.01em;
@@ -555,8 +603,18 @@ b {
 			height: 1.9rem;
 			color: $color-white-1;
 
+			@include bp(1441){
+				@include bph_min(1050){
+					display: inline;
+				}
+			}
 			@include bp(1440){
 				@include bph_min(850){
+					display: inline;
+				}
+			}
+			@include bp(767){
+				@include bph_min(800){
 					display: inline;
 				}
 			}
@@ -574,8 +632,8 @@ b {
 
 			@include bp(767){
 				width: 10rem;
-				@include bph_min(750){
-					width: 15rem;
+				@include bph_min(715){
+					width: 20rem;
 				}
 			}
 		}

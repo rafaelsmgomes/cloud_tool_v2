@@ -11,11 +11,15 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 
-		@include bp_min(1440){
+		@include bp_min(1441){
 			height: 59%;
 			max-height: 27.5rem;
 			@include bph(720){
 				height: 13rem;
+			}
+			@include bph_min(1050){
+				transform: translateY(-50%);
+				margin-top: calc((100vh - 23rem) / 2);
 			}
 		}
 
@@ -23,27 +27,43 @@
 			height: 15rem;
 			width: 26rem;
 			@include bph(650){
-				height: 64%;
+				height: 15rem;
+			}
+			@include bph_min(740){
+				width: 17rem;
+				height: 18rem;
+			}
+			@include bph_min(850){
+				height: 19rem;
+				margin-top: calc((100vh - 40rem) / 2);
+			}
+		}
+		@include bp(1024){
+			@include bph(530){
+				height: 10rem;
+			}
+			@include bph_min(740){
+				width: 17rem;
+				height: 18rem;
 			}
 			@include bph_min(850){
 				height: 19rem;
 			}
 		}
-
-		@include bp(1024){
+		@include bp(910){
+			width: 17rem;
+			height: 20rem;
+			@include bph(600){
+				height: 15rem;
+			}
 			@include bph(530){
-				height: 10rem;
+				margin-top: 1rem;
 			}
-			@include bph_min(750){
-				width: 17rem;
-				height: 30rem;
-			}
-			@include bph_min(740){
-				width: 17rem;
-				height: 30rem;
-			}
-			@include bph_min(850){
-				height: 19rem;
+		}
+		@include bp(767){
+			@include bph_min(726){
+				height: 16rem;
+				margin-top: calc((100vh - 38rem) / 2);
 			}
 		}
 	}
@@ -56,6 +76,12 @@
 		margin-bottom: 1.25rem;
 		margin-right: 1.25rem;
 
+		&--3{ order: 0; }
+		&--4{ order: 5; }
+		&--5{ order: 7; }
+		&--6{ order: 9; }
+		&--7{ order: 11; }
+		&--8{ order: 13; }
 		@include bp_min(1441){
 			@include bph(800){
 				width: 11.1rem;
@@ -64,7 +90,7 @@
 			}
 			@include bph(721){
 				&--3{
-					order: 1;
+					order: 12;
 				}
 			}
 		}
@@ -74,7 +100,11 @@
 			margin-right: .45rem;
 			margin-bottom: .45rem;
 			padding: .25rem;
+			@include bph_min(740){
+				&--4{order: 8; }
+			}
 			@include bph_min(850){
+				&--4{order: 5; }
 				width: 11.9rem;
 				margin-right: 1rem;
 				margin-bottom: 1rem;
@@ -83,16 +113,32 @@
 		}
 
 		@include bp(1024){
-			@include bph(524){
-				&--3{
-					order: 1;
-				}
+			@include bph(530){
+				&--3{ order: 14; }
+			}
+			
+			@include bph_min(740){
+				&--4{order: 8; }
 			}
 			@include bph_min(850){
 				width: 11.9rem;
 				margin-right: 1rem;
 				margin-bottom: 1rem;
 				padding: .4rem;
+			}
+		}
+		@include bp(910){
+			width: 8.35rem;
+			margin-right: .45rem;
+			margin-bottom: .45rem;
+			padding: .25rem;
+			
+			&--4{
+				order: 8; 
+				@include bph(600){ order: 5; }
+			}
+			@include bph(530){
+				&--3{order: 0;}
 			}
 		}
 		

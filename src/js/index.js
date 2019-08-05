@@ -255,10 +255,8 @@ $(document).ready(function(){
 		$('.header__rectangle--grow').css('background-color', 'white'); 
 	});
 
+	$('.btn__progress--3').click();
 
-
-
-	$('.btn__progress--1').click();
 
 	// Hooking header nav buttons to btnprogress
 	e.hdrProgress.on('click',function(){
