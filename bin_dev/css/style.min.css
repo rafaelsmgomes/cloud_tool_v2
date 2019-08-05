@@ -2241,7 +2241,8 @@ b {
     padding-top: 2.00rem;
     padding-left: 5.85rem; }
     .main-container--x .page__content--y {
-      padding-top: 2rem; }
+      padding-top: 2rem;
+      overflow: hidden; }
   @media only screen and (max-width: 1440px) {
     .page__content {
       width: 83.333%; } }
