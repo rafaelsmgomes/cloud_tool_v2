@@ -131,6 +131,13 @@
 			transform: none;
 			height: 21.85rem;
 		}
+
+		@include bph(515){
+			position: absolute;
+			top: 8rem;
+			right: 1.5rem;
+
+		}
 	}
 
 	&-tracker{

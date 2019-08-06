@@ -100,7 +100,7 @@ b {
 		@include bph(435){
 			height: auto;
 		}
-		@include bph(375){
+		@include bph(400){
 			height: 2.40rem;
 		}
 
@@ -287,6 +287,13 @@ b {
 			@include bp(500){
 				width: auto;
 			}
+			@include bp(767){
+				@include bph(515){
+					margin: 0;
+					width: 15rem;
+				}
+			}
+
 		}
 		&--2{
 			width: 39.55rem;
@@ -304,6 +311,10 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
+				@include bph(515){
+					margin: 0;
+					width: 16.3rem;
+				}
 			}
 			@include bp(500){
 				width: auto;
@@ -388,6 +399,10 @@ b {
 		}
 		@include bp(767){
 			width: 24.3rem;
+			@include bph(515){
+				margin: 0;
+				width: 15rem;
+			}
 		}
 		@include bp(500){
 			width: auto;
