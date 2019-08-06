@@ -17,8 +17,8 @@ export const toggleRestartBtn = (pageNum) => {
 export const hideHeader = (pageNum) => {
 	const screenWidth = $('.page').width();
 	const height = $('.page').height();
-	console.log(pageNum, screenWidth, height);
-	if (pageNum === 4 && screenWidth <= 767 && height <= 380){
+
+	if (pageNum === 3 && screenWidth <= 767 && height <= 380){
 		e.headerWrapper.addClass('hidden');
 	} else {
 		e.headerWrapper.removeClass('hidden');

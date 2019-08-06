@@ -213,7 +213,7 @@ $(document).ready(function(){
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
-		// header.hideHeader(state.pageNum.pageNumber);
+		header.hideHeader(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 	});
 
