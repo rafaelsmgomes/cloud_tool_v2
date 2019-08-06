@@ -288,7 +288,7 @@ b {
 				width: auto;
 			}
 			@include bp(767){
-				@include bph(515){
+				@include bph(514){
 					margin: 0;
 					width: 15rem;
 				}
@@ -311,7 +311,7 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
-				@include bph(515){
+				@include bph(514){
 					margin: 0;
 					width: 16.3rem;
 				}
@@ -399,7 +399,7 @@ b {
 		}
 		@include bp(767){
 			width: 24.3rem;
-			@include bph(515){
+			@include bph(514){
 				margin: 0;
 				width: 15rem;
 			}
@@ -427,7 +427,7 @@ b {
 			}
 			@include bp(767){
 				@include bp_min(667){
-					@include bph(515){
+					@include bph(514){
 						width: 40%;
 					}
 				}
