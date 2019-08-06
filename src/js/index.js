@@ -73,13 +73,13 @@ $(document).ready(function(){
 		  loop: false,
 		});
 
-		// var detailedResults3 = lottie.loadAnimation({
-		//   container: document.getElementById('detail-4'),
-		//   renderer: 'svg',
-		//   autoplay: true,
-		//   animationData: detailForth,
-		//   loop: false,
-		// });				
+		var detailedResults3 = lottie.loadAnimation({
+		  container: document.getElementById('detail-3'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailForth,
+		  loop: false,
+		});				
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
@@ -258,21 +258,6 @@ $(document).ready(function(){
 
 
 	// $('.btn__progress--3').click(); 
-
-
-	// Hooking header nav buttons to btnprogress
-	e.hdrProgress.on('click',function(){
-		const hdrValue = $(this).attr('context');
-		const nextSection = $(`.page--${Number(hdrValue)+1}`);
-		const nextLeft = nextSection.css('left').slice(0, -2);
-		const nextTop = nextSection.css('top').slice(0, -2);		
-
-		$('.pathfinder').css('transform',`translate(${Number(nextLeft)*-1}px,${Number(nextTop)*-1}px)`);
-
-		$(this).attr('context',`${Number(hdrValue)+1}`);
-
-		e.btnBackX.attr('context',hdrValue);
-	});		
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
