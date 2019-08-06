@@ -205,7 +205,7 @@ b {
   @media only screen and (max-height: 435px) {
     .landing__title {
       height: auto; } }
-  @media only screen and (max-height: 375px) {
+  @media only screen and (max-height: 400px) {
     .landing__title {
       height: 2.40rem; } }
   .landing__title--fadeout {
@@ -359,6 +359,11 @@ b {
     @media only screen and (max-width: 500px) {
       .main__title--1, .main__title--4 {
         width: auto; } }
+
+@media only screen and (max-width: 767px) and (max-height: 515px) {
+  .main__title--1, .main__title--4 {
+    margin: 0;
+    width: 15rem; } }
   .main__title--2 {
     width: 39.55rem; }
     @media only screen and (max-width: 1440px) {
@@ -374,6 +379,10 @@ b {
     @media only screen and (max-width: 767px) {
       .main__title--2 {
         width: 24.3rem; } }
+  @media only screen and (max-width: 767px) and (max-height: 515px) {
+    .main__title--2 {
+      margin: 0;
+      width: 16.3rem; } }
     @media only screen and (max-width: 500px) {
       .main__title--2 {
         width: auto; } }
@@ -442,6 +451,10 @@ b {
   @media only screen and (max-width: 767px) {
     .main__direction {
       width: 24.3rem; } }
+  @media only screen and (max-width: 767px) and (max-height: 515px) {
+    .main__direction {
+      margin: 0;
+      width: 15rem; } }
   @media only screen and (max-width: 500px) {
     .main__direction {
       width: auto; } }
@@ -1271,6 +1284,11 @@ b {
     margin-top: 2.00rem;
     transform: none;
     height: 21.85rem; }
+  @media only screen and (max-height: 515px) {
+    .dial-group {
+      position: absolute;
+      top: 8rem;
+      right: 1.5rem; } }
 
 .dial-tracker__wrapper {
   width: 100%;
@@ -1582,7 +1600,7 @@ b {
   @media only screen and (max-height: 435px) {
     .landing__container {
       margin-top: 1rem; } }
-  @media only screen and (max-height: 375px) {
+  @media only screen and (max-height: 400px) {
     .landing__container {
       height: 67.1vh;
       width: 67.1vh;
