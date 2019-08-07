@@ -10,7 +10,7 @@
 		
 		@include bp(1024){ 
 			margin-top: 1.6rem; 
-			@include bph_min(800){ margin-top: 2rem; }
+			@include bph_min(801){ margin-top: 2rem; }
 		}
 		
 		@include bp(767){
