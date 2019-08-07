@@ -49,6 +49,33 @@
 
 	&--2{
 		width: 3.50rem;
+
+		@include bp_min(1441){
+			@include bph(750){ 
+				margin: 0;
+				right: 10.8rem;
+				top: 18.5rem; 
+			}
+			@include bph(675){ top: 17.45rem; }
+			@include bph(650){ top: 10.8rem; }
+		}
+		@include bp(1440){ 
+			@include bph(600){
+				margin: 0;
+				right: 9.3rem; ;
+				top: 10.7rem;
+			}
+		}
+		@include bp(1024){
+			@include bph(600){ top: 8.9rem; }
+		}
+		@include bp(910){
+			@include bph(600){ 
+				right: 6.2rem;
+				top: 10.5rem; 
+			}
+			@include bph(550){ top: 9.5rem; }
+		}
 	}
 	&--3{
 		width: 5.10rem;
