@@ -485,6 +485,14 @@ b {
   .main__direction--5, .main__direction--6 {
     height: auto;
     width: auto; }
+    @media only screen and (min-width: 768px) {
+      .main__direction--5, .main__direction--6 {
+        min-width: 33.5rem; } }
+
+@media only screen and (max-width: 767px) and (min-width: 666px) and (max-height: 515px) {
+  .main__direction--5, .main__direction--6 {
+    margin-top: 2rem;
+    width: 14.4rem; } }
 
 .pagination__num {
   flex: 0 0 0.55rem;
@@ -721,23 +729,27 @@ b {
     @media only screen and (max-width: 1440px) {
       .scroller__content--active .scroller__title {
         font-size: 1.25rem; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 600px) {
-  .scroller__content--active .scroller__title {
-    font-size: 0.95em; } }
-    @media only screen and (max-width: 1300px) {
+  @media only screen and (max-width: 1440px) and (max-height: 600px) {
+    .scroller__content--active .scroller__title {
+      font-size: 0.95em; } }
+    @media only screen and (max-width: 911px) {
       .scroller__content--active .scroller__title {
-        line-height: 1;
-        height: auto;
-        margin-top: 0.55rem; } }
+        font-size: 1.25rem; } }
+  @media only screen and (max-width: 911px) and (max-height: 550px) {
+    .scroller__content--active .scroller__title {
+      font-size: 0.95em; } }
     @media only screen and (max-width: 1150px) {
       .scroller__content--active .scroller__title {
-        margin-top: 0;
-        height: auto;
         line-height: 1.1; } }
     @media only screen and (max-width: 1050px) {
       .scroller__content--active .scroller__title {
         letter-spacing: -0.03em; } }
+    @media only screen and (max-width: 767px) {
+      .scroller__content--active .scroller__title {
+        font-size: 0.95em; } }
+  @media only screen and (max-width: 767px) and (min-height: 721px) {
+    .scroller__content--active .scroller__title {
+      font-size: 1.25rem; } }
 
 .scroller__step {
   font-size: 0.7em;
@@ -782,6 +794,10 @@ b {
 @media only screen and (max-width: 960px) and (min-width: 768px) {
   .scroller__description {
     line-height: 1.15; } }
+
+@media only screen and (max-width: 767px) and (min-width: 666px) and (max-height: 515px) {
+  .scroller__description {
+    line-height: 1.1; } }
   .scroller__description--1 {
     padding-left: .3rem; }
   .scroller__description--2 {
@@ -1172,7 +1188,6 @@ b {
         top: 23.1rem; } }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--6 {
-        top: 45.4rem;
         right: -22rem; } }
   @media only screen and (max-width: 1440px) and (max-height: 1015px) {
     .cta__wrapper--6 {
@@ -1192,27 +1207,11 @@ b {
   @media only screen and (max-width: 1440px) and (max-height: 555px) {
     .cta__wrapper--6 {
       top: 22.4rem; } }
-    @media only screen and (max-width: 850px) {
-      .cta__wrapper--6 {
-        right: -24rem; } }
-  @media only screen and (max-width: 850px) and (max-height: 1015px) {
-    .cta__wrapper--6 {
-      top: 31.9rem; } }
-  @media only screen and (max-width: 850px) and (max-height: 750px) {
-    .cta__wrapper--6 {
-      top: 28.5rem; } }
-  @media only screen and (max-width: 850px) and (max-height: 675px) {
-    .cta__wrapper--6 {
-      top: 27.0rem; } }
-  @media only screen and (max-width: 850px) and (max-height: 650px) {
-    .cta__wrapper--6 {
-      top: 24.1rem; } }
-  @media only screen and (max-width: 850px) and (max-height: 600px) {
-    .cta__wrapper--6 {
-      top: 23.7rem; } }
-  @media only screen and (max-width: 850px) and (max-height: 555px) {
-    .cta__wrapper--6 {
-      top: 22.9rem; } }
+
+@media only screen and (max-width: 1024px) and (min-height: 811px) {
+  .cta__wrapper--6 {
+    top: 28.5rem;
+    right: -15rem; } }
     @media only screen and (max-width: 767px) {
       .cta__wrapper--6 {
         display: none; } }
@@ -1792,10 +1791,6 @@ b {
     top: 7.4rem;
     right: 1rem;
     margin-top: 0; } }
-  @media only screen and (max-width: 666px) {
-    .pagination {
-      right: .6rem;
-      bottom: 2rem; } }
   .pagination--1 {
     width: 2.55rem; }
     @media only screen and (max-width: 767px) {
@@ -1821,6 +1816,18 @@ b {
     width: 5.10rem; }
   .pagination--2, .pagination--3 {
     margin-top: 2rem; }
+    @media only screen and (max-width: 767px) {
+      .pagination--2, .pagination--3 {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: .2rem; } }
+  @media only screen and (max-width: 767px) and (max-height: 515px) {
+    .pagination--2, .pagination--3 {
+      position: absolute;
+      margin-top: 0;
+      top: 4rem;
+      left: .9rem; } }
   .pagination--active {
     color: #00758f; }
 
@@ -1992,6 +1999,18 @@ b {
       margin-top: 2rem; } }
   @media only screen and (max-width: 767px) {
     .scroller__wrapper {
+      width: 24.15rem;
+      margin-top: 1rem; } }
+
+@media only screen and (max-width: 767px) and (min-width: 666px) and (max-height: 515px) {
+  .scroller__wrapper {
+    position: absolute;
+    margin: 0;
+    top: 1.2rem;
+    right: 2.9rem;
+    width: 41.3%; } }
+  @media only screen and (max-width: 665px) {
+    .scroller__wrapper {
       width: 100%; } }
   .scroller__wrapper--1 {
     height: 23.15rem; }
@@ -2042,10 +2061,19 @@ b {
 @media only screen and (max-width: 1024px) and (max-height: 600px) {
   .scroller__content--active {
     height: 8.9rem; } }
+    @media only screen and (max-width: 910px) {
+      .scroller__content--active {
+        height: 10rem; } }
+  @media only screen and (max-width: 910px) and (max-height: 550px) {
+    .scroller__content--active {
+      height: 8.9rem; } }
+    @media only screen and (max-width: 767px) {
+      .scroller__content--active {
+        height: 8.9rem; } }
 
-@media only screen and (max-width: 767px) and (min-width: 667px) {
+@media only screen and (max-width: 767px) and (min-width: 666px) and (max-height: 515px) {
   .scroller__content--active {
-    height: 9.5rem; } }
+    height: 8.4rem; } }
     .scroller__content--active > * {
       display: flex;
       opacity: 1; }
@@ -2101,14 +2129,20 @@ b {
 
 @media only screen and (min-width: 1025px) and (max-height: 650px) {
   .scroller__mid {
-    height: 2.5rem; } }
+    height: 2.2rem; } }
   @media only screen and (max-width: 1440px) {
     .scroller__mid {
       height: 2.5rem; } }
 
 @media only screen and (max-width: 1024px) and (max-height: 600px) {
   .scroller__mid {
-    height: 1.5rem; } }
+    height: 2.2rem; } }
+  @media only screen and (max-width: 910px) {
+    .scroller__mid {
+      height: 2.2rem; } }
+  @media only screen and (max-width: 767px) {
+    .scroller__mid {
+      height: 2.3rem; } }
 
 .scroller__header {
   display: flex;
@@ -2127,10 +2161,16 @@ b {
 
 @media only screen and (max-width: 1024px) and (max-height: 600px) {
   .scroller__content--active .scroller__header {
-    height: 2.4rem; } }
-    @media only screen and (max-width: 1150px) {
+    height: 2.55rem; } }
+    @media only screen and (max-width: 910px) {
       .scroller__content--active .scroller__header {
         height: 3.3rem; } }
+  @media only screen and (max-width: 910px) and (max-height: 550px) {
+    .scroller__content--active .scroller__header {
+      height: 2.55rem; } }
+    @media only screen and (max-width: 767px) {
+      .scroller__content--active .scroller__header {
+        height: 2.55rem; } }
 
 .scroller__down {
   width: 1.20rem;
@@ -2179,6 +2219,10 @@ b {
       @media only screen and (max-width: 1440px) {
         .scroller__content--active .rangeslider--horizontal {
           height: 1.6rem; } }
+
+@media only screen and (max-width: 767px) and (min-width: 666px) and (max-height: 515px) {
+  .scroller__content--active .rangeslider--horizontal {
+    margin-top: .35rem; } }
   .rangeslider__fill {
     background: #00758f;
     position: absolute;
@@ -2214,9 +2258,10 @@ b {
         .scroller__content--active .rangeslider__handle::after {
           margin-top: 1.75rem; } }
 
-@media only screen and (max-width: 767px) and (min-width: 667px) {
+@media only screen and (max-width: 767px) and (min-width: 666px) and (max-height: 515px) {
   .scroller__content--active .rangeslider__handle::after {
-    margin-top: 2rem; } }
+    width: 0.65rem;
+    height: .8rem; } }
 
 .selection__wrapper {
   width: 23rem;
