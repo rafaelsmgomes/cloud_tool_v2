@@ -10,14 +10,12 @@
 		
 		@include bp(1024){ 
 			margin-top: 1.6rem; 
-			@include bph_min(800){ margin-top: 2rem; }
+			@include bph_min(801){ margin-top: 2rem; }
 		}
+		
 		@include bp(767){
 			width: 24.15rem;
 			margin-top: 1rem;
-		}
-
-		@include bp(767){
 			@include bp_min(666){
 				@include bph(515){
 					position: absolute;
@@ -105,6 +103,11 @@
 						height: 8.4rem;
 					}
 				}
+				@include bp_min(600){
+					@include bph_min(700){
+						height: 10rem;	
+					}
+				}
 			}
 	
 
@@ -181,7 +184,7 @@
 
 		@include bp_min(1025){
 			@include bph(650){
-				height: 2.2rem;;
+				height: 2.5rem;;
 			}
 		}
 
@@ -189,11 +192,18 @@
 		
 		@include bp(1024){ 
 			@include bph(600){
-				height: 2.2rem; 
+				height: 2.5rem; 
 			}
 		}
-		@include bp(910){ height: 2.2rem; }
-		@include bp(767){ height: 2.3rem; }
+		@include bp(910){ height: 2.5rem; }
+		@include bp(767){ 
+			height: 2.4rem; 
+			@include bp_min(600){
+				@include bph_min(700){
+					height: 3.4rem;				
+				}
+			}
+		}
 
 	}
 	&__header{
@@ -288,14 +298,23 @@
 			@include bp_min(1441){
 				@include bph(650){
 					height: 1.6rem;
+					margin-top: .35rem;
 				}
 			}
-			@include bp(1440){ height: 1.6rem; }
+			@include bp(1440){ 
+				height: 1.6rem; 
+				margin-top: .35rem;
+			}
 
 			@include bp(767){
 				@include bp_min(666){
 					@include bph(515){
 						margin-top: .35rem;
+					}
+				}
+				@include bp_min(600){
+					@include bph_min(700){
+						margin-top: .65rem;
 					}
 				}
 			}
@@ -349,6 +368,10 @@
 					height: .8rem;
 				}
 			}
+		}
+		@include bp(665){
+			width: 0.725rem;
+			height: .9rem;
 		}
 
 	}  

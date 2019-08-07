@@ -42,16 +42,74 @@
 			}
 		}
 	}
+	&--2,
+	&--3{
+		margin-top: 2rem;
+	}
+
 	&--2{
 		width: 3.50rem;
+
+		@include bp_min(1441){
+			@include bph(750){ 
+				margin: 0;
+				right: 10.8rem;
+				top: 18.5rem; 
+			}
+			@include bph(675){ top: 17.45rem; }
+			@include bph(650){ top: 10.8rem; }
+		}
+		@include bp(1440){ 
+			@include bph(600){
+				margin: 0;
+				right: 9.3rem; ;
+				top: 10.7rem;
+			}
+		}
+		@include bp(1024){
+			@include bph(600){ top: 8.9rem; }
+		}
+		@include bp(910){
+			@include bph(600){ 
+				right: 6.2rem;
+				top: 10.5rem; 
+			}
+			@include bph(550){ top: 9.5rem; }
+		}
 	}
 	&--3{
 		width: 5.10rem;
+
+		@include bp_min(1441){
+			@include bph(750){ 
+				margin: 0;
+				right: 9.5rem;
+				top: 20rem; 
+			}
+			@include bph(675){ top: 18.95rem; }
+			@include bph(650){ top: 12.3rem; }
+		}
+		@include bp(1440){ 
+			@include bph(600){
+				margin: 0;
+				right: 8rem; ;
+				top: 12.3rem;
+			}
+		}
+		@include bp(1024){
+			@include bph(600){ top: 10.5rem; }
+		}
+		@include bp(910){
+			@include bph(600){ 
+				right: 5.2rem;
+				top: 11.5rem; 
+			}
+			@include bph(550){ top: 10.5rem; }
+		}
 	}
 
 	&--2,
 	&--3{
-		margin-top: 2rem;
 
 		@include bp(767){
 			position: relative;
@@ -64,8 +122,18 @@
 				margin-top: 0;
 				top: 4rem;
 				left: .9rem;
-
 			}
+			@include bph_min(575){
+				margin-top: 1.5rem;
+			}
+		}
+		@include bp(665){
+			margin: 0;
+			position: absolute;
+			top: auto;
+			left: auto;
+			bottom: 2.2rem;
+			right: .85rem;
 		}
 	}
 
