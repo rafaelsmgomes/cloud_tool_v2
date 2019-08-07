@@ -12,8 +12,24 @@
 			margin-top: 1.6rem; 
 			@include bph_min(800){ margin-top: 2rem; }
 		}
+		@include bp(767){
+			width: 24.15rem;
+			margin-top: 1rem;
+		}
 
-		@include bp(767){ width: 100%; }
+		@include bp(767){
+			@include bp_min(666){
+				@include bph(515){
+					position: absolute;
+					margin: 0;
+					top: 1.2rem;
+					right: 2.9rem;
+					width: 41.3%;
+				}
+			}
+		}
+	
+		@include bp(665){ width: 100%; }
 
 		&--1{
 	    height: 23.15rem;
@@ -75,11 +91,22 @@
 					height: 8.9rem; 
 				}	
 			}
-			
-			@include bp(767){
-				@include bp_min(667){ height: 9.5rem; }
+			@include bp(910){ 
+				height: 10rem;
+				@include bph(550){
+					height: 8.9rem; 
+				}	
 			}
+			@include bp(767){ height: 8.9rem; }
 
+			@include bp(767){
+				@include bp_min(666){
+					@include bph(515){
+						height: 8.4rem;
+					}
+				}
+			}
+	
 
 			& > *{
 				display: flex;
@@ -154,7 +181,7 @@
 
 		@include bp_min(1025){
 			@include bph(650){
-				height: 2.5rem;;
+				height: 2.2rem;;
 			}
 		}
 
@@ -162,9 +189,11 @@
 		
 		@include bp(1024){ 
 			@include bph(600){
-				height: 1.5rem; 
+				height: 2.2rem; 
 			}
 		}
+		@include bp(910){ height: 2.2rem; }
+		@include bp(767){ height: 2.3rem; }
 
 	}
 	&__header{
@@ -190,12 +219,16 @@
 
 			@include bp(1024){
 				@include bph(600){
-					height: 2.4rem;
+					height: 2.55rem;
 				}
 			}
-			@include bp(1150){
+			@include bp(910){
 				height: 3.3rem;
+				@include bph(550){
+					height: 2.55rem;
+				}
 			}
+			@include bp(767){ height: 2.55rem; }
 		}
 	}
 	&__down{
@@ -258,6 +291,14 @@
 				}
 			}
 			@include bp(1440){ height: 1.6rem; }
+
+			@include bp(767){
+				@include bp_min(666){
+					@include bph(515){
+						margin-top: .35rem;
+					}
+				}
+			}
 		}
 	}
 
@@ -300,9 +341,16 @@
 			}
 		}
 		@include bp(1440){ margin-top: 1.75rem; }
+
 		@include bp(767){
-			@include bp_min(667){ margin-top: 2rem; }
+			@include bp_min(666){
+				@include bph(515){
+					width: 0.65rem;
+					height: .8rem;
+				}
+			}
 		}
+
 	}  
   }
 }
