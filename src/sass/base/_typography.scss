@@ -325,6 +325,11 @@ b {
 			width: auto;
 
 			@include bph(650){ display: none; }
+			@include bp(767){
+				@include bph_min(650){
+					margin-top: 1rem;
+				}
+			}
 		}
 
 		&--3{
@@ -346,7 +351,7 @@ b {
 					display: none;
 				}
 			}
-			@include bp(666){
+			@include bp(665){
 				display: none;
 			}
 		}
@@ -800,8 +805,10 @@ b {
 		    @include bp(1050){ letter-spacing: -0.03em; }
 		    @include bp(767){ 
 				font-size: $font-size-2; 
-				@include bph_min(721){
-					font-size: $font-size-4; 
+				@include bp_min(600){
+					@include bph_min(700){
+						font-size: $font-size-4; 
+					}
 				}
 			}
 	
@@ -859,9 +866,15 @@ b {
 		}
 
 		@include bp(767){
+			font-size: $font-size-3;
 			@include bp_min(666){
 				@include bph(515){
 					line-height: 1.1;
+				}
+			}
+			@include bp_min(600){
+				@include bph_min(700){
+					font-size: .95rem;
 				}
 			}
 		}

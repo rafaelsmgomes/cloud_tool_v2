@@ -64,8 +64,18 @@
 				margin-top: 0;
 				top: 4rem;
 				left: .9rem;
-
 			}
+			@include bph_min(575){
+				margin-top: 1.5rem;
+			}
+		}
+		@include bp(665){
+			margin: 0;
+			position: absolute;
+			top: auto;
+			left: auto;
+			bottom: 2.2rem;
+			right: .85rem;
 		}
 	}
 
