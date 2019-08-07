@@ -197,7 +197,6 @@
 			@include bph(555){ top: 23.1rem; }
 
 			@include bp(1440){ 
-				top: 45.4rem;
 				right: -22rem; 
 
 				@include bph(1015){ top: 31.9rem; }
@@ -208,17 +207,12 @@
 				@include bph(555){ top: 22.4rem; }
 			}
 
-			@include bp(850){ 
-				right: -24rem;
-
-				@include bph(1015){ top: 31.9rem; }
-				@include bph(750){ top: 28.5rem; }
-				@include bph(675){ top: 27.0rem; }
-				@include bph(650){ top: 24.1rem; }
-				@include bph(600){ top: 23.7rem; }
-				@include bph(555){ top: 22.9rem; }
+			@include bp(1024){ 
+				@include bph_min(811){ 
+					top: 28.5rem; 
+					right: -15rem;
+				}
 			}
-
 
 			@include bp(767){ display: none; }
 		}
