@@ -5,13 +5,23 @@
 	font-weight: 700;
 	transform: all 500ms;
 
-	@include bph(725){
-	position: absolute;
-    bottom: 2.75rem;
-    right: 0;
+	@include bp_min(1441){
+		@include bph(750){
+		position: absolute;
+		top: 7.4rem;
+		right: 1rem;
+		margin-top: 0;
+		}
+	}
+	@include bp(1440){
+		@include bph(600){
+		position: absolute;
+		top: 7.4rem;
+		right: 1rem;
+		margin-top: 0;
+		}
 	}
 	@include bp(666){
-		top: auto;
 		right: .6rem;
 		bottom: 2rem;
 	}
@@ -41,6 +51,11 @@
 	}
 	&--3{
 		width: 5.10rem;
+	}
+
+	&--2,
+	&--3{
+		margin-top: 2rem;
 	}
 
 	&--active{ color: $color-blue-1; }
