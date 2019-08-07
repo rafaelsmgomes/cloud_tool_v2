@@ -34,7 +34,7 @@ export const resizeLines = () => {
 	// }; 
 	
 
-	if(height <= 375) {
+	if(height <= 400) {
 		y1_start = 3.2*20 + circleSize;
 		x1_center = screenWidth - 60 - circleSize/2 ;
 	} else if(height <= 435) {

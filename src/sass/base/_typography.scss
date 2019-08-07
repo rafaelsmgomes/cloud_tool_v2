@@ -100,7 +100,7 @@ b {
 		@include bph(435){
 			height: auto;
 		}
-		@include bph(375){
+		@include bph(400){
 			height: 2.40rem;
 		}
 
@@ -287,6 +287,13 @@ b {
 			@include bp(500){
 				width: auto;
 			}
+			@include bp(767){
+				@include bph(514){
+					margin: 0;
+					width: 15rem;
+				}
+			}
+
 		}
 		&--2{
 			width: 39.55rem;
@@ -304,38 +311,38 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
+				@include bph(514){
+					margin: 0;
+					width: 16.3rem;
+				}
 			}
 			@include bp(500){
 				width: auto;
 			}
 		}
-		&--3,
 		&--5,
 		&--6{
 			width: auto;
-			@include bp_min(1025){
-				@include bph(650){
-					display: none;
-				}
-			}
+
+			@include bph(650){ display: none; }
+		}
+
+		&--3{
 			@include bp(1024){
 				@include bph(570){
 					display: none;
 				}
 			}
-			@include bp(910){
-				@include bph(660){
-					display: none;
-				}
-			}
-		}
-
-		&--3{
 			@include bp(767){
 				display: block;
 				margin-top: 0;
 				margin-bottom: .2rem;
 				@include bph(514){
+					display: none;
+				}
+			}
+			@include bp(910){
+				@include bph(660){
 					display: none;
 				}
 			}
@@ -388,6 +395,10 @@ b {
 		}
 		@include bp(767){
 			width: 24.3rem;
+			@include bph(514){
+				margin: 0;
+				width: 15rem;
+			}
 		}
 		@include bp(500){
 			width: auto;
@@ -412,7 +423,7 @@ b {
 			}
 			@include bp(767){
 				@include bp_min(667){
-					@include bph(515){
+					@include bph(514){
 						width: 40%;
 					}
 				}
@@ -426,6 +437,11 @@ b {
 
 		&--2{
 			width: 35%;
+		}
+		&--5,
+		&--6{
+			height: auto;
+			width: auto;
 		}
 	}
 }
@@ -690,6 +706,12 @@ b {
 				}
 			}
 		}
+		&--5,
+		&--6{
+			@include bp(850){
+				width: 12rem;
+			}
+		}
 
 
 	}
@@ -742,9 +764,21 @@ b {
 		  height: 3.55rem;
 		  font-size: $font-size-6;
 		  line-height: 1.67;
+		  
+		  	@include bp_min(1441){
+			 	@include bph(650){
+					font-size: $font-size-4;
+			  	}
+		  	}
+		  	@include bp(1440){ font-size: $font-size-4; }
+			  
+			@include bp(1440){ 
+				@include bph(600){
+					font-size: $font-size-2; 
+				}
+			}
 
 		  @include bp(1300){
-		  	font-size: $font-size-8;		 
 		    line-height: 1;
 		    height: auto;
 		    margin-top: 0.55rem;		  	
@@ -752,11 +786,12 @@ b {
 		  @include bp(1150){
 		  	margin-top: 0;
 		  	height: auto;
-		  	line-height: 1.4;
-		  }
+		  	line-height: 1.1;
+			}
 		  @include bp(1050){
 		  	letter-spacing: -0.03em;
 		  }
+	
 		}
 	}
 	&__step{
@@ -770,6 +805,10 @@ b {
 	  color: $color-blue-2;
 	  padding-right: .3rem;
 	  padding-top: 1rem;
+
+	  @include bp(1150){
+		padding-top: .3rem
+	}
 
 		display: none;
 		
@@ -792,8 +831,18 @@ b {
 	  color: $color-blue-2;
 	  align-self: flex-end;
 
-		@include bp(1050){
-	    letter-spacing: -0.03em;
+		@include bp(1050){ letter-spacing: -0.03em; }
+
+		@include bp(1440){ font-size: $font-size-5; }
+		
+		@include bp(1024){ 
+			@include bph(650) {
+				font-size: $font-size-3; 
+			}
+		}
+
+		@include bp(960){
+			@include bp_min(768){ line-height: 1.15; }
 		}
 		&--1{
 			padding-left: .3rem;

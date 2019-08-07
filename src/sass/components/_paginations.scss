@@ -5,8 +5,46 @@
 	font-weight: 700;
 	transform: all 500ms;
 
+	@include bp_min(1441){
+		@include bph(750){
+		position: absolute;
+		top: 7.4rem;
+		right: 1rem;
+		margin-top: 0;
+		}
+	}
+	@include bp(1440){
+		@include bph(600){
+		position: absolute;
+		top: 7.4rem;
+		right: 1rem;
+		margin-top: 0;
+		}
+	}
+	@include bp(666){
+		right: .6rem;
+		bottom: 2rem;
+	}
+
 	&--1{
 		width: 2.55rem;
+
+		@include bp(767){
+			right: 0.8rem;
+			@include bp_min(667){
+				@include bph(514){
+					right: 18.2rem;
+					bottom: auto;
+					top: 17.2rem;
+				}
+				@include bph(450){
+					top: 14.4rem;
+				}
+				@include bph(380){
+					top: 11.7rem;
+				}
+			}
+		}
 	}
 	&--2{
 		width: 3.50rem;
@@ -15,35 +53,11 @@
 		width: 5.10rem;
 	}
 
-	&--active{
-    color: $color-blue-1;
+	&--2,
+	&--3{
+		margin-top: 2rem;
 	}
 
-	@include bph(725){
-		position: absolute;
-    bottom: 2.75rem;
-    right: 0;
-	}
-	@include bp(767){
-		right: 0.8rem;
-		@include bp_min(667){
-			@include bph(514){
-				right: 18.2rem;
-				bottom: auto;
-				top: 17.2rem;
-			}
-			@include bph(450){
-				top: 14.4rem;
-			}
-			@include bph(380){
-				top: 11.7rem;
-			}
-		}
-	}
-	@include bp(666){
-		top: auto;
-		right: .6rem;
-		bottom: 2rem;
-	}
+	&--active{ color: $color-blue-1; }
 
 }
