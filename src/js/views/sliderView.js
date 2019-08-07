@@ -13,8 +13,8 @@ export const progressScrollerContent = slider => {
 
 	const pageHeight = func.returnNumOnly(e.pageContent.css('height'),2);
 
-	//Shrinks previous siblings into a row if body is below height 1000;
-	if(pageHeight <= 1000){
+	//Shrinks previous siblings into a row if body is below height 1015;
+	if(pageHeight <= 1015){
 		const previousSiblingToActive = e.thisNextScrollElement(slider).prevAll();
 		const nextSiblingToActive = e.thisNextScrollElement(slider).nextAll();
 		console.log(nextSiblingToActive);
@@ -31,7 +31,7 @@ export const progressScrollerContent = slider => {
 export const setSliderGroupSize = () =>{
 	const pageHeight = func.returnNumOnly(e.pageContent.css('height'),2);
 
-	if(pageHeight <= 1000){
+	if(pageHeight <= 1015){
 		const nextSiblingToActive1 = $('.scroller__wrapper--1 > .scroller__content--active').nextAll();
 		const nextSiblingToActive2 = $('.scroller__wrapper--2 > .scroller__content--active').nextAll();
 		console.log(nextSiblingToActive1, nextSiblingToActive2);
