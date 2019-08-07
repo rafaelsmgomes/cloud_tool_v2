@@ -1,0 +1,33 @@
+.detscroll{
+	&__wrapper{		
+		width: 44.00rem;
+		background-color: black;
+		margin-top: 2.60rem;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		&-1{
+			height: 15.40rem;
+		}
+		&-2{
+			height: 23.10rem;
+		}
+	}
+
+	&__content{
+		background-color: blue;
+		width: 21.20rem;
+		height: 6.90rem;
+		border-radius: 0.20rem;
+	  box-shadow: 0 0.10rem 0.80rem 0 rgba(0, 0, 0, 0.5);
+	  background-color: $color-white-1;		
+		margin-bottom: 0.80rem;
+		margin-right: 0.80rem;
+	}
+	&__header{
+
+	}
+	&__icon{
+
+	}
+}

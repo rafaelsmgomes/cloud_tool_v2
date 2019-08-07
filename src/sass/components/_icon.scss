@@ -2,3 +2,18 @@
     height: 100%;
     width: 100%;
 }
+
+.icon__zoomout{
+	width: 1.20rem;
+	height: 1.20rem;
+  background-image: url(../assets/graphics/icon-zoom-out.svg);
+  transform: translateY(-0.80rem);
+  position: absolute;
+  right: 1.2rem;
+}
+
+.icon__check{
+  width: 0.85rem;
+  height: 0.64rem;
+	background-color: red;
+}
