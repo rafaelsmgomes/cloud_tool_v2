@@ -21,10 +21,6 @@
 		margin-top: 0;
 		}
 	}
-	@include bp(666){
-		right: .6rem;
-		bottom: 2rem;
-	}
 
 	&--1{
 		width: 2.55rem;
@@ -56,6 +52,21 @@
 	&--2,
 	&--3{
 		margin-top: 2rem;
+
+		@include bp(767){
+			position: relative;
+			top: auto;
+			right: auto;
+			margin-top: .2rem;
+
+			@include bph(515){
+				position: absolute;
+				margin-top: 0;
+				top: 4rem;
+				left: .9rem;
+
+			}
+		}
 	}
 
 	&--active{ color: $color-blue-1; }

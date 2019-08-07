@@ -442,6 +442,18 @@ b {
 		&--6{
 			height: auto;
 			width: auto;
+			
+			@include bp_min(768){ min-width: 33.5rem;}
+
+			@include bp(767){
+				@include bp_min(666){
+					@include bph(515){
+						margin-top: 2rem;
+						width: 14.4rem;
+					}
+				}
+			}
+
 		}
 	}
 }
@@ -770,27 +782,28 @@ b {
 					font-size: $font-size-4;
 			  	}
 		  	}
-		  	@include bp(1440){ font-size: $font-size-4; }
 			  
 			@include bp(1440){ 
+				font-size: $font-size-4;
 				@include bph(600){
 					font-size: $font-size-2; 
 				}
 			}
-
-		  @include bp(1300){
-		    line-height: 1;
-		    height: auto;
-		    margin-top: 0.55rem;		  	
-		  }
-		  @include bp(1150){
-		  	margin-top: 0;
-		  	height: auto;
-		  	line-height: 1.1;
+			@include bp(911){ 
+				font-size: $font-size-4;
+				@include bph(550){
+					font-size: $font-size-2; 
+				}
 			}
-		  @include bp(1050){
-		  	letter-spacing: -0.03em;
-		  }
+
+		    @include bp(1150){ line-height: 1.1; }
+		    @include bp(1050){ letter-spacing: -0.03em; }
+		    @include bp(767){ 
+				font-size: $font-size-2; 
+				@include bph_min(721){
+					font-size: $font-size-4; 
+				}
+			}
 	
 		}
 	}
@@ -844,6 +857,15 @@ b {
 		@include bp(960){
 			@include bp_min(768){ line-height: 1.15; }
 		}
+
+		@include bp(767){
+			@include bp_min(666){
+				@include bph(515){
+					line-height: 1.1;
+				}
+			}
+		}
+
 		&--1{
 			padding-left: .3rem;
 		}
