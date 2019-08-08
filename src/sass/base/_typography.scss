@@ -283,6 +283,9 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
+				@include bph(515){
+					width: 15.3rem;
+				}
 			}
 			@include bp(500){
 				width: auto;
@@ -304,6 +307,9 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
+				@include bph(515){
+					width: 15.3rem;
+				}
 			}
 			@include bp(500){
 				width: auto;
@@ -397,7 +403,10 @@ b {
 		}
 		@include bp(767){
 			width: 24.3rem;
-		}
+			@include bph(515){
+				width: 15.3rem;
+			}
+	}
 		@include bp(500){
 			width: auto;
 		}
