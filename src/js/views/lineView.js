@@ -35,22 +35,28 @@ export const resizeLines = () => {
 	
 
 	if(height <= 400) {
-		y1_start = 3.2*20 + circleSize;
+		y1_start = 2.6*20 + circleSize;
 		x1_center = screenWidth - 60 - circleSize/2 ;
-	} else if(height <= 435) {
-		y1_start = 10.3*20 + circleSize;		
-	} else if(height <= 500) {
-		y1_start = 11.65*20 + circleSize;		
+	} else if(height <= 480 && screenWidth >=768) {
+		y1_start = 11.5*20 + circleSize;		
+	} else if(height <= 530 && screenWidth >=768) {
+		y1_start = 13.4*20 + circleSize;		
+	} else if(height <= 480 && screenWidth <= 767){
+		y1_start = 9.75*20 + circleSize;
+	} else if(height <= 530 && screenWidth <= 767){
+		y1_start = 11.6*20 + circleSize;
 	} else if(height <= 650 && screenWidth <= 767){
 		y1_start = 12.85*20 + circleSize;
-	} else if(height <= 650 || screenWidth <= 600){
+	} else if(screenWidth <= 600){
+		y1_start = 12.9*20 + circleSize;
+	} else if(height <= 650){
 		y1_start = 14.55*20 + circleSize;
 	} else if(height <= 810){
 		y1_start = 154+circleSize;
 	} else if(height >= 1080){
 		y1_start = 10.1*20 + circleSize;
 	}; 
-
+	console.log(screenWidth);
 
 	// if(height <= 650){
 	// 	y1_start = 14.35*20 + .4083*height;
