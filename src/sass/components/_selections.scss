@@ -85,6 +85,19 @@
 			width: 17.6rem;
 			margin: 0.9rem auto;
 		}
+
+		&--x{
+			width: 38.40rem;
+			height: 22.00rem;
+
+			@include bp_min(1441){
+				@include bph_min(1050){
+					transform: translateY(0%);
+					margin-top: 1.85rem;
+				}
+			}
+
+		}
 	}
 	&__container{
 		width: 14.65rem;
@@ -183,5 +196,38 @@
 				background-color: $color-blue-1;
 			}
 		}
+
+		&--x{
+			width: 11.90rem;
+			background-color: blue;
+			margin-bottom: 0.90rem;
+			margin-right: 0.90rem;
+			padding: 0.35rem 0.60rem 0.60rem 0.65rem;
+			&-1{
+				height: 7.05rem;
+			}
+			&-2{
+				height: 6.10rem;
+			}
+			&:hover{
+				pointer-events: none;
+			}
+		}
 	}	
+	&__header{
+		&-x{
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+		}
+	}
+	&__line{
+		height: 0.05rem;
+    color: rgb(255,255,255);
+    background-color: rgb(255,255,255);
+    opacity: .8;
+    border: none;
+    margin-top: 0.48rem;
+    
+	}
 }

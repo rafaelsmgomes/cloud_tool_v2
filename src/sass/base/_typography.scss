@@ -100,7 +100,7 @@ b {
 		@include bph(435){
 			height: auto;
 		}
-		@include bph(400){
+		@include bph(375){
 			height: 2.40rem;
 		}
 
@@ -287,13 +287,6 @@ b {
 			@include bp(500){
 				width: auto;
 			}
-			@include bp(767){
-				@include bph(514){
-					margin: 0;
-					width: 15rem;
-				}
-			}
-
 		}
 		&--2{
 			width: 39.55rem;
@@ -311,38 +304,22 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
-				@include bph(514){
-					margin: 0;
-					width: 16.3rem;
-				}
 			}
 			@include bp(500){
 				width: auto;
 			}
 		}
+		&--3,
 		&--5,
 		&--6{
 			width: auto;
-
-			@include bph(650){ display: none; }
-			@include bp(767){
-				@include bph_min(650){
-					margin-top: 1rem;
-				}
-			}
-		}
-
-		&--3{
-			@include bp(1024){
-				@include bph(570){
+			@include bp_min(1025){
+				@include bph(650){
 					display: none;
 				}
 			}
-			@include bp(767){
-				display: block;
-				margin-top: 0;
-				margin-bottom: .2rem;
-				@include bph(514){
+			@include bp(1024){
+				@include bph(570){
 					display: none;
 				}
 			}
@@ -351,15 +328,31 @@ b {
 					display: none;
 				}
 			}
-			@include bp(665){
+		}
+
+		&--3{
+			@include bp(767){
+				display: block;
+				margin-top: 0;
+				margin-bottom: .2rem;
+				@include bph(514){
+					display: none;
+				}
+			}
+			@include bp(666){
 				display: none;
 			}
 		}
 
 		&--7{
 			width: 41.40rem;
+		  &-a{
+		  	width: 45.4rem;
+		  }
 		  height: 6.60rem;
 		  font-family: $font-reg;	
+		  
+			
 		  & > b{
 				font-family: $font-b;
 		  }
@@ -376,6 +369,10 @@ b {
 	  letter-spacing: normal;
 	  color: #fff;		
 		margin-top: 0.80rem;
+
+		&--x{
+			margin-top: 1rem;	
+		}
 
 		@include bp(1440){
 		  width: 39.55rem;
@@ -400,10 +397,6 @@ b {
 		}
 		@include bp(767){
 			width: 24.3rem;
-			@include bph(514){
-				margin: 0;
-				width: 15rem;
-			}
 		}
 		@include bp(500){
 			width: auto;
@@ -428,7 +421,7 @@ b {
 			}
 			@include bp(767){
 				@include bp_min(667){
-					@include bph(514){
+					@include bph(515){
 						width: 40%;
 					}
 				}
@@ -442,23 +435,6 @@ b {
 
 		&--2{
 			width: 35%;
-		}
-		&--5,
-		&--6{
-			height: auto;
-			width: auto;
-			
-			@include bp_min(768){ min-width: 33.5rem;}
-
-			@include bp(767){
-				@include bp_min(666){
-					@include bph(515){
-						margin-top: 2rem;
-						width: 14.4rem;
-					}
-				}
-			}
-
 		}
 	}
 }
@@ -537,7 +513,48 @@ b {
 		// .selection__container--active &{
 		// 	color: $color-blue-1;
 		// }
+
+		&-x{
+		  width: 100%;
+		  font-family: $font-b;
+		  font-size: $font-size-3;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.36;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+		}
 	}
+
+	&__peer{
+		&-rank{
+		  width: 1.70rem;
+		  height: 1.20rem;
+		  font-family: $font-reg;
+		  font-size: $font-size-2;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-white-1;		
+		}
+		&-percentage{
+		  width: 7.05rem;
+		  height: 0.95rem;
+		  font-family: $font-reg;
+		  font-size: $font-size-3;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.36;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+		  margin-top: 0.10rem;
+		}
+	}
+
+	
 }
 
 .results{
@@ -710,23 +727,18 @@ b {
 		&--2,
 		&--3,
 		&--4{
-			
 			@include bp(1440){
 				@include bph_min(1000){
 					width: 20rem;
 				}
 			}
+
 			@include bp(767){
 				width: 10rem;
 				@include bph_min(715){
 					width: 20rem;
 				}
 			}
-		}
-		&--5,
-		&--6{
-			@include bp(910){ width: 12rem; }
-			@include bp(767){ width: 18rem; }
 		}
 
 
@@ -780,37 +792,21 @@ b {
 		  height: 3.55rem;
 		  font-size: $font-size-6;
 		  line-height: 1.67;
-		  
-		  	@include bp_min(1441){
-			 	@include bph(650){
-					font-size: $font-size-4;
-			  	}
-		  	}
-			  
-			@include bp(1440){ 
-				font-size: $font-size-4;
-				@include bph(600){
-					font-size: $font-size-2; 
-				}
-			}
-			@include bp(911){ 
-				font-size: $font-size-4;
-				@include bph(550){
-					font-size: $font-size-2; 
-				}
-			}
 
-		    @include bp(1150){ line-height: 1.1; }
-		    @include bp(1050){ letter-spacing: -0.03em; }
-		    @include bp(767){ 
-				font-size: $font-size-2; 
-				@include bp_min(600){
-					@include bph_min(700){
-						font-size: $font-size-4; 
-					}
-				}
-			}
-	
+		  @include bp(1300){
+		  	font-size: $font-size-8;		 
+		    line-height: 1;
+		    height: auto;
+		    margin-top: 0.55rem;		  	
+		  }
+		  @include bp(1150){
+		  	margin-top: 0;
+		  	height: auto;
+		  	line-height: 1.4;
+		  }
+		  @include bp(1050){
+		  	letter-spacing: -0.03em;
+		  }
 		}
 	}
 	&__step{
@@ -824,10 +820,6 @@ b {
 	  color: $color-blue-2;
 	  padding-right: .3rem;
 	  padding-top: 1rem;
-
-	  @include bp(1150){
-		padding-top: .3rem
-	}
 
 		display: none;
 		
@@ -850,34 +842,9 @@ b {
 	  color: $color-blue-2;
 	  align-self: flex-end;
 
-		@include bp(1050){ letter-spacing: -0.03em; }
-
-		@include bp(1440){ font-size: $font-size-5; }
-		
-		@include bp(1024){ 
-			@include bph(650) {
-				font-size: $font-size-3; 
-			}
+		@include bp(1050){
+	    letter-spacing: -0.03em;
 		}
-
-		@include bp(960){
-			@include bp_min(768){ line-height: 1.15; }
-		}
-
-		@include bp(767){
-			font-size: $font-size-3;
-			@include bp_min(666){
-				@include bph(515){
-					line-height: 1.1;
-				}
-			}
-			@include bp_min(600){
-				@include bph_min(700){
-					font-size: .95rem;
-				}
-			}
-		}
-
 		&--1{
 			padding-left: .3rem;
 		}
@@ -1106,3 +1073,33 @@ b {
     }
 	}
 }
+
+.detscroll{
+	&__title{
+		display: flex;
+    align-items: center;
+	  width: 16.00rem;
+	  height: 2.30rem;
+	  font-family: $font-b;
+	  font-size: 1.25rem;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+	}
+	&__txt{
+		width: 85%;
+	  height: 2.10rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-5;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.25;
+	  letter-spacing: normal;
+	  color: $color-blue-1;
+	  margin-top: 0.45rem;
+	}
+}
+
