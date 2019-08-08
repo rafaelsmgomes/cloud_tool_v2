@@ -17,7 +17,6 @@ import SliderGroup from './models/Slider';
 
 import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
-import * as dr from './views/detailedResults.js';
 import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
 import * as header from './views/headerView';
@@ -54,7 +53,6 @@ $(document).ready(function(){
 		let detailSecond='';
 		let detailForth='';
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
-		// let results = dr.retrieveResults(sessionStorage, PeersData.retrievePeerScore);	
 
 		detailFirst = retrieveLottieDialAnimation(results.val['1']);
 		detailSecond = retrieveLottieDialAnimation(results.val['2']);

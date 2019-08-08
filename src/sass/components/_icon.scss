@@ -22,3 +22,40 @@
     display: block;
   }
 }
+
+.icon__detscroll{
+  width: 1.3rem;
+  height: 1.3rem;
+  background-size: 100%;
+  margin-right: 0.40rem;
+  &--1{
+    background-image: url("../assets/graphics/illustration/illustration-no-padding-cyber-security-prevention.svg");
+  }
+  &--2{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-cyber-security-threat-detection.svg');
+  } 
+  &--3{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-capacity-planning.svg'); 
+  }
+  &--4{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-outage-prevention.svg');
+  }
+  &--5{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-data-analytics.svg');
+  }
+  &--6{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-data-sources.svg');
+  }
+  &--7{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-big-data-skillsets.svg');
+  }
+  &--8{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-machine-learning.svg');
+  }
+  &--9{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-visualization.svg');
+  }
+  &--10{
+    background-image: url('../assets/graphics/illustration/illustration-no-padding-distribution.svg');
+  }
+}

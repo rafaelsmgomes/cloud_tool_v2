@@ -1076,6 +1076,8 @@ b {
 
 .detscroll{
 	&__title{
+		display: flex;
+    align-items: center;
 	  width: 16.00rem;
 	  height: 2.30rem;
 	  font-family: $font-b;
@@ -1084,6 +1086,7 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.2;
 	  letter-spacing: normal;
-	  color: $color-blue-2;	
+	  color: $color-blue-2;
 	}
 }
+

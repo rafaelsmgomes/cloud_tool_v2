@@ -25,7 +25,9 @@
 		margin-right: 0.80rem;
 	}
 	&__header{
-
+		display: flex;
+    align-items: center;
+    padding-left: 0.40rem;
 	}
 	&__icon{
 
