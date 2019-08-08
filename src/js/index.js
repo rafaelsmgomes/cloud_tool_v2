@@ -12,6 +12,7 @@ import Dial from './models/Dial';
 import Selector from './models/Selector';
 import Page from './models/Page';
 import * as PeersData from './models/PeersData';
+import CompareResults from './models/CompareResults';
 import SliderGroup from './models/Slider';
 
 import * as bP from './views/buttonProgressView';
@@ -46,40 +47,50 @@ $(document).ready(function(){
  	const state = {};
 
 /**************** DETAILED PAGE CONTROLLER ********************/
-
+	
 	if(sessionStorage.dial2){	
+		const results = new CompareResults();
 		let detailFirst='';
 		let detailSecond='';
 		let detailForth='';
-		let results = dr.retrieveResults(sessionStorage, PeersData.retrievePeerScore);
+		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
+		// let results = dr.retrieveResults(sessionStorage, PeersData.retrievePeerScore);	
 
-		detailFirst = retrieveLottieDialAnimation(results.q1);
-		detailSecond = retrieveLottieDialAnimation(results.q2);
-		detailForth = retrieveLottieDialAnimation(results.q4);
+		detailFirst = retrieveLottieDialAnimation(results.val['1']);
+		detailSecond = retrieveLottieDialAnimation(results.val['2']);
+		detailForth = retrieveLottieDialAnimation(results.val['4']);
 
-		var detailedResults1 = lottie.loadAnimation({
-		  container: document.getElementById('detail-1'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: detailFirst,
-		  loop: false,
+
+		// DIALS
+			var detailedResults1 = lottie.loadAnimation({
+			  container: document.getElementById('detail-1'),
+			  renderer: 'svg',
+			  autoplay: true,
+			  animationData: detailFirst,
+			  loop: false,
+			});
+
+			var detailedResults2 = lottie.loadAnimation({
+			  container: document.getElementById('detail-2'),
+			  renderer: 'svg',
+			  autoplay: true,
+			  animationData: detailSecond,
+			  loop: false,
+			});
+
+			var detailedResults3 = lottie.loadAnimation({
+			  container: document.getElementById('detail-3'),
+			  renderer: 'svg',
+			  autoplay: true,
+			  animationData: detailForth,
+			  loop: false,
+			});
+
+		//SELECTORS
+		const selectorValues = results.val['3'].split(',');
+		selectorValues.forEach( function(element, index) {
+			$(`#select-${element}`).addClass('activate');
 		});
-
-		var detailedResults2 = lottie.loadAnimation({
-		  container: document.getElementById('detail-2'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: detailSecond,
-		  loop: false,
-		});
-
-		var detailedResults3 = lottie.loadAnimation({
-		  container: document.getElementById('detail-3'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: detailForth,
-		  loop: false,
-		});				
 	};
 
 /****** DETAILED MAP CONTROLLER ******/

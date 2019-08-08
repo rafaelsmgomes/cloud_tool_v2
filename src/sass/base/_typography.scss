@@ -515,9 +515,14 @@ b {
 		// }
 
 		&-x{
-			width: 100%;
-			height: 100%;
-			font-family: $font-b;
+		  width: 100%;
+		  font-family: $font-b;
+		  font-size: $font-size-3;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.36;
+		  letter-spacing: normal;
+		  color: $color-white-1;
 		}
 	}
 

@@ -40,7 +40,7 @@ export const  retrieveResults= (session, peer) => {
 	let results = {
 		q1: (Number(session.dial1) - peer[1]),
 		q2: (Number(session.dial2) - peer[2]),
-		// q3: [session.selector1, peer['3']],
+		// q3[session.selector1, peer['3']],
 		q4: (Number(session.dial3) - peer[4]),
 		// q5: (Number(session.dial1) - peer),
 		// q6: (Number(session.dial1) - peer),

@@ -12,7 +12,7 @@
 			left: 53.4rem;
 	
 			.main-container--x &{
-        left: 52.4rem;		
+        left: 49.4rem;		
 			}
 		}
 		@include bp(1250){
@@ -153,7 +153,15 @@
 			@include bp(666){
 				display: none;
 			}
-
+			&-x{
+				@include bp_min(1441){				
+					@include bph_min(1050){
+						width: 100rem;
+						top: 16rem;
+						right: -53rem;
+					}
+				}
+			}
 		}
 
 		&--5{

@@ -16,4 +16,9 @@
   width: 0.85rem;
   height: 0.64rem;
 	background-color: red;
+  display: none;
+
+  &.activate{
+    display: block;
+  }
 }
