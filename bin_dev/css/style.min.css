@@ -61,9 +61,6 @@ $Breakpoint argument choices:
 *:focus {
   outline: none; }
 
-* {
-  outline: 1px solid hotpink; }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -124,17 +121,17 @@ body {
 
 @font-face {
   font-family: "Univers";
-  src: url("../fonts/UniversLTStd.otf");
+  src: url("../fonts/OracleSans_Rg.ttf");
   font-weight: normal; }
 
 @font-face {
   font-family: "UniversLite";
-  src: url("../fonts/UniversLTStd-Light.otf");
+  src: url("../fonts/OracleSans_Lt.ttf");
   font-weight: normal; }
 
 @font-face {
   font-family: "UniversB";
-  src: url("../fonts/UniversLTStd-Bold.otf");
+  src: url("../fonts/OracleSans_Bd.ttf");
   font-weight: normal; }
 
 b {
