@@ -1,23 +1,33 @@
 .scroller{
 	&__wrapper{
 		width: 40.90rem;
-		@include bp(1300){
+		@include bp(1315){
 			width: 60%;	
 		}
-		margin-top: 3.00rem;
+		margin-top: 3.0rem;
 		
-		@include bph(725){
-			margin-top: 2rem;
+		@include bph(675){ margin-top: 2rem; }
+		
+		@include bp(1024){ 
+			margin-top: 1.6rem; 
+			@include bph_min(801){ margin-top: 2rem; }
 		}
-		@include bph(675){
-			margin-top: 1.5rem;
+		
+		@include bp(767){
+			width: 24.15rem;
+			margin-top: 1rem;
+			@include bp_min(666){
+				@include bph(515){
+					position: absolute;
+					margin: 0;
+					top: 1.2rem;
+					right: 2.9rem;
+					width: 41.3%;
+				}
+			}
 		}
-		@include bph(650){
-			margin-top: 3.0rem;
-		}
-		@include bph(600){
-			margin-top: 1.5rem;
-		}
+	
+		@include bp(665){ width: 100%; }
 
 		&--1{
 	    height: 23.15rem;
@@ -29,7 +39,7 @@
 	}
 	&__content{
 		width: 97%;
-		@include bph(1000){
+		@include bph(1015){
 			height: .4rem;
 			transition: width $transition-1 linear, opacity $transition-1 linear;
 		}
@@ -46,7 +56,7 @@
 		}
 		& > *{		
 			display: none;
-			@include bph(1000){
+			@include bph(1015){
 				display: flex;
 				opacity: 0;
 			}		
@@ -54,7 +64,7 @@
 
 		&--active{
 			height: 12.65rem;
-			@include bph(1000){
+			@include bph(1015){
 				transition: height $transition-1 linear $transition-3;
 			}
 			opacity: 1;
@@ -65,13 +75,46 @@
 			@include bp(1440){
 				width: 100%;
 			}
-		
 
+			@include bp_min(1441){
+				@include bph(650){
+					height: 10rem;;
+				}
+			}
+  
+			@include bp(1440){ height: 10rem; }
+
+			@include bp(1024){ 
+				@include bph(600){
+					height: 8.9rem; 
+				}	
+			}
+			@include bp(910){ 
+				height: 10rem;
+				@include bph(550){
+					height: 8.9rem; 
+				}	
+			}
+			@include bp(767){ height: 8.9rem; }
+
+			@include bp(767){
+				@include bp_min(666){
+					@include bph(515){
+						height: 8.4rem;
+					}
+				}
+				@include bp_min(600){
+					@include bph_min(700){
+						height: 10rem;	
+					}
+				}
+			}
+	
 
 			& > *{
 				display: flex;
 				opacity: 1;
-				@include bph(1000){
+				@include bph(1015){
 					transition: opacity $transition-1 linear $transition-3;
 				}
 			}
@@ -79,21 +122,21 @@
 
 		&--deactive{
 			// height: 12.65rem;
-			@include bph(1000){
+			@include bph(1015){
 				transition: width $transition-1 linear, opacity $transition-1 linear,height $transition-2 linear $transition-1;
 			}
 			& > * {
 				// transition: opacity 1s;
 				// transition: height 2s;
 				// transition: <property> || <duration> || <timing-function> || <delay> [, ...];
- 				@include bph(1000){
+ 				@include bph(1015){
  					transition: opacity $transition-1 linear;
 				}
 			}
 		}
 		&:not(:last-of-type){
 			margin-bottom: 0.80rem;
-			@include bph(1000){
+			@include bph(1015){
 				margin-bottom: .4rem;
 			}
 		}
@@ -101,7 +144,7 @@
 	&__icon{
 		height: 2.00rem;
 		width: 2.00rem;
-		@include bph(1000){
+		@include bph(1015){
 			margin-right: 1.05rem;
 			height: 2.20rem;
 			width: 2.2rem;
@@ -124,22 +167,13 @@
 		    margin: 0;
 		    margin-right: 1.05rem;
 			}
-			@include bp(1050){
-				margin-right: 0.80rem;
-			}
-			&--2 {
-				transform: translateY(0%);
-			}
-			&--1-b {
-				transform: translateY(-11%);
-			}
+			@include bp(1000){ margin-right: 0.80rem; }
+			
+			&--2 { transform: translateY(0%); }
+			&--1-b { transform: translateY(-11%); }
 			&--2-b,
-			&--6-b {
-				transform: translateY(-5%);
-			}
-			&--5-b {
-				transform: translateY(-7%);
-			}
+			&--6-b { transform: translateY(-5%); }
+			&--5-b { transform: translateY(-7%); }
 		}
 
 	}
@@ -147,6 +181,30 @@
     justify-content: space-between;		
 		height: 3.55rem;
 		padding-top: 1.15rem;
+
+		@include bp_min(1025){
+			@include bph(650){
+				height: 2.5rem;;
+			}
+		}
+
+		@include bp(1440){ height: 2.5rem; }
+		
+		@include bp(1024){ 
+			@include bph(600){
+				height: 2.5rem; 
+			}
+		}
+		@include bp(910){ height: 2.5rem; }
+		@include bp(767){ 
+			height: 2.4rem; 
+			@include bp_min(600){
+				@include bph_min(700){
+					height: 3.4rem;				
+				}
+			}
+		}
+
 	}
 	&__header{
 		display: flex;
@@ -155,7 +213,7 @@
 	
 
 		// transition: opacity 5s;
-		@include bph(1000){
+		@include bph(1015){
 			transition: opacity $transition-1 linear;
 			opacity: 0;
 			height: 3.55rem;
@@ -168,11 +226,19 @@
 		
 		.scroller__content--active &{
 			height: 3.3rem;
-			// align-items: flex-end; 
-			@include bp(1150){
-				height: 3.3rem;
-				align-items: flex-end;
+
+			@include bp(1024){
+				@include bph(600){
+					height: 2.55rem;
+				}
 			}
+			@include bp(910){
+				height: 3.3rem;
+				@include bph(550){
+					height: 2.55rem;
+				}
+			}
+			@include bp(767){ height: 2.55rem; }
 		}
 	}
 	&__down{
@@ -205,7 +271,7 @@
 	  // height: 2.20rem;
 	  // border: solid 2px $color-blue-4;
 	  height: 0;
-	  @include bph(1000){
+	  @include bph(1015){
 	  	width: 100%;
 	  	height: 0;
 	  	transition: all 0.2s linear 0.2s;
@@ -227,14 +293,36 @@
 		  border: solid 2px $color-blue-4;	  	
 		  margin-top: 0.65rem;
 
-		  @include bph(1000){
-		  	transition: all $transition-1 linear $transition-4;
-		  }
-	  }
-  }
+		  @include bph(1015){ transition: all $transition-1 linear $transition-4; }
+
+			@include bp_min(1441){
+				@include bph(650){
+					height: 1.6rem;
+					margin-top: .35rem;
+				}
+			}
+			@include bp(1440){ 
+				height: 1.6rem; 
+				margin-top: .35rem;
+			}
+
+			@include bp(767){
+				@include bp_min(666){
+					@include bph(515){
+						margin-top: .35rem;
+					}
+				}
+				@include bp_min(600){
+					@include bph_min(700){
+						margin-top: .65rem;
+					}
+				}
+			}
+		}
+	}
 
   &__fill{
-	  background: $color-blue-2;
+	  background: $color-blue-1;
 	  position: absolute;  	
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
@@ -258,13 +346,34 @@
 		display: block;
 	    width: 0.80rem;
 	    height: 1.05rem;
-	    background-color: $color-blue-2;
+	    background-color: $color-blue-1;
 	    position: absolute;
 	    transform: translateX(-50%);
 	    margin-top: 2.45rem;
 
 		-webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
 		clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);  
-		}  
+
+		@include bp_min(1025){
+			@include bph(650){
+				margin-top: 1.75rem;
+			}
+		}
+		@include bp(1440){ margin-top: 1.75rem; }
+
+		@include bp(767){
+			@include bp_min(666){
+				@include bph(515){
+					width: 0.65rem;
+					height: .8rem;
+				}
+			}
+		}
+		@include bp(665){
+			width: 0.725rem;
+			height: .9rem;
+		}
+
+	}  
   }
 }
