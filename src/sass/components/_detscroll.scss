@@ -29,7 +29,19 @@
     align-items: center;
     padding-left: 0.40rem;
 	}
-	&__icon{
-
+	
+	&__main-group{
+		padding-left: 0.60rem;
+		padding-right: 0.60rem;
+		padding-top: 0.55rem;
+	}
+	&__range{
+		width: 100%;
+		height: 0.40rem;
+		background-color: red;
+		&--2{
+			margin-top: 0.20rem;
+			background-color: blue;
+		}
 	}
 }
