@@ -45,11 +45,11 @@
 				justify-content: center;    	
 				margin-top: 2.7rem;	
 		}
-		@include bph(500){
+		@include bph(530){
 			margin-top: 1.5rem;	
 		}
-		@include bph(435){
-			margin-top: 1rem;	
+		@include bph(480){
+			margin-top: .5rem;	
 		}
 		@include bph(400){
 			height: 67.1vh;
