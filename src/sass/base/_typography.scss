@@ -285,6 +285,8 @@ b {
 				width: 24.3rem;
 				@include bph(515){
 					width: 15.3rem;
+					margin-top: -.3rem;
+					margin-bottom: 0;
 				}
 			}
 			@include bp(500){
@@ -308,7 +310,9 @@ b {
 			@include bp(767){
 				width: 24.3rem;
 				@include bph(515){
-					width: 15.3rem;
+					width: 16.3rem;
+					margin-top: -.3rem;
+					margin-bottom: 0;
 				}
 			}
 			@include bp(500){
@@ -405,6 +409,7 @@ b {
 			width: 24.3rem;
 			@include bph(515){
 				width: 15.3rem;
+				margin-top: .2rem;
 			}
 	}
 		@include bp(500){
