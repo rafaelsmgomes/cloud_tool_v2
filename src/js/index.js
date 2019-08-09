@@ -100,10 +100,29 @@ $(document).ready(function(){
 
 			detscroll1Values.forEach( function(element, index) {
 				$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+				
+				if(Number(element) < peersDetScroll1[index]){
+					$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');										
+				}else if(Number(element) > peersDetScroll1[index]){					
+					$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');									
+				}else{
+					$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+				}
 			});
 			detscroll2Values.forEach( function(element, index) {
 				$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+
+				if(Number(element) < peersDetScroll2[index]){
+					$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');								
+				
+				}else if(Number(element) > peersDetScroll2[index]){					
+					$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');														
+				}else{
+					$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+				}				
 			});
+
+
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
