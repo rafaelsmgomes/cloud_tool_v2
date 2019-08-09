@@ -90,8 +90,17 @@ $(document).ready(function(){
 				$(`#select-${element}`).addClass('activate');
 			});
 
-				
+		//SLIDER
+			// console.log(results.val[5]);
+			const detscroll1Values = results.val[5].split(',');
+			const detscroll2Values = results.val[6].split(',');
 
+			detscroll1Values.forEach( function(element, index) {
+				$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+			});
+			detscroll2Values.forEach( function(element, index) {
+				$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+			});
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
@@ -445,7 +454,7 @@ $(document).ready(function(){
     		sliderGroup.calculateVal();
     	}else{
     		sliderGroup.calculateVal();
-	    	sl.progressBtn(slider);
+	    	sl.progressBtn(slider);	    	
     	};
     }
 	});
@@ -471,8 +480,10 @@ $(document).ready(function(){
 		sessionStorage.dial2=state.dial2.val;
 		sessionStorage.dial3=state.dial3.val;
 		sessionStorage.selector1=state.selected.choices;
-		sessionStorage.slider1=state.slider1.val;
-		sessionStorage.slider2=state.slider2.val;
+		sessionStorage.slider1=state.slider1.arrayVal;
+		sessionStorage.slider2=state.slider2.arrayVal;
+
+	
 	});
 /**************** SESSION STORAGE CONTROLLER ********************/
 
