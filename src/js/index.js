@@ -95,6 +95,9 @@ $(document).ready(function(){
 			const detscroll1Values = results.val[5].split(',');
 			const detscroll2Values = results.val[6].split(',');
 
+			const peersDetScroll1 = [71,73,71,69];
+			const peersDetScroll2 = [74,74,70,71,71,71];
+
 			detscroll1Values.forEach( function(element, index) {
 				$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 			});
