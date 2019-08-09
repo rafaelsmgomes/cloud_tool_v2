@@ -61,6 +61,9 @@ $Breakpoint argument choices:
 *:focus {
   outline: none; }
 
+* {
+  outline: 1px solid hotpink; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -649,6 +652,26 @@ b {
 @media only screen and (max-width: 1440px) and (max-height: 565px) {
   .dial__text--3c, .dial__text--3-a {
     transform: translateY(-25%); } }
+  .dial__text--peers {
+    width: 9.80rem;
+    height: 4.65rem;
+    font-family: Univers, Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    color: #fff;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 8.25rem; }
+    .dial__text--peers > * {
+      display: block; }
+    .dial__text--peers > b {
+      font-family: UniversB, Arial, Helvetica, sans-serif;
+      line-height: 1.58; }
 
 .cta__txt {
   width: 15.25rem;
