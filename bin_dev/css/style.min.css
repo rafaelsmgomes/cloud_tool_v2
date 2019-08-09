@@ -1751,7 +1751,10 @@ b {
 .detscroll__range {
   width: 100%;
   height: 0.40rem;
-  background-color: red; }
+  border-radius: 50.00rem;
+  border: solid 0.05rem #cad9de; }
+  .detscroll__range--1 {
+    background: linear-gradient(to right, red 40%, transparent 40%); }
   .detscroll__range--2 {
     margin-top: 0.20rem;
     background-color: blue; }
