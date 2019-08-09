@@ -45,6 +45,14 @@
 	&--2,
 	&--3{
 		margin-top: 2rem;
+		// //Check if Selection applies as well
+		// @include bp(1024){
+		// 	@include bph(650){
+		// 		position: absolute;
+		// 		top: 12.5rem;
+		// 		right: 8rem;
+		// 	}
+		// }
 	}
 
 	&--2{

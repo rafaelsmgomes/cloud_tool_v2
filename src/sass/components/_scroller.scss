@@ -7,12 +7,17 @@
 		margin-top: 3.0rem;
 		
 		@include bph(675){ margin-top: 2rem; }
+
 		
 		@include bp(1024){ 
 			margin-top: 1.6rem; 
 			@include bph_min(801){ margin-top: 2rem; }
 		}
-		
+		@include bp(910){
+			@include bph_min(811){
+				width: 27.8rem;
+			}
+		}
 		@include bp(767){
 			width: 24.15rem;
 			margin-top: 1rem;
@@ -22,7 +27,7 @@
 					margin: 0;
 					top: 1.2rem;
 					right: 2.9rem;
-					width: 41.3%;
+					width: 45%;
 				}
 			}
 		}
@@ -150,7 +155,7 @@
 			width: 2.2rem;
 		}
 		margin-right: 0.75rem;
-		transform: translateY(-3%);
+		// transform: translateY(-3%);
 
 		.scroller__content--active &{
 			margin-right: 1.05rem;
@@ -169,11 +174,11 @@
 			}
 			@include bp(1000){ margin-right: 0.80rem; }
 			
-			&--2 { transform: translateY(0%); }
-			&--1-b { transform: translateY(-11%); }
-			&--2-b,
-			&--6-b { transform: translateY(-5%); }
-			&--5-b { transform: translateY(-7%); }
+			// &--2 { transform: translateY(0%); }
+			// &--1-b { transform: translateY(-11%); }
+			// &--2-b,
+			// &--6-b { transform: translateY(-5%); }
+			&--5-b { transform: translateY(-3%); }
 		}
 
 	}

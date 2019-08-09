@@ -329,12 +329,12 @@ b {
 				}
 			}
 			@include bp(1024){
-				@include bph(570){
+				@include bph(650){
 					display: none;
 				}
 			}
 			@include bp(910){
-				@include bph(660){
+				@include bph(650){
 					display: none;
 				}
 			}
@@ -400,16 +400,14 @@ b {
 			font-size: .95rem;
 			width: 34.90rem;
 			margin-top: .5rem;
-
-			@include bph(525){
-				width: 22.5rem;
-			}
 		}
 		@include bp(767){
-			width: 24.3rem;
-			@include bph(515){
-				width: 15.3rem;
-				margin-top: .2rem;
+			width: auto;
+			@include bp_min(667){
+				@include bph(515){
+					width: 15.3rem;
+					margin-top: .2rem;
+				}
 			}
 	}
 		@include bp(500){
@@ -452,19 +450,26 @@ b {
 		}
 		&--5,
 		&--6{
+			@include bp(1440){
+				height: auto;
+			}
 			@include bp(767){
 				@include bp_min(667){
 					@include bph(515){
 						margin-top: 2rem;
+						width: 13.2rem;
 					}
 				}
 			}
+
 		}
 
 	}
 }
 
 .pagination{
+	
+
 	&__num{
 	  flex: 0 0 0.55rem;
 	  height: 0.90rem;
@@ -766,6 +771,16 @@ b {
 			}
 		}
 
+		&--5,
+		&--6{
+			@include bp(910){
+				width: 13.5rem;
+				@include bph_min(811){
+					width: 20rem;
+				}
+			}
+		}
+
 
 	}
 
@@ -815,7 +830,7 @@ b {
 	  }
 		.scroller__content--active &{
 		  height: 3.55rem;
-		  font-size: $font-size-6;
+		  font-size: $font-size-7;
 		  line-height: 1.67;
 
 		  @include bp(1300){
@@ -832,6 +847,32 @@ b {
 		  @include bp(1050){
 		  	letter-spacing: -0.03em;
 		  }
+		  	@include bp_min(1441){
+				@include bph(650){
+					font-size: $font-size-4;
+				}
+			}
+			@include bp(1440){
+				font-size: $font-size-4;
+			}
+			@include bp(910){
+				line-height: 1.1;
+				@include bp_min(768){
+					@include bph(550){
+						font-size: $font-size-2;
+					}
+				}
+			}
+			@include bp(767){
+				@include bp_min(667){
+					@include bph(515){
+						font-size: $font-size-2;
+					}
+				}
+			}
+			@include bp(666){
+				font-size: $font-size-2;
+			}
 		}
 	}
 	&__step{
@@ -844,9 +885,13 @@ b {
 	  text-align: right;
 	  color: $color-blue-2;
 	  padding-right: .3rem;
-	  padding-top: 1rem;
+	  padding-top: .7rem;
 
 		display: none;
+
+		@include bp(1440){
+			padding-top: .5rem;
+		}
 		
 		.scroller__content--active &{
 			display: block;
@@ -868,8 +913,31 @@ b {
 	  align-self: flex-end;
 
 		@include bp(1050){
-	    letter-spacing: -0.03em;
+	    letter-spacing: -0.03rem;
 		}
+
+		@include bp(910){
+			line-height: 1.2;
+			font-size: $font-size-5;
+			@include bp_min(667){
+				@include bph(550){
+					font-size: $font-size-3;
+				}
+			}
+		}
+		@include bp(767){
+			@include bp_min(667){
+				@include bph(515){
+					font-size: $font-size-3;
+					line-height: 1.15;
+				}
+			}
+		}
+		@include bp(666){
+			font-size: $font-size-3;
+			line-height: 1.15;
+		}
+
 		&--1{
 			padding-left: .3rem;
 		}
