@@ -97,10 +97,10 @@ b {
 				}
 			}
 		}
-		@include bph(435){
+		@include bph(480){
 			height: auto;
 		}
-		@include bph(375){
+		@include bph(400){
 			height: 2.40rem;
 		}
 
@@ -203,7 +203,7 @@ b {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 0;
+			margin-top: 2rem;
 		}
 		@include bph(650){
 		height: 3.00rem;
@@ -283,6 +283,11 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
+				@include bph(515){
+					width: 15.3rem;
+					margin-top: -.3rem;
+					margin-bottom: 0;
+				}
 			}
 			@include bp(500){
 				width: auto;
@@ -304,6 +309,11 @@ b {
 			}
 			@include bp(767){
 				width: 24.3rem;
+				@include bph(515){
+					width: 16.3rem;
+					margin-top: -.3rem;
+					margin-bottom: 0;
+				}
 			}
 			@include bp(500){
 				width: auto;
@@ -397,7 +407,11 @@ b {
 		}
 		@include bp(767){
 			width: 24.3rem;
-		}
+			@include bph(515){
+				width: 15.3rem;
+				margin-top: .2rem;
+			}
+	}
 		@include bp(500){
 			width: auto;
 		}
@@ -436,6 +450,17 @@ b {
 		&--2{
 			width: 35%;
 		}
+		&--5,
+		&--6{
+			@include bp(767){
+				@include bp_min(667){
+					@include bph(515){
+						margin-top: 2rem;
+					}
+				}
+			}
+		}
+
 	}
 }
 
