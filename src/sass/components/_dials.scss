@@ -119,12 +119,32 @@
 			margin-top: calc((100vh - 20.1rem) / 2);
 			
 			@include bp_min(1441){
-				@include bph(680){
+				@include bph(650){
 					margin-top: calc((100vh - 15rem) / 2);
+				}
+
+				@include bph_min(1200){
+					max-width: 50rem;
+					max-height: calc(50rem / 2);
+					margin-top: calc((100vh - 30rem) / 2);
 				}
 			}
 			@include bp(1440){
 				margin-top: calc((100vh - 17rem) / 2);
+				@include bph_min(1000){
+					margin-top: calc((100vh - 30rem) / 2);
+	
+					@include bp_min(1200){
+						margin-top: calc((100vh - 30.5rem) / 2);
+					}
+				}	
+			}
+			@include bp(1024){ margin-top: calc((100vh - 16rem) / 2); 
+				@include bph_min(810){ margin-top: calc((100vh - 27rem) / 2); }
+			}
+	
+			@include bp(910){ 
+				@include bph_min(750){ margin-top: calc((100vh - 27rem) / 2); }
 			}
 			@include bp(767){
 				@include bp_min(666){
@@ -136,8 +156,17 @@
 						margin-top: 0;
 					}		
 				}
+				@include bph_min(715){ margin-top: calc((100vh - 24rem) / 2); }
+				@include bph_min(750){ margin-top: calc((100vh - 26rem) / 2); }
 			}
-	
+			@include bp(666){
+				margin-top: calc((100vh - 15rem) / 2);			
+			}
+			@include bp(450){
+				margin-left: auto;
+				margin-right: auto;
+			}
+			// Ahoy	
 		}
 
 		&--x{
