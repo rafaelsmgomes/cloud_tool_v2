@@ -85,9 +85,9 @@
 				@include bph(650){
 					top: 9.2rem;
 				}
-				@include bph_min(1050){
+				@include bph_min(1015){
 					width: 100rem;
-					top: calc((100vh + 19rem) / 2);
+					top: calc((100vh + 23rem) / 2);
 					right: -53rem;
 				}
 			}
@@ -95,46 +95,33 @@
 				top: 14.2rem;
 				left: auto;
 				right: -23rem;
-				@include bph(750){
-					top: 12.25rem;
-				}
-				@include bph(650){
-					top: 9.3rem;
-				}
+				@include bph(650){ top: 11.3rem; }
+				@include bph(600){ top: 9.3rem; }
+				@include bph(530){ top: 8.7rem; }
 				@include bph_min(850){
 					width: 38.5rem;
 					top: calc((100vh + 19rem) / 2);
 					right: -8rem;
 				}
 			}
-			@include bp(1150){
-				right: -25rem;
-				@include bph_min(850){
-					width: 38.5rem;
-					top: calc((100vh + 19rem) / 2);
-					right: -8rem;
-				}
-			}
+			@include bp(1150){ right: -25rem; }
+
 			@include bp(1024){
 				top: 13.85rem;
 
-				@include bph(750){
-					top: 12rem;
-				}
-				@include bph(570){
-					display: none;
-				}
+				@include bph(650){ top: 11rem; }
+				@include bph(600){ top: 9.15rem; }
+				@include bph(530){ display: none; }
 				@include bph_min(850){
-					top: calc((100vh + 19rem) / 2);
+					top: calc((100vh + 22rem) / 2);
+					right: -8rem;
 				} 
 			}
 			@include bp(910){
-				@include bph(660){
-					top: 9.2rem
-				}
-				@include bph(600){
-					display: none;
-				}
+
+				@include bph(700){ top: 13rem; }
+				@include bph(650){ top: 10.2rem; }
+				@include bph(600){ display: none; }
 				@include bph_min(850){
 					top: calc((100vh + 19.5rem) / 2);
 					right: auto;
@@ -207,20 +194,19 @@
 			
 			@include bp(910){ 
 				right: -25rem; 
-				top: 27.1rem;
+				top: 25.9rem;
 			
-				@include bph(800){ top: 26.7rem; }
-				@include bph(650){ top: 23.9rem; }
-				@include bph(600){ top: 21.1rem; }
-				@include bph(550){ top: 19.9rem; }
+				@include bph(800){ top: 25.5rem; }
+				@include bph(650){ top: 22.7rem; }
+				@include bph(600){ top: 19.9rem; }
+				@include bph(550){ top: 18.7rem; }
 
 				@include bph_min(811){ 
 					top: 36.5rem; 
 					right: -13.401rem;
 				}
 				@include bph_min(1016){ 
-					top: 35.3rem;
-					right: -25rem; 
+					top: 43.3rem;
 				}
 			}
 
