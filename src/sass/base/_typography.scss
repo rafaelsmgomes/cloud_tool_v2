@@ -450,6 +450,17 @@ b {
 		&--2{
 			width: 35%;
 		}
+		&--5,
+		&--6{
+			@include bp(767){
+				@include bp_min(667){
+					@include bph(515){
+						margin-top: 2rem;
+					}
+				}
+			}
+		}
+
 	}
 }
 
