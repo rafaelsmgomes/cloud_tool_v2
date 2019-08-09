@@ -54,9 +54,14 @@ $(document).ready(function(){
 		let detailForth='';
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
 
+		console.log(results.val['1'],results.val['2'],results.val['4']);
+
 		detailFirst = retrieveLottieDialAnimation(results.val['1']);
 		detailSecond = retrieveLottieDialAnimation(results.val['2']);
 		detailForth = retrieveLottieDialAnimation(results.val['4']);
+
+
+
 
 
 		// DIALS
@@ -90,8 +95,7 @@ $(document).ready(function(){
 				$(`#select-${element}`).addClass('activate');
 			});
 
-		//SLIDER
-			// console.log(results.val[5]);
+		//SLIDER		
 			const detscroll1Values = results.val[5].split(',');
 			const detscroll2Values = results.val[6].split(',');
 
@@ -359,7 +363,7 @@ $(document).ready(function(){
 	 		this.selfID = self[0].$div.prevObject.data('id');
 	 		this.dial = assignDial(this.selfID);
 	 		this.dial.changeValue(v);
-
+  		
 	 		if(this.context=== false){
 	  		dial.progressBtn(self);
     	}
@@ -390,6 +394,7 @@ $(document).ready(function(){
 		const dial = $(this).find('.dial-tracker'); 
 
 		dial.data('context', true);
+
 		dial.val(theta).trigger('change');
 	
 	});
@@ -504,8 +509,6 @@ $(document).ready(function(){
 		sessionStorage.selector1=state.selected.choices;
 		sessionStorage.slider1=state.slider1.arrayVal;
 		sessionStorage.slider2=state.slider2.arrayVal;
-
-	
 	});
 /**************** SESSION STORAGE CONTROLLER ********************/
 
@@ -536,7 +539,7 @@ function loadCloudAnimation(user,peer){
 }
 
 function retrieveLottieDialAnimation(result){
-		let  variable;
+		let  variable;		
 		if(result > 10){
 			variable = largeDetailHigh;
 		}else if(result < 10 && result > 0){
