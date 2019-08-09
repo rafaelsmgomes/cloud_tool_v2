@@ -85,10 +85,13 @@ $(document).ready(function(){
 			});
 
 		//SELECTORS
-		const selectorValues = results.val['3'].split(',');
-		selectorValues.forEach( function(element, index) {
-			$(`#select-${element}`).addClass('activate');
-		});
+			const selectorValues = results.val['3'].split(',');
+			selectorValues.forEach( function(element, index) {
+				$(`#select-${element}`).addClass('activate');
+			});
+
+				
+
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
@@ -266,7 +269,7 @@ $(document).ready(function(){
 	});
 
 
-	$('.btn__progress--5').click(); 
+	// $('.btn__progress--5').click(); 
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
