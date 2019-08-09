@@ -304,7 +304,7 @@ $(document).ready(function(){
 	});
 
 
-	// $('.btn__progress--5').click(); 
+	// $('.btn__progress--3').click(); 
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');

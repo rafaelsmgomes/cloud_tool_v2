@@ -433,8 +433,9 @@ b {
 			}
 			@include bp(767){
 				@include bp_min(667){
-					@include bph(515){
-						width: 40%;
+					@include bph(514){
+						width: 36%;
+						margin-top: 2rem;
 					}
 				}
 			}
@@ -801,10 +802,44 @@ b {
 			}
 		}
 
+		&--3{
+			@include bp(1150){ width: 13rem;  }
+			@include bp(1025){
+				@include bph_min(850){
+					width: 20rem;  
+				}
+			}
+			@include bp(767){
+				@include bp_min(667){
+					@include bph_min(725){
+						width: 18rem;  
+					}
+				}
+			}
+		}
+
 		&--5,
 		&--6{
-			@include bp(910){
+			@include bp(1024){
 				width: 13.5rem;
+				@include bph_min(811){
+					@include bph(1015){
+						width: 20rem;
+					}
+				}
+			}
+			@include bp(910) {
+				width: 11rem;
+				@include bph_min(811){
+					@include bph(1015){
+						width: 20rem;
+					}
+				}
+			}
+		}
+
+		&--5{
+			@include bp(910) {
 				@include bph_min(811){
 					width: 20rem;
 				}
