@@ -447,7 +447,7 @@ b {
 		}
 
 		&--2{
-			width: 35%;
+			width: 37%;
 		}
 		&--5,
 		&--6{
@@ -1295,3 +1295,17 @@ b {
 	}
 }
 
+.header__nav--btn{
+  font-family: $font-reg;
+  font-size: $font-size-2;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $color-blue-1;
+  cursor: pointer;
+
+  &:hover{
+		color: $color-white-1;
+  }
+}

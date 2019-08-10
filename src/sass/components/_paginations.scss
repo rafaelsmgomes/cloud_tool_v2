@@ -171,4 +171,23 @@
 
 	&--active{ color: $color-blue-1; }
 
+
+	&__wrapper{
+		width: 2.20rem;
+		height: 0.20rem;
+		background-color: orangered;		
+    display: flex;
+    justify-content: space-between;
+	}		
+
+	&__circles{
+		width: .2rem;
+		height: .2rem;
+		background-color: $color-blue-1;
+		border-radius: 1000px;
+
+		&--activate{
+			background-color: $color-white-1;
+		}
+	}
 }

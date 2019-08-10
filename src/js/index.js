@@ -65,7 +65,7 @@ $(document).ready(function(){
 			detailSecond = retrieveLottieDialAnimation(results.val['2']);
 			detailForth = retrieveLottieDialAnimation(results.val['4']);
 
-			// Contextualize where user is in the dial
+			// Contextualize where user is in the dial(NEED TO make this into a function)
 			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
 			const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
 
@@ -75,14 +75,17 @@ $(document).ready(function(){
 					if(element > 10){
 						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
 						dialsUserElements[index].addClass('dial__text--users-more');
+						$(`#main__direction--user-${index}`).text( 'You are ahead of your peers and the global average on your cloud journey.' );
 					}else if(element <= 10 &&  element >= -10){
 						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
 						dialsUserElements[index].addClass('dial__text--users-equal');
+						$(`#main__direction--user-${index}`).text( 'You and your peers are equal in cloud journey.' );
 					}else{						
 						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
 						dialsUserElements[index].addClass('dial__text--users-less');
+						$(`#main__direction--user-${index}`).text( 'You are behind of your peers and the global average on your cloud journey.' );
 					}
-				});
+				});				
 
 			})([dialUserResults, dialsUserElements]);
 
@@ -167,6 +170,7 @@ $(document).ready(function(){
 		$('.line__wrapper').addClass('deactivate');
 		$('.detailed__map--center').addClass('deactivate');
 
+
 		setTimeout(function(){
 			self.addClass('activate');
 			if(val === 2){
@@ -199,6 +203,8 @@ $(document).ready(function(){
 
 		$('.header__nav--btn--2').attr('context',`${Number(val)+1}`);
 		$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
+
+		console.log($('.pagination__wrapper').children());
 	});
 
 /****** HEADER NAV BTN CONTROLLER ******/ 
