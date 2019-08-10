@@ -667,10 +667,33 @@ b {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
-    top: 8.25rem; }
+    top: 9.25rem; }
     .dial__text--peers > * {
       display: block; }
     .dial__text--peers > b {
+      font-family: UniversB, Arial, Helvetica, sans-serif;
+      line-height: 1.58; }
+  .dial__text--users {
+    width: 6.75rem;
+    height: 4.65rem;
+    font-family: Univers, Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    color: #fff;
+    position: absolute; }
+    .dial__text--users-less {
+      left: 6.90rem; }
+    .dial__text--users-more {
+      right: -1.15rem;
+      width: 6.70rem; }
+    .dial__text--users-equal {
+      left: 51%; }
+    .dial__text--users > * {
+      display: block; }
+    .dial__text--users > b {
       font-family: UniversB, Arial, Helvetica, sans-serif;
       line-height: 1.58; }
 

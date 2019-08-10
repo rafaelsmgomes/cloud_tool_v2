@@ -54,17 +54,38 @@ $(document).ready(function(){
 		let detailForth='';
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
 
-		console.log(results.val['1'],results.val['2'],results.val['4']);
 
-		detailFirst = retrieveLottieDialAnimation(results.val['1']);
-		detailSecond = retrieveLottieDialAnimation(results.val['2']);
-		detailForth = retrieveLottieDialAnimation(results.val['4']);
 
 
 
 
 
 		// DIALS
+			detailFirst = retrieveLottieDialAnimation(results.val['1']);		
+			detailSecond = retrieveLottieDialAnimation(results.val['2']);
+			detailForth = retrieveLottieDialAnimation(results.val['4']);
+
+			// Contextualize where user is in the dial
+			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
+			const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
+
+			(function(arr){				
+
+				dialUserResults.forEach( function(element, index) {
+					if(element > 10){
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].addClass('dial__text--users-more');
+					}else if(element <= 10 &&  element >= -10){
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].addClass('dial__text--users-equal');
+					}else{						
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].addClass('dial__text--users-less');
+					}
+				});
+
+			})([dialUserResults, dialsUserElements]);
+
 			var detailedResults1 = lottie.loadAnimation({
 			  container: document.getElementById('detail-1'),
 			  renderer: 'svg',
@@ -542,7 +563,7 @@ function retrieveLottieDialAnimation(result){
 		let  variable;		
 		if(result > 10){
 			variable = largeDetailHigh;
-		}else if(result < 10 && result > 0){
+		}else if(result <= 10 &&  result >= -10){
 			variable = largeDetailMid;
 		}else{
 			variable = largeDetailLow;
