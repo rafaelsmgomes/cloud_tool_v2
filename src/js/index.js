@@ -203,14 +203,25 @@ $(document).ready(function(){
 
 		$('.header__nav--btn--2').attr('context',`${Number(val)+1}`);
 		$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
+	
+		const paginationDetGroup = pagination.retrieveDetailPagination();
 
-		console.log($('.pagination__wrapper').children());
+		pagination.deactivateDetailPagination();		
+
+		for(let i = 0; i <= (val -2); i++){
+			$(paginationDetGroup[i]).addClass('activate');
+		}
+		
 	});
 
 /****** HEADER NAV BTN CONTROLLER ******/ 
 	$('.header__nav--btn').on('click',function(){
 		const self = $(this);
 		dp.movePathfinderX(self);
+
+		pagination.changePagination(self);
+
+
 	});
 	
 /****************  CLOUD/ LOTTIE INIT  ********************/
@@ -224,15 +235,6 @@ $(document).ready(function(){
 		  loop: true,
 		});	
 	};
-	// if(document.getElementById('detail-1')){
-	// 	var detailedResults1 = lottie.loadAnimation({
-	// 	  container: document.getElementById('detail-1'),
-	// 	  renderer: 'svg',
-	// 	  autoplay: true,
-	// 	  animationData: callback(session.dial1,peer['1']),
-	// 	  loop: false,
-	// 	});
-	// };	
 
 /****** CTA POPUPS ******/ 
 	$('.cta__btn').on('click',function(){

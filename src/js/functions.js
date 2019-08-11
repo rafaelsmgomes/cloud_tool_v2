@@ -52,6 +52,13 @@ export const iterateObjSet = (obj, callback) =>{
     });
 };
 
+export const covertObjtoArr = (obj) =>{
+    
+    const array = Array.prototype.slice.call(obj);
+
+    return array;
+};
+
 export const returnNumOnly = (str, n) =>{
     return Number(str.slice(0, `-${n}`));
 };

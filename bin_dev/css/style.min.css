@@ -2240,7 +2240,7 @@ b {
     height: .2rem;
     background-color: #00758f;
     border-radius: 1000px; }
-    .pagination__circles--activate {
+    .pagination__circles.activate {
       background-color: #fff; }
 
 .detailed-score__wrapper {

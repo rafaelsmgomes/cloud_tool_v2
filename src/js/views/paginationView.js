@@ -1,3 +1,5 @@
+import * as func from '.././functions';
+
 export const highlightPagination = (element, stateKey) => {
 		var paginationNodeList = element.find( ".pagination__num");
 		var paginationArray = [];
@@ -15,3 +17,25 @@ export const highlightPagination = (element, stateKey) => {
 			$(paginationArray[j]).addClass('pagination--active');			
 		}
 }
+
+export const retrieveDetailPagination = () => {
+	return func.covertObjtoArr($('.pagination__wrapper').children());
+};
+
+export const deactivateDetailPagination = () =>{
+	$('.pagination__wrapper').children().removeClass('activate');
+};
+
+export const changePagination = (headerbtn) => {
+	const direction =	(headerbtn.attr('direction') === 'up') ? 0 : -2;
+
+	const currentActivatePagCirc = func.covertObjtoArr($('.pagination__circles.activate')).length;
+	const paginationCircGroup = func.covertObjtoArr($('.pagination__wrapper').children());
+	$('.pagination__wrapper').children().removeClass('activate');
+		
+	for(let i = 0; i <= (currentActivatePagCirc+direction); i++){
+		$(paginationCircGroup[i]).addClass('activate');
+		// console.log(paginationCircGroup[i]);
+	};
+}
+
