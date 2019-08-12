@@ -632,8 +632,7 @@ b {
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.32;
-	  letter-spacing: normal;
-		margin-top: 0.25rem;	  
+	  letter-spacing: normal; 
 	  color: $color-white-1;	  	  
 	
 		&--2,
@@ -659,6 +658,7 @@ b {
   		}
   		&--3{
 		  margin-right: 1.00rem;
+		  text-align: right;
 		  @include bph(740){ 
 			margin-right: 0.75rem; 
 			padding-left: 15%;
@@ -670,11 +670,11 @@ b {
 					// transform: translateY(-25%)
 				}
 			}
-			@include bp(1440){
-				@include bph(565){
-					transform: translateY(-25%);
-				}
-			}
+			// @include bp(1440){
+			// 	@include bph(565){
+			// 		transform: translateY(-25%);
+			// 	}
+			// }
 		}
 
   	}
