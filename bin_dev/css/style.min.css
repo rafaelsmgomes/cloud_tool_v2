@@ -1123,6 +1123,9 @@ b {
   .header__nav--btn:hover {
     color: #fff; }
 
+.novzsw {
+  background-color: transparent; }
+
 .btn__arrow {
   background-image: url("../assets/graphics/arrow.svg");
   width: 1.20rem;
