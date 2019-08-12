@@ -649,6 +649,26 @@ b {
       .dial__text--3 {
         margin-right: 0.75rem;
         padding-left: 15%; } }
+  .dial__text--peers {
+    width: 9.80rem;
+    height: 4.65rem;
+    font-family: Univers, Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    color: #fff;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 8.25rem; }
+    .dial__text--peers > * {
+      display: block; }
+    .dial__text--peers > b {
+      font-family: UniversB, Arial, Helvetica, sans-serif;
+      line-height: 1.58; }
 
 .cta__txt {
   width: 15.25rem;
