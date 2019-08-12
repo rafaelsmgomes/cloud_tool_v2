@@ -61,9 +61,6 @@ $Breakpoint argument choices:
 *:focus {
   outline: none; }
 
-* {
-  outline: 1px solid hotpink; }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1718,13 +1715,13 @@ b {
     display: flex;
     align-items: center; }
     .dial__context--wrapper--1 {
-      padding-left: 7.3%;
+      padding-left: 7.7%;
       flex: 0 1 50%; }
       @media only screen and (min-height: 900px) {
         .dial__context--wrapper--1 {
           width: auto; } }
     .dial__context--wrapper--2 {
-      padding-right: 7.3%; }
+      padding-right: 7.7%; }
 
 .dial__line {
   background-color: #fff;
