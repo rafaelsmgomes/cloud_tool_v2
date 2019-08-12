@@ -37,5 +37,6 @@ export const changePagination = (headerbtn) => {
 		$(paginationCircGroup[i]).addClass('activate');
 		// console.log(paginationCircGroup[i]);
 	};
+	
 }
 

@@ -694,7 +694,7 @@ b {
 	    position: absolute;
 	    transform: translateX(-50%);
 	    left: 50%;
-	    top: 9.25rem;
+	    top: 10.75rem;
 
 			& > *{
 				display: block;
@@ -1188,9 +1188,7 @@ b {
 	    margin-left: 0.40rem;
 	    font-family: $font-reg;
 		
-			.header__container--x &{
-				color: $color-blue-1;
-			}
+			
 		}
 	}
 	&__rectangle{

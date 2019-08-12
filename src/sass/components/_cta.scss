@@ -12,7 +12,7 @@
 			left: 53.4rem;
 	
 			.main-container--x &{
-        left: 49.4rem;		
+        left: 51.4rem;		
 			}
 		}
 		@include bp(1250){
@@ -72,6 +72,14 @@
 			}
 		}	
 
+
+		&--1{
+			.main-container--x &{
+		    top: 100%;
+        left: 48.4rem;
+		    width: 90rem;
+			}
+		}
 		&--3{
 			transform: translateY(0%);
 			top: 15.1rem;	
