@@ -30,6 +30,26 @@
 			padding: 0.95rem .8rem 0 .8rem;
 		}
 	}
+
+	&__background{
+		background-color: $color-blue-2;
+		position: fixed;
+		z-index: -10;
+		width: 70.00rem;
+		margin: 0 auto;
+		height: 2.95rem;
+		left: 0;
+		right: 0;
+		padding-top: 0.95rem;
+		transition-property: opacity;
+		transition-duration: .1s;
+		@include bp(1440){ width: 83.333%; }
+		@include bp(767){ 
+			width: 100%;
+			padding: 0.95rem .8rem 0 .8rem;
+		}
+
+	}
 	
 	&__nav{
     width: 14.70rem;
