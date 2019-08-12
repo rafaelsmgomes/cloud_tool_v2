@@ -2950,7 +2950,8 @@ b {
 .main-container {
   opacity: 1; }
   .main-container--x {
-    z-index: 4; }
+    z-index: 4;
+    padding-top: 11.70rem; }
     .main-container--x > * {
       opacity: 0; }
     .main-container--x.activate > * {
