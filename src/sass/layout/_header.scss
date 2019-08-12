@@ -15,7 +15,7 @@
 		transition-duration: .1s;
 
 		&--x{
-			background-color: $color-white-1
+			// background-color: $color-white-1
 		}
 		
 		&.deactivate{
@@ -44,6 +44,7 @@
 		opacity: 0;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		
 		&.activate{
 			z-index: 1;
@@ -51,9 +52,16 @@
 		}
 
 		&--btn{
-			background-color: red;
+			// background-color: red;
 			height: 1.20rem;
-			width: 1.20rem;
+			width: 4.25rem;
+			display: flex;
+	    align-items: center;
+	    &--1{
+	    	& > span{
+	    		margin-left: auto;
+	    	}
+	    }
 		}
 	}
 }

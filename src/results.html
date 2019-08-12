@@ -33,10 +33,10 @@
 		<div class="header__container header__container--x">
 			<div class="header__logo"></div>
 			<div class="header__copyright" id="consent">
-		    <a class="inline" id="teconsent">Cookie Preferences</a> | <a class='txt-blue-link' href='https://www.oracle.com/legal/terms.html' target="_blank">Ad Choices</a> | <a class='txt-blue-link' href='https://www.oracle.com/legal/privacy/marketing-cloud-data-cloud-privacy-policy.html#12' target="_blank">Privacy Policy</a>
+		    <a class="inline" id="teconsent"></a> | <a class='txt-blue-link' href='https://www.oracle.com/legal/terms.html' target="_blank">Ad Choices</a> | <a class='txt-blue-link' href='https://www.oracle.com/legal/privacy/marketing-cloud-data-cloud-privacy-policy.html#12' target="_blank">Privacy Policy</a>
 			</div> 
 			<div class="header__wrapper header__wrapper--1">
-				<div class="header__rectangle header__rectangle--1">
+<!-- 				<div class="header__rectangle header__rectangle--1">
 					<img src="assets/graphics/restart.svg" alt="restart.svg">
 				</div>
 				<div class="header__rectangle header__rectangle--2">
@@ -44,12 +44,43 @@
 				</div>
 				<div class="header__rectangle header__rectangle--3">
 					<img src="assets/graphics/share.svg" alt="share.svg">
+				</div> -->
+				<a href='.' class="header__rectangle header__rectangle--1">
+					<div class="header__rectangle--grow header__rectangle--grow-1">
+							<span class='grow--text'>Restart</span>
+					</div>
+					<img src="assets/graphics/restart.svg" alt="assets/graphics/restart-blue.svg">
+				</a>
+				<div class="header__rectangle header__rectangle--2">
+					<div class="header__rectangle--grow header__rectangle--grow-2">
+							<span class='grow--text'><b>Tips</b>Helpful tips and tricks here. this box should provide more clear instructions on how to complete this assessment.</span>
+					</div>					
+					<img src="assets/graphics/info.svg" alt="info.svg">
 				</div>
+				<div class="header__rectangle header__rectangle--3">
+					<div class="header__rectangle--grow header__rectangle--grow-3">
+							<span class='grow--text'>Share</span>
+					</div>					
+					<img src="assets/graphics/share.svg" alt="assets/graphics/share-blue.svg">
+				</div>				
 			</div>
 
 			<div class="header__nav">
-				<div class="header__nav--btn header__nav--btn--1 btn__regress--x" context='0' direction='down'></div>
-				<div class="header__nav--btn header__nav--btn--2 header__progress" context='2' direction='up'></div>
+				<div class="header__nav--btn header__nav--btn--1 btn__regress--x" context='0' direction='down'>
+					<span>Back</span>
+				</div>
+		
+				<div class="pagination__wrapper">
+					<div class="pagination__circles pagination__circles--1"></div>
+					<div class="pagination__circles pagination__circles--2"></div>
+					<div class="pagination__circles pagination__circles--3"></div>
+					<div class="pagination__circles pagination__circles--4"></div>
+					<div class="pagination__circles pagination__circles--5"></div>
+					<div class="pagination__circles pagination__circles--6"></div>
+				</div>
+
+				<div class="header__nav--btn header__nav--btn--2 header__progress" context='2' direction='up'>	<span>Next</span>
+				</div>
 			</div>
 		</div>
 		<div class="page page--x">
@@ -109,15 +140,18 @@
 				</section>
 				<section class='page page--2'>
 					<div class="page__content page__content--y">
+						<div class="icon__zoomout"></div>
 						<h2 class="main__title main__title--7">Your current position in the <b>cloud journey</b> compared to your peers.</h2>
 						<div class="main__direction main__direction--2">
 							<b>What this mean:</b>
-							You are behind of your peers and the global average on your cloud journey. 
+							<span class='main__direction--user' id='main__direction--user-0'>							 
+							</span>
 						</div>
 
 						<div class="dial-group dial-group--x" id='detail-1'>
-							<!-- <div id="result-ex--1"></div>
-							<div id='result-peer--1'></div> -->
+							<div class="dial__text--users" id='dial__text--users-1'>
+								
+							</div>
 							<div class="dial__text--peers">
 								<b>Your peers are:</b>
 								<span>Planning a cloud strategy</span>
@@ -137,13 +171,22 @@
 				</section>
 				<section class='page page--3 activate'>
 					<div class="page__content page__content--y">
+						<div class="icon__zoomout"></div>
 						<h2 class="main__title main__title--7">Your perceived impact on <b>migration</b> compared to your peers.</h2>
 						<div class="main__direction main__direction--2">
 							<b>What this mean:</b>
-							You are behind of your peers and the global average on your cloud journey. 
+							<span class='main__direction--user' id='main__direction--user-1'>								 
+							</span>
 						</div>
 
 						<div class="dial-group dial-group--x" id='detail-2'>
+							<div class="dial__text--users" id='dial__text--users-2'>
+								
+							</div>
+							<div class="dial__text--peers">
+								<b>Your peers are:</b>
+								<span>Planning a cloud strategy</span>
+							</div>							
 							<div class="cta__wrapper cta__wrapper--1">
 								<div class="cta__txt cta__txt--1">
 									Companies with the most of their applications in the cloud report the greatest increases in productivity and competitiveness.
@@ -173,7 +216,7 @@
 						<h2 class="main__title main__title--7"><b>You identified 68% of the same PaaS features as your peers.</b></h2>
 						<div class="main__direction main__direction--2 main__direction--x">
 							<b>What this mean:</b>
-							You are behind of your peers and the global average on your cloud journey. 
+							The following chart shows your top three important PaaS integration features as compared to your peers.                                         
 						</div>
 						<div class="selection__wrapper selection__wrapper--x" >
 							<div class="selection__container--x selection__container--x-1">
@@ -271,13 +314,23 @@
 				</section>
 				<section class='page page--5 activate'>
 					<div class="page__content page__content--y">
+						<div class="icon__zoomout"></div>
 						<h2 class="main__title main__title--7 main__title--7-a">Your perceived improvement on <b>data management</b> compared to your peers.</h2>
 						<div class="main__direction main__direction--2">
 							<b>What this mean:</b>
-							You are behind of your peers and the global average on your cloud journey. 
+							<span class='main__direction--user' id='main__direction--user-2'>
+								 
+							</span>
 						</div>
 
 						<div class="dial-group dial-group--x" id='detail-3'>
+							<div class="dial__text--users" id='dial__text--users-3'>
+								
+							</div>
+							<div class="dial__text--peers">
+								<b>Your peers are:</b>
+								<span>Planning a cloud strategy</span>
+							</div>							
 							<div class="cta__wrapper cta__wrapper--1">
 								<div class="cta__txt cta__txt--1">
 									Companies with the most of their applications in the cloud report the greatest increases in productivity and competitiveness.
@@ -293,6 +346,7 @@
 				</section>
 				<section class='page page--6 activate'>
 					<div class="page__content page__content--y">
+						<div class="icon__zoomout"></div>
 						<div class="cta__wrapper cta__wrapper--5 cta__wrapper--5-x">
 							<div class="cta__txt cta__txt--5">
 								Cloud-mature companies believe that the safest place for their data is not in data centers, but in the cloud.
@@ -366,6 +420,7 @@
 				</section>
 				<section class='page page--7 activate'>
 					<div class="page__content page__content--y">
+						<div class="icon__zoomout"></div>
 						<div class="cta__wrapper cta__wrapper--6 cta__wrapper--6-x cta__wrapper--4-a">
 							<div class="cta__txt cta__txt--6 cta__txt--6-a">
 								The gap between cloud-mature businesses and late adopters is widest in data analytics.

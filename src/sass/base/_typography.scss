@@ -447,7 +447,7 @@ b {
 		}
 
 		&--2{
-			width: 35%;
+			width: 37%;
 		}
 		&--5,
 		&--6{
@@ -694,7 +694,7 @@ b {
 	    position: absolute;
 	    transform: translateX(-50%);
 	    left: 50%;
-	    top: 8.25rem;
+	    top: 10.75rem;
 
 			& > *{
 				display: block;
@@ -706,7 +706,41 @@ b {
 			}
 		}
 
-		&--users{
+		&--users{	
+			width: 6.75rem;
+			height: 4.65rem;
+		  font-family: $font-reg;
+		  font-size: 0.95rem;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+			position: absolute;
+
+
+    
+    
+
+			&-less{
+				left: 6.90rem;		
+			}
+
+			&-more{
+				right: -1.15rem;
+		    width: 6.70rem;
+			}
+			&-equal{
+				left: 51%;
+			}
+			& > *{
+				display: block;
+				
+			}
+			& > b{
+				font-family: $font-b;
+				line-height: 1.58;
+			}
 
 		}
   }
@@ -1154,9 +1188,7 @@ b {
 	    margin-left: 0.40rem;
 	    font-family: $font-reg;
 		
-			.header__container--x &{
-				color: $color-blue-1;
-			}
+			
 		}
 	}
 	&__rectangle{
@@ -1261,3 +1293,21 @@ b {
 	}
 }
 
+.header__nav--btn{
+  font-family: $font-reg;
+  font-size: $font-size-2;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $color-blue-1;
+  cursor: pointer;
+
+  &:hover{
+		color: $color-white-1;
+  }
+}
+
+.novzsw{
+	background-color: transparent;
+}

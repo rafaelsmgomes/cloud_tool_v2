@@ -4,9 +4,9 @@
 	  height: 1.60rem;	 
 	  align-self: flex-end;
 	  background-image: url("../assets/images/desktop/logo-white.svg");
-	  .header__container--x &{
-	  	background-image: url("../assets/images/desktop/logo-grey.svg");	
-	  }
+	  // .header__container--x &{
+	  // 	background-image: url("../assets/images/desktop/logo-grey.svg");	
+	  // }
 	  margin-right: auto;
 
 	  &:hover{
@@ -78,15 +78,13 @@
 			}
 			.header__container--x &{
 				margin-left: auto;
+				display: flex;
 			}		
 
 		}		
 	
 		&--2{
 			margin-left: auto;
-			.header__container--x &{
-				display: none;
-			}
 		}
 
 		& > img{

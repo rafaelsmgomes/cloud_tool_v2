@@ -54,17 +54,41 @@ $(document).ready(function(){
 		let detailForth='';
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
 
-		console.log(results.val['1'],results.val['2'],results.val['4']);
 
-		detailFirst = retrieveLottieDialAnimation(results.val['1']);
-		detailSecond = retrieveLottieDialAnimation(results.val['2']);
-		detailForth = retrieveLottieDialAnimation(results.val['4']);
 
 
 
 
 
 		// DIALS
+			detailFirst = retrieveLottieDialAnimation(results.val['1']);		
+			detailSecond = retrieveLottieDialAnimation(results.val['2']);
+			detailForth = retrieveLottieDialAnimation(results.val['4']);
+
+			// Contextualize where user is in the dial(NEED TO make this into a function)
+			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
+			const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
+
+			(function(arr){				
+
+				dialUserResults.forEach( function(element, index) {
+					if(element > 10){
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].addClass('dial__text--users-more');
+						$(`#main__direction--user-${index}`).text( 'You are ahead of your peers and the global average on your cloud journey.' );
+					}else if(element <= 10 &&  element >= -10){
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].addClass('dial__text--users-equal');
+						$(`#main__direction--user-${index}`).text( 'You and your peers are equal in cloud journey.' );
+					}else{						
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].addClass('dial__text--users-less');
+						$(`#main__direction--user-${index}`).text( 'You are behind of your peers and the global average on your cloud journey.' );
+					}
+				});				
+
+			})([dialUserResults, dialsUserElements]);
+
 			var detailedResults1 = lottie.loadAnimation({
 			  container: document.getElementById('detail-1'),
 			  renderer: 'svg',
@@ -146,6 +170,7 @@ $(document).ready(function(){
 		$('.line__wrapper').addClass('deactivate');
 		$('.detailed__map--center').addClass('deactivate');
 
+
 		setTimeout(function(){
 			self.addClass('activate');
 			if(val === 2){
@@ -178,12 +203,25 @@ $(document).ready(function(){
 
 		$('.header__nav--btn--2').attr('context',`${Number(val)+1}`);
 		$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
+	
+		const paginationDetGroup = pagination.retrieveDetailPagination();
+
+		pagination.deactivateDetailPagination();		
+
+		for(let i = 0; i <= (val -2); i++){
+			$(paginationDetGroup[i]).addClass('activate');
+		}
+		
 	});
 
 /****** HEADER NAV BTN CONTROLLER ******/ 
 	$('.header__nav--btn').on('click',function(){
 		const self = $(this);
 		dp.movePathfinderX(self);
+
+		pagination.changePagination(self);
+
+
 	});
 	
 /****************  CLOUD/ LOTTIE INIT  ********************/
@@ -197,15 +235,6 @@ $(document).ready(function(){
 		  loop: true,
 		});	
 	};
-	// if(document.getElementById('detail-1')){
-	// 	var detailedResults1 = lottie.loadAnimation({
-	// 	  container: document.getElementById('detail-1'),
-	// 	  renderer: 'svg',
-	// 	  autoplay: true,
-	// 	  animationData: callback(session.dial1,peer['1']),
-	// 	  loop: false,
-	// 	});
-	// };	
 
 /****** CTA POPUPS ******/ 
 	$('.cta__btn').on('click',function(){
@@ -542,7 +571,7 @@ function retrieveLottieDialAnimation(result){
 		let  variable;		
 		if(result > 10){
 			variable = largeDetailHigh;
-		}else if(result < 10 && result > 0){
+		}else if(result <= 10 &&  result >= -10){
 			variable = largeDetailMid;
 		}else{
 			variable = largeDetailLow;
