@@ -232,6 +232,10 @@
 				flex-direction: column;
 				align-items: center;
 				padding-top: 4.7%;
+				@include bp_min(768){
+					padding-top: 4.4%;
+				}
+
 			}
 			&--2{
 				margin-top: 15.7%;
@@ -240,6 +244,16 @@
 				align-items: center;
 				height: 2.2rem;
 
+
+				@include bp_min(768){
+					margin-top: 17.7%;
+					@include bph_min(725){
+						margin-top: 21%;
+					}
+				}
+				@include bp_min(1441){
+					margin-top: 17%;
+				}
 
 				&-a{					
 					margin-top: 31%;
