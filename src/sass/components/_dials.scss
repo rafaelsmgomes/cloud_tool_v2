@@ -231,29 +231,18 @@
 			&--1{
 				flex-direction: column;
 				align-items: center;
-				padding-top: 4.4%;
+				padding-top: 4.7%;
 			}
 			&--2{
-				margin-top: 19.5%;
+				margin-top: 15.7%;
 
 				justify-content: space-between;
 				align-items: center;
-
-				@include bp_min(1441){
-					@include bph(650){
-						margin-top: 18%;
-					}
-				}
-				@include bp(1440){
-					@include bph(565){
-						margin-top: 18%;
-					}
-				}
-
+				height: 2.2rem;
 
 
 				&-a{					
-					margin-top: 35%;
+					margin-top: 31%;
 				}
 			}
 
@@ -274,13 +263,13 @@
 			align-items: center;
 
 			&--1{
-				padding-left: 7.7%;
+				padding-left: 7.5%;
 				flex: 0 1 50%;
 
 				@include bph_min(900){ width: auto; }
 			}
 			&--2{
-				padding-right: 7.7%;	
+				padding-right: 7.5%;	
 			}						
 		}
 	}
