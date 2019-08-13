@@ -2966,19 +2966,31 @@ b {
   background-color: dodgerblue;
   transition: all 1100ms; }
   .pathfinder--x {
-    transform: scale(0.1) translate(-665px, 138rem); }
+    transform: scale(0.1) translate(-33.25rem, 138rem); }
     .pathfinder--x.zoom-in--2 {
-      transform: scale(1) translate(-92.7rem, -50rem); }
+      transform: scale(0.1) scale(1) translate(-92.7rem, -50rem); }
+      .pathfinder--x.zoom-in--2-x {
+        transform: scale(1) translate(-92.7rem, -50rem); }
     .pathfinder--x.zoom-in--3 {
-      transform: scale(1) translate(-278.1rem, -100rem); }
+      transform: scale(0.1) translate(-278.1rem, -100rem); }
+      .pathfinder--x.zoom-in--3-x {
+        transform: scale(1) translate(-278.1rem, -100rem); }
     .pathfinder--x.zoom-in--4 {
-      transform: scale(1) translate(-278.1rem, -100rem); }
+      transform: scale(0.1) translate(-278.1rem, -100rem); }
+      .pathfinder--x.zoom-in--4-x {
+        transform: scale(1) translate(-278.1rem, -100rem); }
     .pathfinder--x.zoom-in--5 {
-      transform: scale(1) translate(-278.1rem, 150rem); }
+      transform: scale(0.1) translate(-278.1rem, 150rem); }
+      .pathfinder--x.zoom-in--5-x {
+        transform: scale(1) translate(-278.1rem, 150rem); }
     .pathfinder--x.zoom-in--6 {
-      transform: scale(1) translate(0, 150rem); }
+      transform: scale(0.1) translate(0, 150rem); }
+      .pathfinder--x.zoom-in--6-x {
+        transform: scale(1) translate(0, 150rem); }
     .pathfinder--x.zoom-in--7 {
-      transform: scale(1) translate(185.4rem, -100rem); }
+      transform: scale(0.1) translate(185.4rem, -100rem); }
+      .pathfinder--x.zoom-in--7-x {
+        transform: scale(1) translate(185.4rem, -100rem); }
 
 .footer {
   position: fixed;
