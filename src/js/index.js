@@ -289,7 +289,7 @@ $(document).ready(function(){
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
-		header.hideHeader(state.pageNum.pageNumber);
+		// header.hideHeader(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 	});
 
@@ -333,7 +333,7 @@ $(document).ready(function(){
 	});
 
 
-	// $('.btn__progress--1').click(); 
+	$('.btn__progress--1').click(); 
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
