@@ -2986,7 +2986,8 @@ b {
 .main-container {
   opacity: 1; }
   .main-container--x {
-    z-index: 4; }
+    z-index: 4;
+    padding-top: 13.70rem; }
     .main-container--x > * {
       opacity: 0; }
     .main-container--x.activate > * {
@@ -3000,6 +3001,20 @@ b {
 .pathfinder {
   background-color: dodgerblue;
   transition: all 1100ms; }
+  .pathfinder--x {
+    transform: scale(0.1) translate(-665px, 138rem); }
+    .pathfinder--x.zoom-in--2 {
+      transform: scale(1) translate(-92.7rem, -50rem); }
+    .pathfinder--x.zoom-in--3 {
+      transform: scale(1) translate(-278.1rem, -100rem); }
+    .pathfinder--x.zoom-in--4 {
+      transform: scale(1) translate(-278.1rem, -100rem); }
+    .pathfinder--x.zoom-in--5 {
+      transform: scale(1) translate(-278.1rem, 150rem); }
+    .pathfinder--x.zoom-in--6 {
+      transform: scale(1) translate(0, 150rem); }
+    .pathfinder--x.zoom-in--7 {
+      transform: scale(1) translate(185.4rem, -100rem); }
 
 .footer {
   position: fixed;
@@ -3174,6 +3189,16 @@ b {
     .page--x.deactivate {
       z-index: -1;
       background-color: transparent; }
+  .main-container--x .page--z {
+    padding-top: 0rem; }
+  .page__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    margin-left: -5.85rem;
+    margin-top: -2rem;
+    z-index: 10000; }
 
 .b-modal {
   height: 100vh;

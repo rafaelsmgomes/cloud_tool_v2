@@ -57,5 +57,19 @@
     }
   }
 
+  &--z{
+    .main-container--x &{
+      padding-top: 0rem;
+    }
+  }
 
+ &__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    margin-left: -5.85rem;
+    margin-top: -2rem; 
+    z-index: 10000;       
+ } 
 }
