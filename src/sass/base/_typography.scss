@@ -1251,7 +1251,8 @@ b {
 
     & > b{
     	display: block;
-    	opacity: 0;
+		opacity: 0;
+		margin-bottom: .4rem;
     	
     	.header__rectangle:hover &{
 	    	transition: opacity .3s;
