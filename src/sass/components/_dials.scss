@@ -24,7 +24,8 @@
 			@include bph_min(1200){
 				max-width: 50rem;
 				max-height: calc(50rem / 2);
-				margin-top: calc((100vh - 30rem) / 2);
+				margin-top: 4.2rem;
+				transform: translateY(0);
 			}
 
 			@include bph(825){
@@ -56,6 +57,11 @@
 				}
 			}
 
+			@include bph_min(1200){
+				margin-top: 4.2rem;
+				transform: translateY(0);	
+			}
+
 			@include bph(725){
 				width: $dial-mediumL;
 				height: calc(#{$dial-mediumL} / 2);		
@@ -67,6 +73,15 @@
 			@include bph(565){
 				width: $dial-small;
 				height: calc(#{$dial-small} / 2);		
+			}
+		}
+
+		@include bp(1200){
+			@include bp_min(1025){
+				@include bph_min(1100){
+					margin-top: 4.2rem;
+					transform: translateY(0);	
+				}
 			}
 		}
 		
@@ -126,7 +141,8 @@
 				@include bph_min(1200){
 					max-width: 50rem;
 					max-height: calc(50rem / 2);
-					margin-top: calc((100vh - 30rem) / 2);
+					margin-top: 4.2rem;
+					transform: translateY(0);
 				}
 			}
 			@include bp(1440){
@@ -135,7 +151,8 @@
 					margin-top: calc((100vh - 30rem) / 2);
 	
 					@include bp_min(1200){
-						margin-top: calc((100vh - 30.5rem) / 2);
+						margin-top: 4.2rem;
+						transform: translateY(0);
 					}
 				}	
 			}
@@ -257,6 +274,15 @@
 
 				&-a{					
 					margin-top: 31%;
+					@include bp_min(768){
+						margin-top: 34%;
+						@include bph_min(725){
+							margin-top: 37%;
+						}
+					}
+					@include bp_min(1441){
+						margin-top: 33%;
+					}
 				}
 			}
 
@@ -278,12 +304,12 @@
 
 			&--1{
 				padding-left: 7.5%;
-				flex: 0 1 50%;
+				flex: 0 1 53%;
 
 				@include bph_min(900){ width: auto; }
 			}
 			&--2{
-				padding-right: 7.5%;	
+				padding-right: 7.5%;
 			}						
 		}
 	}
