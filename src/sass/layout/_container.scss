@@ -8,7 +8,7 @@
 	opacity: 1;
 	&--x{
 		z-index: 	4;
-		padding-top: 11.70rem;
+		padding-top: 13.70rem;
 		& > *{
 			opacity: 	0;
 		}
@@ -30,5 +30,30 @@
   transition: all 1100ms;
   // transition-delay: 300ms;
   // transition-timing-function: cubic-bezier(.84,.09,.19,.92);
+
+	&--x{
+		transform: scale(0.1) translate(-665px, 138rem);
+
+		&.zoom-in{
+			&--2{
+				transform: scale(1) translate(-92.70rem, -50rem);
+			}
+			&--3{
+				transform: scale(1) translate(-278.1rem, -100rem);
+			}
+			&--4{
+				transform: scale(1) translate(-278.1rem, -100rem);
+			}
+			&--5{
+				transform: scale(1) translate(-278.1rem, 150rem);
+			}
+			&--6{
+				transform: scale(1) translate(0, 150rem);
+			}
+			&--7{
+				transform: scale(1) translate(185.4rem, -100rem);
+			}
+		}
+	}
 }
 
