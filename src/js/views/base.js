@@ -25,6 +25,7 @@ export const e = {
 	pathfinder: $('.pathfinder'),
 	results__copy: $('.results__copy'),
 	body: $('body'),
+	headerCopyright: $('.header__copyright'),
 
 	thisDialElement: function(start,reference,end){
 		$(start)[0].$div.closest(reference).find(end);

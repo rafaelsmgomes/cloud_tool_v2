@@ -28,10 +28,12 @@
 		}
 	}
 	&__copyright{
-		margin-right: 1.25rem;
 		display: flex;
 		align-items: center;
-
+		
+		// Used in conjuncture with headerView.js
+		margin-right: -2rem;
+		
 		@include bp(767){
 			display: none;
 		}
@@ -64,7 +66,7 @@
 
 	
 		&:not(:first-of-type){
-			  margin-left: 1.20rem;
+			margin-left: 1.20rem;
 		}
 
 		&--1{
@@ -108,11 +110,11 @@
 
 		&--grow{						
 			position: absolute;
-	    width: 2.00rem;
-	    height: 2.00rem;
-	    border-radius: 50.00rem;
-	    border: solid 0.1rem $color-blue-1;
-	    transition: width .2s;
+			width: 2.00rem;
+			height: 2.00rem;
+			border-radius: 50.00rem;
+			border: solid 0.1rem $color-blue-1;
+			transition: width .2s;
 			right: -.1rem;
 			z-index: 5;
 			background-color: $color-blue-2;
@@ -137,6 +139,7 @@
 
 			.header__rectangle--1:hover &{
 				width: 5.7rem;
+				
 			}
 			.header__rectangle--2:hover &{
 				width: 11rem;
