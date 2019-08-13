@@ -218,26 +218,30 @@ $(document).ready(function(){
 		console.log('test');
 		const self = $(this);
 		const val = self.data('val');
-		$('.pathfinder--x').addClass(`zoom-in--${val}`);
 
+
+		$('.pathfinder--x').addClass(`zoom-in--${val}`);
+		
+		setTimeout(function(){			
+			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
+		}, 500);
+		
 		$('.page__overlay').toggle();
 	});
 
 	$('.icon__zoomout').on('click',function(){		
-
-		$('.zoom-in--2').removeClass('zoom-in--2');
+		console.log('asdfadsf');
+		
 		setTimeout(function(){
 			$('.page__overlay').toggle();
-		}, 1000);
-		
-		// $('.pathfinder--x').removeClass('zoom-in--3');
-		// $('.pathfinder--x').removeClass('zoom-in--4');
-		// $('.pathfinder--x').removeClass('zoom-in--5');
-		// $('.pathfinder--x').removeClass('zoom-in--6');
-		// $('.pathfinder--x').removeClass('zoom-in--7');
-		// $('.pathfinder--x').removeClass('zoom-in--8');
-
-		// $('.page').addClass('page--a');
+		}, 1500);
+		$('.pathfinder--x').removeClass('zoom-in--2 zoom-in--2-x');
+		$('.pathfinder--x').removeClass('zoom-in--3');
+		$('.pathfinder--x').removeClass('zoom-in--4');
+		$('.pathfinder--x').removeClass('zoom-in--5');
+		$('.pathfinder--x').removeClass('zoom-in--6');
+		$('.pathfinder--x').removeClass('zoom-in--7');
+		$('.pathfinder--x').removeClass('zoom-in--8');
 	});
 
 /****** HEADER NAV BTN CONTROLLER ******/ 
