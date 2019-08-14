@@ -215,23 +215,24 @@ $(document).ready(function(){
 	// });
 
 	$('.page__overlay').on('click', function(){
-		console.log('test');
 		const self = $(this);
 		const val = self.data('val');
 
 
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
-		
+		$('.page').toggleClass('zoomed');
 		setTimeout(function(){			
 			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
-		}, 1000);
+			$('.header__nav').toggleClass('activate');
+		}, 1500);
 		
 		$('.page__overlay').toggle();
 	});
 
 	$('.icon__zoomout').on('click',function(){		
-		console.log('asdfadsf');
-		
+		$('.header__nav').toggleClass('activate');
+		$('.page').toggleClass('zoomed');
+
 		setTimeout(function(){
 			$('.page__overlay').toggle();
 		}, 1500);

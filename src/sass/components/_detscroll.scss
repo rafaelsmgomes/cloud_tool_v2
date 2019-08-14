@@ -3,6 +3,10 @@
 		width: 44.00rem;
 		// background-color: black;
 		margin-top: 2.60rem;
+
+		.page.zoomed .page__content > &{
+	    margin-top: 36.6rem;
+	   }
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
