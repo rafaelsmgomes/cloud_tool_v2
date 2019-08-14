@@ -99,6 +99,10 @@
 				@include bph_min(1050){
 					transform: translateY(0%);
 					margin-top: 1.85rem;
+					
+					.page.zoomed .page__content > &{
+						margin-top: 31.85rem;
+					}
 				}
 			}
 

@@ -171,6 +171,10 @@
 
 		&--x{
 			margin-top: 2.00rem;
+			.page.zoomed .page__content > &{
+				margin-top: 34rem;
+			}
+			
 			transform: none;
 			height: 21.85rem;
 		}
