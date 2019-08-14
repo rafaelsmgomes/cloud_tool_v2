@@ -1143,10 +1143,11 @@ b {
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
-  color: #00758f;
-  cursor: pointer; }
+  color: #fff;
+  cursor: pointer;
+  opacity: .2; }
   .header__nav--btn:hover {
-    color: #fff; }
+    opacity: 1; }
 
 .page__zoomed--title {
   font-family: UniversB, Arial, Helvetica, sans-serif;
@@ -3120,13 +3121,19 @@ b {
     height: 1.20rem;
     width: 4.25rem;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    background-image: url("../assets/graphics/icon-back.svg");
+    background-size: 1.20rem 1.20rem;
+    background-repeat: no-repeat; }
     .header__nav--btn--1 > span {
       margin-left: auto; }
     .header__nav--btn--1:before {
       content: "";
       position: absolute;
       background-image: url(); }
+    .header__nav--btn--2 {
+      background-position-x: right;
+      background-image: url("../assets/graphics/icon-back--1.svg"); }
 
 .results__main {
   height: 51.80rem;
