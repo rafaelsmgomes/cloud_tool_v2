@@ -13,18 +13,38 @@
 		.main-container--x &{
 			padding-top: 0;
 			border-radius: 0.20rem;
-		  border: solid 0.10rem $color-blue-1;
+		  border: solid 0.10rem $color-blue-1;						
 			height: 42.00rem;
 			// background-color: green;
+			transition: all 1100ms;
+		}
+
+		.page.zoomed &{
+			border: solid 1rem $color-blue-1;	
 		}
 
 		&--y{
 			padding-top: 2.00rem;
 			padding-left: 5.85rem;
+			transition: all 1100ms;
 
 			.main-container--x &{
 				padding-top: 2rem;
 				overflow: hidden;
+			}
+
+			.page--2.zoomed &,
+			.page--3.zoomed &,
+			.page--4.zoomed &,
+			.page--5.zoomed &,
+			.page--6.zoomed &,
+			.page--7.zoomed &,{
+				width: 85.50rem;
+				height: 82.50rem;
+			}
+
+			.zoomed &{
+				padding: 3.5rem 8rem 12.5rem 12rem;
 			}
 		}		
 
@@ -71,6 +91,17 @@
 
 
 		.page.activate & > *{
+			opacity: 1;
+		}
+
+		.page.zoomed & > *{
+			opacity: 0;
+		}
+		// .page.zoomed & > .page__zoomed--header,
+		// .page.zoomed & > .main__title--x,
+		.page.zoomed & > .dial-group,
+		.page.zoomed & > .selection__wrapper,
+		.page.zoomed & > .detscroll__wrapper,{
 			opacity: 1;
 		}
 

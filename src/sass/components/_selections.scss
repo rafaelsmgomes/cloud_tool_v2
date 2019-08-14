@@ -1,5 +1,6 @@
 .selection{	
 	&__wrapper{
+		z-index: 100;
 		width: 23rem;
 		height: 41%;
 
@@ -99,6 +100,10 @@
 				@include bph_min(1050){
 					transform: translateY(0%);
 					margin-top: 1.85rem;
+					
+					.page.zoomed .page__content > &{
+						margin-top: 31.85rem;
+					}
 				}
 			}
 
@@ -112,6 +117,7 @@
 		padding: .50rem;
 		margin-bottom: 1.25rem;
 		margin-right: 1.25rem;
+		z-index: 100;
 
 		&--3{ order: 0; }
 		&--4{ order: 4; }
@@ -207,6 +213,7 @@
 			// background-color: blue;
 			margin-bottom: 0.90rem;
 			margin-right: 0.90rem;
+			border: solid 0.1rem $color-blue-1;
 			padding: 0.35rem 0.60rem 0.60rem 0.65rem;
 			&-1{
 				height: 7.05rem;

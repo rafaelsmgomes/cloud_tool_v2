@@ -129,4 +129,22 @@
 	  bottom: 0;
 	  position: absolute;
 	}
+
+	&__title{
+		&--wrapper{
+			display: flex;
+			width: 12.15rem;
+			justify-content: space-between;
+			align-items: center;
+			height: 1.95rem;
+			position: absolute;
+			margin-top: 4.50rem;
+		}
+	}
+
+	&__info{
+		flex: 0 0 1.20rem;
+		height: 1.2rem;
+		background-image: url('../assets/graphics/info.svg');
+	}
 }
