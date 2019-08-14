@@ -36,6 +36,7 @@
   	// left: -200vw;
     top: 100rem;
     left: -185.40rem;
+
   }
   &--8{
     top: 189.19rem;
@@ -57,5 +58,37 @@
     }
   }
 
+  &--z{
+    .main-container--x &{
+      padding-top: 0rem;
+    }
+  }
 
+  &__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    margin-left: -12rem;
+    margin-top: -3.5rem; 
+    z-index: 10000;       
+  } 
+
+  &__zoomed{
+    &--header{
+      height: 15rem;
+      width: calc(#{100%} - #{20rem});
+      align-items: center;
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      transition: all 1100ms;
+      .page.activate .page__content > & {
+        opacity: 0;        
+      }      
+      .page.zoomed .page__content > & {
+        opacity: 1;        
+      }      
+    }
+  }
 }
