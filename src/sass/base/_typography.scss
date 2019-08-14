@@ -915,7 +915,7 @@ b {
 	  line-height: 1.58;
 	  letter-spacing: normal;
 	  color: $color-blue-2;
-	  display: flex;
+	  display: none;
 	  align-items: center;
 	  margin-right: auto;	  
 	  transform: translateY(5%);
@@ -925,6 +925,7 @@ b {
 		  line-height: 1.67;	  	
 	  }
 		.scroller__content--active &{
+			display: block;
 		  height: 3.55rem;
 		  font-size: $font-size-7;
 		  line-height: 1.67;
