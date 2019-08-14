@@ -2931,6 +2931,7 @@ b {
     width: 11.90rem;
     margin-bottom: 0.90rem;
     margin-right: 0.90rem;
+    border: solid 0.1rem #00758f;
     padding: 0.35rem 0.60rem 0.60rem 0.65rem; }
     .selection__container--x-1 {
       height: 7.05rem; }
