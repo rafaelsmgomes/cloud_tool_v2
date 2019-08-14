@@ -59,3 +59,14 @@
     background-image: url('../assets/graphics/illustration/illustration-no-padding-distribution.svg');
   }
 }
+
+.page{
+  &__zoomed{
+    &--in{
+      background-image: url('../assets/graphics/icon-zoom-in.svg');
+      height: 12rem;
+      background-size: 100%;
+      flex: 0 0 12rem;
+    }
+  }
+}

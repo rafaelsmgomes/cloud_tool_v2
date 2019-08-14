@@ -8,6 +8,7 @@
 	opacity: 1;
 	&--x{
 		z-index: 	4;
+		padding-top: 13.70rem;
 		& > *{
 			opacity: 	0;
 		}
@@ -29,5 +30,50 @@
   transition: all 1100ms;
   // transition-delay: 300ms;
   // transition-timing-function: cubic-bezier(.84,.09,.19,.92);
+
+	&--x{
+		transform: scale(0.1) translate(-33.25rem, 138rem);
+
+		&.zoom-in{
+			&--2{
+				&-x{
+					transform: scale(1) translate(-92.70rem, -50rem);								
+				}				
+				transform: scale(0.1) scale(1) translate(-92.70rem, -50rem);
+			}
+			&--3{
+				&-x{
+					transform: scale(1) translate(-278.1rem, -100rem);	
+				}								
+				
+				transform: scale(0.1) translate(-278.1rem, -100rem);	
+			}
+			&--4{
+				&-x{
+					transform: scale(1) translate(-278.1rem, 150rem);									
+				}				
+				transform: scale(0.1) translate(-278.1rem, 150rem);
+			}
+			&--5{
+				&-x{
+					transform: scale(1) translate(0rem, 150rem);	
+				}								
+				
+				transform: scale(0.1) translate(0rem, 150rem);	
+			}
+			&--6{
+				&-x{
+					transform: scale(1) translate(278.1rem, 150rem);						
+				}							
+				transform: scale(0.1) translate(278.1rem, 150rem);
+			}
+			&--7{
+				&-x{	
+					transform: scale(1) translate(185.4rem, -100rem);
+				}								
+					transform: scale(0.1) translate(185.4rem, -100rem);				
+			}
+		}
+	}
 }
 
