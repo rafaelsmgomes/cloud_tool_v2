@@ -2980,13 +2980,13 @@ b {
       .pathfinder--x.zoom-in--4-x {
         transform: scale(1) translate(-278.1rem, -100rem); }
     .pathfinder--x.zoom-in--5 {
-      transform: scale(0.1) translate(-278.1rem, 150rem); }
+      transform: scale(0.1) translate(0rem, 150rem); }
       .pathfinder--x.zoom-in--5-x {
-        transform: scale(1) translate(-278.1rem, 150rem); }
+        transform: scale(1) translate(0rem, 150rem); }
     .pathfinder--x.zoom-in--6 {
-      transform: scale(0.1) translate(0, 150rem); }
+      transform: scale(0.1) translate(278.1rem, 150rem); }
       .pathfinder--x.zoom-in--6-x {
-        transform: scale(1) translate(0, 150rem); }
+        transform: scale(1) translate(278.1rem, 150rem); }
     .pathfinder--x.zoom-in--7 {
       transform: scale(0.1) translate(185.4rem, -100rem); }
       .pathfinder--x.zoom-in--7-x {

@@ -224,7 +224,7 @@ $(document).ready(function(){
 		
 		setTimeout(function(){			
 			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
-		}, 500);
+		}, 1000);
 		
 		$('.page__overlay').toggle();
 	});
@@ -236,12 +236,12 @@ $(document).ready(function(){
 			$('.page__overlay').toggle();
 		}, 1500);
 		$('.pathfinder--x').removeClass('zoom-in--2 zoom-in--2-x');
-		$('.pathfinder--x').removeClass('zoom-in--3');
-		$('.pathfinder--x').removeClass('zoom-in--4');
-		$('.pathfinder--x').removeClass('zoom-in--5');
-		$('.pathfinder--x').removeClass('zoom-in--6');
-		$('.pathfinder--x').removeClass('zoom-in--7');
-		$('.pathfinder--x').removeClass('zoom-in--8');
+		$('.pathfinder--x').removeClass('zoom-in--3 zoom-in--3-x');
+		$('.pathfinder--x').removeClass('zoom-in--4 zoom-in--4-x');
+		$('.pathfinder--x').removeClass('zoom-in--5 zoom-in--5-x');
+		$('.pathfinder--x').removeClass('zoom-in--6 zoom-in--6-x');
+		$('.pathfinder--x').removeClass('zoom-in--7 zoom-in--7-x');
+		$('.pathfinder--x').removeClass('zoom-in--8 zoom-in--8-x');
 	});
 
 /****** HEADER NAV BTN CONTROLLER ******/ 
