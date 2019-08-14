@@ -642,20 +642,18 @@ b {
 	&__text{
 
 		font-family: $font-reg;
-	  font-size: $font-size-2;
+		font-size: $font-size-2;
 
-	  @include bp(1450){
-	  	@include bph(650){
-	  		font-size: $font-size-5;
-	  	}
-	  }
-	  font-weight: normal;
-	  font-style: normal;
-	  font-stretch: normal;
-	  line-height: 1.32;
-	  letter-spacing: normal; 
-	  color: $color-white-1;	  	  
-	
+		@include bp(1440){
+			font-size: $font-size-5;
+		}
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.32;
+		letter-spacing: normal; 
+		color: $color-white-1;	  	  
+		
 		&--2,
 		&--3{
 			@include bp_min(1441){
@@ -682,7 +680,6 @@ b {
 		  text-align: right;
 		  @include bph(740){ 
 			margin-right: 0.75rem; 
-			padding-left: 15%;
 		  }
 		  &c,
 		  &-a {
