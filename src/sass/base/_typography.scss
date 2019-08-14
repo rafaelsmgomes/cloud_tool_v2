@@ -1,0 +1,1355 @@
+@font-face { 
+  font-family: "Univers";
+  src: url("../fonts/OracleSans_Rg.ttf");
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: "UniversLite";
+  src: url("../fonts/OracleSans_Lt.ttf");
+  font-weight: normal; 
+}
+@font-face {
+  font-family: "UniversB";
+  src: url("../fonts/OracleSans_Bd.ttf");
+  font-weight: normal; 
+}
+
+b {
+	font-family: $font-b;
+}
+
+.landing{
+	&__title{
+	  font-size: $font-size-1;
+	  font-weight: 700;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.25;
+	  letter-spacing: normal;
+	  text-align: center;
+	  color: $color-white-1;
+		transition-delay: .5s;
+		transition-property: opacity;
+    	transition-duration: 0.5s;
+		margin-top: 42%;
+		padding: 0 2%;
+
+		&--x{
+			display: none;
+		}
+
+		// Width BreakPoints
+		@include bp(767){
+				width: 90%;
+				margin-top: 31.5%;
+				font-size: $font-size-4;
+		}
+
+		//Height BreakPoints
+		@include bph(920){
+			width: 90%;
+			margin-top: 31.5%;
+		}
+		@include bph(775){
+			width: 95%;
+			margin-top: 26%;
+		}
+		@include bp(767){
+			font-size: $font-size-4;
+			width: 17.15rem;
+			@include bph_min(650){
+				font-size: $font-size-6;
+				width: 90%;	
+				margin-top: 33%;
+			}
+		}
+		@include bp(600){
+			margin-top: 1.00rem;
+			display: none;
+			&--x{
+				font-size: $font-size-4;
+				width: 17.15rem;
+
+				display: block;
+				height: 2.40rem;
+				text-align: left;
+				padding-left: 0;
+			}
+		}
+		@include bph(650){
+			margin-top: 1.00rem;
+			display: none;
+			&--x{
+				font-size: $font-size-4;
+				width: 17.15rem;
+
+				display: block;
+				height: 2.40rem;
+				text-align: left;
+				padding-left: 0;
+
+				@include bp(767){
+					font-size: $font-size-4;
+					width: 17.15rem;
+	
+				}
+			}
+		}
+		@include bph(480){
+			height: auto;
+		}
+		@include bph(400){
+			height: 2.40rem;
+		}
+
+
+
+
+	  &--fadeout{	  	
+			opacity: 0;	
+	  }
+
+
+	}
+	&__subtitle{
+	  font-family: $font-reg;
+	  font-size: 1.25rem;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  text-align: center;
+		width: 23.35rem;	
+		padding: 0 0.50rem;
+		color: $color-blue-4;
+		transition-delay: 1s;
+		transition-property: opacity;
+    transition-duration: .5s;
+
+	  &--fadeout{	  	
+			opacity: 0;	
+	  }
+		
+		&--x{
+			display: none;
+		}
+
+		@include bp(600){
+			margin-top: 1.00rem;
+			display: none;				
+
+			&--x{
+			font-size: $font-size-4;
+			height: 4.00rem;
+			margin-top: 0.25rem;					
+				display: block;
+				padding: 0;
+				text-align: left;
+				width: 24.90rem;
+			}
+		}
+		@include bph(650){
+			margin-top: 1.00rem;
+			display: none;				
+
+			&--x{
+			font-size: $font-size-4;
+			height: 4.00rem;
+			margin-top: 0.25rem;					
+				display: block;
+				padding: 0;
+				text-align: left;
+				width: 24.90rem;
+			}
+		}
+		@include bp(767){
+			font-size: $font-size-2;
+			height: auto;
+			width: 17.15rem;
+		}
+	}
+	&__txt{
+		color: $color-white-1;
+		&--1{
+			width: 11.95rem;
+		  height: 1.50rem;
+		  font-size: 1.25rem;
+		  font-family: $font-b;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.2;
+		  letter-spacing: normal;
+		  text-align: center;     
+	    margin-top: 27.25%;
+	    
+		@include bp(767){
+			margin-top: 20%;
+		}
+				
+		@include bph(920){
+			margin-top: 20%
+		}
+		@include bph(780){
+			margin-top: 15%
+		}
+		@include bph(700){
+			margin-top: 10%
+		}
+		@include bp(600){
+		height: 3.00rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2rem;
+		}
+		@include bph(650){
+		height: 3.00rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0;
+		}
+		}
+	}
+}
+
+.main{
+	&__title{
+	  font-size: $font-size-1;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.25;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+	  margin-top: 1.05rem;
+
+
+		@include bp_min(1441){
+			@include bph(650){
+				font-size: $font-size-6;
+				width: 32.50rem;
+			}
+		}
+		@include bp(1440) {
+			font-size: $font-size-6;
+			width: 32.50rem;
+			margin-top: .65rem;
+			@include bph(650){
+				width: 30rem;
+			}
+		}
+	
+		@include bp(1024){
+			font-size: $font-size-6;
+			margin-top: .55rem;
+			@include bph(525){
+				font-size: 1.25rem;
+			}
+		}
+		@include bp(767){
+			font-size: $font-size-4;
+			line-height: 1.2;
+			height: auto;
+			margin-bottom: .6rem;
+		}
+		@include bp(666){
+			margin-top: -0.3rem;
+		}
+			
+
+		&--1,
+		&--4{
+			width: 43.25rem;
+			
+			@include bp_min(1441){
+				@include bph(650){
+					width: 32.50rem;
+				}
+			}
+
+			@include bp(1440){
+				width: 32.50rem;
+			}
+
+			@include bp(1024){
+				width: 34.90rem;
+				@include bph(525){
+					width: 22.5rem;
+				}
+			}
+			@include bp(767){
+				width: 24.3rem;
+				@include bph(515){
+					width: 15.3rem;
+					margin-top: -.3rem;
+					margin-bottom: 0;
+				}
+			}
+			@include bp(500){
+				width: auto;
+			}
+		}
+		&--2{
+			width: 39.55rem;
+
+
+			@include bp(1440){
+				width: 37.10rem;
+			}
+			@include bp(1024){
+				width: 37rem;
+			}
+			@include bp(910){
+				width: 34rem;
+				font-size: 1.25rem
+			}
+			@include bp(767){
+				width: 24.3rem;
+				@include bph(515){
+					width: 16.3rem;
+					margin-top: -.3rem;
+					margin-bottom: 0;
+				}
+			}
+			@include bp(500){
+				width: auto;
+			}
+		}
+		&--3,
+		&--5,
+		&--6{
+			width: auto;
+			@include bp_min(1025){
+				@include bph(650){
+					display: none;
+				}
+			}
+			@include bp(1024){
+				@include bph(650){
+					display: none;
+				}
+			}
+			@include bp(910){
+				@include bph(650){
+					display: none;
+				}
+			}
+		}
+
+		&--3{
+			@include bp(767){
+				display: block;
+				margin-top: 0;
+				margin-bottom: .2rem;
+				@include bph(514){
+					display: none;
+				}
+			}
+			@include bp(666){
+				display: none;
+			}
+		}
+
+		&--7{
+			width: 41.40rem;
+		  &-a{
+		  	width: 45.4rem;
+		  }
+		  height: 6.60rem;
+		  font-family: $font-reg;	
+		  
+			
+		  & > b{
+				font-family: $font-b;
+		  }
+		}
+		
+
+		&--x{
+		  width: 65.50rem;
+		  // height: 15.00rem;
+		  font-family: $font-reg;
+		  font-size: $font-size-8;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+		  position: absolute;
+		  .page.activate .page__content > & {
+        opacity: 0;        
+      }      
+      .page.zoomed .page__content > & {
+        opacity: 1;        
+      }      
+		  margin-top: 17rem;
+		}
+	}
+	&__direction{	 
+	  font-family: $font-reg;
+	  font-size: $font-size-2;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.32;
+	  letter-spacing: normal;
+	  color: #fff;		
+		margin-top: 0.80rem;
+
+		&--x{
+			margin-top: 1rem;	
+		}
+
+		@include bp(1440){
+		  width: 39.55rem;
+		  font-family: $font-reg;
+		  font-size: 0.95rem;
+		  font-weight: normal;
+		  margin-top: .7rem;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;			
+		  height: 2.8rem;
+		}
+		@include bp(1024){
+			font-size: .95rem;
+			width: 34.90rem;
+			margin-top: .5rem;
+		}
+		@include bp(767){
+			width: auto;
+			@include bp_min(667){
+				@include bph(515){
+					width: 15.3rem;
+					margin-top: .2rem;
+				}
+			}
+	}
+		@include bp(500){
+			width: auto;
+		}
+
+		& > b{
+			display: block;
+			font-family: $font-b;
+		}
+
+		&--1{
+			width: 21.30rem;
+			@include bph(530){
+				margin-top: 0;
+				line-height: auto;
+			}
+		}
+		&--3{
+			width: 21.30rem;
+			@include bph(530){
+				margin-top: 0;
+			}
+			@include bp(767){
+				@include bp_min(667){
+					@include bph(514){
+						width: 36%;
+						margin-top: 2rem;
+					}
+				}
+			}
+			@include bp(525){
+				width: auto;
+				height: auto;
+				margin-top: 0;
+			}
+		}
+
+		&--2{
+			width: 37%;
+		}
+		&--5,
+		&--6{
+			@include bp(1440){
+				height: auto;
+			}
+			@include bp(767){
+				@include bp_min(667){
+					@include bph(515){
+						margin-top: 2rem;
+						width: 13.2rem;
+					}
+				}
+			}
+
+		}
+
+	}
+}
+
+.pagination{
+	
+
+	&__num{
+	  flex: 0 0 0.55rem;
+	  height: 0.90rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-3;	  
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  text-align: right;
+	  color: $color-white-1;
+
+	  &--active{
+	  	font-family: $font-b;
+	  }
+	}
+}
+
+.selection{
+	&__text{
+	  font-size: 1.25rem;
+	  font-family: $font-b;
+	  font-style: normal;
+	  color: $color-white-1;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  letter-spacing: -0.01em;
+
+		@include bp_min(1441){
+			@include bph(800){
+				font-size: .95rem;
+			}
+		}
+	 
+	  	@include bp(1440){
+			font-size: $font-size-3;
+			font-family: $font-reg;
+		}
+
+		@include bp(1440){
+			@include bph_min(850){
+				font-size: .95rem;
+			}
+		}
+		@include bp(910){
+			font-size: $font-size-3;
+		}
+		@include bp(767){
+			@include bph(514){
+				line-height: 1.2;
+
+			 	hyphens: auto;
+				word-break: keep-all;
+				@include bph(450){
+					display: block;
+				}
+			}
+		}
+		@include bp(666){
+			display: block;
+			line-height: 1.2;
+
+			hyphens: auto;
+			word-break: keep-all;
+		}
+	  
+		&__hidden{
+			@include bp(1440){ display: none; }
+		}
+		// .selection__container--active &{
+		// 	color: $color-blue-1;
+		// }
+
+		&-x{
+		  width: 100%;
+		  font-family: $font-b;
+		  font-size: $font-size-3;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.36;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+		}
+	}
+
+	&__peer{
+		&-rank{
+		  width: 1.70rem;
+		  height: 1.20rem;
+		  font-family: $font-reg;
+		  font-size: $font-size-2;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-white-1;		
+		}
+		&-percentage{
+		  width: 7.05rem;
+		  height: 0.95rem;
+		  font-family: $font-reg;
+		  font-size: $font-size-3;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.36;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+		  margin-top: 0.10rem;
+		}
+	}
+
+	
+}
+
+.results{
+	&__logo{
+	  width: 12.65rem;
+	  height: 3.20rem;
+	  margin-top: 3.05rem;
+	  font-size: 1.25rem;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  color: $color-grey-1;
+	}
+	&__copy{
+	 	width: 30.00rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-2;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.32;
+	  color: $color-blue-2;
+	  letter-spacing: normal;
+	  text-align: center;
+	  margin: 0 auto;
+	  margin-top: 3.80rem;
+	}
+}
+
+.dial{
+	&__text{
+
+		font-family: $font-reg;
+		font-size: $font-size-2;
+
+		@include bp(1440){
+			font-size: $font-size-5;
+		}
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.32;
+		letter-spacing: normal; 
+		color: $color-white-1;	  	  
+		
+		&--2,
+		&--3{
+			@include bp_min(1441){
+				@include bph_min(1200){
+					transform: translateY(25%)
+				}
+			}	
+		}	
+
+		&--1{
+		  text-align: center;
+			width: 6.60rem;
+			margin-top: 2.5%;
+
+  		}
+  		&--2{
+		  margin-left: 1.00rem;
+		  @include bph(750){ 
+			margin-left: 0.75rem; 
+		  }
+  		}
+  		&--3{
+		  margin-right: 1.00rem;
+		  text-align: right;
+		  @include bph(740){ 
+			margin-right: 0.75rem; 
+		  }
+		  &c,
+		  &-a {
+			@include bp_min(1441){
+				@include bph(650){ 
+					// transform: translateY(-25%)
+				}
+			}
+			// @include bp(1440){
+			// 	@include bph(565){
+			// 		transform: translateY(-25%);
+			// 	}
+			// }
+		}
+
+  	}
+		
+		&--peers{		  
+			width: 9.80rem;
+			height: 4.65rem;
+		  font-family: $font-reg;
+		  font-size: 0.95rem;
+		  text-align: center;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+
+	    position: absolute;
+	    transform: translateX(-50%);
+	    left: 50%;
+	    top: 10.75rem;
+
+			& > *{
+				display: block;
+				
+			}
+			& > b{
+				font-family: $font-b;
+				line-height: 1.58;
+			}
+		}
+
+		&--users{	
+			width: 6.75rem;
+			height: 4.65rem;
+		  font-family: $font-reg;
+		  font-size: 0.95rem;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+			position: absolute;
+
+
+    
+    
+
+			&-less{
+				left: 6.90rem;		
+			}
+
+			&-more{
+				right: -1.15rem;
+		    width: 6.70rem;
+			}
+			&-equal{
+				left: 51%;
+			}
+			& > *{
+				display: block;
+				
+			}
+			& > b{
+				font-family: $font-b;
+				line-height: 1.58;
+			}
+
+		}
+  }
+}
+
+.cta{
+	&__txt{
+	  width: 15.25rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-5;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.31;
+	  letter-spacing: normal;
+	  color: $color-blue-4;
+
+
+		& > b{
+			font-family: $font-b;
+		}
+	  	&--1{
+		  	@include bp(1024){
+				width: 13rem;
+			}
+	  	}
+		
+		&--2{
+			width: 13rem;
+		}
+		
+		&--4{
+
+			@include bp_min(1441){
+				@include bph_min(1050){
+					width: 18rem;
+				}
+			}
+			@include bp(1150){
+				width: 14rem;
+			}
+			@include bp(1440){
+				@include bph_min(850){
+					width: 18rem;
+				}
+			}
+			@include bp(1024){
+				@include bph_min(850){
+					width: 18rem;
+				}
+			}
+	  		&-a{
+		    	letter-spacing: -.01em;
+			}
+		}	 
+		&__focus{
+			font-size: 1.25rem;
+			height: 1.9rem;
+			color: $color-white-1;
+
+			@include bp(1441){
+				@include bph_min(1050){
+					display: inline;
+				}
+			}
+			@include bp(1440){
+				@include bph_min(850){
+					display: inline;
+				}
+			}
+			@include bp(767){
+				@include bph_min(726){
+					display: inline;
+				}
+			}
+		}
+		
+		&--1,
+		&--2,
+		&--3,
+		&--4{
+			@include bp(1440){
+				@include bph_min(1000){
+					width: 20rem;
+				}
+			}
+
+			@include bp(767){
+				width: 10rem;
+				@include bph_min(715){
+					width: 20rem;
+				}
+			}
+		}
+
+		&--3{
+			@include bp(1150){ width: 13rem;  }
+			@include bp(1025){
+				@include bph_min(850){
+					width: 20rem;  
+				}
+			}
+			@include bp(767){
+				@include bp_min(667){
+					@include bph_min(725){
+						width: 18rem;  
+					}
+				}
+			}
+		}
+
+		&--5,
+		&--6{
+			@include bp(1024){
+				width: 13.5rem;
+				@include bph_min(811){
+					@include bph(1015){
+						width: 20rem;
+					}
+				}
+			}
+			@include bp(910) {
+				width: 11rem;
+				@include bph_min(811){
+					@include bph(1015){
+						width: 20rem;
+					}
+				}
+			}
+		}
+
+		&--5{
+			@include bp(910) {
+				@include bph_min(811){
+					width: 20rem;
+				}
+			}
+		}
+
+
+	}
+
+	&-group{
+		&__title{
+			height: 1.70rem;
+		  font-size: 1.25rem;
+		  font-family: $font-b;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.2;
+		  letter-spacing: normal;
+		  color: $color-blue-2;			
+		}
+		&__copy{			  
+		  font-family: $font-reg;
+		  font-size: $font-size-2;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  color: $color-blue-2;
+		  margin-top: 0.20rem;
+		  width: 95%;
+		}
+	}
+}
+
+.scroller{
+	&__title{
+	  font-size: $font-size-2;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.58;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+	  display: flex;
+	  align-items: center;
+	  margin-right: auto;	  
+	  transform: translateY(5%);
+	  @include bph(1000){
+		  height: 3.55rem;
+		  font-size: $font-size-6;
+		  line-height: 1.67;	  	
+	  }
+		.scroller__content--active &{
+		  height: 3.55rem;
+		  font-size: $font-size-7;
+		  line-height: 1.67;
+
+		  @include bp(1300){
+		  	font-size: $font-size-8;		 
+		    line-height: 1;
+		    height: auto;
+		    margin-top: 0.55rem;		  	
+		  }
+		  @include bp(1150){
+		  	margin-top: 0;
+		  	height: auto;
+		  	line-height: 1.4;
+		  }
+		  @include bp(1050){
+		  	letter-spacing: -0.03em;
+		  }
+		  	@include bp_min(1441){
+				@include bph(650){
+					font-size: $font-size-4;
+				}
+			}
+			@include bp(1440){
+				font-size: $font-size-4;
+			}
+			@include bp(910){
+				line-height: 1.1;
+				@include bp_min(768){
+					@include bph(550){
+						font-size: $font-size-2;
+					}
+				}
+			}
+			@include bp(767){
+				@include bp_min(667){
+					@include bph(515){
+						font-size: $font-size-2;
+					}
+				}
+			}
+			@include bp(666){
+				font-size: $font-size-2;
+			}
+		}
+	}
+	&__step{
+	  font-size: $font-size-3;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  text-align: right;
+	  color: $color-blue-2;
+	  padding-right: .3rem;
+	  padding-top: .7rem;
+
+		display: none;
+
+		@include bp(1440){
+			padding-top: .5rem;
+		}
+		
+		.scroller__content--active &{
+			display: block;
+			// @include bp(1440){
+			// 	margin-top: 0;
+			// }
+		}
+	}
+	&__description{
+	  width: 14rem;	  
+	  font-family: $font-lite;
+	  font-size: $font-size-2;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.32;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+	  align-self: flex-end;
+
+		@include bp(1050){
+	    letter-spacing: -0.03rem;
+		}
+
+		@include bp(910){
+			line-height: 1.2;
+			font-size: $font-size-5;
+			@include bp_min(667){
+				@include bph(550){
+					font-size: $font-size-3;
+				}
+			}
+		}
+		@include bp(767){
+			@include bp_min(667){
+				@include bph(515){
+					font-size: $font-size-3;
+					line-height: 1.15;
+				}
+			}
+		}
+		@include bp(666){
+			font-size: $font-size-3;
+			line-height: 1.15;
+		}
+
+		&--1{
+			padding-left: .3rem;
+		}
+		&--2{
+			text-align: right;	
+			padding-right: .3rem;	
+
+		}
+	}
+}
+
+.cloud{
+	&__text{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		padding: 9.10rem 4.05rem 3.83rem 4.05rem;	
+	  font-family: $font-reg;
+	  font-size: $font-size-1;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  letter-spacing: normal;
+	  text-align: center;
+	  color: $color-blue-2;	
+	
+		& > *{
+	    line-height: 1.25;
+		} 
+	}
+
+	&__span{
+		display: block;
+		&--2{
+			font-size: $font-size-7;
+		}
+
+		& > b{
+			font-family: $font-b;
+		}
+	}
+}
+
+.detailed-score{
+	&__title{
+		height: 1.70rem;
+	  font-size: $font-size-4;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+	}
+	&__copy{
+	  width: 100%;
+	  height: 3.20rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-2;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.32;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+    margin-top: 0.55rem;
+	}
+}
+
+.sidebar{
+	&__title{
+	  height: 1.60rem;
+	  font-size: $font-size-4;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+    margin-top: -0.30rem;	  
+	}
+	&__info--title{
+	  height: 0.90rem;
+	  font-size: 0.70rem;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+	}
+	&__info--subtitle{
+		height: 1.15rem;
+	  font-family: $font-reg;
+	  font-size: 0.70rem;
+	  font-weight: 300;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+	}
+}
+
+.btn{
+	&__txt{
+	  height: 1.20rem;
+	  font-size: $font-size-3;
+	  font-family: $font-b;
+	  font-style: normal;
+    display: flex;
+    align-items: center;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+
+	  padding-top: .2rem;
+	}
+}
+
+.footer{
+	&-text{
+	  width: 1.30rem;
+	  height: 0.90rem;
+	  font-size: 0.70rem;
+	  font-family: $font-b;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.29;
+	  letter-spacing: normal;
+	  color: $color-white-1;
+		top: -1.10rem;
+	  text-align: center;
+	  position: absolute;
+	  transform: translateX(25%)
+	}
+}
+
+.header{
+	&__copyright{
+		font-size: $font-size-5;
+		color: $color-blue-1;
+		& > a{
+			color: $color-blue-4;
+			text-decoration: none;
+			margin-top: 0.25rem;
+	    margin-right: 0.40rem;
+	    margin-left: 0.40rem;
+	    font-family: $font-reg;
+		
+			
+		}
+	}
+	&__rectangle{
+		&__txt{
+			font-family: $font-reg;
+			font-size: $font-size-5;
+			color: $color-white-1;
+			transform: translateY(10%);
+			padding: 0 .5rem;
+
+			display: none;
+
+			&--2{
+				width: 11rem;
+				transform: translateY(0%);
+				padding: .3rem;
+				line-height: 1.31;
+			}
+
+			&__description{
+				color: $color-blue-4;
+			}
+		}
+	}
+}
+
+.detailed{
+	&__results{
+		&--title{
+			width: 10.40rem;
+		  height: 1.95rem;
+		  font-size: $font-size-4;
+		  font-family: $font-b;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.2;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+		  display: flex;
+		  align-items: center;
+			transition: all 700ms;
+
+		
+			&.deactivate{
+				opacity: 0;
+			}
+		}
+	}
+
+	&__title{
+		&--wrapper{
+			& > span{			  			  
+			  font-family: $font-b;
+			  font-size: $font-size-4;
+			  font-style: normal;
+			  font-stretch: normal;
+			  line-height: 1.2;
+			  letter-spacing: normal;
+			  color: $color-white-1;
+			}
+		}
+	}
+}
+
+.grow{
+	&--text{
+		font-size: 0.80rem;
+		font-family: $font-reg;
+    color: $color-blue-4;
+		transition: opacity 0s;
+		opacity: 0;
+
+    .header__rectangle:hover &{
+    	transition: opacity .3s;
+    	opacity: 1
+    }
+
+    & > b{
+    	display: block;
+    	opacity: 0;
+    	
+    	.header__rectangle:hover &{
+	    	transition: opacity .3s;
+	    	opacity: 1
+	    }
+    }
+	}
+}
+
+.detscroll{
+	&__title{
+		display: flex;
+    align-items: center;
+	  width: 16.00rem;
+	  height: 2.30rem;
+	  font-family: $font-b;
+	  font-size: 1.25rem;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.2;
+	  letter-spacing: normal;
+	  color: $color-blue-2;
+	}
+	&__txt{
+		width: 85%;
+	  height: 2.10rem;
+	  font-family: $font-reg;
+	  font-size: $font-size-5;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  line-height: 1.25;
+	  letter-spacing: normal;
+	  color: $color-blue-1;
+	  margin-top: 0.45rem;
+	}
+}
+
+.header__nav--btn{
+  font-family: $font-reg;
+  font-size: $font-size-2;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $color-blue-1;
+  cursor: pointer;
+
+  &:hover{
+		color: $color-white-1;
+  }
+}
+
+.page{
+	&__zoomed{
+		&--title{
+		  font-family: $font-b;
+		  font-size: $font-size-8;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.58;
+		  letter-spacing: normal;
+		  color: $color-white-1;
+		}
+	}
+}
