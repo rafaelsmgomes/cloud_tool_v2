@@ -12,8 +12,10 @@ export const movePathfinderX = (btn) => {
     val = val+1;    
   }else{
     $('.header__nav--btn--2').attr('context',Number($('.header__nav--btn--2').attr('context'))-1);
+    val = val-1;
   };
   
+  console.log(val);
 
   $('.pathfinder--x').removeClass('zoom-in--2 zoom-in--4 zoom-in--5 zoom-in--6 zoom-in--7');
   $('.pathfinder--x').removeClass('zoom-in--2-x zoom-in--3-x zoom-in--4-x zoom-in--5-x zoom-in--6-x zoom-in--7-x');
