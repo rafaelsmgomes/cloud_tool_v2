@@ -1,6 +1,6 @@
 import {e} from './base';
 import * as func from '.././functions';
-
+//test
 export const movePathfinderX = (btn) => {
 
 	const direction = btn.attr('direction');
@@ -21,5 +21,5 @@ export const movePathfinderX = (btn) => {
   $('.pathfinder--x').removeClass('zoom-in--2-x zoom-in--3-x zoom-in--4-x zoom-in--5-x zoom-in--6-x zoom-in--7-x');
 
   $('.pathfinder--x').addClass(`zoom-in--${val} zoom-in--${val}-x`);
-      
+  
 };
