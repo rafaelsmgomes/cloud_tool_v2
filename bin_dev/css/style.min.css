@@ -329,7 +329,7 @@ b {
   @media only screen and (max-width: 1024px) and (max-height: 525px) {
     .main__title {
       font-size: 1.25rem; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 830px) {
     .main__title {
       font-size: 1.25rem;
       line-height: 1.2;
@@ -353,10 +353,10 @@ b {
   @media only screen and (max-width: 1024px) and (max-height: 525px) {
     .main__title--1, .main__title--4 {
       width: 22.5rem; } }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 830px) {
       .main__title--1, .main__title--4 {
         width: 24.3rem; } }
-  @media only screen and (max-width: 767px) and (max-height: 515px) {
+  @media only screen and (max-width: 830px) and (max-height: 515px) {
     .main__title--1, .main__title--4 {
       width: 15.3rem;
       margin-top: -.3rem;
@@ -374,12 +374,11 @@ b {
         width: 37rem; } }
     @media only screen and (max-width: 910px) {
       .main__title--2 {
-        width: 34rem;
-        font-size: 1.25rem; } }
-    @media only screen and (max-width: 767px) {
+        width: 34rem; } }
+    @media only screen and (max-width: 830px) {
       .main__title--2 {
         width: 24.3rem; } }
-  @media only screen and (max-width: 767px) and (max-height: 515px) {
+  @media only screen and (max-width: 830px) and (max-height: 515px) {
     .main__title--2 {
       width: 16.3rem;
       margin-top: -.3rem;
@@ -466,6 +465,9 @@ b {
       font-size: .95rem;
       width: 34.90rem;
       margin-top: .5rem; } }
+  @media only screen and (max-width: 830px) {
+    .main__direction {
+      width: 24.3rem; } }
   @media only screen and (max-width: 767px) {
     .main__direction {
       width: auto; } }
@@ -492,7 +494,7 @@ b {
       .main__direction--3 {
         margin-top: 0; } }
 
-@media only screen and (max-width: 767px) and (min-width: 667px) and (max-height: 514px) {
+@media only screen and (max-width: 830px) and (min-width: 667px) and (max-height: 514px) {
   .main__direction--3 {
     width: 36%;
     margin-top: 2rem; } }
@@ -501,8 +503,6 @@ b {
         width: auto;
         height: auto;
         margin-top: 0; } }
-  .main__direction--2 {
-    width: 37%; }
   @media only screen and (max-width: 1440px) {
     .main__direction--5, .main__direction--6 {
       height: auto; } }
@@ -511,6 +511,10 @@ b {
   .main__direction--5, .main__direction--6 {
     margin-top: 2rem;
     width: 13.2rem; } }
+
+@media only screen and (max-width: 666px) {
+  .main {
+    width: auto; } }
 
 .pagination__num {
   flex: 0 0 0.55rem;
@@ -756,6 +760,10 @@ b {
     display: inline; } }
 
 @media only screen and (max-width: 1440px) and (min-height: 1000px) {
+  .cta__txt--1, .cta__txt--2, .cta__txt--3, .cta__txt--4 {
+    width: 20rem; } }
+
+@media only screen and (max-width: 910px) and (min-height: 750px) {
   .cta__txt--1, .cta__txt--2, .cta__txt--3, .cta__txt--4 {
     width: 20rem; } }
   @media only screen and (max-width: 767px) {
@@ -1221,6 +1229,14 @@ b {
   @media only screen and (max-width: 666px) {
     .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
       display: none; } }
+
+@media only screen and (max-width: 910px) and (min-height: 750px) {
+  .cta__wrapper--2 {
+    top: 194%; } }
+
+@media only screen and (max-width: 715px) and (min-height: 715px) {
+  .cta__wrapper--2 {
+    top: 210%; } }
   .main-container--x .cta__wrapper--1 {
     top: 100%;
     left: 48.4rem;
@@ -1542,21 +1558,68 @@ b {
   .btn__regress .hamburguer {
     display: none; }
   @media only screen and (max-width: 767px) {
-    .btn__regress .arrow {
+    .btn__regress {
       display: none; }
-    .btn__regress .hamburguer {
+      .btn__regress .arrow {
+        display: none; } }
+
+.btn__navi {
+  width: 2.00rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: solid 0.1rem #00758f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #324b5c;
+  cursor: pointer;
+  transition: all .1s;
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .btn__navi {
       display: block; } }
-  .btn__regress--2, .btn__regress--5 {
-    margin-top: 4.80rem; }
-  .btn__regress--3, .btn__regress--6 {
-    margin-top: 6.10rem; }
-  .btn__regress--4 {
-    margin-top: 7.90rem;
-    margin-left: auto; }
-  .btn__regress--5, .btn__regress--6 {
-    margin-left: auto; }
-  .btn__regress--7 {
-    margin-top: -0.85rem; }
+  .btn__navi__checkbox {
+    display: none; }
+  .btn__navi__background {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    height: 1.5rem;
+    width: 1.5rem;
+    bottom: 0.25rem;
+    left: 1.05rem;
+    border-radius: 50%;
+    z-index: 100; }
+  .btn__navi__navigation {
+    position: fixed;
+    bottom: 55px;
+    left: .80rem; }
+  .btn__navi__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .btn__navi__item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem; }
+  .btn__navi__icon {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: solid 0.1rem #00758f;
+    padding: .25rem; }
+  .btn__navi__link {
+    text-decoration: none;
+    font-size: 0.80rem;
+    font-family: Univers, Arial, Helvetica, sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center; }
+  .btn__navi__text {
+    margin-left: .6rem; }
+
+.hamburguer {
+  transform: translateY(7.5%); }
 
 .dial-group {
   width: 93.5vh;
@@ -1646,7 +1709,7 @@ b {
     .dial-group {
       max-width: 58.333vw;
       max-height: calc(58.333vw / 2);
-      margin-top: calc((100vh - 27rem) / 2); } }
+      margin-top: calc((100vh - 25.5rem) / 2); } }
 
 @media only screen and (max-width: 910px) and (min-height: 930px) and (min-width: 768px) {
   .dial-group {
@@ -1721,7 +1784,7 @@ b {
 
 @media only screen and (max-width: 910px) and (min-height: 750px) {
   .dial-group--2 {
-    margin-top: calc((100vh - 27rem) / 2); } }
+    margin-top: calc((100vh - 25.5rem) / 2); } }
 
 @media only screen and (max-width: 910px) and (min-height: 930px) and (min-width: 768px) {
   .dial-group--2 {
@@ -2059,9 +2122,9 @@ b {
     height: 1.2rem;
     z-index: 10; }
   @media only screen and (max-width: 767px) {
-    .header__rectangle--1, .header__rectangle--3 {
+    .header__rectangle--1, .header__rectangle--2, .header__rectangle--3 {
       display: none; }
-      .header__rectangle--1.toggle, .header__rectangle--3.toggle {
+      .header__rectangle--1.toggle, .header__rectangle--2.toggle, .header__rectangle--3.toggle {
         display: none; } }
   .header__rectangle--grow {
     position: absolute;
