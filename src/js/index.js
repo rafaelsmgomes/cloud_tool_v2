@@ -1,3 +1,5 @@
+// v1.1
+
 import 'bodymovin';
 import 'jquery';
 import 'rangeslider.js';
