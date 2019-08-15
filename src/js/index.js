@@ -19,6 +19,7 @@ import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
+import * as drv from './views/detResultsView';
 import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
@@ -54,7 +55,7 @@ $(document).ready(function(){
 		let detailForth='';
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
 
-
+		console.log(results);
 
 
 
