@@ -1332,11 +1332,17 @@ b {
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
-  color: $color-blue-1;
+  color: $color-white-1;
   cursor: pointer;
+	opacity: .2;
+
+	& > span{
+		
+	}
 
   &:hover{
-		color: $color-white-1;
+  	opacity: 1;
+		// color: $color-white-1;
   }
 }
 
