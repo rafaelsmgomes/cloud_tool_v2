@@ -77,6 +77,11 @@
 			width: 4.25rem;
 			display: flex;
 	    align-items: center;
+
+      background-image: url('../assets/graphics/icon-back.svg');
+		  background-size: 1.20rem 1.20rem;
+		  background-repeat: no-repeat;
+	    
 	    &--1{
 	    	& > span{
 	    		margin-left: auto;
@@ -96,6 +101,10 @@
 					
 					background-image: url();
 				}	
+	    }
+	    &--2{
+	    	background-position-x: right;
+	    	background-image: url('../assets/graphics/icon-back--1.svg');
 	    }
 		}
 	}
