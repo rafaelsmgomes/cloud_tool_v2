@@ -71,12 +71,8 @@
 
 		&--1{
 			display: none;
-			&:hover{
-					
+			&:hover{					
 			}
-			
-	
-
 			&.toggle{
 				display: flex;
 			}
@@ -84,7 +80,6 @@
 				margin-left: auto;
 				display: flex;
 			}		
-
 		}		
 	
 		&--2{
@@ -98,6 +93,7 @@
 		}
 	
 		&--1,
+		&--2,
 		&--3 {
 			@include bp(767){
 				display: none;
