@@ -105,7 +105,7 @@
 			@include bph_min(750){
 				max-width: $dial-width-max2;
 				max-height: calc(#{$dial-width-max2} / 2);		
-				margin-top: calc((100vh - 27rem) / 2);
+				margin-top: calc((100vh - 25.5rem) / 2);
 			}
 			@include bph_min(930){
 				@include bp_min(768){
@@ -195,7 +195,7 @@
 			}
 	
 			@include bp(910){ 
-				@include bph_min(750){ margin-top: calc((100vh - 27rem) / 2); }
+				@include bph_min(750){ margin-top: calc((100vh - 25.5rem) / 2); }
 				@include bph_min(930){
 					@include bp_min(768){
 						margin-top: 4.2rem;
