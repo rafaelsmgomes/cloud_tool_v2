@@ -155,87 +155,40 @@ $(document).ready(function(){
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
-	// $('.detailed__square').on('click',function(){
-	// 	const self = $(this);
-	// 	const val = self.data('val');
-	// 	const context = $(`.page--${val}`);
-	// 	const nextTop = Number(context.css('top').slice(0,-2))*-1;
-	// 	const nextLeft = Number(context.css('left').slice(0,-2))*-1;		
-
-	// 	context.addClass('activate');
-		
-	// 	$('.detailed__map--container').addClass('activate');
-	// 	$('.detailed__results--title').addClass('deactivate');
-	// 	// $('.detailed__map > *').addClass('deactivate');
-	// 	$('.detailed__map').children().not(this).addClass('deactivate');
-	// 	$('.line__wrapper').addClass('deactivate');
-	// 	$('.detailed__map--center').addClass('deactivate');
-
-
-	// 	setTimeout(function(){
-	// 		self.addClass('activate');
-	// 		if(val === 2){
-	// 			$('.detailed__map').css('transform','scale(7.34) translate(-15.45%,-24.05%)');
-	// 		}else if(val === 3){
-	// 			$('.detailed__map').css('transform','scale(7.34) translate(-40%,-43.1%)');
-	// 		}else if(val === 4){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translate(-40%,43.1%)');
-	// 		}else if(val === 5){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translateY(43.1%)');
-	// 		}else if(val === 6){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translate(43.16%,43.1%)');
-	// 		}else if(val === 7){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translate(23.48%,-43.2%)');
-	// 		}
-
-			
-
-	// 		setTimeout(function(){						
-	// 			$('.page--x').addClass('deactivate');
-	// 			$('.main-container').addClass('activate');
-	// 			$('.header__nav').addClass('activate');
-	// 		}, 800)
-			
-	// 	}, 800);
-			
-	// 	$('.pathfinder').css("transform", `translate(${nextLeft}px,${nextTop}px)`);
-
-	// 	// Changing header nav value's to corresponding square
-
-	// 	$('.header__nav--btn--2').attr('context',`${Number(val)+1}`);
-	// 	$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
-	
-	// 	const paginationDetGroup = pagination.retrieveDetailPagination();
-
-	// 	pagination.deactivateDetailPagination();		
-
-	// 	for(let i = 0; i <= (val -2); i++){
-	// 		$(paginationDetGroup[i]).addClass('activate');
-	// 	}
-		
-	// });
 
 	$('.page__overlay').on('click', function(){
 		const self = $(this);
 		const val = self.data('val');
-
+		
 
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
-		$('.page').toggleClass('zoomed');
+		// $('.page').toggleClass('zoomed');
+		$('.page').toggleClass('zoomed deactivate--z');
+		$(`.page--${val}`).addClass('activate--z');
+		$(`.page--${val}`).removeClass('deactivate--z');
 		setTimeout(function(){			
 			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
 			$('.header__nav').toggleClass('activate');
 		}, 1500);
 		
+		setTimeout(function(){
+			$('.pathfinder--x').toggleClass('zoom-in');
+		}, 2000);
 		$('.page__overlay').toggle();
+
+		$('.header__nav--btn--2').attr('context',`${val}`);
+    $('.header__nav--btn--1').attr('context',`${val-1}`);
+
+    pagination.retrievePagination(self);
 	});
 
 	$('.icon__zoomout').on('click',function(){		
 		$('.header__nav').toggleClass('activate');
 		$('.page').toggleClass('zoomed');
-
+		$('.page').removeClass('deactivate--z activate--z');
+		$('.pathfinder--x').toggleClass('zoom-in');
 		setTimeout(function(){
-			$('.page__overlay').toggle();
+			$('.page__overlay').toggle();			
 		}, 1500);
 		$('.pathfinder--x').removeClass('zoom-in--2 zoom-in--2-x');
 		$('.pathfinder--x').removeClass('zoom-in--3 zoom-in--3-x');
@@ -249,11 +202,19 @@ $(document).ready(function(){
 /****** HEADER NAV BTN CONTROLLER ******/ 
 	$('.header__nav--btn').on('click',function(){
 		const self = $(this);
+		let val = Number(self.attr('context'));
+
+		if(self.attr('direction') === 'up'){
+			val = val + 1;
+		}
+		
+		pagination.changePagination(self);		
+
+		$('.activate--z').toggleClass('deactivate--z activate--z');
+		
+		$(`.page--${val}`).toggleClass('deactivate--z activate--z');
+
 		dp.movePathfinderX(self);
-
-		pagination.changePagination(self);
-
-
 	});
 	
 /****************  CLOUD/ LOTTIE INIT  ********************/
