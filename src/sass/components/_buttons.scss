@@ -11,68 +11,104 @@
 	}
 
 	&__regress{
-    width: 2.00rem;
-    height: 2rem;
-    border-radius: 1rem;
-    border: solid 0.1rem $color-blue-1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-blue-2;
-	cursor: pointer;
-	transition: all .1s;
+		width: 2.00rem;
+		height: 2rem;
+		border-radius: 1rem;
+		border: solid 0.1rem $color-blue-1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-blue-2;
+		cursor: pointer;
+		transition: all .1s;
 
-	&:hover{
-		border: solid 0.1rem $color-white-1;
-	}
+		&:hover{
+			border: solid 0.1rem $color-white-1;
+		}
 
-    &.rotate{
-    	transform: rotate(180deg);
-	}
+		&.rotate{
+			transform: rotate(180deg);
+		}
 
-	.hamburguer{
-		display: none;
-	}
-	@include bp(767){
-		.arrow{
+		.hamburguer{
 			display: none;
 		}
-		.hamburguer{
+		@include bp(767){
+			.arrow{
+				display: none;
+			}
+			// .hamburguer{
+			// 	display: block;
+			// }
+			display: none;
+		}
+	}
+	&__navi{
+		width: 2.00rem;
+		height: 2rem;
+		border-radius: 1rem;
+		border: solid 0.1rem $color-blue-1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-blue-2;
+		cursor: pointer;
+		transition: all .1s;
+		display: none;
+		@include bp(767){
 			display: block;
 		}
-
-	}
-	
-		&--2,
-		&--5,{
-			margin-top: 4.80rem;
+		&__checkbox{
+			display: none;
 		}
-		&--3,
-		&--6{
-			margin-top: 6.10rem;
-		}    
+		&__background{
 
-
-		&--4{
-			margin-top: 7.90rem;
-			margin-left: auto;
+			background-color: rgba($color: #fff, $alpha: .2);
+			position: fixed;
+			height: 1.5rem;
+			width: 1.5rem;
+			bottom: 0.25rem;
+			left: 1.05rem;
+			border-radius: 50%;
+			z-index: 100;
 		}
-		&--5,
-		&--6{
-			margin-left: auto;
+		&__navigation{
+			// display: none;
+			position: fixed;
+			bottom: 55px;
+			left: .80rem;
 		}
-		// &--6{
-	 //    margin-top: -0.85rem;
-		// }
-		&--7{
-	    margin-top: -0.85rem;
+		&__list{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__item{
+			display: flex;
+			justify-content: center;
+			margin-bottom: .5rem;
+		}
+		&__icon{
+			display: inline-block;
+			height: 2rem;
+			width: 2rem;
+			border-radius: 50%;
+			border: solid 0.1rem #00758f;
+			padding: .25rem;
+		}
+		&__link{
+			text-decoration: none;
+			font-size: 0.80rem;
+			font-family: Univers, Arial, Helvetica, sans-serif;
+			color: #fff;
+			display: flex;
+			align-items: center;
+		}
+		&__text{
+			margin-left: .6rem;
 		}
 	}
 }
-
-// .hamburguer{
-// 	display: none;		
-// 	@include bp(767){
-// 		display: block;
-// 	}
-// }
+.hamburguer{
+	transform: translateY(7.5%);
+}
