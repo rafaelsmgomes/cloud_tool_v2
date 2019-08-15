@@ -34,7 +34,9 @@
 	&--x{
 		transform: scale(0.1) translate(-33.25rem, 138rem);
 
+
 		&.zoom-in{
+			transition: none;
 			&--2{
 				&-x{
 					transform: scale(1) translate(-92.70rem, -50rem);								
