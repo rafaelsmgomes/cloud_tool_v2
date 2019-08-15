@@ -21,6 +21,7 @@ import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
+import * as drv from './views/detResultsView';
 import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
@@ -51,16 +52,12 @@ $(document).ready(function(){
 	
 	if(sessionStorage.dial2){	
 		const results = new CompareResults();
+		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
 		let detailFirst='';
 		let detailSecond='';
 		let detailForth='';
-		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
 
-
-
-
-
-
+		drv.displayResults(results);
 
 		// DIALS
 			detailFirst = retrieveLottieDialAnimation(results.val['1']);		
@@ -77,15 +74,15 @@ $(document).ready(function(){
 					if(element > 10){
 						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
 						dialsUserElements[index].addClass('dial__text--users-more');
-						$(`#main__direction--user-${index}`).text( 'You are ahead of your peers and the global average on your cloud journey.' );
+						$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
 					}else if(element <= 10 &&  element >= -10){
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
 						dialsUserElements[index].addClass('dial__text--users-equal');
-						$(`#main__direction--user-${index}`).text( 'You and your peers are equal in cloud journey.' );
+						$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
 					}else{						
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
 						dialsUserElements[index].addClass('dial__text--users-less');
-						$(`#main__direction--user-${index}`).text( 'You are behind of your peers and the global average on your cloud journey.' );
+						$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
 					}
 				});				
 
@@ -283,7 +280,7 @@ $(document).ready(function(){
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
-		header.hideHeader(state.pageNum.pageNumber);
+		// header.hideHeader(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 	});
 
@@ -327,7 +324,7 @@ $(document).ready(function(){
 	});
 
 
-	// $('.btn__progress--3').click(); 
+	// $('.btn__progress--1').click(); 
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
