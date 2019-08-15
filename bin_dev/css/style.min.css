@@ -1592,6 +1592,10 @@ b {
     left: .80rem; }
     .btn__navi__button img {
       padding-top: .4rem; }
+    .btn__navi__button .hamburguer {
+      display: inline; }
+    .btn__navi__button .close {
+      display: none; }
   .btn__navi__background {
     background-color: rgba(50, 75, 92, 0.95);
     position: fixed;
@@ -1600,7 +1604,8 @@ b {
     bottom: 0.25rem;
     left: 1.05rem;
     border-radius: 50%;
-    z-index: -1; }
+    z-index: -1;
+    transition: all .8s; }
   .btn__navi__navigation {
     position: fixed;
     bottom: 55px;
@@ -1639,6 +1644,10 @@ b {
   .btn__navi__checkbox:checked ~ .btn__navi__navigation {
     opacity: 1;
     width: 100%; }
+  .btn__navi__checkbox:checked ~ .btn__navi__button .hamburguer {
+    display: none; }
+  .btn__navi__checkbox:checked ~ .btn__navi__button .close {
+    display: inline; }
 
 .dial-group {
   width: 93.5vh;

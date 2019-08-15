@@ -72,6 +72,12 @@
 			& img {
 				padding-top: .4rem;
 			}
+			& .hamburguer{
+				display: inline;
+			}
+			& .close{
+				display: none;
+			}
 			}
 		&__background{
 
@@ -83,6 +89,7 @@
 			left: 1.05rem;
 			border-radius: 50%;
 			z-index: -1;
+			transition: all .8s;
 		}
 		&__navigation{
 			// display: none;
@@ -132,6 +139,12 @@
 		&__checkbox:checked ~ &__navigation {
 			opacity:1;
 			width: 100%;
+		}
+		&__checkbox:checked ~ &__button .hamburguer {
+			display: none;
+		}
+		&__checkbox:checked ~ &__button .close {
+			display: inline;
 		}
 	}
 }
