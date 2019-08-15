@@ -61,27 +61,44 @@
 		&__checkbox{
 			display: none;
 		}
+		&__button{
+			z-index: 2000;
+			height: 2rem;
+			width: 2rem;
+			border-radius: 50%;
+			position: fixed;
+			bottom: 0rem;
+			left: .80rem;
+			& img {
+				padding-top: .4rem;
+			}
+			}
 		&__background{
 
-			background-color: rgba($color: #fff, $alpha: .2);
+			background-color: rgba($color-blue-2, $alpha: .95);
 			position: fixed;
 			height: 1.5rem;
 			width: 1.5rem;
 			bottom: 0.25rem;
 			left: 1.05rem;
 			border-radius: 50%;
-			z-index: 100;
+			z-index: -1;
 		}
 		&__navigation{
 			// display: none;
 			position: fixed;
 			bottom: 55px;
 			left: .80rem;
+
+			opacity: 0;
+			width: 0;
+			transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);	
 		}
 		&__list{
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			z-index: 1500;
 		}
 		&__item{
 			display: flex;
@@ -94,7 +111,7 @@
 			width: 2rem;
 			border-radius: 50%;
 			border: solid 0.1rem #00758f;
-			padding: .25rem;
+			padding-top: .3rem;
 		}
 		&__link{
 			text-decoration: none;
@@ -107,8 +124,14 @@
 		&__text{
 			margin-left: .6rem;
 		}
+
+		&__checkbox:checked ~ &__background {
+			transform: scale(120);
+			z-index: -1;
+		}
+		&__checkbox:checked ~ &__navigation {
+			opacity:1;
+			width: 100%;
+		}
 	}
-}
-.hamburguer{
-	transform: translateY(7.5%);
 }

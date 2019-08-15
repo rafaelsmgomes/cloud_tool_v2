@@ -22,6 +22,7 @@ export const e = {
 	peersValue: $('#peersValue'),
 	page: $('.page'),
 	pageContent: $(".page__content"),
+	footerNumber: $('.footer-text'),
 	pathfinder: $('.pathfinder'),
 	results__copy: $('.results__copy'),
 	body: $('body'),

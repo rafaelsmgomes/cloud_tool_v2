@@ -27,6 +27,7 @@ import * as path from './views/pathView';
 import * as result from './views/resultsView';
 import * as selector from './views/selectorView';
 import * as sl from './views/sliderView';
+import * as footer from './views/footerView';
 
 import * as func from './functions';
 
@@ -283,6 +284,7 @@ $(document).ready(function(){
 
 	
 	line.resizeLines();
+	footer.hidePageNumber();
 
 	$(window).on('resize',function(){
 		state.width = $('body').width();
@@ -608,3 +610,9 @@ function retrieveLottieDialAnimation(result){
 		}
 		return variable;
 }
+
+/****************  MOBILE NAVIGATION  ********************/
+
+
+
+

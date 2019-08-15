@@ -1196,7 +1196,9 @@ b {
 		top: -1.10rem;
 	  text-align: center;
 	  position: absolute;
-	  transform: translateX(25%)
+	  transform: translateX(25%);
+	  display: block;
+	  transition: all 2s;
 	}
 }
 
